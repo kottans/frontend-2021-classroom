@@ -2,8 +2,6 @@ const boi = {
   species: 'human',
   name: 'Dadia Fedor',
 
-  
-
   gender: 'male',
   legs: 2,
   hands: 2,
