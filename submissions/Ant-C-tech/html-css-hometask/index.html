@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="img/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- /Favicon -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /Fonts -->
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/app.css" />
+
+    <title>Cinema Application</title>
+  </head>
+
+  <body>
+    <video preload="auto" autoplay muted loop poster="img/video_poster.jpg" class="trailer">
+      <source
+        src="video/trailer.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <main>
+      <section class="posterSection">
+        <div class="textContent">
+          <h2 class="textContent__title">Vivarium</h2>
+          <p class="textContent__description">
+            On their search for the perfect home, Gemma (Imogen Poots) and Tom
+            (Jesse Eisenberg) visit a new house in a labyrinthine suburban
+            neighbourhood. When they attempt to leave, each road mysteriously
+            takes them back to where they started, leading them on a
+            mind-bending trip, trapped in a surreal nightmare.
+          </p>
+          <a href="#" class="btn-readMore">&#9660;</a>
+        </div>
+
+        <div class="badge badge-rating">
+            <p>IMBd<br>5.8</p>
+        </div>
+
+        <div class="badge badge-data">
+            <p>From<br>01 March<br>1h 39m</p>
+        </div>
+
+        <div class="mask"></div>
+
+        <img
+          class="posterSection__img"
+          src="img/poster.jpg"
+          alt="vivarium poster"
+        />
+      </section>
+
+      <section class="controlSection">
+        <nav class="movieType">
+          <ul class="movieType__list">
+            <li class="movieType__listItem movieType__listItem-disabled">
+              <a class="movieType__listItemLink movieType__listItemLink-disabled" href="#">General</a>
+            </li>
+            <li class="movieType__listItem">
+              <a class="movieType__listItemLink" href="#">Digital 2D</a>
+            </li>
+            <li class="movieType__listItem movieType__listItem-active">
+              <a class="movieType__listItemLink movieType__listItemLink-active" href="#">IMAX 3D</a>
+            </li>
+            <li class="movieType__listItem">
+              <a class="movieType__listItemLink" href="#">Cinema 4Dx</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="movieDate">
+          <p class="movieDate__title">Tue, 2 March</p>
+          <div class="flexRow">
+            <a href="#" class="btn-prevDay">&#9668;</a>
+              <ol class="calendar">
+                <li class="calendar__listItem">
+                  <a href="#" class="calendar__listItemLink calendar__listItemLink">
+                    <span class="calendar__supText calendar__supText-today">Today</span><br>1
+                  </a>
+                </li>
+                <li class="calendar__listItem">
+                  <a href="#" class="calendar__listItemLink calendar__listItemLink-active">
+                    <span class="calendar__supText calendar__supText-active">Tue</span><br>2
+                  </a>
+                </li>
+                <li class="calendar__listItem">
+                  <a href="#" class="calendar__listItemLink">
+                    <span class="calendar__supText">Wed</span><br>3
+                  </a>
+                </li>
+                <li class="calendar__listItem">
+                  <a href="#" class="calendar__listItemLink">
+                    <span class="calendar__supText">Thu</span><br>4
+                  </a>
+                </li>
+                <li class="calendar__listItem">
+                  <a href="#" class="calendar__listItemLink calendar__listItemLink-disabled">
+                    <span class="calendar__supText calendar__supText-disabled">Fri</span><br>5
+                  </a>
+                </li>
+              </ol>
+            <a href="#" class="btn-nextDay">	&#9658;</a>
+          </div>
+        </nav>
+
+        <nav class="movieTime">
+          <p class="movieTime__title">Time</p>
+          <ul class="movieTime__list">
+            <li class="movieTime__listItem  movieTime__listItem-active">
+              <a class="movieTime__listItemLink  movieTime__listItemLink-active" href="#">14:00</a>
+            </li>
+            <li class="movieTime__listItem">
+              <a class="movieTime__listItemLink" href="#">17:00</a>
+            </li>
+            <li class="movieTime__listItem">
+              <a class="movieTime__listItemLink" href="#">20:00</a>
+            </li>
+            <li class="movieTime__listItem  movieTime__listItem-disabled">
+              <a class="movieTime__listItemLink movieTime__listItemLink-disabled" href="#">23:00</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="hall">
+          <p class="hall__screen">Screen</p>
+
+          <div class="hall__row">
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">1</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">2</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">3</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">4</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">5</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">6</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">7</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">8</span>
+            </label>
+          </div>
+
+          <div class="hall__row">
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">9</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">10</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">11</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">12</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">13</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">14</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">15</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">16</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">17</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">18</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">19</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">20</span>
+            </label>
+          </div>
+
+                    <div class="hall__row">
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">21</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">22</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">23</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">24</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">25</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">26</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">27</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">28</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">29</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">30</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">31</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">32</span>
+            </label>
+          </div>
+
+                    <div class="hall__row">
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">33</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">34</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">35</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">36</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">37</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">38</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">39</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">40</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">41</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">42</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">43</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">44</span>
+            </label>
+          </div>
+
+                    <div class="hall__row">
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">45</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">46</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">47</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">48</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">49</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">50</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">51</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">52</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">53</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">54</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox">
+              <span class="seat__mask">55</span>
+            </label>
+            <label class="seat">
+              <input class="seat__input visually-hidden" type="checkbox" disabled>
+              <span class="seat__mask">56</span>
+            </label>
+          </div>
+        </nav>
+
+        <div class="hall__legend">
+          <p class="hall__legendItem hall__legendItem-available">Available</p>
+          <p class="hall__legendItem hall__legendItem-taken">Taken</p>
+          <p class="hall__legendItem hall__legendItem-selection">Your selection</p>
+          <div class="shoppingCart">
+            <a href="#"><img class="shoppingCart__img" src="img/shopping-cart.svg" alt="shopping cart"></a>
+          </div>
+        </div>
+
+
+      </section>
+    </main>
+  </body>
+</html>
