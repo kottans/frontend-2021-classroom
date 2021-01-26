@@ -1,10 +1,13 @@
 let a;
-console.log(a);
+console.log(ab);
+
+
 
 const users = [
+
+
   {
     name: 'Anna',
   },
 ];
 
-console.log(users);
