@@ -7,6 +7,7 @@ const boi = {
     saying: 'Я ничей. Я сам по себе мальчик. Свой собственный.',
     friends: [],
   };
+dsfsdfds
   
   var a = 'a'
   
