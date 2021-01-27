@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Roll</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-left">
+        <a class="logo" href="#">Camera Roll</a>
+      </div>
+      <div class="header-right">
+        <nav class="settings-buttons">
+          <ul>
+            <li><a class="settings-buttons-link settings" href="#"></a></li>
+            <li><a class="settings-buttons-link profile" href="#"></a></li>
+            <li><a class="settings-buttons-link sign-out" href="#"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav class="site-path">
+      <ol>
+        <li><a class="path-link" href="#">Фільми</a></li>
+        <li><a class="path-link" href="#">Сонік У Кіно</a></li>
+        <li><a class="path-link active" href="#">Придбати білет</a></li>
+      </ol>
+    </nav>
+    <main>
+      <aside class="advertisement">
+        <h2 class="other-films">Інші фільми</h2>
+        <article class="poster">
+          <h3><a href="#">Душа</a></h3>
+          <a href="#" class="adv-poster-container">
+            <img src="assets/soul.jpg" alt="Душа" />
+          </a>
+          <div class="adv-info">
+            <p class="adv-date">з 17 лютого</p>
+            <p class="adv-time">12:00, 14:00, 16:00</p>
+          </div>
+        </article>
+        <article class="poster">
+          <h3><a href="#">Диво-жінка 1984</a></h3>
+          <a href="#" class="adv-poster-container">
+            <img src="assets/wonder-woman.jpg" alt="Диво-жінка 1984" />
+          </a>
+          <div class="adv-info">
+            <p class="adv-date">з 17 лютого</p>
+            <p class="adv-time">12:00, 14:00, 16:00</p>
+          </div>
+        </article>
+      </aside>
+      <section class="hall">
+        <article class="about-film">
+          <div class="film-poster">
+            <img src="assets/sonic.jpg" alt="Сонік в кіно" />
+          </div>
+          <div class="information">
+            <h1>Сонік в кіно</h1>
+            <p class="description">
+              Одна далека та не схожа на Землю планета в небезпеці. Щоб її
+              врятувати неймовірно швидкий, веселий і по-справжньому відважний
+              їжак Сонік телепортувався до нашого рідного дому, а саме до США.
+              Стрибок напруги після того, як енергійний їжак приземлився у нас,
+              привів до зникнення електрики на всьому Північно-Західному
+              узбережжі країни, що не пройшло повз увагу Пентагону. За Соніком
+              уже почала полювання влада, і головний мисливець – доктор
+              Роботник, який хоче захопити весь світ. Але першою людиною, що
+              зустрілася їжаку, був Том Вачовськи. Це звичайний хлопець, який
+              вирішив допомогти Соніку та не дати Роботнику здійснити свій
+              жахливий план.
+            </p>
+            <form class="film-info">
+              <div class="form-block">
+                <label>
+                  <div class="input-label">17 лют</div>
+                  <input type="radio" name="date" id="date1" />
+                </label>
+                <label>
+                  <div class="input-label">18 лют</div>
+                  <input type="radio" name="date" id="date2" />
+                </label>
+                <label>
+                  <div class="input-label">19 лют</div>
+                  <input type="radio" name="date" id="date3" />
+                </label>
+                <label>
+                  <div class="input-label">20 лют</div>
+                  <input type="radio" name="date" id="date4" />
+                </label>
+                <label>
+                  <div class="input-label">30 лют</div>
+                  <input type="radio" name="date" id="date5" />
+                </label>
+              </div>
+            </form>
+          </div>
+        </article>
+        <div class="screen"></div>
+        <div class="sits">
+          <label>
+            <input type="checkbox" />
+            <div class="sit">1</div>
+          </label>
+        </div>
+      </section>
+      <section class="tickets-container">
+        <div class="tickets">
+          <h2>Обрані квитки</h2>
+          <div class="check">
+            <div class="heading">
+              <div>Місце</div>
+              <div>Ціна</div>
+            </div>
+            <ul>
+              <li>
+                <div class="sit-name">31</div>
+                <div class="sit-price">60 грн</div>
+              </li>
+              <li>
+                <div class="sit-name">32</div>
+                <div class="sit-price">60 грн</div>
+              </li>
+              <li>
+                <div class="sit-name">33</div>
+                <div class="sit-price">60 грн</div>
+              </li>
+            </ul>
+            <div class="check-sum">
+              <div class="check-sum-label">Сума:</div>
+              <div class="check-sum-amount">180 грн</div>
+            </div>
+          </div>
+          <button class="buy-tickets">Придбати</button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
