@@ -71,18 +71,29 @@
         <section class="movie">
           <h2 class="section-header movie-hider">Микита Кожум'яка</h2>
           <figure class="movie-card">
-            <picture class="movie-poster">
-              <source
-                srcset="img/poster-desktop.jpg, img/poster-desktop@2x.jpg 2x"
-                media="(min-width: 960px)"
-              />
-              <img
-                src="img/poster-mobile.jpg"
-                alt="Poster"
-                class="movie-poster__img"
-                srcset="img/poster-mobile@2x.jpg"
-              />
-            </picture>
+            <div class="movie-poster">
+              <picture>
+                <source
+                  srcset="img/poster-desktop.jpg, img/poster-desktop@2x.jpg 2x"
+                  media="(min-width: 960px)"
+                />
+                <img
+                  src="img/poster-mobile.jpg"
+                  alt="Poster"
+                  class="movie-poster__img"
+                  srcset="img/poster-mobile@2x.jpg"
+                />
+              </picture>
+              <div class="movie-info__description">
+                <p class="description__text">
+                  Мультфільм про неймовірні пригоди 12-річного хлопчика у
+                  магічному світі. Маленький Микита хоче стати героєм, як тато,
+                  та перемогти дракона. Незважаючи на всі перестороги та
+                  заборони батька, хлопець сміливо йде в пошуках пригод,
+                  зустрічає нових друзів та фантастичних диво-створінь.
+                </p>
+              </div>
+            </div>
             <figcaption class="movie-info">
               <table class="table movie-table">
                 <tr>

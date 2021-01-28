@@ -16,7 +16,7 @@
 body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: 300;
   color: #222831;
   background-image: url('../img/bg.jpg');
@@ -245,7 +245,35 @@ img {
 }
 
 .movie-poster {
+  position: relative;
   margin-bottom: 10px;
+}
+
+.movie-info__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(48, 71, 94, 0.8);
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.description__text {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+}
+
+.movie-poster:hover .movie-info__description {
+  opacity: 1;
 }
 
 .movie-table,
