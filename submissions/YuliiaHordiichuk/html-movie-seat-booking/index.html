@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Cinema App</title>
+</head>
+
+<body>
+    <section class="booking-page container" id="booking-page">
+        <header class="booking-page__header"> 
+            <h1 class="booking-page__title">DIXON</h1>
+            <nav class="booking-page__nav nav">
+                <ul class ="nav__list">
+                    <li class="nav__item">
+                        <span class="nav__accent">01</span> 
+                        <span>choose a movie </span>
+                    </li>
+                    <li class="nav__item">
+                        <span class="nav__accent">02</span> 
+                        <span>choose seats</span>    
+                    </li>
+                    <li class="nav__item">
+                        <span class="nav__accent">03</span>
+                        <span>purchase</span>  
+                    </li>
+                    <li class="nav__item">
+                        <span class="nav__accent">04</span>
+                        <span>complete</span>  
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class="booking-page__aside poster">
+            <img src="./img/poster.jpg" alt="Movie poster" class="poster__img">
+
+            <ul class="poster__list">
+                <li class="poster__item">
+                    <h3 class="poster__heading">Director</h3>
+                    <p class="poster__text">Todd Phillips</p>
+                </li>
+                <li class="poster__item">
+                    <h3 class="poster__heading">Starring</h3>
+                    <p class="poster__text"> Joaquin Phoenix, Robert De Niro, Zazie Beetz</p>
+                </li>
+                <li class="poster__item">
+                    <h3 class="poster__heading">Genre</h3>
+                    <p class="poster__text">Crime, Drama, Thriller</p>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="booking-page__wrapper">
+            <section class="booking-page__main main">
+
+                <header class="main__header">
+                    <h2 class="main__title">JOKER</h2>
+                    <div class="main__desc">
+                        <i class="far fa-clock main__time-icon"></i>
+                        <span class="main__duration">122 minutes</span>
+                        <span class="main__hall">6-RED</span>
+                    </div>
+                </header>
+
+                <div class="main__info info">
+                    <div class="info__details info__details_day">
+                        <p class="info__title">Monday, 1 February</p>
+                        <ul class="info__list">
+                            <li class="info__item info__item_button">
+                                <button class="info__button">
+                                    <i class="fas fa-long-arrow-alt-left"></i>
+                                </button>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="day" checked>
+                                    <span class="info__detail">Mon</span>
+                                    <span class="info__detail">1</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="day">
+                                    <span class="info__detail">Tue</span>
+                                    <span class="info__detail">2</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="day">
+                                    <span class="info__detail">Wed</span>
+                                    <span class="info__detail">3</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="day">
+                                    <span class="info__detail">Thu</span>
+                                    <span class="info__detail">4</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="day">
+                                    <span class="info__detail">Fri</span>
+                                    <span class="info__detail">5</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="day">
+                                    <span class="info__detail">Sat</span>
+                                    <span class="info__detail">6</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="day">
+                                    <span class="info__detail">Sun</span>
+                                    <span class="info__detail">7</span>
+                                </label>
+                            </li>
+                            <li class="info__item info__item_button">
+                                <button class="info__button">
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info__details info__details_time">
+                        <p class="info__title">Choose time</p>
+                        <ul class="info__list">
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="time">
+                                    <span class="info__detail">2D</span>
+                                    <span class="info__detail">10:00</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="time">
+                                    <span class="info__detail">2D</span>
+                                    <span class="info__detail">12:15</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="time" checked>
+                                    <span class="info__detail">2D</span>
+                                    <span class="info__detail">16:40</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="time">
+                                    <span class="info__detail">3D</span>
+                                    <span class="info__detail">18:25</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="time">
+                                    <span class="info__detail">3D</span>
+                                    <span class="info__detail">20:00</span>
+                                </label>
+                            </li>
+                            <li class="info__item">
+                                <label class="info__label">
+                                    <input type="radio" class="info__input" name="time">
+                                    <span class="info__detail">3D</span>
+                                    <span class="info__detail">22:30</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main__seats-choice seats">
+                    <p class="seats__text">Screen</p>
+                    <div class="seats__grid">
+                        <ul class="seats__list">
+                            <li class="seats__item">a</li>
+                            <li class="seats__item">b</li>
+                            <li class="seats__item">c</li>
+                            <li class="seats__item">d</li>
+                            <li class="seats__item">e</li>
+                            <li class="seats__item">f</li>
+                        </ul>
+                    
+
+                        <div class="seats__template">
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                        </div>
+                        <div class="seats__template">
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                        </div>
+                        <div class="seats__template">
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input" disabled>
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                            <div class="seats__row">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                                <input type="checkbox" class="seats__input">
+                            </div>
+                        </div>
+
+                        <ul class="seats__list">
+                            <li class="seats__item">a</li>
+                            <li class="seats__item">b</li>
+                            <li class="seats__item">c</li>
+                            <li class="seats__item">d</li>
+                            <li class="seats__item">e</li>
+                            <li class="seats__item">f</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="seats-info">
+                    <li class="seats-info__desc seats-info__desc_selected">Selected</li>
+                    <li class="seats-info__desc seats-info__desc_available">Available</li>
+                    <li class="seats-info__desc seats-info__desc_taken">Taken</li>
+                </ul>
+            </section>
+
+            <nav class="pages-nav">
+                <a href="#" class="pages-nav__btn">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                </a>
+                
+                <a href="#" class="pages-nav__btn">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+            </nav>
+        </div>
+    </section>
+</body>
+</html>
