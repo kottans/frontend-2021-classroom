@@ -1,4 +1,4 @@
-@import url("./reset.css");
+@import url('./reset.css');
 
 body {
   display: flex;
@@ -48,7 +48,7 @@ h1 {
 }
 
 .session_time::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0px;
   left: -10px;
@@ -68,7 +68,7 @@ h1 {
 }
 
 .auditorium::before {
-  content: "";
+  content: '';
   position: absolute;
   width: max(300px, 80%);
   height: 20px;
@@ -102,40 +102,40 @@ h1 {
   position: relative;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   position: absolute;
   -webkit-appearance: none;
   appearance: none;
 }
 
 .description-vip,
-input[type="checkbox"][data-type="vip"] + .seat {
+input[type='checkbox'][data-type='vip'] + .seat {
   width: clamp(20px, 12%, 36px);
   border: 2px solid #c33124;
 }
 
-input[type="checkbox"]:focus + .seat {
+input[type='checkbox']:focus + .seat {
   outline: 2px solid #f9de59;
   outline-offset: 2px;
 }
 
-input[type="checkbox"]:checked + .seat {
+input[type='checkbox']:checked + .seat {
   background-color: #f98365;
 }
 
-input[type="checkbox"][data-type="vip"]:checked + .seat {
+input[type='checkbox'][data-type='vip']:checked + .seat {
   background-color: #c33124;
 }
 
 .description,
-input[type="checkbox"]:disabled + .seat {
+input[type='checkbox']:disabled + .seat {
   cursor: default;
 }
 
 .description-disabled::after,
-input[type="checkbox"]:disabled + .seat::after {
+input[type='checkbox']:disabled + .seat::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
   left: 0%;
   height: 1px;
@@ -145,9 +145,9 @@ input[type="checkbox"]:disabled + .seat::after {
 }
 
 .description-disabled::before,
-input[type="checkbox"]:disabled + .seat::before {
+input[type='checkbox']:disabled + .seat::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
   left: 0%;
   height: 1px;
@@ -156,14 +156,14 @@ input[type="checkbox"]:disabled + .seat::before {
   background-color: #f98365;
 }
 
-input[type="checkbox"]:disabled:checked + .seat {
+input[type='checkbox']:disabled:checked + .seat {
   background-color: transparent;
 }
 
 .description-busy::before,
-input[type="checkbox"]:disabled:checked + .seat::before {
+input[type='checkbox']:disabled:checked + .seat::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 1px;
   left: calc(50% - 4px);
   height: 8px;
@@ -173,9 +173,9 @@ input[type="checkbox"]:disabled:checked + .seat::before {
 }
 
 .description-busy::after,
-input[type="checkbox"]:disabled:checked + .seat::after {
+input[type='checkbox']:disabled:checked + .seat::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 10px;
   left: calc(50% - 5px);
   height: 11px;
@@ -187,8 +187,8 @@ input[type="checkbox"]:disabled:checked + .seat::after {
 
 .description-vip::after,
 .description-vip::before,
-input[type="checkbox"][data-type="vip"]:disabled:checked + .seat::before,
-input[type="checkbox"][data-type="vip"]:disabled:checked + .seat::after {
+input[type='checkbox'][data-type='vip']:disabled:checked + .seat::before,
+input[type='checkbox'][data-type='vip']:disabled:checked + .seat::after {
   background-color: #c33124;
 }
 
@@ -202,7 +202,7 @@ input[type="checkbox"][data-type="vip"]:disabled:checked + .seat::after {
 }
 
 .auditorium__description::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -5px;
   left: 10px;

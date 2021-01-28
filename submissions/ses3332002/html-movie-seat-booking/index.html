@@ -1,144 +1,415 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Homework01</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Homework01</title>
-</head>
-
-<body>
-  <header>
-    <h1>Наши котики</h1>
-    <img class="poster" src="./img/poster.jpg" alt="постер" />
-    <p class="session_date">04.02.2020</p>
-    <p class="session_time">18-00</p>
-  </header>
-  <section class="auditorium">
-    <h2>Выберите места</h2>
-    <form name="auditorium__selection" autocomplete="off">
-      <div class="auditorium__row">
-        <input type="checkbox" id="seat1_1"><label for="seat1_1" class="seat"></label>
-        <input type="checkbox" id="seat1_2"><label for="seat1_2" class="seat"></label>
-        <input type="checkbox" id="seat1_3"><label for="seat1_3" class="seat"></label>
-        <input type="checkbox" id="seat1_4"><label for="seat1_4" class="seat"></label>
-        <input type="checkbox" id="seat1_5"><label for="seat1_5" class="seat"></label>
-        <input type="checkbox" id="seat1_6"><label for="seat1_6" class="seat"></label>
-        <input type="checkbox" id="seat1_7"><label for="seat1_7" class="seat"></label>
-        <input type="checkbox" id="seat1_8"><label for="seat1_8" class="seat"></label>
-        <input type="checkbox" id="seat1_9"><label for="seat1_9" class="seat"></label>
-        <input type="checkbox" id="seat1_10"><label for="seat1_10" class="seat"></label>
-      </div>
-      <div class="auditorium__row">
-        <input type="checkbox" id="seat2_1"><label for="seat2_1" class="seat"></label>
-        <input type="checkbox" id="seat2_2" disabled><label for="seat2_2" class="seat"></label>
-        <input type="checkbox" id="seat2_3"><label for="seat2_3" class="seat"></label>
-        <input type="checkbox" id="seat2_4" disabled><label for="seat2_4" class="seat"></label>
-        <input type="checkbox" id="seat2_5"><label for="seat2_5" class="seat"></label>
-        <input type="checkbox" id="seat2_6" disabled><label for="seat2_6" class="seat"></label>
-        <input type="checkbox" id="seat2_7"><label for="seat2_7" class="seat"></label>
-        <input type="checkbox" id="seat2_8" disabled><label for="seat2_8" class="seat"></label>
-        <input type="checkbox" id="seat2_9"><label for="seat2_9" class="seat"></label>
-        <input type="checkbox" id="seat2_10" disabled><label for="seat2_10" class="seat"></label>
-      </div>
-      <div class="auditorium__row">
-        <input type="checkbox" id="seat3_1"><label for="seat3_1" class="seat"></label>
-        <input type="checkbox" id="seat3_2"><label for="seat3_2" class="seat"></label>
-        <input type="checkbox" id="seat3_3"><label for="seat3_3" class="seat"></label>
-        <input type="checkbox" id="seat3_4" disabled checked><label for="seat3_4" class="seat"></label>
-        <input type="checkbox" id="seat3_5"><label for="seat3_5" class="seat"></label>
-        <input type="checkbox" id="seat3_6" disabled checked><label for="seat3_6" class="seat"></label>
-        <input type="checkbox" id="seat3_7"><label for="seat3_7" class="seat"></label>
-        <input type="checkbox" id="seat3_8"><label for="seat3_8" class="seat"></label>
-        <input type="checkbox" id="seat3_9"><label for="seat3_9" class="seat"></label>
-        <input type="checkbox" id="seat3_10"><label for="seat3_10" class="seat"></label>
-      </div>
-      <div class="auditorium__row">
-        <input type="checkbox" id="seat4_1"><label for="seat4_1" class="seat"></label>
-        <input type="checkbox" id="seat4_2" disabled><label for="seat4_2" class="seat"></label>
-        <input type="checkbox" id="seat4_3"><label for="seat4_3" class="seat"></label>
-        <input type="checkbox" id="seat4_4" disabled><label for="seat4_4" class="seat"></label>
-        <input type="checkbox" id="seat4_5"><label for="seat4_5" class="seat"></label>
-        <input type="checkbox" id="seat4_6" disabled><label for="seat4_6" class="seat"></label>
-        <input type="checkbox" id="seat4_7"><label for="seat4_7" class="seat"></label>
-        <input type="checkbox" id="seat4_8" disabled><label for="seat4_8" class="seat"></label>
-        <input type="checkbox" id="seat4_9"><label for="seat4_9" class="seat"></label>
-        <input type="checkbox" id="seat4_10" disabled><label for="seat4_10" class="seat"></label>
-      </div>
-      <div class="auditorium__row">
-        <input type="checkbox" id="seat5_1"><label for="seat5_1" class="seat"></label>
-        <input type="checkbox" id="seat5_2"><label for="seat5_2" class="seat"></label>
-        <input type="checkbox" id="seat5_3"><label for="seat5_3" class="seat"></label>
-        <input type="checkbox" id="seat5_4"><label for="seat5_4" class="seat"></label>
-        <input type="checkbox" id="seat5_5"><label for="seat5_5" class="seat"></label>
-        <input type="checkbox" id="seat5_6" disabled checked><label for="seat5_6" class="seat"></label>
-        <input type="checkbox" id="seat5_7" disabled checked><label for="seat5_7" class="seat"></label>
-        <input type="checkbox" id="seat5_8"><label for="seat5_8" class="seat"></label>
-        <input type="checkbox" id="seat5_9"><label for="seat5_9" class="seat"></label>
-        <input type="checkbox" id="seat5_10"><label for="seat5_10" class="seat"></label>
-        <input type="checkbox" id="seat5_11"><label for="seat5_11" class="seat"></label>
-        <input type="checkbox" id="seat5_12"><label for="seat5_12" class="seat"></label>
-        <input type="checkbox" id="seat5_13"><label for="seat5_13" class="seat"></label>
-        <input type="checkbox" id="seat5_14"><label for="seat5_14" class="seat"></label>
-      </div>
-      <div class="auditorium__row">
-        <input type="checkbox" id="seat6_1"><label for="seat6_1" class="seat"></label>
-        <input type="checkbox" id="seat6_2" disabled><label for="seat6_2" class="seat"></label>
-        <input type="checkbox" id="seat6_3"><label for="seat6_3" class="seat"></label>
-        <input type="checkbox" id="seat6_4" disabled><label for="seat6_4" class="seat"></label>
-        <input type="checkbox" id="seat6_5"><label for="seat6_5" class="seat"></label>
-        <input type="checkbox" id="seat6_6" disabled><label for="seat6_6" class="seat"></label>
-        <input type="checkbox" id="seat6_7"><label for="seat6_7" class="seat"></label>
-        <input type="checkbox" id="seat6_8" disabled><label for="seat6_8" class="seat"></label>
-        <input type="checkbox" id="seat6_9"><label for="seat6_9" class="seat"></label>
-        <input type="checkbox" id="seat6_10" disabled><label for="seat6_10" class="seat"></label>
-        <input type="checkbox" id="seat6_11"><label for="seat6_11" class="seat"></label>
-        <input type="checkbox" id="seat6_12" disabled><label for="seat6_12" class="seat"></label>
-        <input type="checkbox" id="seat6_13"><label for="seat6_13" class="seat"></label>
-        <input type="checkbox" id="seat6_14" disabled><label for="seat6_14" class="seat"></label>
-      </div>
-      <div class="auditorium__row">
-        <input type="checkbox" id="seat7_1" disabled><label for="seat7_1" class="seat"></label>
-        <input type="checkbox" id="seat7_2"><label for="seat7_2" class="seat"></label>
-        <input type="checkbox" id="seat7_3" disabled><label for="seat7_3" class="seat"></label>
-        <input type="checkbox" id="seat7_4"><label for="seat7_4" class="seat"></label>
-        <input type="checkbox" id="seat7_5" disabled><label for="seat7_5" class="seat"></label>
-        <input type="checkbox" id="seat7_6"><label for="seat7_6" class="seat"></label>
-        <input type="checkbox" id="seat7_7" disabled><label for="seat7_7" class="seat"></label>
-        <input type="checkbox" id="seat7_8"><label for="seat7_8" class="seat"></label>
-        <input type="checkbox" id="seat7_9" disabled><label for="seat7_9" class="seat"></label>
-        <input type="checkbox" id="seat7_10"><label for="seat7_10" class="seat"></label>
-        <input type="checkbox" id="seat7_11" disabled><label for="seat7_11" class="seat"></label>
-        <input type="checkbox" id="seat7_12"><label for="seat7_12" class="seat"></label>
-        <input type="checkbox" id="seat7_13" disabled><label for="seat7_13" class="seat"></label>
-        <input type="checkbox" id="seat7_14"><label for="seat7_14" class="seat"></label>
-      </div>
-      <div class="auditorium__row">
-        <input type="checkbox" id="seat8_1" data-type="vip"><label for="seat8_1" class="seat"></label>
-        <input type="checkbox" id="seat8_2" data-type="vip"><label for="seat8_2" class="seat"></label>
-        <input type="checkbox" id="seat8_3" data-type="vip"><label for="seat8_3" class="seat"></label>
-        <input type="checkbox" id="seat8_4" data-type="vip"><label for="seat8_4" class="seat"></label>
-        <input type="checkbox" id="seat8_5" disabled checked data-type="vip"><label for="seat8_5" class="seat"></label>
-        <input type="checkbox" id="seat8_6" data-type="vip"><label for="seat8_6" class="seat"></label>
-        <input type="checkbox" id="seat8_7" data-type="vip"><label for="seat8_7" class="seat"></label>
-        <input type="checkbox" id="seat8_8" data-type="vip"><label for="seat8_8" class="seat"></label>
-      </div>
-      <input type="submit" class="seats_submit" value="Заказать">
-    </form>
-    <aside class="auditorium__description">
-      <div class="description"></div>
-      <div class="description description-vip"></div>
-      <div class="description__text">- свободно</div>
-      <div class="description description-busy"></div>
-      <div class="description description-vip description-busy"></div>
-      <div class="description__text">- занято</div>
-      <div class="description description-disabled"></div>
-      <div class="description__text">- недоступно</div>
-    </aside>
-  </section>
-  <!-- <script src="script.js"></script> -->
-</body>
-
+  <body>
+    <header>
+      <h1>Наши котики</h1>
+      <img class="poster" src="./img/poster.jpg" alt="постер" />
+      <p class="session_date">04.02.2020</p>
+      <p class="session_time">18-00</p>
+    </header>
+    <section class="auditorium">
+      <h2>Выберите места</h2>
+      <form name="auditorium__selection" autocomplete="off">
+        <div class="auditorium__row">
+          <input type="checkbox" id="seat1_1" /><label
+            for="seat1_1"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_2" /><label
+            for="seat1_2"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_3" /><label
+            for="seat1_3"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_4" /><label
+            for="seat1_4"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_5" /><label
+            for="seat1_5"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_6" /><label
+            for="seat1_6"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_7" /><label
+            for="seat1_7"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_8" /><label
+            for="seat1_8"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_9" /><label
+            for="seat1_9"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat1_10" /><label
+            for="seat1_10"
+            class="seat"
+          ></label>
+        </div>
+        <div class="auditorium__row">
+          <input type="checkbox" id="seat2_1" /><label
+            for="seat2_1"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_2" disabled /><label
+            for="seat2_2"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_3" /><label
+            for="seat2_3"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_4" disabled /><label
+            for="seat2_4"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_5" /><label
+            for="seat2_5"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_6" disabled /><label
+            for="seat2_6"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_7" /><label
+            for="seat2_7"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_8" disabled /><label
+            for="seat2_8"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_9" /><label
+            for="seat2_9"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat2_10" disabled /><label
+            for="seat2_10"
+            class="seat"
+          ></label>
+        </div>
+        <div class="auditorium__row">
+          <input type="checkbox" id="seat3_1" /><label
+            for="seat3_1"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_2" /><label
+            for="seat3_2"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_3" /><label
+            for="seat3_3"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_4" disabled checked /><label
+            for="seat3_4"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_5" /><label
+            for="seat3_5"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_6" disabled checked /><label
+            for="seat3_6"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_7" /><label
+            for="seat3_7"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_8" /><label
+            for="seat3_8"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_9" /><label
+            for="seat3_9"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat3_10" /><label
+            for="seat3_10"
+            class="seat"
+          ></label>
+        </div>
+        <div class="auditorium__row">
+          <input type="checkbox" id="seat4_1" /><label
+            for="seat4_1"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_2" disabled /><label
+            for="seat4_2"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_3" /><label
+            for="seat4_3"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_4" disabled /><label
+            for="seat4_4"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_5" /><label
+            for="seat4_5"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_6" disabled /><label
+            for="seat4_6"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_7" /><label
+            for="seat4_7"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_8" disabled /><label
+            for="seat4_8"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_9" /><label
+            for="seat4_9"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat4_10" disabled /><label
+            for="seat4_10"
+            class="seat"
+          ></label>
+        </div>
+        <div class="auditorium__row">
+          <input type="checkbox" id="seat5_1" /><label
+            for="seat5_1"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_2" /><label
+            for="seat5_2"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_3" /><label
+            for="seat5_3"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_4" /><label
+            for="seat5_4"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_5" /><label
+            for="seat5_5"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_6" disabled checked /><label
+            for="seat5_6"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_7" disabled checked /><label
+            for="seat5_7"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_8" /><label
+            for="seat5_8"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_9" /><label
+            for="seat5_9"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_10" /><label
+            for="seat5_10"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_11" /><label
+            for="seat5_11"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_12" /><label
+            for="seat5_12"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_13" /><label
+            for="seat5_13"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat5_14" /><label
+            for="seat5_14"
+            class="seat"
+          ></label>
+        </div>
+        <div class="auditorium__row">
+          <input type="checkbox" id="seat6_1" /><label
+            for="seat6_1"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_2" disabled /><label
+            for="seat6_2"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_3" /><label
+            for="seat6_3"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_4" disabled /><label
+            for="seat6_4"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_5" /><label
+            for="seat6_5"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_6" disabled /><label
+            for="seat6_6"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_7" /><label
+            for="seat6_7"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_8" disabled /><label
+            for="seat6_8"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_9" /><label
+            for="seat6_9"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_10" disabled /><label
+            for="seat6_10"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_11" /><label
+            for="seat6_11"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_12" disabled /><label
+            for="seat6_12"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_13" /><label
+            for="seat6_13"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat6_14" disabled /><label
+            for="seat6_14"
+            class="seat"
+          ></label>
+        </div>
+        <div class="auditorium__row">
+          <input type="checkbox" id="seat7_1" disabled /><label
+            for="seat7_1"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_2" /><label
+            for="seat7_2"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_3" disabled /><label
+            for="seat7_3"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_4" /><label
+            for="seat7_4"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_5" disabled /><label
+            for="seat7_5"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_6" /><label
+            for="seat7_6"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_7" disabled /><label
+            for="seat7_7"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_8" /><label
+            for="seat7_8"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_9" disabled /><label
+            for="seat7_9"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_10" /><label
+            for="seat7_10"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_11" disabled /><label
+            for="seat7_11"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_12" /><label
+            for="seat7_12"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_13" disabled /><label
+            for="seat7_13"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat7_14" /><label
+            for="seat7_14"
+            class="seat"
+          ></label>
+        </div>
+        <div class="auditorium__row">
+          <input type="checkbox" id="seat8_1" data-type="vip" /><label
+            for="seat8_1"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat8_2" data-type="vip" /><label
+            for="seat8_2"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat8_3" data-type="vip" /><label
+            for="seat8_3"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat8_4" data-type="vip" /><label
+            for="seat8_4"
+            class="seat"
+          ></label>
+          <input
+            type="checkbox"
+            id="seat8_5"
+            disabled
+            checked
+            data-type="vip"
+          /><label for="seat8_5" class="seat"></label>
+          <input type="checkbox" id="seat8_6" data-type="vip" /><label
+            for="seat8_6"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat8_7" data-type="vip" /><label
+            for="seat8_7"
+            class="seat"
+          ></label>
+          <input type="checkbox" id="seat8_8" data-type="vip" /><label
+            for="seat8_8"
+            class="seat"
+          ></label>
+        </div>
+        <input type="submit" class="seats_submit" value="Заказать" />
+      </form>
+      <aside class="auditorium__description">
+        <div class="description"></div>
+        <div class="description description-vip"></div>
+        <div class="description__text">- свободно</div>
+        <div class="description description-busy"></div>
+        <div class="description description-vip description-busy"></div>
+        <div class="description__text">- занято</div>
+        <div class="description description-disabled"></div>
+        <div class="description__text">- недоступно</div>
+      </aside>
+    </section>
+    <!-- <script src="script.js"></script> -->
+  </body>
 </html>
