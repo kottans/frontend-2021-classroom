@@ -135,104 +135,102 @@
           </figure>
         </section>
         <section class="booking">
-          <div class="booking-form-container">
-            <form class="form booking-form" method="post" action="#">
-              <div class="booking-date">
-                <h2 class="form-header">День та час сеансу:</h2>
-                <label class="booking-label">
-                  <input
-                    type="date"
-                    value="2021-01-30"
-                    class="booking-input booking-input__date"
-                  />
-                </label>
-                <label class="booking-label">
-                  <select
-                    class="booking-input booking-input__time"
-                    tabindex="1"
-                  >
-                    <option value="10:00">10:00</option>
-                    <option value="13:00">13:00</option>
-                    <option value="16:00">16:00</option>
-                    <option value="19:00">19:00</option>
-                  </select>
-                </label>
-              </div>
-              <div class="booking-city">
-                <h2 class="form-header">Ваше місто:</h2>
-                <label class="booking-label">
-                  <input
-                    type="radio"
-                    class="booking-input booking-input__city visually-hidden"
-                    value="Kyiv"
-                    name="city"
-                    checked
-                  />
-                  <span class="booking-ico booking-ico__city"></span>
-                  <span class="booking-name booking-city__name">Київ</span>
-                </label>
-                <label class="booking-label">
-                  <input
-                    type="radio"
-                    class="booking-input booking-input__city visually-hidden"
-                    value="Lviv"
-                    name="city"
-                  />
-                  <span class="booking-ico booking-ico__city"></span>
-                  <span class="booking-name booking-city__name">Львів</span>
-                </label>
-                <label class="booking-label">
-                  <input
-                    type="radio"
-                    class="booking-input booking-input__city visually-hidden"
-                    value="Odesa"
-                    name="city"
-                  />
-                  <span class="booking-ico booking-ico__city"></span>
-                  <span class="booking-name booking-city__name">Одеса</span>
-                </label>
-                <label class="booking-label">
-                  <input
-                    type="radio"
-                    class="booking-input booking-input__city visually-hidden"
-                    value="Dnipro"
-                    name="city"
-                  />
-                  <span class="booking-ico booking-ico__city"></span>
-                  <span class="booking-name booking-city__name">Дніпро</span>
-                </label>
-                <label class="booking-label">
-                  <input
-                    type="radio"
-                    class="booking-input booking-input__city visually-hidden"
-                    value="Kharkiv"
-                    name="city"
-                  />
-                  <span class="booking-ico booking-ico__city"></span>
-                  <span class="booking-name booking-city__name">Харків</span>
-                </label>
-                <label class="booking-label">
-                  <input
-                    type="radio"
-                    class="booking-input booking-input__city visually-hidden"
-                    value="Kharkiv"
-                    name="city"
-                  />
-                  <span class="booking-ico booking-ico__city"></span>
-                  <span class="booking-name booking-city__name">Полтава</span>
-                </label>
-              </div>
-              <div class="booking-details">
-                <span class="booking-ico booking-ico__place">1</span>
-                <span>Вільне місце</span>
-                <span
-                  class="booking-ico booking-ico__place booking-ico__place__disabled"
-                  >1</span
-                >
-                <span>Недоступне</span>
-              </div>
-              <h2 class="form-header">Місце:</h2>
-              <div class="booking-row">
+          <form class="form booking-form" method="post" action="#">
+            <fieldset class="booking-date">
+              <legend class="form-header">День та час сеансу:</legend>
+              <label class="booking-label">
+                <input
+                  type="date"
+                  value="2021-01-30"
+                  class="booking-input booking-input__date"
+                />
+              </label>
+              <label class="booking-label">
+                <select class="booking-input booking-input__time" tabindex="1">
+                  <option value="10:00">10:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="19:00">19:00</option>
+                </select>
+              </label>
+            </fieldset>
+            <fieldset class="booking-city">
+              <legend class="form-header">Ваше місто:</legend>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Kyiv"
+                  name="city"
+                  checked
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Київ</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Lviv"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Львів</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Odesa"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Одеса</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Dnipro"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Дніпро</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Kharkiv"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Харків</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Kharkiv"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Полтава</span>
+              </label>
+            </fieldset>
+            <div class="booking-details">
+              <span class="booking-ico booking-ico__place">1</span>
+              <span>Вільне місце</span>
+              <span
+                class="booking-ico booking-ico__place booking-ico__place__disabled"
+                >1</span
+              >
+              <span>Недоступне</span>
+            </div>
+            <fieldset class="booking-row">
+              <legend class="form-header">Місце:</legend>
+              <fieldset class="booking-row__inputs">
+                <legend class="booking-row__header">Ряд 1</legend>
                 <label class="booking-label booking-label__place">
                   <input
                     type="checkbox"
@@ -248,7 +246,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="1 2"
                     disabled
@@ -263,7 +261,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="1 3"
                     disabled
@@ -351,8 +349,11 @@
                   <span class="booking-ico booking-ico__place">10</span>
                   <span class="visually-hidden">1 ряд 10 місце</span>
                 </label>
-              </div>
-              <div class="booking-row">
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <fieldset class="booking-row__inputs">
+                <legend class="booking-row__header">Ряд 2</legend>
                 <label class="booking-label booking-label__place">
                   <input
                     type="checkbox"
@@ -390,7 +391,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="2 4"
                     disabled
@@ -405,7 +406,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="2 5"
                     disabled
@@ -420,7 +421,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="2 6"
                     disabled
@@ -475,13 +476,16 @@
                   <span class="booking-ico booking-ico__place">10</span>
                   <span class="visually-hidden">2 ряд 10 місце</span>
                 </label>
-              </div>
-              <div class="booking-row">
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 3</legend>
+              <fieldset class="booking-row__inputs">
                 <label class="booking-label booking-label__place">
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="3 1"
                     disabled
@@ -540,7 +544,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="3 6"
                     disabled
@@ -555,7 +559,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="3 7"
                     disabled
@@ -570,7 +574,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="3 8"
                     disabled
@@ -585,7 +589,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="3 9"
                     disabled
@@ -651,8 +655,11 @@
                   <span class="booking-ico booking-ico__place">14</span>
                   <span class="visually-hidden">3 ряд 14 місце</span>
                 </label>
-              </div>
-              <div class="booking-row">
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <fieldset class="booking-row__inputs">
+                <legend class="booking-row__header">Ряд 4</legend>
                 <label class="booking-label booking-label__place">
                   <input
                     type="checkbox"
@@ -807,8 +814,11 @@
                   <span class="booking-ico booking-ico__place">14</span>
                   <span class="visually-hidden">4 ряд 14 місце</span>
                 </label>
-              </div>
-              <div class="booking-row">
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 5</legend>
+              <fieldset class="booking-row__inputs">
                 <label class="booking-label booking-label__place">
                   <input
                     type="checkbox"
@@ -868,7 +878,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="5 6"
                     disabled
@@ -883,7 +893,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="5 7"
                     disabled
@@ -909,7 +919,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="5 9"
                     disabled
@@ -924,7 +934,7 @@
                   <input
                     type="checkbox"
                     class="booking-input booking-input__place visually-hidden"
-                    data-available="1"
+                    data-available="0"
                     data-price="100"
                     value="5 10"
                     disabled
@@ -979,8 +989,11 @@
                   <span class="booking-ico booking-ico__place">14</span>
                   <span class="visually-hidden">5 ряд 14 місце</span>
                 </label>
-              </div>
-              <div class="booking-row">
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 6</legend>
+              <fieldset class="booking-row__inputs">
                 <label class="booking-label booking-label__place">
                   <input
                     type="checkbox"
@@ -1135,8 +1148,11 @@
                   <span class="booking-ico booking-ico__place">14</span>
                   <span class="visually-hidden">6 ряд 14 місце</span>
                 </label>
-              </div>
-              <div class="booking-row">
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 7</legend>
+              <fieldset class="booking-row__inputs">
                 <label class="booking-label booking-label__place">
                   <input
                     type="checkbox"
@@ -1279,8 +1295,11 @@
                   />
                   <span class="booking-ico booking-ico__place">14</span>
                 </label>
-              </div>
-              <div class="booking-row">
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 8</legend>
+              <fieldset class="booking-row__inputs">
                 <label class="booking-label booking-label__place">
                   <input
                     type="checkbox"
@@ -1435,12 +1454,12 @@
                   <span class="booking-ico booking-ico__place">14</span>
                   <span class="visually-hidden">8 ряд 14 місце</span>
                 </label>
-              </div>
-              <button type="submit" class="button submit-button">
-                Підтвердити
-              </button>
-            </form>
-          </div>
+              </fieldset>
+            </fieldset>
+            <button type="submit" class="button submit-button">
+              Підтвердити
+            </button>
+          </form>
         </section>
         <section class="order">
           <h2 class="section-header order-header">Ваше замовлення</h2>

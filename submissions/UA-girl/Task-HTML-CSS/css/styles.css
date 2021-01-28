@@ -50,6 +50,10 @@ img {
   background-color: #dddddd;
 }
 
+.booking {
+  padding: 20px 0 0;
+}
+
 .order {
   padding-bottom: 20px;
 }
@@ -303,21 +307,38 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 .booking-date,
 .booking-city,
-.booking-row {
+.booking-row__inputs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 0 20px 0;
   padding: 0;
   width: 100%;
+  border: none;
 }
 
 .booking-row {
+  padding: 0;
+  width: 100%;
+  border: none;
+}
+
+.booking-row__inputs {
   flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+.booking-row__header {
+  margin: 0 0 5px 0;
+  padding: 0;
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
 }
 
 .booking-label {
@@ -553,6 +574,12 @@ img {
   }
 }
 
+@media screen and (min-width: 420px) {
+  .booking {
+    padding: 20px 20px 0;
+  }
+}
+
 @media screen and (min-width: 468px) {
   .container {
     padding: 0 20px;
@@ -599,13 +626,8 @@ img {
   }
 
   .movie,
-  .booking,
   .order {
-    padding: 20px 60px;
-  }
-
-  .order {
-    padding-bottom: 20px;
+    padding: 20px 40px;
   }
 
   .about-link {
@@ -632,6 +654,10 @@ img {
 
   .navigation-link {
     font-size: 14px;
+  }
+
+  .booking {
+    padding: 20px 40px;
   }
 
   .booking-date {
@@ -685,6 +711,12 @@ img {
 }
 
 @media screen and (min-width: 960px) {
+  .movie,
+  .booking,
+  .order {
+    padding: 20px 60px;
+  }
+
   .movie-card {
     flex-direction: row;
     align-items: flex-start;
