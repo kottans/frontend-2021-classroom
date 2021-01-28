@@ -27,6 +27,7 @@
         </nav>
       </div>
     </header>
+
     <nav class="site-path">
       <ol>
         <li><a class="path-link" href="#">Фільми</a></li>
@@ -79,37 +80,373 @@
               жахливий план.
             </p>
             <form class="film-info">
-              <div class="form-block">
+              <div class="time-block">
                 <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time1"
+                  />
+                  <div class="input-label">12:00</div>
+                </label>
+                <label>
+                  <input
+                    checked
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time2"
+                  />
+                  <div class="input-label">14:00</div>
+                </label>
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time3"
+                  />
+                  <div class="input-label">15:00</div>
+                </label>
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time4"
+                  />
+                  <div class="input-label">17:30</div>
+                </label>
+                <label>
+                  <input
+                    disabled
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time5"
+                  />
+                  <div class="input-label">19:00</div>
+                </label>
+              </div>
+              <div class="date-block">
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date1"
+                  />
                   <div class="input-label">17 лют</div>
-                  <input type="radio" name="date" id="date1" />
                 </label>
                 <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date2"
+                  />
                   <div class="input-label">18 лют</div>
-                  <input type="radio" name="date" id="date2" />
                 </label>
                 <label>
+                  <input
+                    checked
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date3"
+                  />
                   <div class="input-label">19 лют</div>
-                  <input type="radio" name="date" id="date3" />
                 </label>
                 <label>
+                  <input
+                    disabled
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date4"
+                  />
                   <div class="input-label">20 лют</div>
-                  <input type="radio" name="date" id="date4" />
                 </label>
                 <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date5"
+                  />
                   <div class="input-label">30 лют</div>
-                  <input type="radio" name="date" id="date5" />
                 </label>
               </div>
             </form>
           </div>
         </article>
-        <div class="screen"></div>
         <div class="sits">
-          <label>
-            <input type="checkbox" />
-            <div class="sit">1</div>
-          </label>
+          <div class="screen">
+            <div class="first-half"></div>
+            <div class="second-half"></div>
+            <div class="screen-label">Екран</div>
+          </div>
+          <form class="sits-buttons">
+            <div class="hall-row">
+              <div class="row-number">1</div>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">2</div>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">3</div>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">4</div>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">5</div>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">6</div>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" disabled />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+          </form>
         </div>
       </section>
       <section class="tickets-container">
