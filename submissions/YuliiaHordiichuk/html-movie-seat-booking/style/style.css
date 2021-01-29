@@ -65,7 +65,7 @@ body {
     background: 
         linear-gradient(to top, var(--container-bg-color) 50%, var(--container-bg-color) 70%, transparent),
         linear-gradient(90deg, var(--container-bg-color) 25% , transparent),
-        url(/img/bg.jpg) no-repeat top 0 right 0; 
+        url(../img/bg.jpg) no-repeat top 0 right 0; 
 }
 
 @media(max-width: 1200px ) {
@@ -73,7 +73,7 @@ body {
         background: 
         linear-gradient(to top, var(--container-bg-color) 50%, var(--container-bg-color) 70%, transparent),
         linear-gradient(90deg, var(--container-bg-color) 25% , transparent),
-        url(/img/bg.jpg) no-repeat top 0 right 0 / 700px; 
+        url(../img/bg.jpg) no-repeat top 0 right 0 / 700px; 
     }  
 }
 
@@ -360,6 +360,7 @@ body {
 }
 
 .info__input {
+    opacity: 0;
     width: 0;
     height: 0;
 } 
@@ -448,6 +449,7 @@ body {
 
 .seats__input {
     appearance: none;
+    -webkit-appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 5px;
@@ -478,6 +480,10 @@ body {
     outline: none; 
     background-color: var(--main-accent-color);
 }
+
+.seats__input:focus {
+    outline: 1px solid var(--main-accent-color);
+  }
 
 .seats-info {
     display: flex; 
