@@ -242,10 +242,19 @@ button:focus {
   background-color: #04d9ff;
 }
 
-.seat:not(.occupied) span:hover {
+input:focus + span:before {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
+  border: 1px solid #04d9ff;
+}
+
+.seat:not(.occupied):hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 .seat.occupied span::before {
