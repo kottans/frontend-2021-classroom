@@ -167,7 +167,8 @@ a {
     margin: 0 auto;
     display: grid;
     column-gap: 30px;
-    grid-template-columns: 105px 316px 110px;;
+    grid-template-columns: 105px 316px 110px;
+    ;
 }
 
 .cinema-hall__column {
@@ -200,15 +201,18 @@ a {
 }
 
 .seat:hover,
-.seat:focus {
+.seat:focus,
+.seat_checkbox:focus+.seat {
     cursor: pointer;
     border: 1px solid #ba181b;
 }
 
 .seat_checkbox {
-    width: 0px;
     position: absolute;
-    height: 0px;
+    opacity: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
 .hall-info__item {
