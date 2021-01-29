@@ -1,14 +1,26 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
   background: #232433;
 }
 
 main {
   font-family: Roboto, 'sans-serif';
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 main * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -55,6 +67,8 @@ main * {
 
 .info-block {
   padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: rgb(214, 214, 214);
   line-height: 1.8;
@@ -81,12 +95,19 @@ main * {
 
 .info-block img {
   width: 35%;
+  height: 35%;
 }
 
 .rating {
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -113,6 +134,8 @@ button {
   padding: 7px 17px;
   color: #eee;
   border-radius: 3px;
+  -webkit-transition: background 0.1s;
+  -o-transition: background 0.1s;
   transition: background 0.1s;
 }
 
@@ -126,7 +149,10 @@ button:focus {
 }
 
 .legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   padding: 7px;
   border-top: 1px solid rgba(238, 238, 238, 0.3);
@@ -135,6 +161,8 @@ button:focus {
 }
 
 .description-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -156,8 +184,13 @@ button:focus {
 }
 
 .screen-block {
+  -webkit-perspective: 1000px;
   perspective: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -166,7 +199,9 @@ button:focus {
   height: 100px;
   width: 90%;
   margin: 15px 0;
+  -webkit-transform: rotateX(-45deg);
   transform: rotateX(-45deg);
+  -webkit-box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
 }
 
@@ -175,11 +210,16 @@ button:focus {
 }
 
 .hall .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .seat input[type='checkbox'] {
+  opacity: 0;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -192,6 +232,8 @@ button:focus {
   margin: 3px;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
+  -webkit-transition: background 0.1s ease;
+  -o-transition: background 0.1s ease;
   transition: background 0.1s ease;
   background-color: #818181;
 }
@@ -201,12 +243,17 @@ button:focus {
 }
 
 .seat:not(.occupied) span:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
 .seat.occupied span::before {
   background-color: #eee;
   cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -222,10 +269,21 @@ button:focus {
     height: 100%;
     margin: 0 auto;
     max-width: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
+
+  .info-block img {
+    width: 35%;
+    height: 35%;
+  }
+
   .movie-info {
     max-width: 50%;
   }
