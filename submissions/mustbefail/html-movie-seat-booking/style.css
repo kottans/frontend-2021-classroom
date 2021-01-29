@@ -1,0 +1,235 @@
+body {
+  background: #232433;
+}
+
+main {
+  font-family: Roboto, 'sans-serif';
+  display: flex;
+  align-items: center;
+}
+
+main * {
+  box-sizing: border-box;
+}
+
+.desctop {
+  display: none;
+}
+
+.booking {
+  color: #eee;
+  background: #232433;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.booking:after {
+  content: '';
+  background-image: url(https://www.themoviedb.org/t/p/original/v3wGDRhnik4HSuaMzATkgaqDJLS.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: color;
+  opacity: 0.09;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.booking h1 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.tagline {
+  margin-top: 0;
+  font-style: italic;
+  text-align: right;
+  color: rgb(182, 182, 182);
+}
+
+.info-block {
+  padding: 5px;
+  display: flex;
+  color: rgb(214, 214, 214);
+  line-height: 1.8;
+}
+
+.info-block span {
+  background: #eee;
+  color: #333;
+  padding: 2px 5px;
+  margin: 0 2px;
+  border-radius: 3px;
+  white-space: nowrap;
+  height: 25px;
+}
+
+.info-block .rate {
+  border: 1px solid #eee;
+  font-weight: bold;
+  text-shadow: 1px 1px rgba(219, 219, 219, 0.5);
+  background: rgb(156, 38, 38);
+  color: #eee;
+  padding: 1px 5px;
+}
+
+.info-block img {
+  width: 35%;
+}
+
+.rating {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-badge {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  background: rgb(6, 192, 115);
+  line-height: 45px;
+  font-weight: bold;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.rating span {
+  background: transparent;
+  color: #eee;
+}
+
+button {
+  background: transparent;
+  border: 1px solid #eee;
+  padding: 7px 17px;
+  color: #eee;
+  border-radius: 3px;
+  transition: background 0.1s;
+}
+
+button:active {
+  background: #eee;
+  color: #333;
+}
+
+button:focus {
+  text-decoration: underline;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-around;
+  padding: 7px;
+  border-top: 1px solid rgba(238, 238, 238, 0.3);
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+  margin: 20px -10px;
+}
+
+.description-block {
+  display: flex;
+}
+
+.legend .seat {
+  height: 16px;
+  width: 18px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  margin-right: 5px;
+  background: #828282;
+}
+
+.legend .seat.selected {
+  background: #04d9ff;
+}
+
+.legend .seat.occupied {
+  background: #eee;
+}
+
+.screen-block {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.screen {
+  background-color: #fff;
+  height: 100px;
+  width: 90%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
+}
+
+.hall {
+  margin: 30px 0;
+}
+
+.hall .row {
+  display: flex;
+  justify-content: center;
+}
+
+.seat input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.seat span:before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  margin: 3px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transition: background 0.1s ease;
+  background-color: #818181;
+}
+
+.seat input[type='checkbox']:checked + span:before {
+  background-color: #04d9ff;
+}
+
+.seat:not(.occupied) span:hover {
+  transform: scale(1.2);
+}
+
+.seat.occupied span::before {
+  background-color: #eee;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.add-to-cart-block {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    height: 100vh;
+  }
+  .booking {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .movie-info {
+    max-width: 50%;
+  }
+  .hall-box {
+    max-width: 50%;
+  }
+}
