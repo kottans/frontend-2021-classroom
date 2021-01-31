@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://orybka.github.io/html-movie-seat-booking/favicon.ico?v=2" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Drive-In Cinema</title>
+</head>
+<body>
+  <main class="main-container">
+    <nav class="breadcrumbs">
+      <ol class="menu">
+        <li class="menu-item">01 Overview</li>
+        <li class="menu-item active-menu-item">02 Cars position</li>
+        <li class="menu-item">03 Cart</li>
+        <li class="menu-item">04 Payment</li>
+      </ol>
+    </nav>
+    <div class="main-film-container">
+      <section class="film-description">
+        <div class="film-information">
+          <h2 class="film-title">The Dark Knight</h2>
+          <address class="film-address"> 
+            <img class="icon" src="assets/icons/location.png" alt="credit-card" >
+            <span class="film-item">Kyiv</span>
+          </address>
+          <div class="row">
+            <div class="row film-date">
+              <img class="icon" src="assets/icons/event.png" alt="credit-card" >
+              <span class="film-item">6 February</span>
+            </div>
+            <div class="row film-time">
+              <img class="icon" src="assets/icons/time.png" alt="credit-card" >
+              <time class="film-item" datetime="2021-02-06 18:00">18:00</time>
+            </div>
+          </div>
+          <div class="row ticket-price">
+            <img class="icon" src="assets/icons/credit-card.png" alt="credit-card" >
+            <span class="film-item">200 UAH</span>
+          </div>
+        </div>
+      </section>
+      <section class="car-selection-container">
+        <div class="col cars-selection">
+          <div class="row legend-container">
+            <span class="legend-item item-unavailable">unavailable</span>
+            <span class="legend-item item-selected">selected</span>
+            <span class="legend-item item-sedan">sedan only</span>
+            <span class="legend-item item-jeep">jeep only</span>
+          </div>
+          <div class="screen-container"></div>
+          <div class="col cars-container">
+            <div class="row cars-row first-row">
+              <input type="checkbox" class="car-sedan unavailable" disabled>
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan unavailable" disabled>
+              <input type="checkbox" class="car-sedan">
+            </div>
+            <div class="row cars-row second-row">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan unavailable" disabled>
+              <input type="checkbox" class="car-sedan unavailable" disabled>
+              <input type="checkbox" class="car-sedan">
+            </div>
+            <div class="row cars-row third-row">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+            </div>
+            <div class="row cars-row forth-row">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+              <input type="checkbox" class="car-sedan">
+            </div>
+            <div class="row cars-row fifth-row">
+              <input type="checkbox" class="car-jeep">
+              <input type="checkbox" class="car-jeep">
+              <input type="checkbox" class="car-jeep">
+              <input type="checkbox" class="car-jeep unavailable" disabled>
+              <input type="checkbox" class="car-jeep unavailable" disabled>
+            </div>
+          </div>
+          <div class="button-container">
+            <a href="#" class="confirm-button">buy now</a>
+          </div>
+        </div>
+      </section>
+    </div>  
+  </main>
+</body>
+</html>
