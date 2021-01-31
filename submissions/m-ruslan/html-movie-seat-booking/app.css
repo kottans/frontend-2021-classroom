@@ -4,9 +4,8 @@ html {
 
 body {
   max-width: 700px;
-  height: 100%;
-  background-color: rgb(211, 228, 228);
   margin: auto;
+  background-color: rgb(211, 228, 228);
 }
 
 header {
@@ -18,15 +17,15 @@ header {
 }
 
 .header__logoImg {
-  margin: 0px 10px;
   width: 30px;
   height: 30px;
+  margin: 0px 10px;
 }
 
 .movie {
-  margin: auto;
   width: 90%;
   height: 170px;
+  margin: auto;
   background-color: rgb(226, 224, 192);
 }
 
@@ -46,34 +45,35 @@ header {
 }
 
 .movieInfo__sessionDescr {
-  list-style-type: none;
   padding: 0px;
   margin: 0px;
+  list-style-type: none;
   line-height: 25px;
 }
 
 .hall {
-  margin: 20px auto;
   width: 90%;
+  margin: 20px auto;
 }
 
 .hall__screenImg {
-  width: 80%;
   display: block;
+  width: 80%;
   margin: 0px auto;
 }
 
 .hall__screenText {
-  text-align: center;
   margin: 0px auto;
+  text-align: center;
   color: rgb(112, 112, 112);
 }
 
 .seats {
-  margin: 70px auto;
   display: grid;
   width: 80%;
   height: 405px;
+  margin: 70px auto;
+
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr) 0.5fr 1fr;
   column-gap: 7px;
@@ -159,11 +159,11 @@ footer {
 }
 
 .footer__list {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px 10px;
   display: flex;
   justify-content: space-between;
+  margin: 0px;
+  padding: 0px 10px;
+  list-style-type: none;
 }
 
 @media screen and (max-width: 550px) {
@@ -183,8 +183,8 @@ footer {
   }
 
   .seats {
-    margin: 50px auto;
     height: 245px;
+    margin: 50px auto;
     column-gap: 5px;
     row-gap: 10px;
   }
@@ -202,8 +202,8 @@ footer {
   }
 
   .seats {
-    margin: 30px auto;
     height: 165px;
+    margin: 30px auto;
   }
 
   .seats__row,
