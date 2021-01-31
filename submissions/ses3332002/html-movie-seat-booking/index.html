@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Homework01</title>
   </head>
 
@@ -12,8 +12,8 @@
     <header>
       <h1>Наши котики</h1>
       <img class="poster" src="./img/poster.jpg" alt="постер" />
-      <p class="session_date">04.02.2020</p>
-      <p class="session_time">18-00</p>
+      <time datetime="2020-02-04" class="session_date">04.02.2020</time>
+      <time datetime="18:00" class="session_time">18-00</time>
     </header>
     <section class="auditorium">
       <h2>Выберите места</h2>
@@ -400,14 +400,20 @@
         <input type="submit" class="seats_submit" value="Заказать" />
       </form>
       <aside class="auditorium__description">
-        <div class="description"></div>
-        <div class="description description-vip"></div>
-        <div class="description__text">- свободно</div>
-        <div class="description description-busy"></div>
-        <div class="description description-vip description-busy"></div>
-        <div class="description__text">- занято</div>
-        <div class="description description-disabled"></div>
-        <div class="description__text">- недоступно</div>
+        <div class="descriptions__wrapper">
+          <div class="description"></div>
+          <div class="description description-vip"></div>
+          <div class="description__text">- свободно</div>
+        </div>
+        <div class="descriptions__wrapper">
+          <div class="description description-busy"></div>
+          <div class="description description-vip description-busy"></div>
+          <div class="description__text">- занято</div>
+        </div>
+        <div class="descriptions__wrapper">
+          <div class="description description-disabled"></div>
+          <div class="description__text">- недоступно</div>
+        </div>
       </aside>
     </section>
     <!-- <script src="script.js"></script> -->

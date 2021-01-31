@@ -114,6 +114,10 @@ input[type='checkbox'][data-type='vip'] + .seat {
   border: 2px solid #c33124;
 }
 
+.description-vip {
+  width: 36px;
+}
+
 input[type='checkbox']:focus + .seat {
   outline: 2px solid #f9de59;
   outline-offset: 2px;
@@ -130,6 +134,12 @@ input[type='checkbox'][data-type='vip']:checked + .seat {
 .description,
 input[type='checkbox']:disabled + .seat {
   cursor: default;
+}
+
+.descriptions__wrapper {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .description-disabled::after,
@@ -164,6 +174,7 @@ input[type='checkbox']:disabled:checked + .seat {
 input[type='checkbox']:disabled:checked + .seat::before {
   position: absolute;
   content: '';
+
   top: 1px;
   left: calc(50% - 4px);
   height: 8px;
@@ -215,6 +226,7 @@ input[type='checkbox'][data-type='vip']:disabled:checked + .seat::after {
 .description__text {
   margin: 4px;
   font-size: 13px;
+  white-space: nowrap;
 }
 
 .seats_submit {
