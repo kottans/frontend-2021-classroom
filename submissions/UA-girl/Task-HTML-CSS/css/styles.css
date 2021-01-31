@@ -329,6 +329,7 @@ img {
 }
 
 .booking-row__inputs {
+  justify-content: center;
   flex-wrap: nowrap;
   margin-bottom: 10px;
 }
@@ -426,10 +427,21 @@ img {
 
 .booking-details {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   width: 100%;
+}
+
+.booking-details__example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+}
+
+.booking-details__title {
+  margin-left: 10px;
 }
 
 .booking-ico__place {
@@ -680,6 +692,10 @@ img {
     width: 30%;
   }
 
+  .booking-label__place {
+    margin: 0 1px;
+  }
+
   .booking-ico__place {
     width: 30px;
     height: 40px;
@@ -733,5 +749,9 @@ img {
 
   .table-header {
     width: 42%;
+  }
+
+  .booking-label__place {
+    margin: 0 5px;
   }
 }
