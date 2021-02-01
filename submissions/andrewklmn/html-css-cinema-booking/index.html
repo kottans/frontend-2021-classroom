@@ -24,15 +24,54 @@
         <h2>Screen side</h2>
         <img src="img/screen.svg" alt="Schematic image of the cinema screen">
       </section>
-      <section>
+      <section class="selector-container">
         <h2>Select seats for booking:</h2>
-        <form action="index.html" method="POST">
-          <article>
-            <label>
-              <input class="seat" type="checkbox" name="" id="">
-              <span></span>
-            </label>
-          </article>
+        <form class="seat_container" action="index.html" method="POST" autocomplete="off">
+          <section class="seat_row">
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_1_1" name="seat_1_1" value="booked">
+              <label class="seat_label" for="seat_1_1">1</label>
+            </article>
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_1_2" name="seat_1_2" value="booked" disabled>
+              <label class="seat_label" for="seat_1_2">2</label>
+            </article>
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_1_3" name="seat_1_3" value="booked">
+              <label class="seat_label" for="seat_1_3">3</label>
+            </article>
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_1_4" name="seat_1_4" value="booked">
+              <label class="seat_label" for="seat_1_4">4</label>
+            </article>
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_1_5" name="seat_1_5" value="booked">
+              <label class="seat_label" for="seat_1_5">5</label>
+            </article>
+          </section>
+          <section class="seat_row">
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_2_1" name="seat_2_1" value="booked">
+              <label class="seat_label" for="seat_2_1">1</label>
+            </article>
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_2_2" name="seat_2_2" value="booked">
+              <label class="seat_label" for="seat_2_2">2</label>
+            </article>
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_2_3" name="seat_2_3" value="booked">
+              <label class="seat_label" for="seat_2_3">3</label>
+            </article>
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_2_4" name="seat_2_4" value="booked">
+              <label class="seat_label" for="seat_2_4">4</label>
+            </article>
+            <article class="seat">
+              <input class="seat_control" type="checkbox" id="seat_2_5" name="seat_2_5" value="booked">
+              <label class="seat_label" for="seat_2_5">5</label>
+            </article>
+          </section>
+
           <button type="submit">Book now</button>
         </form>
       </section>
