@@ -120,14 +120,12 @@
         </div>
 
         <div class="badge badge-rating">
-            <p>IMBd<br>5.8</p>
+            <p><a class="badge__link" href="https://www.imdb.com/title/tt8368406/" target="_blank">IMBd</a><br>5.8</p>
         </div>
 
         <div class="badge badge-data">
-            <p>From<br>01 March<br>1h 39m</p>
+            <p>From<br><time datetime="2021-03-01">01 March</time><br>1h 39m</p>
         </div>
-
-        <div class="mask"></div>
 
         <img
           class="posterSection__img"
@@ -137,7 +135,7 @@
       </section>
 
       <section class="controlSection">
-        <nav class="movieType">
+        <section class="movieType">
           <ul class="movieType__list">
             <li class="movieType__listItem movieType__listItem-disabled">
               <a class="movieType__listItemLink movieType__listItemLink-disabled" href="#">General</a>
@@ -152,62 +150,75 @@
               <a class="movieType__listItemLink" href="#">Cinema 4Dx</a>
             </li>
           </ul>
-        </nav>
+        </section>
 
-        <nav class="movieDate">
-          <p class="movieDate__title">Tue, 2 March</p>
+        <section class="movieDate">
+          <p class="movieDate__title"><time datetime="2021-03-02">Tue, 2 March</time></p>
           <div class="flexRow">
             <a href="#" class="btn-prevDay">&#9668;</a>
               <ol class="calendar">
                 <li class="calendar__listItem">
                   <a href="#" class="calendar__listItemLink calendar__listItemLink">
-                    <span class="calendar__supText calendar__supText-today">Today</span><br>1
+                    <span class="calendar__supText calendar__supText-today">Today</span><br>
+                    <time datetime="2021-03-01">1</time>
                   </a>
                 </li>
                 <li class="calendar__listItem">
                   <a href="#" class="calendar__listItemLink calendar__listItemLink-active">
-                    <span class="calendar__supText calendar__supText-active">Tue</span><br>2
+                    <span class="calendar__supText calendar__supText-active">Tue</span><br>
+                    <time datetime="2021-03-02">2</time>
                   </a>
                 </li>
                 <li class="calendar__listItem">
                   <a href="#" class="calendar__listItemLink">
-                    <span class="calendar__supText">Wed</span><br>3
+                    <span class="calendar__supText">Wed</span><br>
+                    <time datetime="2021-03-03">3</time>
                   </a>
                 </li>
                 <li class="calendar__listItem">
                   <a href="#" class="calendar__listItemLink">
-                    <span class="calendar__supText">Thu</span><br>4
+                    <span class="calendar__supText">Thu</span><br>
+                    <time datetime="2021-03-04">4</time>
                   </a>
                 </li>
                 <li class="calendar__listItem">
                   <a href="#" class="calendar__listItemLink calendar__listItemLink-disabled">
-                    <span class="calendar__supText calendar__supText-disabled">Fri</span><br>5
+                    <span class="calendar__supText calendar__supText-disabled">Fri</span><br>
+                    <time datetime="2021-03-05">5</time>
                   </a>
                 </li>
               </ol>
             <a href="#" class="btn-nextDay">	&#9658;</a>
           </div>
-        </nav>
+        </section>
 
-        <nav class="movieTime">
+        <section class="movieTime">
           <p class="movieTime__title">Time</p>
           <ul class="movieTime__list">
             <li class="movieTime__listItem  movieTime__listItem-active">
-              <a class="movieTime__listItemLink  movieTime__listItemLink-active" href="#">14:00</a>
+              <a class="movieTime__listItemLink  movieTime__listItemLink-active" href="#">
+                <time datetime="14:00">14:00</time>
+              </a>
             </li>
             <li class="movieTime__listItem">
-              <a class="movieTime__listItemLink" href="#">17:00</a>
+              <a class="movieTime__listItemLink" href="#">
+                <time datetime="17:00">17:00</time>
+              </a>
             </li>
             <li class="movieTime__listItem">
-              <a class="movieTime__listItemLink" href="#">20:00</a>
+              <a class="movieTime__listItemLink" href="#">
+                <time datetime="20:00">20:00</time>
+              </a>
             </li>
             <li class="movieTime__listItem  movieTime__listItem-disabled">
-              <a class="movieTime__listItemLink movieTime__listItemLink-disabled" href="#">23:00</a>
+              <a class="movieTime__listItemLink movieTime__listItemLink-disabled" href="#">
+                <time datetime="23:00">23:00</time>
+              </a>
             </li>
           </ul>
-        </nav>
+        </section>
 
-        <nav class="hall">
+        <section class="hall">
           <p class="hall__screen">Screen</p>
 
           <div class="hall__row">
@@ -448,7 +459,7 @@
               <span class="seat__mask">56</span>
             </label>
           </div>
-        </nav>
+        </section>
 
         <div class="hall__legend">
           <p class="hall__legendItem hall__legendItem-available">Available</p>

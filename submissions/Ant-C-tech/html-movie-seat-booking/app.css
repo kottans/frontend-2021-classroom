@@ -76,6 +76,26 @@ main {
   border-right: 2px solid var(--secondary-color);
 }
 
+.posterSection::after {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+  z-index: 15;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 9) 5%,
+    rgba(0, 0, 0, 0.7) 40%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
 .badge {
   position: absolute;
   top: 0;
@@ -104,6 +124,14 @@ main {
   right: 0;
 
   border-radius: 5%;
+}
+
+.badge__link {
+  text-decoration: none;
+
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  font-weight: bold;
 }
 
 .textContent {
@@ -156,24 +184,6 @@ main {
   display: block;
 
   width: 100%;
-}
-
-.mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 15;
-
-  width: 100%;
-  height: 100%;
-
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 9) 5%,
-    rgba(0, 0, 0, 0.7) 40%,
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }
 
 .controlSection {
@@ -708,17 +718,17 @@ main {
 }
 
 @media screen and (max-width: 440px) {
-  .mask {
-    background: linear-gradient(
+  .posterSection::after {
+  background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 9) 5%,
       rgba(0, 0, 0, 0.7) 70%,
       rgba(0, 0, 0, 0.2) 80%,
       rgba(0, 0, 0, 0) 100%
     );
-  }
+}
 
-    .controlSection {
+  .controlSection {
     padding: 20px 10px;
   }
 
@@ -759,7 +769,7 @@ main {
     margin: 0 5px;
   }
 
-   .seat__mask {
+  .seat__mask {
     width: 18px;
     height: 18px;
 
@@ -768,7 +778,7 @@ main {
 }
 
 @media screen and (max-width: 325px) {
-  .textContent__description{
+  .textContent__description {
     font-size: 12px;
   }
 }
