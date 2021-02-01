@@ -430,6 +430,7 @@ body {
   border: 1px solid #de1b1b;
   color: #e3e3e3;
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .main .main__btn:hover {
