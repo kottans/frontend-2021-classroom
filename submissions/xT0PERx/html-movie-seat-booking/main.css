@@ -1,0 +1,357 @@
+html {
+  display: grid;
+  justify-content: center;
+}
+
+.page {
+  max-width: 1550px;
+  background: rgb(201, 201, 214);
+}
+
+.top {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(119, 109, 106, 1) 1%,
+    rgba(201, 201, 214, 1) 100%
+  );
+  border-radius: 10px;
+}
+
+.navigation {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style-type: none;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-inline-start: 0em;
+}
+
+.item {
+  display: grid;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  align-self: center;
+  justify-self: center;
+  border: 10px solid;
+  border-color: transparent;
+  opacity: 0.6;
+}
+
+.item:hover {
+  border: 10px solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.item:active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+.item a {
+  font-size: 26px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation-item-choisen {
+  font-weight: 700;
+  border: 10px solid;
+  border-radius: 10px;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.content {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(2, minmax(400px, 750px));
+  gap: 1em;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.placement {
+  display: grid;
+  grid-template-rows: repeat(6, [row] 1fr);
+  background-image: url(/Images/background.jpg);
+  width: 100%;
+  height: 925px;
+  padding-right: 20px;
+  background-repeat: no-repeat;
+}
+
+.screen {
+  display: grid;
+  text-align: center;
+  width: 80%;
+  padding: 15px;
+  justify-self: center;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 0.8;
+  order: 3;
+}
+
+.screen p {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.calendarWrap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  order: 1;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column: span 5;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.calendarItem {
+  display: grid;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.calendar-item-link {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.calendar-item-link:hover {
+  transition: text-decoration 0.5s;
+  font-weight: bolder;
+}
+
+.calendar-item-link:active {
+  font-weight: bolder;
+  color: darkturquoise;
+}
+
+.calendar-item-link-choisen {
+  font-weight: bolder;
+  color: darkturquoise;
+}
+
+.btn-prevDay {
+  display: grid;
+  justify-content: center;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.btn-prevDay:active {
+  color: darkturquoise;
+}
+
+.btn-prevDay:hover {
+  border: 1px solid;
+}
+
+.btn-nextDay {
+  display: grid;
+  justify-content: center;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.btn-nextDay:active {
+  color: darkturquoise;
+}
+
+.btn-nextDay:hover {
+  border: 1px solid;
+}
+
+.timeWrap {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-color: rgba(0, 0, 0, 0.6);
+  order: 2;
+}
+
+.timeWrap-title {
+  font-size: 24px;
+  font-weight: bolder;
+  padding-left: 2em;
+  color: aliceblue;
+  letter-spacing: 4px;
+}
+
+.timeWrap-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  list-style-type: none;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-inline-start: 0px;
+}
+
+.timeItem {
+  display: grid;
+  justify-content: center;
+}
+
+.timeItem a {
+  font-size: 24px;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.timeItem a:hover {
+  border: 1px solid;
+  border-color: darkturquoise;
+}
+
+.timeItem a:active {
+  color: darkturquoise;
+}
+
+.hallStatus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  order: 5;
+}
+
+.seatsItem {
+  position: relative;
+  font-size: 22px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding: 40px;
+  text-align: center;
+}
+
+.seatsItem::before {
+  content: " ";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 10px;
+}
+
+.seatsAvailable::before {
+  background: grey;
+}
+
+.seatsTaken::before {
+  background: rgb(240, 57, 57);
+}
+
+.seatsSelected::before {
+  background: blue;
+}
+
+.seats {
+  display: grid;
+  grid-row: span 2;
+  grid-template-columns: repeat(10, 1fr);
+  min-width: 400px;
+  padding: 10px;
+  justify-self: center;
+  border: rgb(216, 208, 208) solid;
+  background-color: rgba(255, 255, 255, 0.6);
+  order: 4;
+}
+
+.seat {
+  align-self: center;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.seat_input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+}
+
+.seat_number {
+  position: relative;
+  z-index: 2;
+  top: 3px;
+  left: 4px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: rgb(95, 90, 90);
+  color: rgb(255, 255, 255);
+  transition: all ease-in-out 0.3s;
+}
+
+.seat_input:checked + .seat_number {
+  background: blue;
+  font-weight: bold;
+}
+
+.seat_input:disabled + .seat_number {
+  background: rgb(240, 57, 57);
+  color: rgb(33, 0, 118);
+  font-weight: bold;
+}
+
+.summary {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  background-image: url(/Images/back-2.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.summary p {
+  display: grid;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 40px;
+  color: aliceblue;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 420px) and (max-width: 920px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .summary {
+    display: none;
+  }
+}
