@@ -24,6 +24,7 @@ img {
 
   --Seat-notAvailable-bg-color: #444451;
   --Seat-selected-bg-color: #37e7f7;
+  --Seat-focused-bg-color: rgb(55, 192, 55);
   --Seat-available-bg-color: #ffffff;
   --Seat-width: 30px;
   --Seat-height: 25px;
@@ -41,6 +42,13 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .Main {
@@ -63,6 +71,10 @@ body {
 .Top_title {
   font-size: 1.3em;
   font-weight: 400;
+}
+
+.Middle {
+  flex-grow: 1;
 }
 
 .Hints_container {
@@ -158,6 +170,9 @@ body {
 .Seat_checkbox + .Seat_view:hover {
   cursor: pointer;
 }
+.Seat_checkbox:focus + .Seat_view {
+  background-color: var(--Seat-focused-bg-color);
+}
 .Seat_checkbox:checked + .Seat_view {
   background-color: var(--Seat-selected-bg-color);
 }
@@ -168,6 +183,9 @@ body {
   background-color: var(--Seat-notAvailable-bg-color);
 }
 
+.Seats {
+  border: none;
+}
 .Seats_row {
   display: flex;
   justify-content: center;
