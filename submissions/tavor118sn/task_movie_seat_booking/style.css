@@ -218,6 +218,7 @@
 
 .checkbox-input:disabled:hover + .hall-place-details {
   box-shadow: none;
+  cursor: not-allowed;
 }
 
 /* Emulate focus for label */
