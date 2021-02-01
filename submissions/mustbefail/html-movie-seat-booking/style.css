@@ -219,17 +219,21 @@ button:focus {
 }
 
 .seat input[type='checkbox'] {
-  opacity: 0;
+  opacity: 0; /*???checkboxes are visible in ios safari???*/
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+.seat {
+  margin: 2px;
+}
+
 .seat span:before {
   content: '';
   display: inline-block;
   width: 25px;
   height: 20px;
-  margin: 3px;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   -webkit-transition: background 0.1s ease;
@@ -250,6 +254,7 @@ input:focus + span:before {
 }
 
 .seat:not(.occupied):hover {
+  cursor: pointer;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
