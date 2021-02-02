@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Choose seats</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <a class="logo" href="#">Cinema</a>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#" class="navigation__link">Movies</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">Schedule</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <strong class="main__message">Book your ticket!</strong>
+      <article class="movie">
+        <div class="movie__column">
+          <h1 class="movie__title">Soul</h1>
+          <img class="movie__poster" src="assets/soul.jpg" alt="soul_poster"
+          srcset="
+          assets/soul_mobile.jpg 126w,
+          assets/soul_1440.jpg 260w,
+          assets/soul_4k.jpg 401w"
+          sizes="(max-width: 500px) 126px,
+            (max-width: 1440px) 260px,
+            400px"
+          >
+        </div>
+        <div class="movie__column">
+          <form action="#" class="schedule">
+            <h2 class="schedule__title">Choose date and time</h2>
+            <div class="schedule__date">
+              <label class="schedule__item">Mon
+                <input class="schedule__input input-hidden" type="radio" name="date" value="8" checked>
+                <span class="schedule__circle">8</span>
+              </label>
+              <label class="schedule__item">Tue
+                <input class="schedule__input input-hidden" type="radio" name="date" value="9">
+                <span class="schedule__circle">9</span>
+              </label>
+              <label class="schedule__item">Wed
+                <input class="schedule__input input-hidden" type="radio" name="date" value="10">
+                <span class="schedule__circle">10</span>
+              </label>
+              <label class="schedule__item">Thu
+                <input class="schedule__input input-hidden" type="radio" name="date" value="11">
+                <span class="schedule__circle">11</span>
+              </label>
+              <label class="schedule__item">Fri
+                <input class="schedule__input input-hidden" type="radio" name="date" value="12">
+                <span class="schedule__circle">12</span>
+              </label>
+            </div>
+            <div class="schedule__time">
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="10.00">
+                <span class="schedule__clock">10.00</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="12.45" checked>
+                <span class="schedule__clock">12.45</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="15.50">
+                <span class="schedule__clock">15.50</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="17.00">
+                <span class="schedule__clock">17.00</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="18.00">
+                <span class="schedule__clock">18.00</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="18.40">
+                <span class="schedule__clock">18.40</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="19.25">
+                <span class="schedule__clock">19.25</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="20.30">
+                <span class="schedule__clock">20.30</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="21.20">
+                <span class="schedule__clock">21.20</span>
+              </label>
+              <label class="schedule__item">
+                <input class="schedule__input input-hidden" type="radio" name="time" value="22.00">
+                <span class="schedule__clock">22.00</span>
+              </label>
+            </div>
+            <button type="submit" class="button">Confirm</button>
+          </form>
+        </div>
+      </article>
+      <section class="hall">
+        <h2 class="hall__title">Pick your seat</h2>
+        <p class="hall__screen">Screen</p>
+        <form action="#" class="seats">
+          <div class="seats__row">
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="1">
+                <span class="seats__square">1</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="2">
+                <span class="seats__square">2</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="3" disabled>
+                <span class="seats__square">3</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="4" disabled>
+                <span class="seats__square">4</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="5">
+                <span class="seats__square">5</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="6">
+                <span class="seats__square">6</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="7">
+                <span class="seats__square">7</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="8">
+                <span class="seats__square">8</span>
+              </label>
+            </div>
+          </div>
+          <div class="seats__row">
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="1">
+                <span class="seats__square">1</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="2">
+                <span class="seats__square">2</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="3">
+                <span class="seats__square">3</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="4">
+                <span class="seats__square">4</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="5" disabled>
+                <span class="seats__square">5</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="6" disabled>
+                <span class="seats__square">6</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="7">
+                <span class="seats__square">7</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="8">
+                <span class="seats__square">8</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="9">
+                <span class="seats__square">9</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="10" disabled>
+                <span class="seats__square">10</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="11">
+                <span class="seats__square">11</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="12">
+                <span class="seats__square">12</span>
+              </label>
+            </div>
+          </div>
+          <div class="seats__row">
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="1">
+                <span class="seats__square">1</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="2">
+                <span class="seats__square">2</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="3">
+                <span class="seats__square">3</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="4">
+                <span class="seats__square">4</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="5">
+                <span class="seats__square">5</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="6">
+                <span class="seats__square">6</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="7" disabled>
+                <span class="seats__square">7</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="8">
+                <span class="seats__square">8</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="9">
+                <span class="seats__square">9</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="10">
+                <span class="seats__square">10</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="11">
+                <span class="seats__square">11</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="12">
+                <span class="seats__square">12</span>
+              </label>
+            </div>
+          </div>
+          <div class="seats__row">
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="1" disabled>
+                <span class="seats__square">1</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="2" disabled>
+                <span class="seats__square">2</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="3">
+                <span class="seats__square">3</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="4">
+                <span class="seats__square">4</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="5">
+                <span class="seats__square">5</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="6">
+                <span class="seats__square">6</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="7">
+                <span class="seats__square">7</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="8">
+                <span class="seats__square">8</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="9">
+                <span class="seats__square">9</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="10">
+                <span class="seats__square">10</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="11">
+                <span class="seats__square">11</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="12">
+                <span class="seats__square">12</span>
+              </label>
+            </div>
+          </div>
+          <div class="seats__row">
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="1">
+                <span class="seats__square">1</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="2">
+                <span class="seats__square">2</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="3" disabled>
+                <span class="seats__square">3</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="4">
+                <span class="seats__square">4</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="5">
+                <span class="seats__square">5</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="6">
+                <span class="seats__square">6</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="7">
+                <span class="seats__square">7</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="8">
+                <span class="seats__square">8</span>
+              </label>
+            </div>
+            <div class="seats__column">
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="9">
+                <span class="seats__square">9</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="10">
+                <span class="seats__square">10</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="11">
+                <span class="seats__square">11</span>
+              </label>
+              <label class="seats__item">
+                <input class="seats__input input-hidden" type="checkbox" name="seat" value="12">
+                <span class="seats__square">12</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="seats__button button">Confirm</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">By <a class="footer__link" href="https://github.com/HannaSyn/">HannaSyn</a> for Kottans</p>
+    </div>
+  </footer>
+</body>
+</html>
