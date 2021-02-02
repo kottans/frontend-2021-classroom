@@ -1,11 +1,13 @@
 body {
   padding: 0;
   margin: 0;
+  width: 100vw;
   background-color: lightgray;
   box-sizing: border-box;
 }
 
 .seat {
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
 
@@ -13,12 +15,12 @@ body {
 }
 
 .seat_label {
-  display: block;
-  margin-top: 1px;
-  padding-top: 8px;
+  margin-top: 4px;
+  padding-top: 5px;
+  align-self: center;
 
-  width: 42px;
-  height: 40px;
+  width: 35px;
+  height: 33px;
 
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -36,9 +38,13 @@ body {
 
 .seat_control {
   position: absolute;
-  width: 45px;
-  height: 45px;
+  align-self: center;
 
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  outline: solid transparent;
   cursor: pointer;
 
   -moz-appearance: none;
@@ -66,16 +72,22 @@ body {
 }
 
 .seat_row {
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  gap: 9px;
 }
 
 .seat_container {
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
 }
 
 .selector-container {
@@ -92,19 +104,19 @@ body {
   }
 
   .seat_label {
-    padding-top: 5px;
+    padding-top: 3px;
 
     width: 32px;
     height: 30px;
 
-    font-size: 12px;
+    font-size: 13px;
   }
   .seat_row {
-    gap: 5px;
+    gap: 7px;
   }
 
   .seat_container {
-    gap: 5px;
+    gap: 7px;
   }
 }
 
@@ -116,7 +128,7 @@ body {
   }
 
   .seat_label {
-    padding-top: 5px;
+    padding-top: 2px;
 
     width: 22px;
     height: 20px;
