@@ -121,6 +121,10 @@ a {
     margin-right: 5px;
 }
 
+.raiting{
+    font-weight: 800;
+}
+
 .timeslot {
     padding: 20px 7vw;
     font-size: 26px;
