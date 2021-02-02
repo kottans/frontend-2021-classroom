@@ -32,7 +32,6 @@ body {
 
   background-color: green;
   outline: solid transparent;
-  cursor: pointer;
 }
 
 .seat_control {
@@ -40,12 +39,22 @@ body {
   width: 45px;
   height: 45px;
 
+  cursor: pointer;
+
   -moz-appearance: none;
   -webkit-appearance: none;
 }
 
 .seat_control:focus {
   outline: solid yellow;
+}
+
+.seat_control:hover {
+  outline: solid white;
+}
+
+.seat_control:disabled {
+  cursor: not-allowed;
 }
 
 .seat_control:checked + label.seat_label {
@@ -73,4 +82,52 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  .seat_control {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+  }
+
+  .seat_label {
+    padding-top: 5px;
+
+    width: 32px;
+    height: 30px;
+
+    font-size: 12px;
+  }
+  .seat_row {
+    gap: 5px;
+  }
+
+  .seat_container {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .seat_control {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+  }
+
+  .seat_label {
+    padding-top: 5px;
+
+    width: 22px;
+    height: 20px;
+
+    font-size: 10px;
+  }
+  .seat_row {
+    gap: 5px;
+  }
+
+  .seat_container {
+    gap: 5px;
+  }
 }
