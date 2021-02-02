@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint submissions/",
     "lint:write": "eslint --fix submissions/",
-    "prettier": "prettier --write \"submissions/**/*.js\""
+    "prettier": "prettier --write \"submissions/**\""
   },
   "repository": {
     "type": "git",
