@@ -1,0 +1,402 @@
+*, 
+*::after, 
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    background-color: #000;
+    color: #d951a0;
+}
+
+.logo__link-img {
+    width: 120px;
+}
+
+.logo__title {
+    margin: auto 10px;
+    letter-spacing: 17px;
+}
+
+nav.breadcrumb {
+    padding: 0.8em 1em;
+}
+
+nav.breadcrumb ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+nav.breadcrumb li {
+    display: inline;    
+}
+
+nav.breadcrumb li + li::before {
+    display: inline-block;
+    margin: 0 0.25em;
+    transform: rotate(15deg);
+    border-right: 0.1em solid currentColor;
+    height: 0.8em;
+    content: "";
+}
+
+.nav.breadcrumb a {
+    color: #000;
+}
+
+nav.breadcrumb [aria-current="page"] {
+    color: #d951a0;
+    font-weight: 700;
+    text-decoration: none;
+}
+  
+.container {
+    display: flex;
+    margin: auto 50px;
+    padding: 5px 30px;
+}
+
+.cinema {
+    width: 70%;
+}
+
+.tikets {
+    width: 30%;
+}
+
+.cinema-info {
+    display: flex;
+}
+
+.cinema-info__image {
+    height: 170px;
+}
+
+.cinema-info__description {
+    padding: 10px;
+}
+
+.description__title,
+.description__hall,
+.description__text {
+    margin: 5px;
+}
+
+.description__text {
+    display: flex;
+}
+
+.description__text svg {
+    height: 20px;
+    width: 20px;
+}
+
+.description__text span {
+    font-size: 17px;
+    line-height: 23px;
+    font-weight: 300;
+    margin-left: 8px;
+}
+
+.cinema-screen {
+    padding: 20px 100px;
+}
+
+.cinem-screen__title {
+    margin: 0;
+    text-align: center;
+}
+
+.hall__row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 14%;
+}
+
+.hall__row::before, .hall__row::after {
+    content: '';
+    position: absolute;
+    left: 60px;
+    top: 15px;
+    color: #ccc;
+}
+
+.row1::before {
+    content: "1";
+}
+
+.row2::before {
+    content: "2";
+}
+
+.row3::before {
+    content: "3";
+}
+
+.row4::before {
+    content: "4";
+}
+
+.row5::before {
+    content: "5";
+}
+
+.row6::before {
+    content: "6";
+}
+
+.row7::before {
+    content: "7";
+}
+
+.row8::before {
+    content: "8";
+}
+
+.row9::before {
+    content: "9";
+}
+
+.row10::before {
+    content: "10";
+}
+
+.row11::before {
+    content: "11";
+}
+
+.hall__row:last-child {
+    justify-content: space-around;
+}
+
+.hall__seat {
+    position: relative;
+    height: 36px;
+    width: 25px;
+    margin: 3px;
+}
+
+.hall__seat-data {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.hall__seat-inner {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    border: solid 1px;
+    border-radius: 3px;
+}
+
+.ordinary {
+    border-color: #6caadf;
+}
+
+.comfort {
+    border-color: crimson;
+}
+
+.special {
+    border-color:#6b98c0;
+    background-image: url('../images/special-seat.svg');
+    background-position-y: center;
+}
+
+.hall__seat-data:focus + .hall__seat-inner,
+.hall__seat-data:hover + .hall__seat-inner {
+    border-color: rgb(211, 49, 226);
+    box-shadow: 0 2px 10px rgb(217 81 160), 0 0px rgb(228 18 18 / 22%);
+}
+
+.hall__seat-data:checked ~ .ordinary {
+    background-color: #95c7f4;
+}
+
+.hall__seat-data:checked ~ .comfort {
+    background-color: #ff0000;
+}
+
+.hall__seat-data:checked ~ .special {
+    background-color: #f0f5f9;                                                                                                                                      
+}
+
+.tikets {
+    background-color: #e6e1e1;
+    border-left: #ccc;
+    padding: 20px;
+    height: 50%;
+}
+
+.tikets__wrap {
+    text-align: center;
+}
+
+@media(max-width: 1440px) {
+    .cinema-screen {
+        padding: 20px 50px;
+    }
+
+    .hall__row {
+        padding: 5px 9%;
+    }
+
+    .hall__row::before {
+        left: 30px;
+    }    
+}
+
+@media(max-width: 1024px) {
+    .container {
+        margin: 0px 30px;
+        padding: 0px 10px;
+    }
+
+    .cinema-screen {
+        padding: 10px;
+    }
+
+    .hall__row {        
+        padding: 5px 3%;
+    }
+
+    .hall__row::before {
+        left: 3px;
+    }
+
+    .tikets__wrap {
+        font-size: 14px;
+    }
+
+    .tikets__wrap-image {
+        height: 100px;
+    }
+} 
+
+@media(max-width: 800px) {
+    .container {
+        margin: 0px 15px;
+        padding: 0px;
+        flex-direction: column;
+    }
+
+    .description, .description__text span {
+        font-size: 15px;
+        line-height: 16px;
+    }
+    
+    .cinema-info__image {
+        height: 150px;
+    }
+
+    .cinema-info__description {
+        padding: 15px 5px;
+    }
+
+    .description__text svg {
+        height: 15px;
+        width: 15px;
+    }
+
+    .cinema, .tikets {
+        width: 100%;
+    }
+
+    .tikets {
+        display: none;
+    }
+} 
+
+@media(max-width: 460px) {
+    .logo__link-img {
+        width: 60px;
+    }
+
+    .logo__title {
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+
+    .container {
+        margin: 0px 8px;
+    }
+
+    nav.breadcrumb {
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .cinema, .tikets {
+        width: 100%;
+    }
+
+    .cinem-screen__title {
+        font-size: 14px;
+    }
+
+    .cinema-screen {
+        padding: 5px;
+    }
+
+    .hall__seat {
+        position: relative;
+        height: 22px;
+        width: 16px;
+        margin: 1px;
+    }
+
+    .hall__row::before {
+        left: -1px;
+        top: 5px;
+        font-size: 13px;
+    }
+} 
+
+
+@media(max-width: 320px) {
+    nav.breadcrumb {
+        font-size: 10px;
+    }
+
+    .description, .description__text span {
+        font-size: 12px;
+    }
+
+    .cinem-screen__title {
+        display: none;
+    }
+
+    .hall__seat {
+        height: 18px;
+        width: 12px;
+    }
+
+    .hall__row::before {
+        left: 7px;
+        top: 1px;
+        font-size: 9px;
+    }
+
+    .hall__row:last-child {
+        justify-content: center;
+    }
+} 
