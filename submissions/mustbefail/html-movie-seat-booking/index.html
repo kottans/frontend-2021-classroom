@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
     <title>Document</title>
     <link
       rel="stylesheet"
@@ -12,208 +12,216 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-        <section class="booking">
-          <div class="poster desctop">
-            <img src="https://www.themoviedb.org/t/p/original/89rjeJhduF2qT6TRrbJvVGEhBpX.jpg" alt="film poster">
-          </div>
-          <article class="movie-info">
-            <h1>The Devil All the Time</h1>
-            <p class="tagline">"Everyone ends up in
-              the same <br> damned place."
-            </p>
-            <div class="info-block">
-              <img src="https://www.themoviedb.org/t/p/original/89rjeJhduF2qT6TRrbJvVGEhBpX.jpg" alt="film poster">
-              <div>
-                <div class="rating"><div class="rating-badge">74</div><span>Viewers rating</span></div>
-                <span class="rate">R</span>
-                <span class="date">11/09/2020 (US)</span>
-                <span class="durotaiton">2h 18m </span>
-                <span class="genres">Crime, Drama, Thriller</span>
+      <div class="booking">
+        <div class="poster desktop">
+          <img
+            src="https://www.themoviedb.org/t/p/original/89rjeJhduF2qT6TRrbJvVGEhBpX.jpg"
+            alt="film poster"
+          />
+        </div>
+        <article class="movie-info">
+          <h1>The Devil All the Time</h1>
+          <p class="tagline">
+            "Everyone ends up in the same <br />
+            damned place."
+          </p>
+          <div class="info-block">
+            <img
+              src="https://www.themoviedb.org/t/p/original/89rjeJhduF2qT6TRrbJvVGEhBpX.jpg"
+              alt="film poster"
+            />
+            <div>
+              <div class="rating">
+                <div class="rating-badge">74</div>
+                <span>Viewers rating</span>
               </div>
-            </div>              
-              <p class="description">
-                In Knockemstiff, Ohio and its
-                neighboring backwoods, sinister characters converge around young
-                Arvin Russell as he fights the evil forces that threaten him and
-                his family. Antonio Campos Director, Screenplay Donald Ray Pollock
-                Novel Paulo Campos Screenplay
-                <div class="trailer">
-                    <button>Watch trailer</button>
-                </div>
-            </p>
-          </article>
-          <div class="hall-box">
-            <div class="legend">
-              <div class="description-block">
-                <div class="seat"></div>
-                <span>N/A</span>
-              </div>
-              <div class="description-block">
-                <div class="seat selected"></div>
-                <span>Selected</span>
-              </div>
-              <div class="description-block">
-                <div class="seat occupied"></div>
-                <span>Occupied</span>
-              </div>
-            </div>
-            <div class="screen-block">
-              <div class="screen"></div>
-            </div>
-            <div class="hall">
-              <form action="" id="hall">
-                <div class="row">
-                  <label class="seat">
-                    <input type="checkbox"  value="row 1 seat 1" aria-label="row 1 seat 1"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 1 seat 2" aria-label="row 1 seat 2"/>
-                    <span></span>
-                  </label>
-                  <label class="seat occupied">
-                    <input type="checkbox" disabled value="row 1 seat 3" aria-label="row 1 seat 3"/>
-                    <span></span>
-                  </label>
-                  <label class="seat occupied">
-                    <input type="checkbox" disabled value="row 1 seat 4" aria-label="row 1 seat 4"/>
-                    <span></span>
-                  </label>
-                  <label class="seat occupied">
-                    <input type="checkbox" disabled value="row 1 seat 5" aria-label="row 1 seat 5"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 1 seat 6" aria-label="row 1 seat 6"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 1 seat 7" aria-label="row 1 seat 7"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 1 seat 8" aria-label="row 1 seat 8"/>
-                    <span></span>
-                  </label>
-                </div>
-                <div class="row">
-                  <label class="seat">
-                    <input type="checkbox" value="row 2 seat 9" aria-label="row 2 seat 9"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 2 seat 10" aria-label="row 2 seat 10"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 2 seat 11" aria-label="row 2 seat 11"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 2 seat 12" aria-label="row 2 seat 12"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 2 seat 13" aria-label="row 2 seat 13"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 2 seat 14" aria-label="row 2 seat 14"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 2 seat 15" aria-label="row 2 seat 15"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 2 seat 16" aria-label="row 2 seat 16"/>
-                    <span></span>
-                  </label>
-                </div>
-                <div class="row">
-                  <label class="seat">
-                    <input type="checkbox" value="row 3 seat 17" aria-label="row 3 seat 17"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 3 seat 18" aria-label="row 3 seat 18"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 3 seat 19" aria-label="row 3 seat 19"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 3 seat 20" aria-label="row 3 seat 20"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 3 seat 21" aria-label="row 3 seat 21"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 3 seat 22" aria-label="row 3 seat 22"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 3 seat 23" aria-label="row 3 seat 23"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox" value="row 3 seat 24" aria-label="row 3 seat 8"/>
-                    <span></span>
-                  </label>
-                </div>
-                <div class="row">
-                  <label class="seat  occupied">
-                    <input type="checkbox" disabled value="row 4 seat 25" aria-label="row 4 seat 25"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 4 seat 26" aria-label="row 4 seat 26"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 4 seat 27" aria-label="row 4 seat 27"/>
-                    <span></span>
-                  </label>
-                  <label class="seat occupied">
-                    <input type="checkbox" disabled value="row 4 seat 28" aria-label="row 4 seat 28"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 4 seat 29" aria-label="row 4 seat 29"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 4 seat 30" aria-label="row 4 seat 30"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 4 seat 31" aria-label="row 4 seat 31"/>
-                    <span></span>
-                  </label>
-                  <label class="seat">
-                    <input type="checkbox"  value="row 4 seat 32" aria-label="row 4 seat 32"/>
-                    <span></span>
-                  </label>
-                </div>
-                <div class="add-to-cart-block">
-                  <p>You have selected * seats for a price of $*</p>
-                  <button form="hall">Add to cart</button>
-                </div>
-              </form>
+              <span class="rate tag">R</span>
+              <time class="tag">11/09/2020 (US)</time>
+              <time class="tag">2h 18m </time>
+              <span class="tag">Crime, Drama, Thriller</span>
             </div>
           </div>
-
-          </section>
+          <p class="description">
+            In Knockemstiff, Ohio and its neighboring backwoods, sinister
+            characters converge around young Arvin Russell as he fights the evil
+            forces that threaten him and his family. Antonio Campos Director,
+            Screenplay Donald Ray Pollock Novel Paulo Campos Screenplay
+          </p>
+          <div class="trailer">
+            <button>Watch trailer</button>
+          </div>
+        </article>
+        <div class="hall-box">
+          <div class="legend">
+            <div class="description-block">
+              <div class="seat"></div>
+              <span>N/A</span>
+            </div>
+            <div class="description-block">
+              <div class="seat selected"></div>
+              <span>Selected</span>
+            </div>
+            <div class="description-block">
+              <div class="seat occupied"></div>
+              <span>Occupied</span>
+            </div>
+          </div>
+          <div class="screen-block">
+            <div class="screen"></div>
+          </div>
+          <div class="hall">
+            <form action="#">
+              <div class="row">
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat occupied">
+                  <input type="checkbox" disabled />
+                  <span></span>
+                </label>
+                <label class="seat occupied">
+                  <input type="checkbox" disabled />
+                  <span></span>
+                </label>
+                <label class="seat occupied">
+                  <input type="checkbox" disabled />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="row">
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="row">
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="row">
+                <label class="seat occupied">
+                  <input type="checkbox" disabled />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat occupied">
+                  <input type="checkbox" disabled />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <label class="seat">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="add-to-cart-block">
+                <p>You have selected * seats for a price of $*</p>
+                <button type="submit">Add to cart</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
