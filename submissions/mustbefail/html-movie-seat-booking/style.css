@@ -238,7 +238,7 @@ button:focus {
 }
 
 input:focus + span:before {
-  background-color: #04d9ff;
+  background-color: #adadad;
 }
 
 .seat:not(.occupied):hover {
