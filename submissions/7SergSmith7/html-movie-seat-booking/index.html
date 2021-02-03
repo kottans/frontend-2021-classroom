@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Movie Seat Booking</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header__title">Movie Seat Booking</h1>
+    </header>
+    <main>
+      <section class="main__film-description">
+        <img
+          class="main__film-description__film-image"
+          src="soul_image.png"
+          alt="soul_image"
+        />
+        <h2 class="main__film-description__film-title">soul</h2>
+        <span class="main__film-description__film-year">2021</span>
+        <div class="main__film-description__selected-seats-info">
+          <h3 class="selected-seats-info__title">Selected Seats</h3>
+          <div class="selected-seats-info__seats-list">
+            <div class="selected-seats-info__seats-list__row">
+              <div class="seats-list__row__seats">
+                <div class="row__seats place">
+                  <span class="place__number">3</span>
+                  <span class="place__title">Place</span>
+                </div>
+                <div class="row__seats row-seats">
+                  <span class="row-seats__number">8</span>
+                  <span class="row-seats__title">Row</span>
+                </div>
+                <div class="row__seats seat-cost">
+                  <span class="seat-cost__number">$5</span>
+                  <span class="seat-cost__title">Cost</span>
+                </div>
+              </div>
+              <span class="row__delete-icon">X</span>
+            </div>
+            <div class="selected-seats-info__seats-list__row">
+              <div class="seats-list__row__seats">
+                <div class="row__seats place">
+                  <span class="place__number">3</span>
+                  <span class="place__title">Place</span>
+                </div>
+                <div class="row__seats row-seats">
+                  <span class="row-seats__number">8</span>
+                  <span class="row-seats__title">Row</span>
+                </div>
+                <div class="row__seats seat-cost">
+                  <span class="seat-cost__number">$5</span>
+                  <span class="seat-cost__title">Cost</span>
+                </div>
+              </div>
+              <span class="row__delete-icon">X</span>
+            </div>
+          </div>
+          <div class="selected-seats-info__total-cost-block">
+            <span class="selected-seats-info__total-cost-block__text"
+              >Final cost</span
+            >
+            <span class="selected-seats-info__total-cost-block__total-cost"
+              >$10</span
+            >
+          </div>
+          <a href="#" class="selected-seats-info__checkout-btn">checkout</a>
+        </div>
+      </section>
+      <section class="main__screen-and-seats-block">
+        <nav class="main__screen-and-seats-block__navigation">
+          <div class="main__screen-and-seats-block__navigation__date">
+            <ul class="navigation__date__list">
+              <li class="date__list__item navigation-arrow"><</li>
+              <li class="date__list__item selected-date">02 February</li>
+              <li class="date__list__item navigation-arrow">></li>
+            </ul>
+          </div>
+          <div class="main__screen-and-seats-block__navigation__time">
+            <ol class="navigation__time__list">
+              <li class="time__list__item">10:00</li>
+              <li class="time__list__item">11:20</li>
+              <li class="time__list__item selected-time">12:00</li>
+              <li class="time__list__item">16:00</li>
+              <li class="time__list__item">17:20</li>
+              <li class="time__list__item">19:00</li>
+            </ol>
+          </div>
+        </nav>
+        <div class="main__screen-and-seats-block__screen">
+          <h2 class="main__screen-and-seats-block__screen__title">Screen</h2>
+          <img
+            src="screen-image.png"
+            alt="screen-image"
+            class="main__screen-and-seats-block__screen__image"
+          />
+        </div>
+        <div class="main__screen-and-seats-block__seats-list">
+          <div class="seats-list__row">
+            <label
+              class="seats-list__row__item empty-place"
+              for="seat-1-1"
+            ></label>
+
+            <label
+              class="seats-list__row__item empty-place"
+              for="seat-1-2"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-3"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-1-3"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-4"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-1-4"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-5"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-1-5"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-6"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-1-6"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-7"
+            />
+            <label class="seats-list__row__item" for="seat-1-7"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-8"
+            />
+            <label class="seats-list__row__item" for="seat-1-8"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-9"
+            />
+            <label class="seats-list__row__item" for="seat-1-9"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-10"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-1-10"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-11"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-1-11"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-1-12"
+            />
+            <label class="seats-list__row__item" for="seat-1-12"></label>
+
+            <label
+              class="seats-list__row__item empty-place"
+              for="seat-1-13"
+            ></label>
+
+            <label
+              class="seats-list__row__item empty-place"
+              for="seat-1-14"
+            ></label>
+          </div>
+          <div class="seats-list__row">
+            <label
+              class="seats-list__row__item empty-place"
+              for="seat-2-1"
+            ></label>
+
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-2"
+            />
+            <label class="seats-list__row__item" for="seat-2-2"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-3"
+            />
+            <label class="seats-list__row__item" for="seat-2-3"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-4"
+            />
+            <label class="seats-list__row__item" for="seat-2-4"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-5"
+            />
+            <label class="seats-list__row__item" for="seat-2-5"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-6"
+            />
+            <label class="seats-list__row__item" for="seat-2-6"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-7"
+            />
+            <label class="seats-list__row__item" for="seat-2-7"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-8"
+            />
+            <label class="seats-list__row__item" for="seat-2-8"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-9"
+            />
+            <label class="seats-list__row__item" for="seat-2-9"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-10"
+            />
+            <label class="seats-list__row__item" for="seat-2-10"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-11"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-2-11"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-12"
+            />
+            <label class="seats-list__row__item" for="seat-2-12"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-2-13"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-2-13"
+            ></label>
+
+            <label
+              class="seats-list__row__item empty-place"
+              for="seat-2-14"
+            ></label>
+          </div>
+          <div class="seats-list__row">
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-1"
+            /><label class="seats-list__row__item" for="seat-3-1"></label>
+
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-2"
+            />
+            <label class="seats-list__row__item" for="seat-3-2"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-3"
+            />
+            <label class="seats-list__row__item" for="seat-3-3"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-4"
+            />
+            <label class="seats-list__row__item" for="seat-3-4"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-5"
+            />
+            <label class="seats-list__row__item" for="seat-3-5"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-6"
+            />
+            <label class="seats-list__row__item" for="seat-3-6"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-7"
+            />
+            <label class="seats-list__row__item" for="seat-3-7"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-8"
+            />
+            <label class="seats-list__row__item" for="seat-3-8"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-9"
+            />
+            <label class="seats-list__row__item" for="seat-3-9"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-10"
+            />
+            <label class="seats-list__row__item" for="seat-3-10"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-11"
+            />
+            <label class="seats-list__row__item" for="seat-3-11"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-12"
+            />
+            <label class="seats-list__row__item" for="seat-3-12"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-13"
+            />
+            <label class="seats-list__row__item" for="seat-3-13"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-3-14"
+            />
+            <label class="seats-list__row__item" for="seat-3-14"></label>
+          </div>
+          <div class="seats-list__row">
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-1"
+              disabled
+            /><label
+              class="seats-list__row__item unavailable-place"
+              for="seat-4-1"
+            ></label>
+
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-2"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-4-2"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-3"
+            />
+            <label class="seats-list__row__item" for="seat-4-3"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-4"
+            />
+            <label class="seats-list__row__item" for="seat-4-4"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-5"
+            />
+            <label class="seats-list__row__item" for="seat-4-5"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-6"
+            />
+            <label class="seats-list__row__item" for="seat-4-6"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-7"
+            />
+            <label class="seats-list__row__item" for="seat-4-7"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-8"
+            />
+            <label class="seats-list__row__item" for="seat-4-8"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-9"
+            />
+            <label class="seats-list__row__item" for="seat-4-9"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-10"
+            />
+            <label class="seats-list__row__item" for="seat-4-10"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-11"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-4-11"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-12"
+            />
+            <label class="seats-list__row__item" for="seat-4-12"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-13"
+            />
+            <label class="seats-list__row__item" for="seat-4-13"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-4-14"
+            />
+            <label class="seats-list__row__item" for="seat-4-14"></label>
+          </div>
+          <div class="seats-list__row">
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-1"
+            /><label class="seats-list__row__item" for="seat-5-1"></label>
+
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-2"
+            />
+            <label class="seats-list__row__item" for="seat-5-2"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-3"
+            />
+            <label class="seats-list__row__item" for="seat-5-3"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-4"
+            />
+            <label class="seats-list__row__item" for="seat-5-4"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-5"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-5-5"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-6"
+            />
+            <label class="seats-list__row__item" for="seat-5-6"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-7"
+            />
+            <label class="seats-list__row__item" for="seat-5-7"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-8"
+            />
+            <label class="seats-list__row__item" for="seat-5-8"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-9"
+            />
+            <label class="seats-list__row__item" for="seat-5-9"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-10"
+            />
+            <label class="seats-list__row__item" for="seat-5-10"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-11"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-5-11"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-12"
+            />
+            <label class="seats-list__row__item" for="seat-5-12"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-13"
+            />
+            <label class="seats-list__row__item" for="seat-5-13"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-5-14"
+            />
+            <label class="seats-list__row__item" for="seat-5-14"></label>
+          </div>
+          <div class="seats-list__row">
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-1"
+            /><label class="seats-list__row__item" for="seat-6-1"></label>
+
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-2"
+            />
+            <label class="seats-list__row__item" for="seat-6-2"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-3"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-6-3"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-4"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-6-4"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-5"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-6-5"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-6"
+              disabled
+            />
+            <label
+              class="seats-list__row__item unavailable-place"
+              for="seat-6-6"
+            ></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-7"
+            />
+            <label class="seats-list__row__item" for="seat-6-7"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-8"
+            />
+            <label class="seats-list__row__item" for="seat-6-8"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-9"
+            />
+            <label class="seats-list__row__item" for="seat-6-9"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-10"
+            />
+            <label class="seats-list__row__item" for="seat-6-10"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-11"
+            />
+            <label class="seats-list__row__item" for="seat-6-11"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-12"
+            />
+            <label class="seats-list__row__item" for="seat-6-12"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-13"
+            />
+            <label class="seats-list__row__item" for="seat-6-13"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-6-14"
+            />
+            <label class="seats-list__row__item" for="seat-6-14"></label>
+          </div>
+          <div class="seats-list__row">
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-1"
+            /><label class="seats-list__row__item" for="seat-7-1"></label>
+
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-2"
+            />
+            <label class="seats-list__row__item" for="seat-7-2"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-3"
+            />
+            <label class="seats-list__row__item" for="seat-7-3"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-4"
+            />
+            <label class="seats-list__row__item" for="seat-7-4"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-5"
+            />
+            <label class="seats-list__row__item" for="seat-7-5"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-6"
+            />
+            <label class="seats-list__row__item" for="seat-7-6"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-7"
+            />
+            <label class="seats-list__row__item" for="seat-7-7"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-8"
+            />
+            <label class="seats-list__row__item" for="seat-7-8"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-9"
+            />
+            <label class="seats-list__row__item" for="seat-7-9"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-10"
+            />
+            <label class="seats-list__row__item" for="seat-7-10"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-11"
+            />
+            <label class="seats-list__row__item" for="seat-7-11"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-12"
+            />
+            <label class="seats-list__row__item" for="seat-7-12"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-13"
+            />
+            <label class="seats-list__row__item" for="seat-7-13"></label>
+            <input
+              type="checkbox"
+              class="seats-list__row__input"
+              id="seat-7-14"
+            />
+            <label class="seats-list__row__item" for="seat-7-14"></label>
+          </div>
+        </div>
+        <div class="main__screen-and-seats-block__info">
+          <div class="main__screen-and-seats-block__info__free-place">
+            <span class="info__place-box free"></span
+            ><span class="info__definition">Free</span>
+          </div>
+          <div class="main__screen-and-seats-block__info__taken-place">
+            <span class="info__place-box taken"></span
+            ><span class="info__definition">Taken</span>
+          </div>
+          <div class="main__screen-and-seats-block__info__selected-place">
+            <span class="info__place-box selected"></span
+            ><span class="info__definition">Selected</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
