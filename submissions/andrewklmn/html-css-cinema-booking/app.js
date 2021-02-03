@@ -39,7 +39,10 @@ const init = (seats) => {
     seatContainer.appendChild(seatRow);
   });
 
-  /* seatContainer.innerHTML += '<button class="book_button" type="submit">Buy tickets</button>'; */
+  seatContainer.innerHTML += `
+    <button class="book_button" type="submit">
+      Buy tickets
+    </button>`;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
