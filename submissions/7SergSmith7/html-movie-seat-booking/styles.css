@@ -331,9 +331,12 @@ main {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 450px) {
   body {
-    width: 68 0px;
+    width: 350px;
+  }
+  section {
+    margin: 0 0;
   }
   .main__film-description__film-image {
     width: 130px;
@@ -356,5 +359,12 @@ main {
   }
   .selected-seats-info__checkout-btn {
     margin-bottom: 30px;
+  }
+  .main__screen-and-seats-block {
+    width: 300px;
+  }
+  .main__film-description {
+    width: 300px;
+    padding: 0 30px;
   }
 }
