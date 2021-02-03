@@ -4,35 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Ticket booking form</title>
   </head>
   <body>
     <header>
       <nav>
-        <a href=""><img src="" alt="Logo of cinema"></a>
-        <ul>
-          <li>Item1</li>
-          <li>Item2</li>
-          <li>Item3</li>
-          <li>Item4</li>
-        </ul>
+        <a href=""><img class="logo" src="img/logo.png" alt="Logo of cinema"></a>
+        <ol class="menu">
+          <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
+          <li><a href="index.html" target="_blank" rel="noopener noreferrer">About</a></li>
+          <li><a href="index.html" target="_blank" rel="noopener noreferrer">Contacts</a></li>
+        </ol>
       </nav>
     </header>
     <main>
-      <h1>Cinema ticket booking service</h1>      
-      <section class="screen">
-        <h2>Screen side</h2>
-        <img src="img/screen.svg" alt="Schematic image of the cinema screen">
-      </section>
-      <section class="selector-container">
-        <h2>Select seats for booking:</h2>
-        <form class="seat_container" action="index.html" method="POST" autocomplete="off"></form>
+      <aside>
+        <img class="poster" src="img/poster_1200x1200.jpg" alt="Poster about INTERSTELLAR movie">
+      </aside>
+      <section class="interactive">
+        <h1 class="hidden">Ticket booking form</h1>      
+        <section class="screen">
+          <h2 class="hidden">Screen wall</h2>
+          <img class="screen" src="img/screen.svg" alt="Schematic image of the cinema screen">
+        </section>
+        <section class="selector-container">
+          <h2 class="hidden">Choose a seat from seven rows of seat for booking:</h2>
+          <form class="seat_container" action="index.html" method="POST" autocomplete="off"></form>
+        </section>
       </section>
     </main>
-    <aside>
-      Summary:
-    </aside>
-    <footer></footer>
+    <footer>Copyright © 2021 Cinema company. All Rights Reserved</footer>
     <script src="app.js"></script>
   </body>
 </html>
