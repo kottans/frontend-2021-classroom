@@ -306,9 +306,19 @@ h1 {
 }
 
 .radio-box {
+  position: absolute;
   appearance: none;
   -webkit-appearance: none;
   position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .input-label {
@@ -400,9 +410,16 @@ h1 {
 }
 
 .sit-check {
+  position: absolute;
   appearance: none;
   -webkit-appearance: none;
-  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .sit-text {
@@ -619,21 +636,31 @@ input:focus + .sit-text {
 
 @media (max-width: 530px) {
   header {
+    height: 50px;
     position: sticky;
     top: 0px;
     z-index: 2000;
   }
 
+  .settings-buttons-link {
+    height: 50px;
+    width: 50px;
+  }
+
+  .information h1 {
+    font-size: 30px;
+  }
+
   .sit-text {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    line-height: 30px;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    line-height: 25px;
   }
 
   .sit-check:before {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .sit-text:hover {
@@ -650,10 +677,23 @@ input:focus + .sit-text {
   }
 
   .path-link {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .path-link:before {
-    top: 20px;
+    top: 18px;
+  }
+
+  .row-number {
+    font-size: 15px;
+  }
+
+  .hall-row:nth-child(2n) {
+    height: 40px;
+    background-color: white;
+  }
+
+  .hall-row {
+    padding: 0px;
   }
 }
