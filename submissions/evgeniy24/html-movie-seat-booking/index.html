@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/media.css" />
+    <title>Movie-seat-booking</title>
+  </head>
+  <body>
+    <div class="main-wrap">
+      <header>
+        <h1 class="movie-title">Dune (2021)</h1>
+        <fieldset class="rating">
+          <legend class="rating__caption">Rating</legend>
+          <div class="rating__group">
+            <input
+              class="rating__star"
+              type="radio"
+              name="film-rating"
+              value="1"
+              aria-label="awful"
+            />
+            <input
+              class="rating__star"
+              type="radio"
+              name="film-rating"
+              value="2"
+              aria-label="passably"
+            />
+            <input
+              class="rating__star"
+              type="radio"
+              name="film-rating"
+              value="3"
+              aria-label="Normal"
+            />
+            <input
+              class="rating__star"
+              type="radio"
+              name="film-rating"
+              value="4"
+              aria-label="Nice"
+            />
+            <input
+              class="rating__star"
+              type="radio"
+              name="film-rating"
+              value="5"
+              aria-label="Perfect"
+            />
+          </div>
+          <div class="rating-counter">224 reviews</div>
+        </fieldset>
+      </header>
+      <main>
+        <aside class="film-cover">
+          <picture class="film-poster">
+            <source type="image/avif" srcset="./img/dune-main-800.avif" />
+            <source
+              media="(min-width: 320px) and (max-width: 768)"
+              srcset="./img/dune-main-320.jpg"
+            />
+            <img src="./img/dune-main-800.jpg" alt="Dune 2021 film" />
+          </picture>
+        </aside>
+        <div class="booking-wrap">
+          <section class="session-date">
+            <ol class="date__list">
+              <li class="date__item"><a href="">1 MON</a></li>
+              <li class="date__item item--active"><a href="">2 TUE</a></li>
+              <li class="date__item"><a href="">3 WED</a></li>
+              <li class="date__item"><a href="">4 THU</a></li>
+              <li class="date__item"><a href="">5 FRI</a></li>
+              <li class="date__item"><a href="">6 SAT</a></li>
+              <li class="date__item"><a href="">5 SUN</a></li>
+            </ol>
+          </section>
+          <section class="session-time">
+            <ol class="time__list">
+              <li class="time__item"><a href="">11:00</a></li>
+              <li class="time__item"><a href="">15:00</a></li>
+              <li class="time__item"><a href="">17:30</a></li>
+              <li class="time__item item--active"><a href="">19:30</a></li>
+              <li class="time__item"><a href="">22:00</a></li>
+            </ol>
+          </section>
+          <section class="cinema-hall">
+            <img
+              class="cinema-screen"
+              src="./img/main-screen.svg"
+              alt="cinema screen"
+            />
+            <form action="">
+              <div class="seats-grid">
+                <ul class="row-number">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                </ul>
+                <ul class="left-sector">
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" disabled />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                </ul>
+                <ul class="center">
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" disabled />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" disabled />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" disabled />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                </ul>
+                <ul class="right-sector">
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" disabled />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" />
+                    </label>
+                  </li>
+                </ul>
+                <ul class="row-number">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                </ul>
+              </div>
+            </form>
+          </section>
+          <button class="booking__button">BOOK NOW</button>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>
