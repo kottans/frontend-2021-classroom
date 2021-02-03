@@ -20,7 +20,7 @@ header {
 }
 
 .logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   text-decoration: none;
   color: teal;
   font-weight: 300;
@@ -54,7 +54,7 @@ header {
   position: relative;
   padding: 15px;
   font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   color: grey;
 }
@@ -64,7 +64,7 @@ header {
 }
 
 .path-link:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 7px;
@@ -100,30 +100,30 @@ header {
 }
 
 .settings-buttons-link.profile {
-  background-image: url('assets/user-circle-solid-teal.svg');
+  background-image: url("assets/user-circle-solid-teal.svg");
 }
 
 .settings-buttons-link.sign-out {
-  background-image: url('assets/sign-out-alt-solid-red.svg');
+  background-image: url("assets/sign-out-alt-solid-red.svg");
 }
 
 .settings-buttons-link.settings {
-  background-image: url('assets/cog-solid-teal.svg');
+  background-image: url("assets/cog-solid-teal.svg");
 }
 
 .settings-buttons-link.profile:hover {
   background-color: teal;
-  background-image: url('assets/user-circle-solid-white.svg');
+  background-image: url("assets/user-circle-solid-white.svg");
 }
 
 .settings-buttons-link.sign-out:hover {
   background-color: #ff4545;
-  background-image: url('assets/sign-out-alt-solid-white.svg');
+  background-image: url("assets/sign-out-alt-solid-white.svg");
 }
 
 .settings-buttons-link.settings:hover {
   background-color: teal;
-  background-image: url('assets/cog-solid-white.svg');
+  background-image: url("assets/cog-solid-white.svg");
 }
 
 main {
@@ -163,7 +163,7 @@ main {
 .poster h3 a {
   color: teal;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 30px;
   font-weight: 300;
 }
@@ -178,7 +178,7 @@ main {
 .adv-info {
   order: 3;
   padding: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .adv-poster-container img {
@@ -209,7 +209,7 @@ main {
 }
 
 .tickets h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: teal;
   font-size: 30px;
   font-weight: 400;
@@ -221,7 +221,7 @@ main {
   padding: 5px;
   background: teal;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   justify-content: space-between;
 }
 
@@ -237,7 +237,7 @@ main {
   padding: 5px;
   display: flex;
   justify-content: space-between;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .check ul li:nth-child(2n) {
@@ -251,7 +251,7 @@ main {
   padding: 10px;
   margin-top: 10px;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 25px;
   border-radius: 15px;
@@ -266,7 +266,7 @@ main {
 }
 
 .other-films {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 35px;
   font-weight: 600;
   margin-top: 20px;
@@ -278,7 +278,7 @@ main {
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 45px;
   margin: 10px;
 }
@@ -293,7 +293,7 @@ h1 {
 }
 
 .description {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 25px;
   text-align: justify;
 }
@@ -313,7 +313,7 @@ h1 {
 
 .input-label {
   padding: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: teal;
   cursor: pointer;
@@ -390,7 +390,7 @@ h1 {
 .screen-label {
   text-align: center;
   font-size: 30px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: teal;
   font-weight: 600;
 }
@@ -408,7 +408,7 @@ h1 {
 .sit-text {
   line-height: 40px;
   font-size: 25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 800;
   color: teal;
   cursor: pointer;
@@ -429,7 +429,7 @@ h1 {
 
 .sit-check:before {
   display: block;
-  content: '';
+  content: "";
   background: grey;
   width: 40px;
   height: 40px;
@@ -460,5 +460,200 @@ h1 {
   padding: 10px;
   color: grey;
   font-size: 25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+footer {
+  background: black;
+  width: 100%;
+}
+
+input:focus + .sit-text {
+  outline: 1px solid black;
+}
+
+@media (max-width: 1850px) {
+  .advertisement {
+    width: 200px;
+    margin: 20px;
+  }
+
+  .poster {
+    width: 100%;
+  }
+
+  .tickets-container {
+    width: 200px;
+  }
+
+  .tickets {
+    width: 100%;
+  }
+
+  .tickets h2 {
+    font-size: 20px;
+  }
+
+  .buy-tickets {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .film-poster {
+    min-width: 200px;
+  }
+
+  .film-poster img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .sit-text {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .sit-check:before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .row-number {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1060px) {
+  header {
+    height: 70px;
+  }
+
+  .logo {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .settings-buttons-link {
+    width: 70px;
+    height: 70px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hall {
+    order: 1;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sit-text {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .sit-check:before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tickets {
+    margin: 0px;
+  }
+
+  .tickets-container {
+    order: 2;
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .buy-tickets {
+    width: 20%;
+  }
+
+  .advertisement {
+    order: 3;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .poster {
+    width: 300px;
+  }
+}
+
+@media (max-width: 750px) {
+  .about-film {
+    flex-direction: column;
+  }
+
+  .sits-buttons {
+    width: 100%;
+  }
+
+  .advertisement {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .poster {
+    width: 80%;
+    min-height: 500px;
+  }
+
+  .adv-poster-container img {
+    top: -20%;
+  }
+}
+
+@media (max-width: 530px) {
+  header {
+    position: sticky;
+    top: 0px;
+    z-index: 2000;
+  }
+
+  .sit-text {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .sit-check:before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .sit-text:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .buy-tickets {
+    width: 200px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .path-link {
+    font-size: 15px;
+  }
+
+  .path-link:before {
+    top: 20px;
+  }
 }
