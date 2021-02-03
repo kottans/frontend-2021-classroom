@@ -21,18 +21,25 @@ const init = (seats) => {
       const seatElement = document.createElement('article');
       const s = seatIndex + 1;
       const d = seat === BOOKED ? 'disabled' : '';
-
+      const t = seat === BOOKED ? 'Taken!' : `row #${r}, seat #${s}`;
       seatElement.classList.add('seat');
       seatElement.setAttribute('role', 'none');
       seatElement.innerHTML = `
         <input 
-            class="seat_control" 
-            type="checkbox"
-            id="seat_${r}_${s}" 
-            name="seat_${r}_${s}" 
-            aria-label="row${r}, seat${s}"
-            value="booked" ${d}>
-        <label class="seat_label" aria-hidden="true" for="seat_${r}_${s}">${s}</label>
+          class="seat_control" 
+          type="checkbox"
+          id="seat_${r}_${s}" 
+          name="seat_${r}_${s}" 
+          aria-label="row${r}, seat${s}"
+          value="booked" ${d}>
+        <label 
+          class="seat_label" 
+          aria-hidden="true" 
+          for="seat_${r}_${s}"
+          title="${t}"
+        >
+          ${s}
+        </label>
       `;
       seatRow.appendChild(seatElement);
     });
@@ -41,7 +48,7 @@ const init = (seats) => {
 
   seatContainer.innerHTML += `
     <button class="book_button" type="submit">
-      Buy tickets
+      Book now
     </button>`;
 };
 
