@@ -18,17 +18,71 @@
       </nav>
     </header>
     <main>
+      <aside class="poster">
+        <img class="poster_image" src="img/banner-horizontal.jpg" alt="Poster of selected movie">
+        <h3>Interstellar (2014)</h3>
+        <p class="about">
+          In Earth's future, a global crop blight and second Dust Bowl are slowly 
+          rendering the planet uninhabitable. Professor Brand (Michael Caine), 
+          a brilliant NASA physicist, is working on plans to save mankind by 
+          transporting Earth's population to a new home via a wormhole. 
+          But first, Brand must send former NASA pilot Cooper (Matthew McConaughey) 
+          and a team of researchers through the wormhole and across the galaxy 
+          to find out which of three planets could be mankind's new home. 
+        </p>
+        <hr>
+        <p class="crew">
+          <strong>Genre:</strong> sci fi, action, adventure <br>
+          <strong>Original Language:</strong> English <br>
+          <strong>Director:</strong> Christopher Nolan <br>
+          <strong>Director:</strong> Jonathan Nolan, Christopher Nolan <br>
+          <strong>Cast:</strong> Matthew McConaughey, Anne Hathaway, Jessica Chastain and others
+        </p> 
+      </aside>
       <section class="interactive">
         <h1 class="hidden">Ticket booking form</h1>      
-        <section class="screen">
-          <h2 class="hidden">Screen wall</h2>
-          <img class="screen" src="img/screen.svg" alt="Schematic image of the cinema screen">
-        </section>
-        <section class="selector-container">
-          <h4>Choose your seats:</h2>
-          <form class="seat_container" action="index.html" method="POST" autocomplete="off"></form>
-        </section>
+        <form class="booking_form" action="index.html" method="POST" autocomplete="off">
+          <section class="date_selector">
+            <h4>Available dates:</h4>
+            <input class="checkbox_control disappearanced" type="radio" name="show_date" id="show_date1" value="08.02.21" checked>
+            <label class="checkbox_label" for="show_date1">08.02.21</label>
+            <input class="checkbox_control disappearanced" type="radio" name="show_date" id="show_date2" value="09.02.21">
+            <label class="checkbox_label" for="show_date2">09.02.21</label>
+            <input class="checkbox_control disappearanced" type="radio" name="show_date" id="show_date3" value="10.02.21">
+            <label class="checkbox_label" for="show_date3">10.02.21</label>          
+            <input class="checkbox_control disappearanced" type="radio" name="show_date" id="show_date4" value="11.02.21">
+            <label class="checkbox_label" for="show_date4">11.02.21</label>          
+          </section>
+          <section class="time_selector">
+            <h4>Show time:</h4>
+              <input class="checkbox_control disappearanced" type="radio" name="show_time" id="show_time1" value="09:00" checked>
+              <label class="checkbox_label" for="show_time1">09:00</label>
+              <input class="checkbox_control disappearanced" type="radio" name="show_time" id="show_time2" value="11:00" disabled>
+              <label class="checkbox_label" for="show_time2">11:00</label>
+              <input class="checkbox_control disappearanced" type="radio" name="show_time" id="show_time3" value="13:00">
+              <label class="checkbox_label" for="show_time3">13:00</label>
+              <input class="checkbox_control disappearanced" type="radio" name="show_time" id="show_time4" value="15:00">
+              <label class="checkbox_label" for="show_time4">15:00</label>
+              <input class="checkbox_control disappearanced" type="radio" name="show_time" id="show_time5" value="17:00">
+              <label class="checkbox_label" for="show_time5">17:00</label>
+          </section>
+          <section class="screen">
+            <h2 class="hidden">Screen wall</h2>
+            <svg width="260" height="40" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 30 Q 130 10 260 30" stroke="#0AF" stroke-width="6" fill="transparent"/>
+            </svg>
+          </section>
+          <section class="seat_set">
+            <h4>Choose your seats:</h2>
+          </section>
+          <button class="book_button" type="submit">
+            Buy now
+          </button>
+        </form>
       </section>
+      <aside class="summary_info">
+        <h4>Your order:</h4>
+      </aside>
     </main>
     <footer>Copyright © 2021 Cinema company. All Rights Reserved</footer>
     <script src="app.js"></script>

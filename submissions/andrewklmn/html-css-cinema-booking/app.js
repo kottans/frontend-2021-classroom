@@ -1,6 +1,6 @@
 const FREE = 0;
 const BOOKED = 1;
-const seatContainer = document.querySelector('.seat_container');
+const seatContainer = document.querySelector('.seat_set');
 
 const seatInitialSet = [
   [FREE, BOOKED, BOOKED, BOOKED, FREE, FREE, FREE],
@@ -26,7 +26,7 @@ const init = (seats) => {
       seatElement.setAttribute('role', 'none');
       seatElement.innerHTML = `
         <input 
-          class="seat_control" 
+          class="seat_control disappearanced" 
           type="checkbox"
           id="seat_${r}_${s}" 
           name="seat_${r}_${s}" 
@@ -45,11 +45,12 @@ const init = (seats) => {
     });
     seatContainer.appendChild(seatRow);
   });
-
+  /*
   seatContainer.innerHTML += `
     <button class="book_button" type="submit">
       Book now
     </button>`;
+  */
 };
 
 document.addEventListener('DOMContentLoaded', () => {

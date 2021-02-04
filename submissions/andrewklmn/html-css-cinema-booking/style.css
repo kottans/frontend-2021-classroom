@@ -10,11 +10,16 @@ body {
   text-align: center;
 }
 
-h4 {
-  margin: 0;
-  padding: 0;
+h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
 
-  font-size: 1.6vw;
+h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  font-size: 16px;
   color: #888;
 }
 
@@ -29,7 +34,7 @@ header {
 
 .logo {
   width: 80px;
-  height: auto;
+  height: 57px;
 }
 
 nav {
@@ -64,15 +69,14 @@ nav > ol {
 main {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: stretch;
 
-  margin-top: 65px;
-  margin-bottom: 35px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  margin-top: 61px;
 
-  max-width: 1000px;
+  width: 100%;
+  height: calc(100vh - 78px);
 
   background-color: white;
 }
@@ -81,27 +85,121 @@ main {
   display: none;
 }
 
+.disappearanced {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+
+  font-size: 12px;
+
+  width: 45%;
+}
+
+.poster_image {
+  width: 100%;
+}
+
+.poster > .about {
+  margin: 0;
+  padding: 10px;
+
+  text-align: justify;
+}
+
+.poster > .crew {
+  margin: 0;
+  padding: 10px;
+
+  text-align: center;
+}
+
+.poster hr {
+  width: 100%;
+}
+
 .interactive {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  width: 100%;
+  width: 35%;
+  height: 100%;
+}
+
+.summary_info {
+  width: 20%;
 }
 
 .screen {
-  width: 60%;
+  margin-top: 10px;
+  width: 100%;
 }
 
-.seat_container {
+.booking_form {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  justify-content: space-around;
   align-items: center;
 
+  width: 95%;
+  min-width: 200px;
+  max-width: 450px;
+
+  height: 100%;
+}
+
+.checkbox_control {
+  position: absolute;
+}
+
+.checkbox_label {
+  display: inline-table;
+  padding: 5px;
+  border: solid 3px white;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+
+  background-color: green;
+  color: white;
+
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.checkbox_label:hover {
+  border: solid 3px yellow;
+}
+
+.checkbox_control:focus + .checkbox_label {
+  border: solid 3px cyan;
+}
+
+.checkbox_control:disabled + .checkbox_label {
+  background-color: gray;
+}
+
+.checkbox_control:active + .checkbox_label {
+  border: solid 3px yellow;
+}
+
+.checkbox_control:checked + .checkbox_label {
+  background-color: red;
+  color: white;
+}
+
+.seat_set {
   width: 100%;
-  max-width: 500px;
 }
 
 .seat_row {
@@ -111,8 +209,10 @@ main {
   align-items: center;
   flex-wrap: nowrap;
 
-  width: 40vw;
-  height: 4vw;
+  width: 95%;
+  height: calc(100vh / 15);
+  min-height: 25px;
+  max-height: 40px;
 }
 
 .seat {
@@ -121,18 +221,15 @@ main {
   flex-direction: column;
   align-items: stretch;
 
-  width: 8%;
+  width: 9%;
   height: 100%;
-  max-height: 50px;
 
-  font-size: 1.4vw;
+  font-size: 14px;
 }
 
 .seat_label {
-  margin-top: 4px;
+  padding-top: 4px;
   align-self: center;
-
-  padding-top: 0.6vw;
 
   width: 80%;
   height: 100%;
@@ -160,22 +257,22 @@ main {
 
   border: none;
   outline: solid transparent;
-
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
 }
 
-.seat_control:focus + label.seat_label {
+.seat_control:focus + .seat_label {
   border: solid 3px cyan;
 }
 
-.seat_control:disabled + label.seat_label {
+.seat_control:disabled + .seat_label {
   cursor: not-allowed;
 }
 
-.seat_control:checked + label.seat_label {
+.seat_control:checked + .seat_label {
   background-color: red;
+}
+
+.seat_label:hover {
+  border: solid 3px yellow;
 }
 
 .seat_control:disabled + label.seat_label {
@@ -192,81 +289,44 @@ main {
 
 .book_button {
   height: 44px;
-  width: 200px;
+  width: 70%;
 
   margin-top: 10px;
   margin-bottom: 10px;
 
   font-weight: bold;
   color: white;
-  background-color: #090;
+  background-color: #f60;
 
   border-radius: 20px;
+  cursor: pointer;
+}
+.book_button:hover {
+  background-color: orangered;
 }
 
 footer {
   display: block;
   position: fixed;
   bottom: 0;
-  padding-top: 10px;
-
   width: 100%;
-
+  height: 17px;
   color: lightgray;
   background-color: #343434;
 
   font-size: 13px;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 800px) {
   main {
     flex-direction: column;
+    height: auto;
+    justify-content: start;
   }
-
-  h4 {
-    font-size: 4vw;
-  }
-
-  .seat_row {
-    width: 95vw;
-    height: 7vw;
-  }
-
-  .seat {
-    font-size: 2.5vw;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  h4 {
-    font-size: 4vw;
-  }
-
-  .seat_row {
-    width: 90vw;
-    height: 8vw;
-  }
-
-  .seat {
-    font-size: 3vw;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  h4 {
-    font-size: 6vw;
-  }
-
-  .seat_row {
+  .poster,
+  .middle,
+  .interactive {
     width: 100vw;
-    height: 9vw;
-  }
-
-  .seat {
-    font-size: 4vw;
-  }
-
-  footer {
-    font-size: 10px;
+    height: auto;
   }
 }
