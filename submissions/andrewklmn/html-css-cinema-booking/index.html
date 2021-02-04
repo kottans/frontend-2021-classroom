@@ -19,7 +19,12 @@
     </header>
     <main aria-label="Main area of booking form">
       <aside class="poster" aria-label="Poster about movie">
-        <img class="poster_image" src="img/banner-horizontal.jpg" alt="Poster of selected movie">
+        <img class="poster_image" 
+              srcset="img/banner-horizontal_480w.jpg 480w,
+                      img/banner-horizontal_992w.jpg 992w"
+              sizes="(max-width: 500px) 480px, 992px"
+              src="img/banner-horizontal.jpg"
+              alt="Poster of selected movie">
         <h3>Interstellar (2014)</h3>
         <p class="about">
           In Earth's future, a global crop blight and second Dust Bowl are slowly 
