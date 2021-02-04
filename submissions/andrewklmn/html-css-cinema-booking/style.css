@@ -258,6 +258,11 @@ main {
   border: solid 3px #ffffff;
   background-color: green;
 
+  background-image: url('img/seat_template.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
   cursor: pointer;
 }
 
