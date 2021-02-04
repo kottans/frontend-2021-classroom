@@ -1,11 +1,7 @@
-html {
-  display: grid;
-  justify-content: center;
-}
-
-.page {
-  max-width: 1550px;
+.container {
+  max-width: 1500px;
   background: rgb(201, 201, 214);
+  margin: 0 auto;
 }
 
 .top {
@@ -23,7 +19,7 @@ html {
   margin-right: 0.5em;
 }
 
-.items {
+.navigation_items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -33,7 +29,7 @@ html {
   padding-inline-start: 0em;
 }
 
-.item {
+.navigation_item {
   display: grid;
   width: 100%;
   padding-top: 25px;
@@ -45,7 +41,7 @@ html {
   opacity: 0.6;
 }
 
-.item:hover {
+.navigation_item:hover {
   border: 10px solid;
   border-left-style: none;
   border-right-style: none;
@@ -55,19 +51,19 @@ html {
   opacity: 1;
 }
 
-.item:active {
+.navigation_item:active {
   opacity: 1;
   font-weight: 700;
 }
 
-.item a {
+.navigation_item a {
   font-size: 26px;
   color: rgb(0, 0, 0);
   text-decoration: none;
   text-align: center;
 }
 
-.navigation-item-choisen {
+.navigation_item-choisen {
   font-weight: 700;
   border: 10px solid;
   border-radius: 10px;
@@ -80,7 +76,7 @@ html {
 .content {
   display: grid;
   width: 100%;
-  height: 100vh;
+  max-height: 100%;
   grid-template-columns: repeat(2, minmax(400px, 750px));
   gap: 1em;
   margin-top: 10px;
@@ -90,18 +86,17 @@ html {
 .placement {
   display: grid;
   grid-template-rows: repeat(6, [row] 1fr);
-  background-image: url(/Images/background.jpg);
+  background-image: url(./Images/background.jpg);
   width: 100%;
   height: 925px;
-  padding-right: 20px;
   background-repeat: no-repeat;
 }
 
 .screen {
   display: grid;
-  text-align: center;
   width: 80%;
   padding: 15px;
+  text-align: center;
   justify-self: center;
   align-self: center;
   background-color: rgba(255, 255, 255, 0.6);
@@ -115,11 +110,12 @@ html {
   text-transform: uppercase;
 }
 
-.calendarWrap {
+.calendar_wrap {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
+  list-style-type: none;
   order: 1;
 }
 
@@ -127,6 +123,7 @@ html {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column: span 5;
+  list-style-type: none;
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
@@ -134,71 +131,68 @@ html {
   padding-inline-start: 0px;
 }
 
-.calendarItem {
-  display: grid;
-  justify-content: center;
+.calendar_item {
+  text-align: center;
   font-size: 24px;
   text-decoration: none;
 }
 
-.calendar-item-link {
+.calendar_item_link {
   text-decoration: none;
   color: aliceblue;
 }
 
-.calendar-item-link:hover {
+.calendar_item_link:hover {
   transition: text-decoration 0.5s;
   font-weight: bolder;
 }
 
-.calendar-item-link:active {
+.calendar_item_link:active {
   font-weight: bolder;
   color: darkturquoise;
 }
 
-.calendar-item-link-choisen {
+.calendar_item_link-choisen {
   font-weight: bolder;
   color: darkturquoise;
 }
 
-.btn-prevDay {
-  display: grid;
-  justify-content: center;
+.btn_prevDay {
+  text-align: center;
   text-decoration: none;
   color: aliceblue;
 }
 
-.btn-prevDay:active {
+.btn_prevDay:active {
   color: darkturquoise;
 }
 
-.btn-prevDay:hover {
+.btn_prevDay:hover {
   border: 1px solid;
 }
 
-.btn-nextDay {
-  display: grid;
-  justify-content: center;
+.btn_nextDay {
+  text-align: center;
   text-decoration: none;
   color: aliceblue;
 }
 
-.btn-nextDay:active {
+.btn_nextDay:active {
   color: darkturquoise;
 }
 
-.btn-nextDay:hover {
+.btn_nextDay:hover {
   border: 1px solid;
 }
 
-.timeWrap {
+.time_wrap {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   background-color: rgba(0, 0, 0, 0.6);
   order: 2;
 }
 
-.timeWrap-title {
+.time_wrap_title {
   font-size: 24px;
   font-weight: bolder;
   padding-left: 2em;
@@ -206,7 +200,7 @@ html {
   letter-spacing: 4px;
 }
 
-.timeWrap-inner {
+.time_wrap_inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
@@ -216,34 +210,33 @@ html {
   padding-inline-start: 0px;
 }
 
-.timeItem {
-  display: grid;
-  justify-content: center;
+.time_item {
+  text-align: center;
 }
 
-.timeItem a {
+.time_item a {
   font-size: 24px;
   text-decoration: none;
   color: aliceblue;
 }
 
-.timeItem a:hover {
+.time_item a:hover {
   border: 1px solid;
   border-color: darkturquoise;
 }
 
-.timeItem a:active {
+.time_item a:active {
   color: darkturquoise;
 }
 
-.hallStatus {
+.hall_status {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   order: 5;
 }
 
-.seatsItem {
+.seats_item {
   position: relative;
   font-size: 22px;
   background-color: rgb(0, 0, 0);
@@ -254,7 +247,7 @@ html {
   text-align: center;
 }
 
-.seatsItem::before {
+.seats_item::before {
   content: " ";
   position: absolute;
   width: 30px;
@@ -262,15 +255,15 @@ html {
   left: 10px;
 }
 
-.seatsAvailable::before {
+.seats_available::before {
   background: grey;
 }
 
-.seatsTaken::before {
+.seats_taken::before {
   background: rgb(240, 57, 57);
 }
 
-.seatsSelected::before {
+.seats_selected::before {
   background: blue;
 }
 
@@ -308,8 +301,7 @@ html {
   top: 3px;
   left: 4px;
   display: grid;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
   width: 30px;
   height: 30px;
   background: rgb(95, 90, 90);
@@ -329,28 +321,29 @@ html {
 }
 
 .summary {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  align-items: center;
-  background-image: url(/Images/back-2.jpg);
+  background-image: url(./Images/back-2.jpg);
   background-repeat: no-repeat;
   width: 100%;
   font-size: 20px;
   letter-spacing: 1.5px;
 }
 
-.summary p {
-  display: grid;
+.summary_inner {
   background: rgba(0, 0, 0, 0.6);
-  margin: 40px;
   color: aliceblue;
   padding: 10px;
+  margin: 60px 20px 0px;
 }
 
 @media only screen and (min-width: 420px) and (max-width: 920px) {
+  .container {
+    max-width: 750px;
+  }
+
   .content {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .summary {
     display: none;
   }

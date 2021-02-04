@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Movie Seat Booking</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="top">
+        <nav class="navigation">
+          <ul class="navigation_items">
+            <li class="navigation_item"><a href="#">Main</a></li>
+            <li class="navigation_item"><a href="#">Premieres</a></li>
+            <li class="navigation_item"><a href="#">Contacts</a></li>
+            <li class="navigation_item navigation_item-choisen">
+              <a href="#">Booking tickets</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="content">
+        <section class="summary">
+          <div class="summary_inner">
+            <p>
+              &nbsp;Parallel to our world, there is another: a world ruled by
+              extremely dangerous and endowed with incredible strength monsters,
+              furiously protecting their possessions from strangers.
+            </p>
+            <p>
+              &nbsp;It is here that Lieutenant Artemis and her squad of elite
+              fighters enter through the spatial portal. And now they have to
+              test their strength in the face of an unprecedented threat.
+            </p>
+          </div>
+        </section>
+
+        <section class="placement">
+          <div class="screen">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 806 21"
+              fill="#061420"
+            >
+              <path
+                d="M3.2,20l-2,0.2l-0.3-4l2-0.2C136.2,5.3,269.6,0,403,0s266.8,5.3,400.2,16l2,0.2l-0.3,4l-2-0.2 C669.5,9.3,536.3,4,403,4S136.4,9.3,3.2,20z"
+              ></path>
+            </svg>
+            <p>screen</p>
+          </div>
+
+          <div class="calendar_wrap">
+            <a href="#" class="btn_prevDay">◄</a>
+            <ol class="calendar">
+              <li class="calendar_item">
+                <a href="#" class="calendar_item_link">
+                  <span>Today</span><br />1
+                </a>
+              </li>
+              <li class="calendar_item">
+                <a href="#" class="calendar_item_link">
+                  <span>Tue</span><br />2
+                </a>
+              </li>
+              <li class="calendar_item">
+                <a
+                  href="#"
+                  class="calendar_item_link calendar_item_link-choisen"
+                >
+                  <span>Wed</span><br />3
+                </a>
+              </li>
+              <li class="calendar_item">
+                <a href="#" class="calendar_item_link">
+                  <span>Thu</span><br />4
+                </a>
+              </li>
+              <li class="calendar_item">
+                <a href="#" class="calendar_item_link">
+                  <span>Fri</span><br />5
+                </a>
+              </li>
+            </ol>
+            <a href="#" class="btn_nextDay"> ►</a>
+          </div>
+          <div class="time_wrap">
+            <p class="time_wrap_title">Time</p>
+            <ol class="time_wrap_inner">
+              <li class="time_item"><a href="#">14:00</a></li>
+              <li class="time_item"><a href="#">17:30</a></li>
+              <li class="time_item"><a href="#">21:00</a></li>
+              <li class="time_item"><a href="#">23:30</a></li>
+            </ol>
+          </div>
+          <div class="hall_status">
+            <p class="seats_item seats_available">Available</p>
+            <p class="seats_item seats_taken">Taken</p>
+            <p class="seats_item seats_selected">Your selection</p>
+          </div>
+          <div class="seats">
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_1" />
+              <span class="seat_number">1</span>
+            </label>
+            <label class="seat">
+              <input
+                class="seat_input"
+                type="checkbox"
+                value="seat_2"
+                disabled=""
+              />
+              <span class="seat_number">2</span>
+            </label>
+            <label class="seat">
+              <input
+                class="seat_input"
+                type="checkbox"
+                value="seat_3"
+                disabled=""
+              />
+              <span class="seat_number">3</span>
+            </label>
+            <label class="seat">
+              <input
+                class="seat_input"
+                type="checkbox"
+                value="seat_4"
+                disabled=""
+              />
+              <span class="seat_number">4</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_5" />
+              <span class="seat_number">5</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_6" />
+              <span class="seat_number">6</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_7" />
+              <span class="seat_number">7</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_8" />
+              <span class="seat_number">8</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_9" />
+              <span class="seat_number">9</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_10" />
+              <span class="seat_number">10</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_11" />
+              <span class="seat_number">11</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_12" />
+              <span class="seat_number">12</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_13" />
+              <span class="seat_number">13</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_14" />
+              <span class="seat_number">14</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_15" />
+              <span class="seat_number">15</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_16" />
+              <span class="seat_number">16</span>
+            </label>
+            <label class="seat">
+              <input
+                class="seat_input"
+                type="checkbox"
+                value="seat_17"
+                disabled=""
+              />
+              <span class="seat_number">17</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_18" />
+              <span class="seat_number">18</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_19" />
+              <span class="seat_number">19</span>
+            </label>
+            <label class="seat">
+              <input
+                class="seat_input"
+                type="checkbox"
+                value="seat_20"
+                disabled=""
+              />
+              <span class="seat_number">20</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_21" />
+              <span class="seat_number">21</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_22" />
+              <span class="seat_number">22</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_23" />
+              <span class="seat_number">23</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_24" />
+              <span class="seat_number">24</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_25" />
+              <span class="seat_number">25</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_26" />
+              <span class="seat_number">26</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_27" />
+              <span class="seat_number">27</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_28" />
+              <span class="seat_number">28</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_29" />
+              <span class="seat_number">29</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_30" />
+              <span class="seat_number">30</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_31" />
+              <span class="seat_number">31</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_32" />
+              <span class="seat_number">32</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_33" />
+              <span class="seat_number">33</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_34" />
+              <span class="seat_number">34</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_35" />
+              <span class="seat_number">35</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_36" />
+              <span class="seat_number">36</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_37" />
+              <span class="seat_number">37</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_38" />
+              <span class="seat_number">38</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_39" />
+              <span class="seat_number">39</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_40" />
+              <span class="seat_number">40</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_41" />
+              <span class="seat_number">41</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_42" />
+              <span class="seat_number">42</span>
+            </label>
+            <label class="seat">
+              <input
+                class="seat_input"
+                type="checkbox"
+                value="seat_43"
+                disabled=""
+              />
+              <span class="seat_number">43</span>
+            </label>
+            <label class="seat">
+              <input
+                class="seat_input"
+                type="checkbox"
+                value="seat_44"
+                disabled=""
+              />
+              <span class="seat_number">44</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_45" />
+              <span class="seat_number">45</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_46" />
+              <span class="seat_number">46</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_47" />
+              <span class="seat_number">47</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_48" />
+              <span class="seat_number">48</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_49" />
+              <span class="seat_number">49</span>
+            </label>
+            <label class="seat">
+              <input class="seat_input" type="checkbox" value="seat_50" />
+              <span class="seat_number">50</span>
+            </label>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
