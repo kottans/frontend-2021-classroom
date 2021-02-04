@@ -129,7 +129,7 @@ main {
   padding: 10px;
   padding-bottom: 30px;
 
-  text-align: center;
+  text-align: left;
 }
 
 .poster hr {
@@ -377,6 +377,11 @@ footer {
     width: 100vw;
     height: auto;
   }
+
+  .poster > .crew {
+    text-align: center;
+  }
+
   .summary_info {
     width: 100%;
 
