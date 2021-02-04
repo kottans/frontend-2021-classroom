@@ -16,6 +16,7 @@ const init = (seats) => {
     const seatRow = document.createElement('section');
     const r = rowIndex + 1;
     seatRow.classList.add('seat_row');
+    seatRow.innerHTML = '<h2 class="hidden">Seat row</h2>';
 
     row.forEach((seat, seatIndex) => {
       const seatElement = document.createElement('article');
@@ -25,22 +26,23 @@ const init = (seats) => {
       seatElement.classList.add('seat');
       seatElement.setAttribute('role', 'none');
       seatElement.innerHTML = `
-        <input 
-          class="seat_control disappearanced" 
-          type="checkbox"
-          id="seat_${r}_${s}" 
-          name="seat_${r}_${s}" 
-          aria-label="row${r}, seat${s}"
-          value="booked" ${d}>
-        <label 
-          class="seat_label" 
-          aria-hidden="true" 
-          for="seat_${r}_${s}"
-          title="${t}"
-        >
-          ${s}
-        </label>
-      `;
+            <h2 class="hidden">Seat</h2>
+            <input 
+              class="seat_control disappearanced" 
+              type="checkbox"
+              id="seat_${r}_${s}" 
+              name="seat_${r}_${s}" 
+              aria-label="row${r}, seat${s}"
+              value="booked" ${d}
+            >
+            <label 
+              class="seat_label" 
+              aria-hidden="true" 
+              for="seat_${r}_${s}"
+              title="${t}">
+              ${s}
+            </label>
+`;
       seatRow.appendChild(seatElement);
     });
     seatContainer.appendChild(seatRow);

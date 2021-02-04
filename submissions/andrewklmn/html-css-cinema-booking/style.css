@@ -318,6 +318,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  margin-bottom: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
 
