@@ -127,6 +127,7 @@ main {
 .poster > .crew {
   margin: 0;
   padding: 10px;
+  padding-bottom: 30px;
 
   text-align: center;
 }
