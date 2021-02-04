@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cinema {
+  width: 900px;
+  background-color: #e0e0d1;
+  margin: 20px;
+  box-shadow: 0 0 5px 5px grey;
+  border-radius: 25px;
+}
+
+.header {
+  text-align: center;
+  margin: 20px;
+}
+
+.screen {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: -20px;
+}
+
+.seats {
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-template-columns: 1fr 8fr;
+  font-size: 26px;
+  gap: 10px;
+  align-items: center;
+  margin-top: 25px;
+  margin-right: 10%;
+}
+
+.row-count {
+  justify-self: end;
+  margin: 0 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat-place {
+  margin: 10px 24px;
+}
+
+.seat-place:focus-within {
+  color: red;
+}
+
+.seat-number:active {
+  box-shadow: 0 0 3px 5px #87ceeb;
+}
+
+.seat-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.seat-checkbox:checked ~ .seat-number {
+  background-color: green;
+}
+
+.seat-checkbox:disabled ~ .seat-number {
+  background-color: grey;
+}
+
+.seat-checkbox:disabled ~ .seat-number:active {
+  box-shadow: none;
+}
+
+.seat-checkbox:checked ~ .seat-number:hover {
+  background-color: #00ff00;
+}
+
+.seat-number {
+  padding: 10px 10px;
+  background-color: #87ceeb;
+  border-radius: 5px;
+}
+
+.seat-number:hover {
+  background-color: #378eb1;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+}
