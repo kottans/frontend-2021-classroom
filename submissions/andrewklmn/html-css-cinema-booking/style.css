@@ -307,13 +307,13 @@ main {
 
   font-weight: bold;
   color: white;
-  background-color: #f60;
+  background-color: #c85000;
 
   border-radius: 20px;
   cursor: pointer;
 }
 .book_button:hover {
-  background-color: orangered;
+  background-color: #f70;
 }
 
 .summary_info {

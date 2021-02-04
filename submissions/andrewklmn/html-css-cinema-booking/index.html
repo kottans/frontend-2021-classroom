@@ -7,18 +7,18 @@
     <title>Ticket booking form</title>
   </head>
   <body data-new-gr-c-s-check-loaded="8.869.0" data-gr-ext-installed="">
-    <header>
-      <nav>
+    <header aria-label="Page header with navigation">
+      <nav aria-label="Bavigation bar">
         <a href=""><img class="logo" src="img/logo.png" alt="Logo of cinema"></a>
-        <ol class="menu">
+        <ol class="menu" aria-label="Set of links">
           <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
           <li><a href="index.html" target="_blank" rel="noopener noreferrer">About</a></li>
           <li><a href="index.html" target="_blank" rel="noopener noreferrer">Contacts</a></li>
         </ol>
       </nav>
     </header>
-    <main>
-      <aside class="poster">
+    <main aria-label="Main area of booking form">
+      <aside class="poster" aria-label="Poster about movie">
         <img class="poster_image" src="img/banner-horizontal.jpg" alt="Poster of selected movie">
         <h3>Interstellar (2014)</h3>
         <p class="about">
@@ -39,10 +39,10 @@
           <strong>Cast:</strong> Matthew McConaughey, Anne Hathaway, Jessica Chastain and others
         </p> 
       </aside>
-      <section class="interactive">
+      <section class="interactive" aria-label="Area for setting of booking details">
         <h1 class="hidden">Ticket booking form</h1>      
-        <form class="booking_form" action="index.html" method="POST" autocomplete="off">
-          <section class="date_selector">
+        <form class="booking_form" action="index.html" method="POST" autocomplete="off" aria-label="Interactive area">
+          <section class="date_selector" aria-label="Date selector">
             <h4>Available dates:</h4>
             <input class="checkbox_control disappeared" type="radio" name="show_date" id="show_date1" value="08 Feb" aria-label="8th February" aria-checked="true" checked="checked">
             <label class="checkbox_label" for="show_date1" aria-hidden="true">08 Feb</label>
@@ -53,7 +53,7 @@
             <input class="checkbox_control disappeared" type="radio" name="show_date" id="show_date4" value="11 Feb" aria-label="11th February">
             <label class="checkbox_label" for="show_date4" aria-hidden="true">11 Feb</label>          
           </section>
-          <section class="time_selector">
+          <section class="time_selector" aria-label="Show time selector">
             <h4>Show time:</h4>
               <input class="checkbox_control disappeared" type="radio" name="show_time" id="show_time1" aria-label="9 a.m." value="09:00" checked="checked">
               <label class="checkbox_label" for="show_time1" aria-hidden="true">09:00</label>
@@ -66,15 +66,15 @@
               <input class="checkbox_control disappeared" type="radio" name="show_time" id="show_time5" aria-label="5 p.m." value="17:00">
               <label class="checkbox_label" for="show_time5" aria-hidden="true">17:00</label>
           </section>
-          <section class="screen">
+          <section class="screen" aria-label="Schematic image of sreen">
             <h2 class="hidden">Screen wall</h2>
             <svg width="260" height="40" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 30 Q 130 10 260 30" stroke="#0AF" stroke-width="6" fill="transparent"></path>
             </svg>
           </section>
-          <section class="seat_set">
+          <section class="seat_set" aria-label="Seat selector">
             <h4>Choose your seats:</h4>
-            <section class="seat_row">
+            <section class="seat_row" aria-label="Row with seats">
               <h2 class="hidden">Seat row</h2>
               <article class="seat" role="none">
                 <h2 class="hidden">Seat</h2>
@@ -126,7 +126,7 @@
                 </label>
               </article>
             </section>
-            <section class="seat_row"><h2 class="hidden">Seat row</h2>
+            <section class="seat_row" aria-label="Row with seats"><h2 class="hidden">Seat row</h2>
               <article class="seat" role="none">
                 <h2 class="hidden">Seat</h2>
                 <input class="seat_control disappeared" type="checkbox" id="seat_2_1" name="seat_2_1" aria-label="row2, seat1" value="booked">
@@ -191,7 +191,7 @@
                 </label>
               </article>
             </section>
-            <section class="seat_row"><h2 class="hidden">Seat row</h2>
+            <section class="seat_row" aria-label="Row with seats"><h2 class="hidden">Seat row</h2>
               <article class="seat" role="none">
                 <h2 class="hidden">Seat</h2>
                 <input class="seat_control disappeared" type="checkbox" id="seat_3_1" name="seat_3_1" aria-label="row3, seat1" value="booked">
@@ -256,7 +256,7 @@
                 </label>
               </article>
             </section>
-            <section class="seat_row"><h2 class="hidden">Seat row</h2>
+            <section class="seat_row" aria-label="Row with seats"><h2 class="hidden">Seat row</h2>
               <article class="seat" role="none">
                 <h2 class="hidden">Seat</h2>
                 <input class="seat_control disappeared" type="checkbox" id="seat_4_1" name="seat_4_1" aria-label="row4, seat1" value="booked">
@@ -321,7 +321,7 @@
                 </label>
               </article>
             </section>
-            <section class="seat_row"><h2 class="hidden">Seat row</h2>
+            <section class="seat_row" aria-label="Row with seats"><h2 class="hidden">Seat row</h2>
               <article class="seat" role="none">
                 <h2 class="hidden">Seat</h2>
                 <input class="seat_control disappeared" type="checkbox" id="seat_5_1" name="seat_5_1" aria-label="row5, seat1" value="booked">
@@ -386,7 +386,7 @@
                 </label>
               </article>
             </section>
-            <section class="seat_row"><h2 class="hidden">Seat row</h2>
+            <section class="seat_row" aria-label="Row with seats"><h2 class="hidden">Seat row</h2>
               <article class="seat" role="none">
                 <h2 class="hidden">Seat</h2>
                 <input class="seat_control disappeared" type="checkbox" id="seat_6_1" name="seat_6_1" aria-label="row6, seat1" value="booked">
@@ -471,9 +471,9 @@
           </button>
         </form>
       </section>
-      <aside class="summary_info">
+      <aside class="summary_info" aria-label="Ticket view">
         <h4 class="hidden">Your order:</h4>
-        <ul class="ticket">
+        <ul class="ticket" aria-label="Order details">
           <li class="ticket_header">Your order:</li>
           <li>Movie: Interstellar</li>
           <li>----------</li>
@@ -490,6 +490,6 @@
         </ul>
       </aside>
     </main>
-    <footer>Copyright © 2021 Cinema company. All Rights Reserved</footer>
+    <footer aria-label="Page footer with copyright information">Copyright © 2021 Cinema company. All Rights Reserved</footer>
   </body>
 </html>
