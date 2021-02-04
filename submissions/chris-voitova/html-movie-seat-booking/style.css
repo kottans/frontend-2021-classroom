@@ -191,6 +191,8 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .hall-item__input:checked + .hall-item__seat {
