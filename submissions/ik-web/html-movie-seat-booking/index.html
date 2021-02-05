@@ -1,0 +1,286 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seat Booking</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <section class="movie-info">
+            <h1 class="movie-info__title">Monster Hunter</h1>
+            <div class="movie-info__inner">
+                <div class="movie-info__poster">
+                    <img src="img/movie.jpg" alt="movie poster">
+                </div>
+
+                <ul class="movie-info__about">
+                    <li class="movie-info__about-item about-item__format">3D</li>
+                    <li class="movie-info__about-item about-item__map">
+                        <address>Kyiv, SEC "Lavina", Hall 13</address>
+                    </li>
+                    <li class="movie-info__about-item about-item__date">
+                        <time datetime="2021-02-04">2021.02.04</time> Thursday
+                    </li>
+                    <li class="movie-info__about-item about-item__time">
+                        Time <time datetime="18:50">18:50 - 21:39</time>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="booking-seats">
+            <h2 class="booking-seats__title">Choose your seats</h2>
+
+            <div class="booking-seats__cinema-hall">
+                <div class="cinema-hall__screen">screen</div>
+                <form class="cinema-hall__seats" id="seats-form">
+
+                    <ol class="cinema-hall__row">
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="1">
+                                <span class="cinema-hall__seat">1</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="2">
+                                <span class="cinema-hall__seat">2</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="3">
+                                <span class="cinema-hall__seat">3</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="4">
+                                <span class="cinema-hall__seat">4</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="5"> 
+                                <span class="cinema-hall__seat">5</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="6">
+                                <span class="cinema-hall__seat">6</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="7">
+                                <span class="cinema-hall__seat">7</span>
+                            </label>
+                        </li>
+                    </ol>
+
+                    <ol class="cinema-hall__row">
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="8">
+                                <span class="cinema-hall__seat">1</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="9">
+                                <span class="cinema-hall__seat">2</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="10">
+                                <span class="cinema-hall__seat">3</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="11">
+                                <span class="cinema-hall__seat">4</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="12">
+                                <span class="cinema-hall__seat">5</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="13">
+                                <span class="cinema-hall__seat">6</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="14">
+                                <span class="cinema-hall__seat">7</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="15" disabled>
+                                <span class="cinema-hall__seat">8</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="16"> 
+                                <span class="cinema-hall__seat">9</span>
+                            </label>
+                        </li>
+                    </ol>
+
+                    <ol class="cinema-hall__row">
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="17" disabled>
+                                <span class="cinema-hall__seat">1</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="18" disabled>
+                                <span class="cinema-hall__seat">2</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="19">
+                                <span class="cinema-hall__seat">3</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="20">
+                                <span class="cinema-hall__seat">4</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="21">
+                                <span class="cinema-hall__seat">5</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="22">
+                                <span class="cinema-hall__seat">6</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="23">
+                                <span class="cinema-hall__seat">7</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="24">
+                                <span class="cinema-hall__seat">8</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="25">
+                                <span class="cinema-hall__seat">9</span>
+                            </label>
+                        </li>
+                    </ol>
+
+                    <ol class="cinema-hall__row">
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="26">
+                                <span class="cinema-hall__seat">1</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="27">
+                                <span class="cinema-hall__seat">2</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="28">
+                                <span class="cinema-hall__seat">3</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="29">
+                                <span class="cinema-hall__seat">4</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="30">
+                                <span class="cinema-hall__seat">5</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="31">
+                                <span class="cinema-hall__seat">6</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="32">
+                                <span class="cinema-hall__seat">7</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="33" disabled>
+                                <span class="cinema-hall__seat">8</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="34">
+                                <span class="cinema-hall__seat">9</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="35">
+                                <span class="cinema-hall__seat">10</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="cinema-hall__check" value="36">
+                                <span class="cinema-hall__seat">11</span>
+                            </label>
+                        </li>
+                    </ol>
+
+                </form>
+            </div>
+
+            <div class="cinema-hall__seats-status">
+                <div class="seats-status__item seats-status__item--disabled">N/A</div>
+                <div class="seats-status__item seats-status__item--checked">Selected</div>
+                <div class="seats-status__item seats-status__item--unchecked">A</div>
+            </div>
+
+            <button class="cinema-hall__btn" form="seats-form">Continue</button>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
