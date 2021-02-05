@@ -2,32 +2,28 @@ body {
   padding: 0;
   margin: 0;
 
-  width: 100%;
-
   background-color: white;
-  box-sizing: content-box;
 
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-h3 {
+h1 {
   margin-top: 10px;
-  margin-bottom: 0;
-}
-
-h4 {
-  margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 5px;
 
   font-size: 16px;
-  color: #888;
+  color: #333;
 }
 
 header {
   display: block;
   position: fixed;
   top: 0;
+
+  margin: 0;
+  padding: 0;
+
   width: 100%;
 
   background-color: #343434;
@@ -118,7 +114,7 @@ main {
   width: 100%;
 }
 
-.poster > .about {
+.about {
   margin: 0;
   padding: 10px;
 
@@ -127,7 +123,7 @@ main {
 
 .crew {
   margin: 0;
-  padding: 10px;
+  padding: 20px;
   padding-bottom: 30px;
 
   text-align: left;
@@ -212,7 +208,7 @@ main {
 }
 
 .checkbox_control:checked + .checkbox_label {
-  background-color: red;
+  background-color: #BB0000;
   color: white;
 }
 
@@ -261,13 +257,14 @@ main {
   text-align: center;
   color: white;
 
-  border: solid 3px #ffffff;
-  background-color: green;
-
+  
   background-image: url('img/seat_template.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  
+  border: solid 3px #ffffff;
+  background-color: green;
 
   cursor: pointer;
 }
@@ -367,12 +364,17 @@ footer {
   display: block;
   position: fixed;
   bottom: 0;
+
+  margin: 0;
+  padding: 0;
+
   width: 100%;
   height: 17px;
+  
+  font-size: 13px;
   color: lightgray;
   background-color: #343434;
 
-  font-size: 13px;
 }
 
 @media screen and (max-width: 800px) {
@@ -381,10 +383,12 @@ footer {
     height: auto;
     justify-content: start;
     align-items: center;
+
+    width: 100%;
   }
   .poster,
   .interactive {
-    width: 100vw;
+    width: 100%;
     height: auto;
   }
 
