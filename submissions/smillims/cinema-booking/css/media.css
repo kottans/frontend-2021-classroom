@@ -33,19 +33,14 @@
     right: -60px;
     top: 15px;
   }
+
+  .input-menu,
   .label-menu {
-    position: absolute;
-    top: 780px;
-    left: -20px;
-  }
-
-  .input-menu:checked + .label-menu {
-    position: absolute;
-
-    left: -50px;
+    display: none;
   }
 
   .aside-menu {
+    display: block;
     width: 630px;
     height: 440px;
 
@@ -67,6 +62,9 @@
     width: 600px;
     margin-bottom: 7px;
   }
+  .aside-menu-button {
+    margin-left: 13px;
+  }
 
   .aside-menu-tickets-green {
     margin-top: 20px;
@@ -74,6 +72,7 @@
 
   .container {
     position: absolute;
+    width: 200px;
   }
 
   .main {
@@ -90,6 +89,14 @@
   .tickets,
   .aside-menu-button {
     width: 460px;
+  }
+
+  .aside-menu-button {
+    margin-left: 20px;
+  }
+
+  .container {
+    width: 500px;
   }
 
   .main {
@@ -153,6 +160,7 @@
   }
 
   .container {
+    width: 300px;
     left: -50px;
   }
 
@@ -192,6 +200,10 @@
     width: 330px;
   }
 
+  .container {
+    max-width: 100px;
+  }
+
   .main {
     width: 450px;
     margin-left: 55px;
@@ -224,12 +236,16 @@
 
 @media screen and (max-width: 465px) {
   .aside-menu {
-    width: 330px;
+    width: 350px;
   }
 
   .tickets,
   .aside-menu-button {
-    width: 290px;
+    width: 310px;
+  }
+
+  .container {
+    max-width: 100px;
   }
 
   .main {
@@ -255,6 +271,10 @@
 }
 
 @media screen and (max-width: 400px) {
+  .container {
+    max-width: 100px;
+  }
+
   .main-poster {
     max-width: 250px;
     max-height: 250px;
