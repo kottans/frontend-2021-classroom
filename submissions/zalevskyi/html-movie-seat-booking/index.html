@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie seat selection</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link href='./app.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <h1 class='title'>Book your seats</h1>
+        </header>
+        <main>
+            <section class='film'>
+                <p class='film__title'>Film: Matrix</p>
+                <p class='film__date'>Date: <time datetime='2010-01-03'>2010-01-03</time></p>
+                <p class='film__time'>Time: <time datetime='10:30'>10:30</time></p>
+            </section>
+            <section class='seats_legend__wrapper'>
+                <span class='seat'></span>
+                <span class='description'>Available</span>
+                <span class='seat booked'></span>
+                <span class='description'>Booked</span>
+                <span class='seat not_available'></span>
+                <span class='description'>Not Available</span>
+            </section>
+            <section>
+                <div class='screen'>Screen</div>
+                <form id='hall'>
+                    <fieldset class="row" id="row1">
+                        <legend class="visually_hidden">Row 1 seats</legend>
+                        <input type="checkbox" name="seat" value="r1p1" id="r1p1" class="seat__input visually_hidden" disabled="">
+                        <label for="r1p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r1p2" id="r1p2" class="seat__input visually_hidden">
+                        <label for="r1p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r1p3" id="r1p3" class="seat__input visually_hidden">
+                        <label for="r1p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r1p4" id="r1p4" class="seat__input visually_hidden">
+                        <label for="r1p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r1p5" id="r1p5" class="seat__input visually_hidden">
+                        <label for="r1p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r1p6" id="r1p6" class="seat__input visually_hidden">
+                        <label for="r1p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r1p7" id="r1p7" class="seat__input visually_hidden">
+                        <label for="r1p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r1p8" id="r1p8" class="seat__input visually_hidden" disabled="">
+                        <label for="r1p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r1p9" id="r1p9" class="seat__input visually_hidden">
+                        <label for="r1p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r1p10" id="r1p10" class="seat__input visually_hidden">
+                        <label for="r1p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r1p11" id="r1p11" class="seat__input visually_hidden">
+                        <label for="r1p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r1p12" id="r1p12" class="seat__input visually_hidden">
+                        <label for="r1p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row2">
+                        <legend class="visually_hidden">Row 2 seats</legend>
+                        <input type="checkbox" name="seat" value="r2p1" id="r2p1" class="seat__input visually_hidden">
+                        <label for="r2p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r2p2" id="r2p2" class="seat__input visually_hidden">
+                        <label for="r2p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r2p3" id="r2p3" class="seat__input visually_hidden">
+                        <label for="r2p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r2p4" id="r2p4" class="seat__input visually_hidden">
+                        <label for="r2p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r2p5" id="r2p5" class="seat__input visually_hidden" disabled="">
+                        <label for="r2p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r2p6" id="r2p6" class="seat__input visually_hidden">
+                        <label for="r2p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r2p7" id="r2p7" class="seat__input visually_hidden">
+                        <label for="r2p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r2p8" id="r2p8" class="seat__input visually_hidden" disabled="">
+                        <label for="r2p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r2p9" id="r2p9" class="seat__input visually_hidden">
+                        <label for="r2p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r2p10" id="r2p10" class="seat__input visually_hidden">
+                        <label for="r2p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r2p11" id="r2p11" class="seat__input visually_hidden" disabled="">
+                        <label for="r2p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r2p12" id="r2p12" class="seat__input visually_hidden">
+                        <label for="r2p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row3">
+                        <legend class="visually_hidden">Row 3 seats</legend>
+                        <input type="checkbox" name="seat" value="r3p1" id="r3p1" class="seat__input visually_hidden">
+                        <label for="r3p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r3p2" id="r3p2" class="seat__input visually_hidden">
+                        <label for="r3p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r3p3" id="r3p3" class="seat__input visually_hidden">
+                        <label for="r3p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r3p4" id="r3p4" class="seat__input visually_hidden">
+                        <label for="r3p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r3p5" id="r3p5" class="seat__input visually_hidden" disabled="">
+                        <label for="r3p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r3p6" id="r3p6" class="seat__input visually_hidden" disabled="">
+                        <label for="r3p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r3p7" id="r3p7" class="seat__input visually_hidden">
+                        <label for="r3p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r3p8" id="r3p8" class="seat__input visually_hidden">
+                        <label for="r3p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r3p9" id="r3p9" class="seat__input visually_hidden">
+                        <label for="r3p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r3p10" id="r3p10" class="seat__input visually_hidden">
+                        <label for="r3p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r3p11" id="r3p11" class="seat__input visually_hidden">
+                        <label for="r3p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r3p12" id="r3p12" class="seat__input visually_hidden">
+                        <label for="r3p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row4">
+                        <legend class="visually_hidden">Row 4 seats</legend>
+                        <input type="checkbox" name="seat" value="r4p1" id="r4p1" class="seat__input visually_hidden" disabled="">
+                        <label for="r4p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r4p2" id="r4p2" class="seat__input visually_hidden">
+                        <label for="r4p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r4p3" id="r4p3" class="seat__input visually_hidden">
+                        <label for="r4p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r4p4" id="r4p4" class="seat__input visually_hidden">
+                        <label for="r4p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r4p5" id="r4p5" class="seat__input visually_hidden" disabled="">
+                        <label for="r4p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r4p6" id="r4p6" class="seat__input visually_hidden">
+                        <label for="r4p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r4p7" id="r4p7" class="seat__input visually_hidden">
+                        <label for="r4p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r4p8" id="r4p8" class="seat__input visually_hidden">
+                        <label for="r4p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r4p9" id="r4p9" class="seat__input visually_hidden">
+                        <label for="r4p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r4p10" id="r4p10" class="seat__input visually_hidden" disabled="">
+                        <label for="r4p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r4p11" id="r4p11" class="seat__input visually_hidden" disabled="">
+                        <label for="r4p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r4p12" id="r4p12" class="seat__input visually_hidden" disabled="">
+                        <label for="r4p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row5">
+                        <legend class="visually_hidden">Row 5 seats</legend>
+                        <input type="checkbox" name="seat" value="r5p1" id="r5p1" class="seat__input visually_hidden">
+                        <label for="r5p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r5p2" id="r5p2" class="seat__input visually_hidden">
+                        <label for="r5p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r5p3" id="r5p3" class="seat__input visually_hidden">
+                        <label for="r5p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r5p4" id="r5p4" class="seat__input visually_hidden">
+                        <label for="r5p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r5p5" id="r5p5" class="seat__input visually_hidden" disabled="">
+                        <label for="r5p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r5p6" id="r5p6" class="seat__input visually_hidden">
+                        <label for="r5p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r5p7" id="r5p7" class="seat__input visually_hidden">
+                        <label for="r5p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r5p8" id="r5p8" class="seat__input visually_hidden" disabled="">
+                        <label for="r5p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r5p9" id="r5p9" class="seat__input visually_hidden">
+                        <label for="r5p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r5p10" id="r5p10" class="seat__input visually_hidden">
+                        <label for="r5p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r5p11" id="r5p11" class="seat__input visually_hidden">
+                        <label for="r5p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r5p12" id="r5p12" class="seat__input visually_hidden">
+                        <label for="r5p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row6">
+                        <legend class="visually_hidden">Row 6 seats</legend>
+                        <input type="checkbox" name="seat" value="r6p1" id="r6p1" class="seat__input visually_hidden" disabled="">
+                        <label for="r6p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r6p2" id="r6p2" class="seat__input visually_hidden">
+                        <label for="r6p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r6p3" id="r6p3" class="seat__input visually_hidden">
+                        <label for="r6p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r6p4" id="r6p4" class="seat__input visually_hidden" disabled="">
+                        <label for="r6p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r6p5" id="r6p5" class="seat__input visually_hidden" disabled="">
+                        <label for="r6p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r6p6" id="r6p6" class="seat__input visually_hidden">
+                        <label for="r6p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r6p7" id="r6p7" class="seat__input visually_hidden">
+                        <label for="r6p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r6p8" id="r6p8" class="seat__input visually_hidden">
+                        <label for="r6p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r6p9" id="r6p9" class="seat__input visually_hidden">
+                        <label for="r6p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r6p10" id="r6p10" class="seat__input visually_hidden">
+                        <label for="r6p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r6p11" id="r6p11" class="seat__input visually_hidden">
+                        <label for="r6p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r6p12" id="r6p12" class="seat__input visually_hidden">
+                        <label for="r6p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row7">
+                        <legend class="visually_hidden">Row 7 seats</legend>
+                        <input type="checkbox" name="seat" value="r7p1" id="r7p1" class="seat__input visually_hidden">
+                        <label for="r7p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r7p2" id="r7p2" class="seat__input visually_hidden">
+                        <label for="r7p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r7p3" id="r7p3" class="seat__input visually_hidden">
+                        <label for="r7p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r7p4" id="r7p4" class="seat__input visually_hidden">
+                        <label for="r7p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r7p5" id="r7p5" class="seat__input visually_hidden">
+                        <label for="r7p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r7p6" id="r7p6" class="seat__input visually_hidden" disabled="">
+                        <label for="r7p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r7p7" id="r7p7" class="seat__input visually_hidden">
+                        <label for="r7p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r7p8" id="r7p8" class="seat__input visually_hidden">
+                        <label for="r7p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r7p9" id="r7p9" class="seat__input visually_hidden" disabled="">
+                        <label for="r7p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r7p10" id="r7p10" class="seat__input visually_hidden">
+                        <label for="r7p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r7p11" id="r7p11" class="seat__input visually_hidden">
+                        <label for="r7p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r7p12" id="r7p12" class="seat__input visually_hidden">
+                        <label for="r7p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row8">
+                        <legend class="visually_hidden">Row 8 seats</legend>
+                        <input type="checkbox" name="seat" value="r8p1" id="r8p1" class="seat__input visually_hidden">
+                        <label for="r8p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r8p2" id="r8p2" class="seat__input visually_hidden">
+                        <label for="r8p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r8p3" id="r8p3" class="seat__input visually_hidden">
+                        <label for="r8p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r8p4" id="r8p4" class="seat__input visually_hidden">
+                        <label for="r8p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r8p5" id="r8p5" class="seat__input visually_hidden">
+                        <label for="r8p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r8p6" id="r8p6" class="seat__input visually_hidden">
+                        <label for="r8p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r8p7" id="r8p7" class="seat__input visually_hidden">
+                        <label for="r8p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r8p8" id="r8p8" class="seat__input visually_hidden">
+                        <label for="r8p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r8p9" id="r8p9" class="seat__input visually_hidden">
+                        <label for="r8p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r8p10" id="r8p10" class="seat__input visually_hidden">
+                        <label for="r8p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r8p11" id="r8p11" class="seat__input visually_hidden">
+                        <label for="r8p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r8p12" id="r8p12" class="seat__input visually_hidden" disabled="">
+                        <label for="r8p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row9">
+                        <legend class="visually_hidden">Row 9 seats</legend>
+                        <input type="checkbox" name="seat" value="r9p1" id="r9p1" class="seat__input visually_hidden">
+                        <label for="r9p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r9p2" id="r9p2" class="seat__input visually_hidden">
+                        <label for="r9p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r9p3" id="r9p3" class="seat__input visually_hidden">
+                        <label for="r9p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r9p4" id="r9p4" class="seat__input visually_hidden">
+                        <label for="r9p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r9p5" id="r9p5" class="seat__input visually_hidden">
+                        <label for="r9p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r9p6" id="r9p6" class="seat__input visually_hidden">
+                        <label for="r9p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r9p7" id="r9p7" class="seat__input visually_hidden">
+                        <label for="r9p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r9p8" id="r9p8" class="seat__input visually_hidden">
+                        <label for="r9p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r9p9" id="r9p9" class="seat__input visually_hidden">
+                        <label for="r9p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r9p10" id="r9p10" class="seat__input visually_hidden">
+                        <label for="r9p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r9p11" id="r9p11" class="seat__input visually_hidden">
+                        <label for="r9p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r9p12" id="r9p12" class="seat__input visually_hidden" disabled="">
+                        <label for="r9p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class="row" id="row10">
+                        <legend class="visually_hidden">Row 10 seats</legend>
+                        <input type="checkbox" name="seat" value="r10p1" id="r10p1" class="seat__input visually_hidden">
+                        <label for="r10p1" class="seat">1</label>
+                        <input type="checkbox" name="seat" value="r10p2" id="r10p2" class="seat__input visually_hidden">
+                        <label for="r10p2" class="seat">2</label>
+                        <input type="checkbox" name="seat" value="r10p3" id="r10p3" class="seat__input visually_hidden">
+                        <label for="r10p3" class="seat">3</label>
+                        <input type="checkbox" name="seat" value="r10p4" id="r10p4" class="seat__input visually_hidden">
+                        <label for="r10p4" class="seat">4</label>
+                        <input type="checkbox" name="seat" value="r10p5" id="r10p5" class="seat__input visually_hidden">
+                        <label for="r10p5" class="seat">5</label>
+                        <input type="checkbox" name="seat" value="r10p6" id="r10p6" class="seat__input visually_hidden">
+                        <label for="r10p6" class="seat">6</label>
+                        <input type="checkbox" name="seat" value="r10p7" id="r10p7" class="seat__input visually_hidden">
+                        <label for="r10p7" class="seat">7</label>
+                        <input type="checkbox" name="seat" value="r10p8" id="r10p8" class="seat__input visually_hidden">
+                        <label for="r10p8" class="seat">8</label>
+                        <input type="checkbox" name="seat" value="r10p9" id="r10p9" class="seat__input visually_hidden">
+                        <label for="r10p9" class="seat">9</label>
+                        <input type="checkbox" name="seat" value="r10p10" id="r10p10" class="seat__input visually_hidden">
+                        <label for="r10p10" class="seat">10</label>
+                        <input type="checkbox" name="seat" value="r10p11" id="r10p11" class="seat__input visually_hidden">
+                        <label for="r10p11" class="seat">11</label>
+                        <input type="checkbox" name="seat" value="r10p12" id="r10p12" class="seat__input visually_hidden">
+                        <label for="r10p12" class="seat">12</label>
+                    </fieldset>
+                    <fieldset class='book__wrapper'>
+                        <input type='submit' class='book__button' value='Book Now'>
+                    </fieldsset>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
