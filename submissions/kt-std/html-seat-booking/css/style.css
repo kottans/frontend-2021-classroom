@@ -84,15 +84,12 @@ body {
         url(../assets/poster.jpg);    
 }
 
-.poster__container::before{
-    content: 'Alien';
+.poster__heading{
     position: absolute;
     left: 50%;
     bottom: 5%; 
     line-height: 1;
     height: auto;
-    display: block;
-    box-sizing: border-box;
     transform: translate(-50%);
     color: white;    
     font-family: var(--space-font);
