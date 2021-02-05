@@ -116,7 +116,7 @@
   border: 1px solid transparent;
 }
 
-.choose-section__time {
+.choose-section__time-label {
   height: auto;
   cursor: pointer;
 }
@@ -126,25 +126,7 @@
   font-weight: bold;
 }
 
-.choose-section__time:hover > .choose-section__span--time {
-  border: 1px solid rgba(240, 12, 12, 0.7);
-}
-
-.choose-section__input:focus-visible + .choose-section__span--time {
-  border: 1px solid rgba(240, 12, 12, 0.7);
-}
-
-.choose-section__time-container:focus-within {
-  border: 1px dashed rgba(77, 77, 77, 1);
-}
-
-.choose-section__input:checked + .choose-section__span--time {
-  border: 1px solid rgba(240, 12, 12, 0.7);
-  background-color: rgba(240, 12, 12, 0.7);
-  color: white;
-}
-
-.choose-section__span--time {
+.choose-section__time {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,6 +138,24 @@
   border-radius: 5px;
   font-size: 12px;
   background-color: white;
+}
+
+.choose-section__time:hover  {
+  border: 1px solid rgba(240, 12, 12, 0.7);
+}
+
+.choose-section__input:focus-visible + .choose-section__time {
+  border: 1px solid rgba(240, 12, 12, 0.7);
+}
+
+.choose-section__time-container:focus-within {
+  border: 1px dashed rgba(77, 77, 77, 1);
+}
+
+.choose-section__input:checked + .choose-section__time {
+  border: 1px solid rgba(240, 12, 12, 0.7);
+  background-color: rgba(240, 12, 12, 0.7);
+  color: white;
 }
 
 .choose-section__time-number {
