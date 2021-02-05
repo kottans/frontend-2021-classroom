@@ -37,7 +37,7 @@ body {
   margin-top: 16px;
 }
 
-.poster,
+.posterImg,
 .seat,
 .seat:focus,
 .hiddenCheckbox:checked + .seat,
@@ -49,7 +49,7 @@ body {
   box-shadow: 2px 3px 4px #020204;
 }
 
-.poster {
+.posterImg {
   width: 250px;
   height: 360px;
   position: relative;
@@ -167,13 +167,16 @@ hr {
 
 .hiddenCheckbox:checked + .seat,
 .seat.booked,
-.rowVip .hiddenCheckbox:checked + .seat,
 .seat.booked,
 .booking,
 .occupiedSeat {
   background-color: #b09a86;
 }
 
+.hiddenCheckbox:checked + .seat,
+.rowVip .hiddenCheckbox:checked + .seat {
+  background-color: #a32432;
+}
 .hiddenCheckbox.disabled.notActive + .seat,
 .blockedSeat {
   background-color: #ef4222;
@@ -202,14 +205,23 @@ hr {
 @media screen and (min-width: 300px) {
   .mainContainer {
     width: 90%;
-    height: 800px;
+    height: 900px;
     flex-direction: column;
   }
 
-  .poster {
+  .posterContainer {
+    padding-top: 20px;
+  }
+
+  .posterImg {
     width: 200px;
     height: 280px;
-    margin-left: 40px;
+  }
+
+  .poster {
+    display: flex;
+    position: relative;
+    justify-content: center;
   }
 
   .badge {
@@ -227,6 +239,11 @@ hr {
 
   .filmTitle {
     font-size: 18px;
+  }
+
+  .filmInfo {
+    font-size: 14px;
+    margin-top: -10px;
   }
 
   .seats {
@@ -248,7 +265,33 @@ hr {
   .booking {
     width: 150px;
     height: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mainContainer {
+    flex-direction: row;
+  }
+
+  .posterContainer {
+    flex-direction: row;
+    margin-top: 35px;
+  }
+
+  .filmInfo {
+    width: 80%;
+    margin-top: 35px;
+  }
+
+  .badge,
+  .legend {
+    margin-left: 20px;
+    padding: 10px;
+  }
+
+  .seats {
+    width: 250px;
   }
 }
 
@@ -270,7 +313,7 @@ hr {
     margin-bottom: 30px;
   }
 
-  .poster {
+  .posterImg {
     width: 250px;
     height: 360px;
   }
