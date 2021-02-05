@@ -1,1624 +1,2025 @@
 <!DOCTYPE html>
 <html lang="ua">
-<head>
-    <meta charset="UTF-8"/>
+  <head>
+    <meta charset="UTF-8" />
     <title>Замовлення квитків</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
-            rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/normalize.css"/>
-    <link rel="stylesheet" href="css/styles.css"/>
-</head>
-<body>
-<svg version="1.1" style="display: none">
-    <symbol id="fb" viewBox="0 0 32 32">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <svg version="1.1" style="display: none">
+      <symbol id="fb" viewBox="0 0 32 32">
         <path
-                fill="#FFF"
-                d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"
+          fill="#FFF"
+          d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"
         />
-    </symbol>
-    <symbol id="insta" viewBox="0 0 32 32">
+      </symbol>
+      <symbol id="insta" viewBox="0 0 32 32">
         <path
-                fill="#FFF"
-                d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"
-        />
-        <path
-                fill="#FFF"
-                d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637 10.302h3.039v3.039h-3.039z"
+          fill="#FFF"
+          d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"
         />
         <path
-                fill="#FFF"
-                d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z"
+          fill="#FFF"
+          d="M15.978 18.659c1.466 0 2.659-1.193 2.659-2.659s-1.193-2.659-2.659-2.659c-1.466 0-2.659 1.193-2.659 2.659s1.192 2.659 2.659 2.659zM18.637 10.302h3.039v3.039h-3.039z"
         />
-    </symbol>
-    <symbol id="twitter" viewBox="0 0 32 32">
         <path
-                fill="#FFF"
-                d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"
+          fill="#FFF"
+          d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.955 21.698a2.285 2.285 0 0 1-2.279 2.279H10.279A2.285 2.285 0 0 1 8 21.698V10.302a2.286 2.286 0 0 1 2.279-2.279h11.396a2.286 2.286 0 0 1 2.279 2.279v11.396z"
         />
-    </symbol>
-</svg>
-<header class="header">
-    <nav class="container navigation navigation-nojs">
+      </symbol>
+      <symbol id="twitter" viewBox="0 0 32 32">
+        <path
+          fill="#FFF"
+          d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"
+        />
+      </symbol>
+    </svg>
+    <header class="header">
+      <nav class="container navigation navigation-nojs">
         <button
-                type="button"
-                class="button navigation-button navigation-button__open">
-            <span class="visually-hidden">Відкрити меню</span>
-            <span class="navigation-ico"></span>
+          type="button"
+          class="button navigation-button navigation-button__open"
+        >
+          <span class="visually-hidden">Відкрити меню</span>
+          <span class="navigation-ico"></span>
         </button>
         <ul class="navigation-list">
-            <li class="navigation-item">
-                <a class="navigation-link" href="#">головна</a>
-            </li>
-            <li class="navigation-item">
-                <a class="navigation-link" href="#">прем'єри</a>
-            </li>
-            <li class="navigation-item">
-                <a class="navigation-link" href="#">кінотеатри</a>
-            </li>
-            <li class="navigation-item navigation-item__active">
-                <a class="navigation-link">замовити квиток</a>
-            </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">головна</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">прем'єри</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">кінотеатри</a>
+          </li>
+          <li class="navigation-item navigation-item__active">
+            <a class="navigation-link">замовити квиток</a>
+          </li>
         </ul>
-    </nav>
-</header>
-<main class="main">
-    <div class="container">
+      </nav>
+    </header>
+    <main class="main">
+      <div class="container">
         <section class="movie">
-            <h2 class="section-header movie-hider">Микита Кожум'яка</h2>
-            <div class="movie-card">
-                <div class="movie-poster">
-                    <picture>
-                        <source srcset="img/poster-desktop.jpg, img/poster-desktop@2x.jpg 2x"
-                                media="(min-width: 960px)"/>
-                        <img src="img/poster-mobile.jpg" alt="Микита Кожем'яка постер" class="movie-poster__img"
-                             srcset="img/poster-mobile@2x.jpg"/>
-                    </picture>
-                    <div class="movie-info__description">
-                        <p class="description__text">Мультфільм про неймовірні пригоди
-                            12-річного хлопчика у магічному світі.
-                            Маленький Микита хоче стати героєм, як тато, та перемогти дракона. Незважаючи на всі
-                            перестороги
-                            та заборони батька, хлопець сміливо йде в пошуках пригод, зустрічає нових друзів та
-                            фантастичних
-                            диво-створінь.
-                        </p>
-                    </div>
-                </div>
-                <div class="movie-info">
-                    <table class="table movie-table">
-                        <tr>
-                            <th class="table-header">Вік:</th>
-                            <td class="table-data">0+</td>
-                        </tr>
-                        <tr>
-                            <th class="table-header">Режисер:</th>
-                            <td class="table-data">Манук Депоян</td>
-                        </tr>
-                        <tr>
-                            <th class="table-header">Мова:</th>
-                            <td class="table-data">Українська мова</td>
-                        </tr>
-                        <tr>
-                            <th class="table-header">Жанр:</th>
-                            <td class="table-data">Мультфільм, Пригоди, Сімейний</td>
-                        </tr>
-                        <tr>
-                            <th class="table-header">Тривалість:</th>
-                            <td class="table-data">1:26</td>
-                        </tr>
-                        <tr>
-                            <th class="table-header">Виробництво:</th>
-                            <td class="table-data">Україна</td>
-                        </tr>
-                        <tr>
-                            <th class="table-header">Сценарій:</th>
-                            <td class="table-data">
-                                Олена Шульга, Світлана Куценко, Памела Хіккі
-                            </td>
-                        </tr>
-                        <tr>
-                            <th class="table-header">У головних ролях:</th>
-                            <td class="table-data">Віктор Андрієнко, Руслана Писанка</td>
-                        </tr>
-                    </table>
-                </div>
+          <h2 class="section-header movie-hider">Микита Кожум'яка</h2>
+          <div class="movie-card">
+            <div class="movie-poster">
+              <picture>
+                <source
+                  srcset="img/poster-desktop.jpg, img/poster-desktop@2x.jpg 2x"
+                  media="(min-width: 960px)"
+                />
+                <img
+                  src="img/poster-mobile.jpg"
+                  alt="Микита Кожем'яка постер"
+                  class="movie-poster__img"
+                  srcset="img/poster-mobile@2x.jpg"
+                />
+              </picture>
+              <div class="movie-info__description">
+                <p class="description__text">
+                  Мультфільм про неймовірні пригоди 12-річного хлопчика у
+                  магічному світі. Маленький Микита хоче стати героєм, як тато,
+                  та перемогти дракона. Незважаючи на всі перестороги та
+                  заборони батька, хлопець сміливо йде в пошуках пригод,
+                  зустрічає нових друзів та фантастичних диво-створінь.
+                </p>
+              </div>
             </div>
+            <div class="movie-info">
+              <table class="table movie-table">
+                <tr>
+                  <th class="table-header">Вік:</th>
+                  <td class="table-data">0+</td>
+                </tr>
+                <tr>
+                  <th class="table-header">Режисер:</th>
+                  <td class="table-data">Манук Депоян</td>
+                </tr>
+                <tr>
+                  <th class="table-header">Мова:</th>
+                  <td class="table-data">Українська мова</td>
+                </tr>
+                <tr>
+                  <th class="table-header">Жанр:</th>
+                  <td class="table-data">Мультфільм, Пригоди, Сімейний</td>
+                </tr>
+                <tr>
+                  <th class="table-header">Тривалість:</th>
+                  <td class="table-data">1:26</td>
+                </tr>
+                <tr>
+                  <th class="table-header">Виробництво:</th>
+                  <td class="table-data">Україна</td>
+                </tr>
+                <tr>
+                  <th class="table-header">Сценарій:</th>
+                  <td class="table-data">
+                    Олена Шульга, Світлана Куценко, Памела Хіккі
+                  </td>
+                </tr>
+                <tr>
+                  <th class="table-header">У головних ролях:</th>
+                  <td class="table-data">Віктор Андрієнко, Руслана Писанка</td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </section>
         <section class="booking">
-            <form class="form booking-form" method="post" action="#">
-                <fieldset class="booking-date">
-                    <legend class="form-header">День та час сеансу:</legend>
-                    <label class="booking-label">
-                        <input type="date" value="2021-01-30" class="booking-input booking-input__date" name="date"/>
-                    </label>
-                    <label class="booking-label">
-                        <select class="booking-input booking-input__time" tabindex="0">
-                            <option value="10:00">10:00</option>
-                            <option value="13:00">13:00</option>
-                            name="time"
-                            <option value="16:00">16:00</option>
-                            <option value="19:00">19:00</option>
-                        </select>
-                    </label>
-                </fieldset>
-                <fieldset class="booking-city">
-                    <legend class="form-header">Ваше місто:</legend>
-                    <label class="booking-label">
-                        <input type="radio" class="booking-input booking-input__city visually-hidden" value="Kyiv"
-                               name="city" checked/>
-                        <span class="booking-ico booking-ico__city"></span>
-                        <span class="booking-name booking-city__name">Київ</span>
-                    </label>
-                    <label class="booking-label">
-                        <input type="radio" class="booking-input booking-input__city visually-hidden" value="Lviv"
-                               name="city"/>
-                        <span class="booking-ico booking-ico__city"></span>
-                        <span class="booking-name booking-city__name">Львів</span>
-                    </label>
-                    <label class="booking-label">
-                        <input type="radio" class="booking-input booking-input__city visually-hidden" value="Odesa"
-                               name="city"/>
-                        <span class="booking-ico booking-ico__city"></span>
-                        <span class="booking-name booking-city__name">Одеса</span>
-                    </label>
-                    <label class="booking-label">
-                        <input type="radio" class="booking-input booking-input__city visually-hidden" value="Dnipro"
-                               name="city"/>
-                        <span class="booking-ico booking-ico__city"></span>
-                        <span class="booking-name booking-city__name">Дніпро</span>
-                    </label>
-                    <label class="booking-label">
-                        <input type="radio" class="booking-input booking-input__city visually-hidden" value="Kharkiv"
-                               name="city"/>
-                        <span class="booking-ico booking-ico__city"></span>
-                        <span class="booking-name booking-city__name">Харків</span>
-                    </label>
-                    <label class="booking-label">
-                        <input type="radio" class="booking-input booking-input__city visually-hidden" value="Kharkiv"
-                               name="city"/>
-                        <span class="booking-ico booking-ico__city"></span>
-                        <span class="booking-name booking-city__name">Полтава</span>
-                    </label>
-                </fieldset>
-                <div class="booking-details">
-                    <div class="booking-details__example">
-                        <span class="booking-ico booking-ico__place">1</span>
-                        <span class="booking-details__title">Вільне місце</span>
-                    </div>
-                    <div class="booking-details__example">
-                        <span class="booking-ico booking-ico__place booking-ico__place__disabled">1</span>
-                        <span class="booking-details__title">Недоступне</span>
-                    </div>
-                </div>
-                <fieldset class="booking-row">
-                    <legend class="form-header">Місце:</legend>
-                    <fieldset class="booking-row__inputs">
-                        <legend class="booking-row__header">Ряд 1</legend>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="1 1"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">1</span>
-                            <span class="visually-hidden">1 ряд 1 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="1 2"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >2</span
-                            >
-                            <span class="visually-hidden">1 ряд 2 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="1 3"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >3</span
-                            >
-                            <span class="visually-hidden">1 ряд 3 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="1 4"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">4</span>
-                            <span class="visually-hidden">1 ряд 4 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="1 5"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">5</span>
-                            <span class="visually-hidden">1 ряд 5 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="1 6"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">6</span>
-                            <span class="visually-hidden">1 ряд 6 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="1 7"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">7</span>
-                            <span class="visually-hidden">1 ряд 7 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="1 8"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">8</span>
-                            <span class="visually-hidden">1 ряд 8 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="1 9"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">9</span>
-                            <span class="visually-hidden">1 ряд 9 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="1 10"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">10</span>
-                            <span class="visually-hidden">1 ряд 10 місце</span>
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <fieldset class="booking-row">
-                    <fieldset class="booking-row__inputs">
-                        <legend class="booking-row__header">Ряд 2</legend>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="2 1"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">1</span>
-                            <span class="visually-hidden">2 ряд 1 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="2 2"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">2</span>
-                            <span class="visually-hidden">2 ряд 2 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="2 3"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">3</span>
-                            <span class="visually-hidden">2 ряд 3 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="2 4"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >4</span
-                            >
-                            <span class="visually-hidden">2 ряд 4 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="2 5"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >5</span
-                            >
-                            <span class="visually-hidden">2 ряд 5 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="2 6"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                            >6</span
-                            >
-                            <span class="visually-hidden">2 ряд 6 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="2 7"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">7</span>
-                            <span class="visually-hidden">2 ряд 7 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="2 8"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">8</span>
-                            <span class="visually-hidden">2 ряд 8 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="2 9"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">9</span>
-                            <span class="visually-hidden">2 ряд 9 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="2 10"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">10</span>
-                            <span class="visually-hidden">2 ряд 10 місце</span>
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <fieldset class="booking-row">
-                    <legend class="booking-row__header">Ряд 3</legend>
-                    <fieldset class="booking-row__inputs">
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="3 1"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >1</span
-                            >
-                            <span class="visually-hidden">3 ряд 1 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 2"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">2</span>
-                            <span class="visually-hidden">3 ряд 2 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 3"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">3</span>
-                            <span class="visually-hidden">3 ряд 3 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 4"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">4</span>
-                            <span class="visually-hidden">3 ряд 4 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 5"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">5</span>
-                            <span class="visually-hidden">3 ряд 5 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="3 6"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >6</span
-                            >
-                            <span class="visually-hidden">3 ряд 6 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="3 7"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >7</span
-                            >
-                            <span class="visually-hidden">3 ряд 7 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="3 8"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >8</span
-                            >
-                            <span class="visually-hidden">3 ряд 8 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="3 9"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >9</span
-                            >
-                            <span class="visually-hidden">3 ряд 9 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 10"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">10</span>
-                            <span class="visually-hidden">3 ряд 10 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 11"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">11</span>
-                            <span class="visually-hidden">3 ряд 11 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 12"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">12</span>
-                            <span class="visually-hidden">3 ряд 12 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 13"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">13</span>
-                            <span class="visually-hidden">3 ряд 13 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="3 14"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">14</span>
-                            <span class="visually-hidden">3 ряд 14 місце</span>
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <fieldset class="booking-row">
-                    <fieldset class="booking-row__inputs">
-                        <legend class="booking-row__header">Ряд 4</legend>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 1"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">1</span>
-                            <span class="visually-hidden">4 ряд 1 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 2"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">2</span>
-                            <span class="visually-hidden">4 ряд 2 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 3"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">3</span>
-                            <span class="visually-hidden">4 ряд 3 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 4"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">4</span>
-                            <span class="visually-hidden">4 ряд 4 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 5"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">5</span>
-                            <span class="visually-hidden">4 ряд 5 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 6"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">6</span>
-                            <span class="visually-hidden">4 ряд 6 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 7"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">7</span>
-                            <span class="visually-hidden">4 ряд 7 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 8"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">8</span>
-                            <span class="visually-hidden">4 ряд 8 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 9"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">9</span>
-                            <span class="visually-hidden">4 ряд 9 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 10"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">10</span>
-                            <span class="visually-hidden">4 ряд 10 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 11"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">11</span>
-                            <span class="visually-hidden">4 ряд 11 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 12"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">12</span>
-                            <span class="visually-hidden">4 ряд 12 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 13"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">13</span>
-                            <span class="visually-hidden">4 ряд 13 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="4 14"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">14</span>
-                            <span class="visually-hidden">4 ряд 14 місце</span>
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <fieldset class="booking-row">
-                    <legend class="booking-row__header">Ряд 5</legend>
-                    <fieldset class="booking-row__inputs">
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 1"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">1</span>
-                            <span class="visually-hidden">5 ряд 1 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 2"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">2</span>
-                            <span class="visually-hidden">5 ряд 2 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 3"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">3</span>
-                            <span class="visually-hidden">5 ряд 3 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 4"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">4</span>
-                            <span class="visually-hidden">5 ряд 4 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 5"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">5</span>
-                            <span class="visually-hidden">5 ряд 5 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="5 6"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >6</span
-                            >
-                            <span class="visually-hidden">5 ряд 6 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="5 7"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >7</span
-                            >
-                            <span class="visually-hidden">5 ряд 7 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 8"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">8</span>
-                            <span class="visually-hidden">5 ряд 8 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="5 9"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >9</span
-                            >
-                            <span class="visually-hidden">5 ряд 9 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="0"
-                                    data-price="100"
-                                    value="5 10"
-                                    name="place"
-                                    disabled
-                            />
-                            <span
-                                    class="booking-ico booking-ico__place booking-ico__place__disabled"
-                                    aria-hidden="true"
-                            >10</span
-                            >
-                            <span class="visually-hidden">5 ряд 10 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 11"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">11</span>
-                            <span class="visually-hidden">5 ряд 11 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 12"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">12</span>
-                            <span class="visually-hidden">5 ряд 12 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 13"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">13</span>
-                            <span class="visually-hidden">5 ряд 13 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="5 14"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">14</span>
-                            <span class="visually-hidden">5 ряд 14 місце</span>
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <fieldset class="booking-row">
-                    <legend class="booking-row__header">Ряд 6</legend>
-                    <fieldset class="booking-row__inputs">
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 1"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">1</span>
-                            <span class="visually-hidden">6 ряд 1 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 2"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">2</span>
-                            <span class="visually-hidden">6 ряд 2 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 3"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">3</span>
-                            <span class="visually-hidden">6 ряд 3 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 4"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">4</span>
-                            <span class="visually-hidden">6 ряд 4 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 5"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">5</span>
-                            <span class="visually-hidden">6 ряд 5 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 6"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">6</span>
-                            <span class="visually-hidden">6 ряд 6 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 7"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">7</span>
-                            <span class="visually-hidden">6 ряд 7 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 8"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">8</span>
-                            <span class="visually-hidden">6 ряд 8 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 9"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">9</span>
-                            <span class="visually-hidden">6 ряд 9 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 10"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">10</span>
-                            <span class="visually-hidden">6 ряд 0 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 11"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">11</span>
-                            <span class="visually-hidden">6 ряд 11 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 12"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">12</span>
-                            <span class="visually-hidden">6 ряд 12 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 13"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">13</span>
-                            <span class="visually-hidden">6 ряд 13 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="6 14"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">14</span>
-                            <span class="visually-hidden">6 ряд 14 місце</span>
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <fieldset class="booking-row">
-                    <legend class="booking-row__header">Ряд 7</legend>
-                    <fieldset class="booking-row__inputs">
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 1"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">1</span>
-                            <span class="visually-hidden">7 ряд 1 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 2"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">2</span>
-                            <span class="visually-hidden">7 ряд 2 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 3"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">3</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 4"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">4</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 5"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">5</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 6"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">6</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 7"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">7</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 8"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">8</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 9"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">9</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 10"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">10</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 11"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">11</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 12"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">12</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 13"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">13</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="7 14"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">14</span>
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <fieldset class="booking-row">
-                    <legend class="booking-row__header">Ряд 8</legend>
-                    <fieldset class="booking-row__inputs">
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 1"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">1</span>
-                            <span class="visually-hidden">8 ряд 1 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 2"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">2</span>
-                            <span class="visually-hidden">8 ряд 2 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 3"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">3</span>
-                            <span class="visually-hidden">8 ряд 3 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 4"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">4</span>
-                            <span class="visually-hidden">8 ряд 4 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 5"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">5</span>
-                            <span class="visually-hidden">8 ряд 5 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 6"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">6</span>
-                            <span class="visually-hidden">8 ряд 6 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 7"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">7</span>
-                            <span class="visually-hidden">8 ряд 7 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 8"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">8</span>
-                            <span class="visually-hidden">8 ряд 8 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 9"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">9</span>
-                            <span class="visually-hidden">8 ряд 9 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 10"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">10</span>
-                            <span class="visually-hidden">8 ряд 10 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 11"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">11</span>
-                            <span class="visually-hidden">8 ряд 11 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 12"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">12</span>
-                            <span class="visually-hidden">8 ряд 12 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 13"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">13</span>
-                            <span class="visually-hidden">8 ряд 13 місце</span>
-                        </label>
-                        <label class="booking-label booking-label__place">
-                            <input
-                                    type="checkbox"
-                                    class="booking-input booking-input__place visually-hidden"
-                                    data-available="1"
-                                    data-price="100"
-                                    value="8 14"
-                                    name="place"
-                            />
-                            <span class="booking-ico booking-ico__place" aria-hidden="true">14</span>
-                            <span class="visually-hidden">8 ряд 14 місце</span>
-                        </label>
-                    </fieldset>
-                </fieldset>
-                <button type="submit" class="button submit-button">
-                    Підтвердити
-                </button>
-            </form>
+          <form class="form booking-form" method="post" action="#">
+            <fieldset class="booking-date">
+              <legend class="form-header">День та час сеансу:</legend>
+              <label class="booking-label">
+                <input
+                  type="date"
+                  value="2021-01-30"
+                  class="booking-input booking-input__date"
+                  name="date"
+                />
+              </label>
+              <label class="booking-label">
+                <select class="booking-input booking-input__time" tabindex="0">
+                  <option value="10:00">10:00</option>
+                  <option value="13:00">13:00</option>
+                  name="time"
+                  <option value="16:00">16:00</option>
+                  <option value="19:00">19:00</option>
+                </select>
+              </label>
+            </fieldset>
+            <fieldset class="booking-city">
+              <legend class="form-header">Ваше місто:</legend>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Kyiv"
+                  name="city"
+                  checked
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Київ</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Lviv"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Львів</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Odesa"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Одеса</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Dnipro"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Дніпро</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Kharkiv"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Харків</span>
+              </label>
+              <label class="booking-label">
+                <input
+                  type="radio"
+                  class="booking-input booking-input__city visually-hidden"
+                  value="Kharkiv"
+                  name="city"
+                />
+                <span class="booking-ico booking-ico__city"></span>
+                <span class="booking-name booking-city__name">Полтава</span>
+              </label>
+            </fieldset>
+            <div class="booking-details">
+              <div class="booking-details__example">
+                <span class="booking-ico booking-ico__place">1</span>
+                <span class="booking-details__title">Вільне місце</span>
+              </div>
+              <div class="booking-details__example">
+                <span
+                  class="booking-ico booking-ico__place booking-ico__place__disabled"
+                  >1</span
+                >
+                <span class="booking-details__title">Недоступне</span>
+              </div>
+            </div>
+            <fieldset class="booking-row">
+              <legend class="form-header">Місце:</legend>
+              <fieldset class="booking-row__inputs">
+                <legend class="booking-row__header">Ряд 1</legend>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="1 1"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >1</span
+                  >
+                  <span class="visually-hidden">1 ряд 1 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="1 2"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >2</span
+                  >
+                  <span class="visually-hidden">1 ряд 2 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="1 3"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >3</span
+                  >
+                  <span class="visually-hidden">1 ряд 3 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="1 4"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >4</span
+                  >
+                  <span class="visually-hidden">1 ряд 4 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="1 5"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >5</span
+                  >
+                  <span class="visually-hidden">1 ряд 5 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="1 6"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >6</span
+                  >
+                  <span class="visually-hidden">1 ряд 6 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="1 7"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >7</span
+                  >
+                  <span class="visually-hidden">1 ряд 7 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="1 8"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >8</span
+                  >
+                  <span class="visually-hidden">1 ряд 8 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="1 9"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >9</span
+                  >
+                  <span class="visually-hidden">1 ряд 9 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="1 10"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >10</span
+                  >
+                  <span class="visually-hidden">1 ряд 10 місце</span>
+                </label>
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <fieldset class="booking-row__inputs">
+                <legend class="booking-row__header">Ряд 2</legend>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="2 1"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >1</span
+                  >
+                  <span class="visually-hidden">2 ряд 1 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="2 2"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >2</span
+                  >
+                  <span class="visually-hidden">2 ряд 2 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="2 3"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >3</span
+                  >
+                  <span class="visually-hidden">2 ряд 3 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="2 4"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >4</span
+                  >
+                  <span class="visually-hidden">2 ряд 4 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="2 5"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >5</span
+                  >
+                  <span class="visually-hidden">2 ряд 5 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="2 6"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    >6</span
+                  >
+                  <span class="visually-hidden">2 ряд 6 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="2 7"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >7</span
+                  >
+                  <span class="visually-hidden">2 ряд 7 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="2 8"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >8</span
+                  >
+                  <span class="visually-hidden">2 ряд 8 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="2 9"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >9</span
+                  >
+                  <span class="visually-hidden">2 ряд 9 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="2 10"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >10</span
+                  >
+                  <span class="visually-hidden">2 ряд 10 місце</span>
+                </label>
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 3</legend>
+              <fieldset class="booking-row__inputs">
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="3 1"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >1</span
+                  >
+                  <span class="visually-hidden">3 ряд 1 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 2"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >2</span
+                  >
+                  <span class="visually-hidden">3 ряд 2 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 3"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >3</span
+                  >
+                  <span class="visually-hidden">3 ряд 3 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 4"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >4</span
+                  >
+                  <span class="visually-hidden">3 ряд 4 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 5"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >5</span
+                  >
+                  <span class="visually-hidden">3 ряд 5 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="3 6"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >6</span
+                  >
+                  <span class="visually-hidden">3 ряд 6 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="3 7"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >7</span
+                  >
+                  <span class="visually-hidden">3 ряд 7 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="3 8"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >8</span
+                  >
+                  <span class="visually-hidden">3 ряд 8 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="3 9"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >9</span
+                  >
+                  <span class="visually-hidden">3 ряд 9 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 10"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >10</span
+                  >
+                  <span class="visually-hidden">3 ряд 10 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 11"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >11</span
+                  >
+                  <span class="visually-hidden">3 ряд 11 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 12"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >12</span
+                  >
+                  <span class="visually-hidden">3 ряд 12 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 13"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >13</span
+                  >
+                  <span class="visually-hidden">3 ряд 13 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="3 14"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >14</span
+                  >
+                  <span class="visually-hidden">3 ряд 14 місце</span>
+                </label>
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <fieldset class="booking-row__inputs">
+                <legend class="booking-row__header">Ряд 4</legend>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 1"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >1</span
+                  >
+                  <span class="visually-hidden">4 ряд 1 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 2"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >2</span
+                  >
+                  <span class="visually-hidden">4 ряд 2 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 3"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >3</span
+                  >
+                  <span class="visually-hidden">4 ряд 3 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 4"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >4</span
+                  >
+                  <span class="visually-hidden">4 ряд 4 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 5"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >5</span
+                  >
+                  <span class="visually-hidden">4 ряд 5 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 6"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >6</span
+                  >
+                  <span class="visually-hidden">4 ряд 6 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 7"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >7</span
+                  >
+                  <span class="visually-hidden">4 ряд 7 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 8"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >8</span
+                  >
+                  <span class="visually-hidden">4 ряд 8 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 9"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >9</span
+                  >
+                  <span class="visually-hidden">4 ряд 9 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 10"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >10</span
+                  >
+                  <span class="visually-hidden">4 ряд 10 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 11"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >11</span
+                  >
+                  <span class="visually-hidden">4 ряд 11 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 12"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >12</span
+                  >
+                  <span class="visually-hidden">4 ряд 12 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 13"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >13</span
+                  >
+                  <span class="visually-hidden">4 ряд 13 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="4 14"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >14</span
+                  >
+                  <span class="visually-hidden">4 ряд 14 місце</span>
+                </label>
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 5</legend>
+              <fieldset class="booking-row__inputs">
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 1"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >1</span
+                  >
+                  <span class="visually-hidden">5 ряд 1 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 2"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >2</span
+                  >
+                  <span class="visually-hidden">5 ряд 2 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 3"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >3</span
+                  >
+                  <span class="visually-hidden">5 ряд 3 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 4"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >4</span
+                  >
+                  <span class="visually-hidden">5 ряд 4 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 5"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >5</span
+                  >
+                  <span class="visually-hidden">5 ряд 5 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="5 6"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >6</span
+                  >
+                  <span class="visually-hidden">5 ряд 6 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="5 7"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >7</span
+                  >
+                  <span class="visually-hidden">5 ряд 7 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 8"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >8</span
+                  >
+                  <span class="visually-hidden">5 ряд 8 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="5 9"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >9</span
+                  >
+                  <span class="visually-hidden">5 ряд 9 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="0"
+                    data-price="100"
+                    value="5 10"
+                    name="place"
+                    disabled
+                  />
+                  <span
+                    class="booking-ico booking-ico__place booking-ico__place__disabled"
+                    aria-hidden="true"
+                    >10</span
+                  >
+                  <span class="visually-hidden">5 ряд 10 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 11"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >11</span
+                  >
+                  <span class="visually-hidden">5 ряд 11 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 12"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >12</span
+                  >
+                  <span class="visually-hidden">5 ряд 12 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 13"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >13</span
+                  >
+                  <span class="visually-hidden">5 ряд 13 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="5 14"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >14</span
+                  >
+                  <span class="visually-hidden">5 ряд 14 місце</span>
+                </label>
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 6</legend>
+              <fieldset class="booking-row__inputs">
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 1"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >1</span
+                  >
+                  <span class="visually-hidden">6 ряд 1 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 2"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >2</span
+                  >
+                  <span class="visually-hidden">6 ряд 2 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 3"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >3</span
+                  >
+                  <span class="visually-hidden">6 ряд 3 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 4"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >4</span
+                  >
+                  <span class="visually-hidden">6 ряд 4 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 5"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >5</span
+                  >
+                  <span class="visually-hidden">6 ряд 5 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 6"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >6</span
+                  >
+                  <span class="visually-hidden">6 ряд 6 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 7"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >7</span
+                  >
+                  <span class="visually-hidden">6 ряд 7 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 8"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >8</span
+                  >
+                  <span class="visually-hidden">6 ряд 8 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 9"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >9</span
+                  >
+                  <span class="visually-hidden">6 ряд 9 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 10"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >10</span
+                  >
+                  <span class="visually-hidden">6 ряд 0 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 11"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >11</span
+                  >
+                  <span class="visually-hidden">6 ряд 11 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 12"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >12</span
+                  >
+                  <span class="visually-hidden">6 ряд 12 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 13"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >13</span
+                  >
+                  <span class="visually-hidden">6 ряд 13 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="6 14"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >14</span
+                  >
+                  <span class="visually-hidden">6 ряд 14 місце</span>
+                </label>
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 7</legend>
+              <fieldset class="booking-row__inputs">
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 1"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >1</span
+                  >
+                  <span class="visually-hidden">7 ряд 1 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 2"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >2</span
+                  >
+                  <span class="visually-hidden">7 ряд 2 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 3"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >3</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 4"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >4</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 5"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >5</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 6"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >6</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 7"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >7</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 8"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >8</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 9"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >9</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 10"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >10</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 11"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >11</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 12"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >12</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 13"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >13</span
+                  >
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="7 14"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >14</span
+                  >
+                </label>
+              </fieldset>
+            </fieldset>
+            <fieldset class="booking-row">
+              <legend class="booking-row__header">Ряд 8</legend>
+              <fieldset class="booking-row__inputs">
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 1"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >1</span
+                  >
+                  <span class="visually-hidden">8 ряд 1 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 2"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >2</span
+                  >
+                  <span class="visually-hidden">8 ряд 2 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 3"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >3</span
+                  >
+                  <span class="visually-hidden">8 ряд 3 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 4"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >4</span
+                  >
+                  <span class="visually-hidden">8 ряд 4 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 5"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >5</span
+                  >
+                  <span class="visually-hidden">8 ряд 5 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 6"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >6</span
+                  >
+                  <span class="visually-hidden">8 ряд 6 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 7"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >7</span
+                  >
+                  <span class="visually-hidden">8 ряд 7 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 8"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >8</span
+                  >
+                  <span class="visually-hidden">8 ряд 8 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 9"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >9</span
+                  >
+                  <span class="visually-hidden">8 ряд 9 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 10"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >10</span
+                  >
+                  <span class="visually-hidden">8 ряд 10 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 11"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >11</span
+                  >
+                  <span class="visually-hidden">8 ряд 11 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 12"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >12</span
+                  >
+                  <span class="visually-hidden">8 ряд 12 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 13"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >13</span
+                  >
+                  <span class="visually-hidden">8 ряд 13 місце</span>
+                </label>
+                <label class="booking-label booking-label__place">
+                  <input
+                    type="checkbox"
+                    class="booking-input booking-input__place visually-hidden"
+                    data-available="1"
+                    data-price="100"
+                    value="8 14"
+                    name="place"
+                  />
+                  <span
+                    class="booking-ico booking-ico__place"
+                    aria-hidden="true"
+                    >14</span
+                  >
+                  <span class="visually-hidden">8 ряд 14 місце</span>
+                </label>
+              </fieldset>
+            </fieldset>
+            <button type="submit" class="button submit-button">
+              Підтвердити
+            </button>
+          </form>
         </section>
         <section class="order">
-            <h2 class="section-header order-header">Ваше замовлення</h2>
-            <table class="table order-table">
-                <tr>
-                    <th class="table-header">Дата:</th>
-                    <td class="table-data">
-                        <time datetime="2021-01-30">30.01.2012p.</time>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="table-header">Час:</th>
-                    <td class="table-data">
-                        <time datetime="2021-01-30 13:00">13:00</time>
-                    </td>
-                </tr>
-                <tr>
-                    <th class="table-header">Фільм:</th>
-                    <td class="table-data">Микита Кожум'яка</td>
-                </tr>
-                <tr>
-                    <th class="table-header">Кількість місць:</th>
-                    <td class="table-data">3</td>
-                </tr>
-                <tr>
-                    <th class="table-header">Усього:</th>
-                    <th class="table-header">300грн.</th>
-                </tr>
-            </table>
+          <h2 class="section-header order-header">Ваше замовлення</h2>
+          <table class="table order-table">
+            <tr>
+              <th class="table-header">Дата:</th>
+              <td class="table-data">
+                <time datetime="2021-01-30">30.01.2012p.</time>
+              </td>
+            </tr>
+            <tr>
+              <th class="table-header">Час:</th>
+              <td class="table-data">
+                <time datetime="2021-01-30 13:00">13:00</time>
+              </td>
+            </tr>
+            <tr>
+              <th class="table-header">Фільм:</th>
+              <td class="table-data">Микита Кожум'яка</td>
+            </tr>
+            <tr>
+              <th class="table-header">Кількість місць:</th>
+              <td class="table-data">3</td>
+            </tr>
+            <tr>
+              <th class="table-header">Усього:</th>
+              <th class="table-header">300грн.</th>
+            </tr>
+          </table>
         </section>
-    </div>
-</main>
-<footer class="footer">
-    <div class="container">
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
         <address class="address">
-            <p class="address-street">Україна, м.Київ, вул.Хрещатик, 145</p>
-            <a class="address-tel" href="tel:+380442552255">+38 (044) 255 22 55</a>
-            <a class="address-email" href="mailto:mail@ukr.net">mail@ukr.net</a>
+          <p class="address-street">Україна, м.Київ, вул.Хрещатик, 145</p>
+          <a class="address-tel" href="tel:+380442552255"
+            >+38 (044) 255 22 55</a
+          >
+          <a class="address-email" href="mailto:mail@ukr.net">mail@ukr.net</a>
         </address>
         <ul class="media">
-            <li class="media-item">
-                <a class="media-link" href="#">
-                    <svg width="32" height="32" class="media-ico">
-                        <use xlink:href="#fb"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="media-item">
-                <a class="media-link" href="#">
-                    <svg width="32" height="32" class="media-ico">
-                        <use xlink:href="#insta"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="media-item">
-                <a class="media-link" href="#">
-                    <svg width="32" height="32" class="media-ico">
-                        <use xlink:href="#twitter"></use>
-                    </svg>
-                </a>
-            </li>
+          <li class="media-item">
+            <a class="media-link" href="#">
+              <svg width="32" height="32" class="media-ico">
+                <use xlink:href="#fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="media-item">
+            <a class="media-link" href="#">
+              <svg width="32" height="32" class="media-ico">
+                <use xlink:href="#insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="media-item">
+            <a class="media-link" href="#">
+              <svg width="32" height="32" class="media-ico">
+                <use xlink:href="#twitter"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
         <ul class="about">
-            <li class="about-item">
-                <a class="about-link" href="#">Про нас</a>
-            </li>
-            <li class="about-item">
-                <a class="about-link" href="#">Новини</a>
-            </li>
-            <li class="about-item">
-                <a class="about-link" href="#">Партнерам</a>
-            </li>
+          <li class="about-item">
+            <a class="about-link" href="#">Про нас</a>
+          </li>
+          <li class="about-item">
+            <a class="about-link" href="#">Новини</a>
+          </li>
+          <li class="about-item">
+            <a class="about-link" href="#">Партнерам</a>
+          </li>
         </ul>
-    </div>
-</footer>
-<script src="js/main.js"></script>
-</body>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>
