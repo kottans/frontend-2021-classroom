@@ -125,11 +125,17 @@ main {
   text-align: justify;
 }
 
-.poster > .crew {
+.crew {
   margin: 0;
   padding: 10px;
   padding-bottom: 30px;
 
+  text-align: left;
+}
+
+.crew p {
+  margin: 0;
+  padding: 0px;
   text-align: left;
 }
 
@@ -382,7 +388,7 @@ footer {
     height: auto;
   }
 
-  .poster > .crew {
+  .crew p {
     text-align: center;
   }
 
