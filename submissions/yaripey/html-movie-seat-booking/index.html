@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,13 +18,13 @@
         <a class="logo" href="#">Camera Roll</a>
       </div>
       <div class="header-right">
-        <nav class="settings-buttons">
+        <div class="settings-buttons">
           <ul>
             <li><a class="settings-buttons-link settings" href="#"></a></li>
             <li><a class="settings-buttons-link profile" href="#"></a></li>
             <li><a class="settings-buttons-link sign-out" href="#"></a></li>
           </ul>
-        </nav>
+        </div>
       </div>
     </header>
 
@@ -32,7 +32,7 @@
       <ol>
         <li><a class="path-link" href="#">Фільми</a></li>
         <li><a class="path-link" href="#">Сонік У Кіно</a></li>
-        <li><a class="path-link active" href="#">Придбати білет</a></li>
+        <li><a class="path-link active" href="#">Придбати квиток</a></li>
       </ol>
     </nav>
     <main>
@@ -87,8 +87,9 @@
                     type="radio"
                     name="time"
                     id="time1"
+                    value="12:00"
                   />
-                  <div class="input-label">12:00</div>
+                  <div class="input-label"><time>12:00</time></div>
                 </label>
                 <label>
                   <input
@@ -97,8 +98,9 @@
                     type="radio"
                     name="time"
                     id="time2"
+                    value="14:00"
                   />
-                  <div class="input-label">14:00</div>
+                  <div class="input-label"><time>14:00</time></div>
                 </label>
                 <label>
                   <input
@@ -106,8 +108,9 @@
                     type="radio"
                     name="time"
                     id="time3"
+                    value="15:00"
                   />
-                  <div class="input-label">15:00</div>
+                  <div class="input-label"><time>15:00</time></div>
                 </label>
                 <label>
                   <input
@@ -115,8 +118,9 @@
                     type="radio"
                     name="time"
                     id="time4"
+                    value="17:30"
                   />
-                  <div class="input-label">17:30</div>
+                  <div class="input-label"><time>17:30</time></div>
                 </label>
                 <label>
                   <input
@@ -125,8 +129,9 @@
                     type="radio"
                     name="time"
                     id="time5"
+                    value="19:00"
                   />
-                  <div class="input-label">19:00</div>
+                  <div class="input-label"><time>19:00</time></div>
                 </label>
               </div>
               <div class="date-block">
@@ -136,8 +141,11 @@
                     type="radio"
                     name="date"
                     id="date1"
+                    value="2021-02-17"
                   />
-                  <div class="input-label">17 лют</div>
+                  <div class="input-label">
+                    <time datetime="2021-02-17">17 лют</time>
+                  </div>
                 </label>
                 <label>
                   <input
@@ -145,8 +153,11 @@
                     type="radio"
                     name="date"
                     id="date2"
+                    value="2021-02-18"
                   />
-                  <div class="input-label">18 лют</div>
+                  <div class="input-label">
+                    <time datetime="2021-02-18">18 лют</time>
+                  </div>
                 </label>
                 <label>
                   <input
@@ -155,8 +166,11 @@
                     type="radio"
                     name="date"
                     id="date3"
+                    value="2021-02-9"
                   />
-                  <div class="input-label">19 лют</div>
+                  <div class="input-label">
+                    <time datetime="2021-02-19">19 лют</time>
+                  </div>
                 </label>
                 <label>
                   <input
@@ -165,8 +179,11 @@
                     type="radio"
                     name="date"
                     id="date4"
+                    value="2021-02-20"
                   />
-                  <div class="input-label">20 лют</div>
+                  <div class="input-label">
+                    <time datetime="2021-02-20">20 лют</time>
+                  </div>
                 </label>
                 <label>
                   <input
@@ -174,8 +191,11 @@
                     type="radio"
                     name="date"
                     id="date5"
+                    value="2021-02-21"
                   />
-                  <div class="input-label">30 лют</div>
+                  <div class="input-label">
+                    <time datetime="2021-02-21">21 лют</time>
+                  </div>
                 </label>
               </div>
             </form>
@@ -191,258 +211,258 @@
             <div class="hall-row">
               <div class="row-number">1</div>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="1" class="sit-check" />
                 <div class="sit-text">1</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="2" class="sit-check" />
                 <div class="sit-text">2</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="3" class="sit-check" disabled />
                 <div class="sit-text">3</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="4" class="sit-check" disabled />
                 <div class="sit-text">4</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="5" class="sit-check" disabled />
                 <div class="sit-text">5</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="6" class="sit-check" />
                 <div class="sit-text">6</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="7" class="sit-check" />
                 <div class="sit-text">7</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="8" class="sit-check" />
                 <div class="sit-text">8</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="9" class="sit-check" />
                 <div class="sit-text">9</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="10" class="sit-check" />
                 <div class="sit-text">10</div>
               </label>
             </div>
             <div class="hall-row">
               <div class="row-number">2</div>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="11" class="sit-check" disabled />
                 <div class="sit-text">1</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="12" class="sit-check" />
                 <div class="sit-text">2</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="13" class="sit-check" />
                 <div class="sit-text">3</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="14" class="sit-check" />
                 <div class="sit-text">4</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="15" class="sit-check" />
                 <div class="sit-text">5</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="16" class="sit-check" />
                 <div class="sit-text">6</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="17" class="sit-check" />
                 <div class="sit-text">7</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="18" class="sit-check" />
                 <div class="sit-text">8</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="19" class="sit-check" />
                 <div class="sit-text">9</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="20" class="sit-check" />
                 <div class="sit-text">10</div>
               </label>
             </div>
             <div class="hall-row">
               <div class="row-number">3</div>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="21" class="sit-check" />
                 <div class="sit-text">1</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="22" class="sit-check" />
                 <div class="sit-text">2</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="23" class="sit-check" />
                 <div class="sit-text">3</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="24" class="sit-check" />
                 <div class="sit-text">4</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="25" class="sit-check" />
                 <div class="sit-text">5</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="26" class="sit-check" />
                 <div class="sit-text">6</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="27" class="sit-check" />
                 <div class="sit-text">7</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="28" class="sit-check" />
                 <div class="sit-text">8</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="29" class="sit-check" />
                 <div class="sit-text">9</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="30" class="sit-check" />
                 <div class="sit-text">10</div>
               </label>
             </div>
             <div class="hall-row">
               <div class="row-number">4</div>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="31" class="sit-check" />
                 <div class="sit-text">1</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="32" class="sit-check" />
                 <div class="sit-text">2</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="33" class="sit-check" />
                 <div class="sit-text">3</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="34" class="sit-check" disabled />
                 <div class="sit-text">4</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="35" class="sit-check" />
                 <div class="sit-text">5</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="36" class="sit-check" />
                 <div class="sit-text">6</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="37" class="sit-check" />
                 <div class="sit-text">7</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="38" class="sit-check" />
                 <div class="sit-text">8</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="39" class="sit-check" />
                 <div class="sit-text">9</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="40" class="sit-check" />
                 <div class="sit-text">10</div>
               </label>
             </div>
             <div class="hall-row">
               <div class="row-number">5</div>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="41" class="sit-check" />
                 <div class="sit-text">1</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="42" class="sit-check" />
                 <div class="sit-text">2</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="43" class="sit-check" />
                 <div class="sit-text">3</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="44" class="sit-check" />
                 <div class="sit-text">4</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="45" class="sit-check" />
                 <div class="sit-text">5</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="46" class="sit-check" disabled />
                 <div class="sit-text">6</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="47" class="sit-check" disabled />
                 <div class="sit-text">7</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="48" class="sit-check" disabled />
                 <div class="sit-text">8</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="49" class="sit-check" />
                 <div class="sit-text">9</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="50" class="sit-check" />
                 <div class="sit-text">10</div>
               </label>
             </div>
             <div class="hall-row">
               <div class="row-number">6</div>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="51" class="sit-check" />
                 <div class="sit-text">1</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="52" class="sit-check" />
                 <div class="sit-text">2</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="53" class="sit-check" />
                 <div class="sit-text">3</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="54" class="sit-check" />
                 <div class="sit-text">4</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="55" class="sit-check" disabled />
                 <div class="sit-text">5</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="56" class="sit-check" />
                 <div class="sit-text">6</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" disabled />
+                <input type="checkbox" value="57" class="sit-check" disabled />
                 <div class="sit-text">7</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="58" class="sit-check" />
                 <div class="sit-text">8</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="59" class="sit-check" />
                 <div class="sit-text">9</div>
               </label>
               <label>
-                <input type="checkbox" class="sit-check" />
+                <input type="checkbox" value="60" class="sit-check" />
                 <div class="sit-text">10</div>
               </label>
             </div>
