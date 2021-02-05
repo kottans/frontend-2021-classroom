@@ -1,0 +1,15 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  color: #333;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
