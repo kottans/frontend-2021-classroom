@@ -1,0 +1,277 @@
+@media screen and (max-width: 1450px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .aside-menu {
+    width: 270px;
+  }
+  .aside-menu-h2 {
+    font-size: 70px;
+  }
+  .tickets,
+  .aside-menu-button {
+    width: 250px;
+  }
+  .tickets p {
+    font-size: 55px;
+  }
+  .aside-menu-button {
+    font-size: 65px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    position: relative;
+  }
+
+  .header-menu {
+    position: relative;
+    right: -60px;
+    top: 15px;
+  }
+  .label-menu {
+    position: absolute;
+    top: 780px;
+    left: -20px;
+  }
+
+  .input-menu:checked + .label-menu {
+    position: absolute;
+
+    left: -50px;
+  }
+
+  .aside-menu {
+    width: 630px;
+    height: 440px;
+
+    position: absolute;
+    top: 780px;
+    left: 50px;
+  }
+
+  .aside-menu-block-h2 {
+    height: 100px;
+  }
+
+  .asime-menu-poster {
+    display: none;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    width: 600px;
+    margin-bottom: 7px;
+  }
+
+  .aside-menu-tickets-green {
+    margin-top: 20px;
+  }
+
+  .container {
+    position: absolute;
+  }
+
+  .main {
+    margin: 0 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .aside-menu {
+    width: 500px;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    width: 460px;
+  }
+
+  .main {
+    width: 600px;
+    font-size: 40px;
+
+    margin-top: 30px;
+    margin-left: 100px;
+  }
+
+  .main-poster {
+    max-width: 500px;
+    max-height: 300px;
+
+    border-radius: 50px;
+  }
+
+  .seating {
+    width: 600px;
+  }
+
+  .seating-screen svg {
+    width: 500px;
+    left: 0px;
+  }
+
+  .seating-screen::after {
+    left: 210px;
+  }
+
+  .seating-container {
+    max-width: 480px;
+    margin: 0;
+    margin-left: 110px;
+  }
+
+  .label-seating-place-blue {
+    min-width: 50px;
+    border-radius: 70px;
+  }
+
+  .seating-place-green:nth-of-type(n + 53),
+  .label-seating-place-green:nth-of-type(n + 53),
+  .seating-place-yellow:nth-of-type(n + 27),
+  .label-seating-place-yellow:nth-of-type(n + 27),
+  .seating-place-blue:nth-of-type(n + 9),
+  .label-seating-place-blue:nth-of-type(n + 9) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .input-menu,
+  .label-menu {
+    display: none;
+  }
+
+  .aside-menu {
+    display: flex;
+    margin-left: -60px;
+  }
+
+  .container {
+    left: -50px;
+  }
+
+  .main-form {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .aside-menu {
+    top: 650px;
+  }
+
+  .main {
+    margin-left: 70px;
+  }
+
+  .main-poster {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .main-form {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aside-menu {
+    width: 370px;
+    margin-left: -90px;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    width: 330px;
+  }
+
+  .main {
+    width: 450px;
+    margin-left: 55px;
+  }
+
+  .seating {
+    width: 450px;
+    margin-left: -20px;
+  }
+
+  .seating-screen svg {
+    width: 300px;
+    left: 0px;
+  }
+
+  .seating-screen::after {
+    left: 120px;
+
+    font-size: 25px;
+  }
+  .seating-place-green:nth-of-type(n + 37),
+  .label-seating-place-green:nth-of-type(n + 37),
+  .seating-place-yellow:nth-of-type(n + 19),
+  .label-seating-place-yellow:nth-of-type(n + 19),
+  .seating-place-blue:nth-of-type(n + 7),
+  .label-seating-place-blue:nth-of-type(n + 7) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .aside-menu {
+    width: 330px;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    width: 290px;
+  }
+
+  .main {
+    font-size: 30px;
+  }
+
+  .main-poster {
+    order: 2;
+    margin-left: 10px;
+  }
+
+  .main-form {
+    order: 1;
+    margin-left: -50px;
+  }
+
+  .choose-date,
+  .choose-time {
+    width: 60px;
+
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-poster {
+    max-width: 250px;
+    max-height: 250px;
+
+    margin-left: 35px;
+  }
+
+  .main-form {
+    margin-left: -80px;
+  }
+
+  .seating {
+    margin-left: -45px;
+  }
+
+  .seating-place-blue:nth-of-type(n + 5),
+  .label-seating-place-blue:nth-of-type(n + 5) {
+    display: none;
+  }
+}
