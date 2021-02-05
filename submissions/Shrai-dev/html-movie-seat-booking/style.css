@@ -139,7 +139,7 @@ body {
   display: flex;
   justify-content: center;
   margin-left: 45px;
-  -moz-margin-start: 110px;
+  -moz-margin-start: 25px;
   margin-bottom: 30px;
   width: 420px;
   border-bottom: 3px solid #000000;
@@ -170,6 +170,7 @@ body {
 .seat__input {
   margin: 15px;
   -moz-margin-start: 12px;
+  -moz-appearance: none;
   width: 1px;
   height: 1px;
   opacity: 0;
@@ -396,7 +397,7 @@ body {
     justify-content: flex-end;
   }
   .seats__info-text {
-    padding: 5px;
+    padding: 3px;
   }
   .seats-taken::before {
     margin-left: -20px;
@@ -417,7 +418,7 @@ body {
     border-radius: 1px;
   }
   .screen__title {
-    font-size: 13px;
+    font-size: 12px;
   }
   .screen__title::after {
     width: 250px;
