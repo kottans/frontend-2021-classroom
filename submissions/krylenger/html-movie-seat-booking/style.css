@@ -15,7 +15,7 @@
   border-radius: 10px;
 }
 
-.container-half-screen--film-info {
+.film-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
