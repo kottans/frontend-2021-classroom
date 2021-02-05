@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieTime</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="wrapper_header">
+        <a href="#top" class="logo">
+          <img src="img/movie-reel-cinema-tool.svg" alt="MovieTime logo" />
+          <h1 class="page_title">MovieTime</h1>
+        </a>
+        <nav class="navigation">
+          <ul class="nav_list">
+            <li class="nav_item"><a class="nav_a" href="#">Movies</a></li>
+            <li class="nav_item"><a class="nav_a" href="#">Cinemas</a></li>
+            <li class="nav_item"><a class="nav_a" href="#">Events</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper_main">
+        <article class="movie_container">
+          <img src="img/gentlemen.jpg" alt="gentlemen poster" />
+          <h2 class="movie_heading">The Gentlemen</h2>
+          <p class="movie_description">
+            A talented American graduate of Oxford, using his unique skills, and
+            audacity, creates a marijuana empire using the estates of
+            impoverished British aristocrats. However, when he tries to sell his
+            empire to a fellow American billionaire, a chain of events unfolds,
+            involving blackmail, deception, mayhem and murder between street
+            thugs, Russian oligarchs, Triad gangsters and gutter journalists.
+          </p>
+        </article>
+        <section class="movie_booking">
+          <div class="info">
+            <div class="time">
+              <p>
+                <time datetime="2021-02-07T20:00:00"
+                  >07.02.2021, Sunday 20:00</time
+                >
+              </p>
+            </div>
+            <div class="location">
+              <p>IMAX Cinema Planet. Hall № 7</p>
+            </div>
+          </div>
+          <div class="cinema_hall">
+            <div class="ticket_type">
+              <div class="available_seat"></div>
+              <p>Available</p>
+              <div class="taken_seat"></div>
+              <p>Taken</p>
+            </div>
+            <hr class="screen" />
+            <p class="screen">Screen</p>
+
+            <form action="#" id="ticket" class="ticket_form">
+              <div class="seats">
+                <div class="first_set">
+                  <div class="empty"></div>
+                  <div class="empty"></div>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row2_seat1"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row2_seat2"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row3_seat1"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row3_seat2"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row4_seat1"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row4_seat2"
+                      disabled
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row5_seat1"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row5_seat2"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat1"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat2"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row7_seat1"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row7_seat2"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                </div>
+                <div class="second_set">
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row1_seat1"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row1_seat2"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row1_seat3"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row2_seat3"
+                      disabled
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row2_seat4"
+                      disabled
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row2_seat5"
+                      disabled
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row3_seat3"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row3_seat4"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row3_seat5"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row4_seat3"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row4_seat4"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row4_seat5"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row5_seat3"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row5_seat4"
+                      disabled
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row5_seat5"
+                      disabled
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat3"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat4"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat5"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat3"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat4"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat5"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                </div>
+
+                <div class="third_set">
+                  <div class="empty"></div>
+                  <div class="empty"></div>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row2_seat6"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row2_seat7"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row3_seat6"
+                      disabled
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row3_seat7"
+                      disabled
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row4_seat6"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row4_seat7"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row5_seat6"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row5_seat7"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat6"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row6_seat7"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row7_seat6"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                  <label class="seat">
+                    <input
+                      type="checkbox"
+                      class="checkbox_input"
+                      name="seat"
+                      value="row7_seat7"
+                    />
+                    <span class="check_box"></span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="total">
+            <p>Total: <b>$60</b></p>
+            <button
+              class="form_button"
+              type="submit"
+              form="ticket"
+              value="Submit"
+            >
+              Checkout
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
