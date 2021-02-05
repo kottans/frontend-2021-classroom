@@ -14,8 +14,12 @@ body {
 }
 
 .logo {
-    display: flex;
     background-color: #000;
+}
+
+.logo__link {
+    display: flex;
+    text-decoration: none;
     color: #d951a0;
 }
 
@@ -23,7 +27,7 @@ body {
     width: 120px;
 }
 
-.logo__title {
+.logo__link-title {
     margin: auto 10px;
     letter-spacing: 17px;
 }
@@ -102,9 +106,11 @@ nav.breadcrumb [aria-current="page"] {
     width: 20px;
 }
 
-.description__text span {
+.description__text address,
+.description__text time {
     font-size: 17px;
     line-height: 23px;
+    font-style: normal;
     font-weight: 300;
     margin-left: 8px;
 }
@@ -126,7 +132,7 @@ nav.breadcrumb [aria-current="page"] {
     padding: 5px 14%;
 }
 
-.hall__row::before, .hall__row::after {
+.hall__row::before {
     content: '';
     position: absolute;
     left: 60px;
@@ -187,6 +193,7 @@ nav.breadcrumb [aria-current="page"] {
     height: 36px;
     width: 25px;
     margin: 3px;
+    cursor: pointer;
 }
 
 .hall__seat-data {
@@ -212,14 +219,26 @@ nav.breadcrumb [aria-current="page"] {
     border-color: #6caadf;
 }
 
+.ordinary--active {
+    background-color: #95c7f4;
+}
+
 .comfort {
     border-color: crimson;
+}
+
+.comfort--active {
+    background-color: #ff0000;
 }
 
 .special {
     border-color:#6b98c0;
     background-image: url('../images/special-seat.svg');
     background-position-y: center;
+}
+
+.special--active {
+    background-color: #f0f5f9;  
 }
 
 .hall__seat-data:focus + .hall__seat-inner,
@@ -299,7 +318,9 @@ nav.breadcrumb [aria-current="page"] {
         flex-direction: column;
     }
 
-    .description, .description__text span {
+    .description, 
+    .description__text address,
+    .description__text time {
         font-size: 15px;
         line-height: 16px;
     }
@@ -331,7 +352,7 @@ nav.breadcrumb [aria-current="page"] {
         width: 60px;
     }
 
-    .logo__title {
+    .logo__link-title {
         letter-spacing: 5px;
         font-size: 20px;
     }
@@ -377,7 +398,9 @@ nav.breadcrumb [aria-current="page"] {
         font-size: 10px;
     }
 
-    .description, .description__text span {
+    .description, 
+    .description__text address,
+    .description__text time {
         font-size: 12px;
     }
 
