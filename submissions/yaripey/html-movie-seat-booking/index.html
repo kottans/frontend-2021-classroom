@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Roll</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-left">
+        <a class="logo" href="#">Camera Roll</a>
+      </div>
+      <div class="header-right">
+        <div class="settings-buttons">
+          <ul>
+            <li><a class="settings-buttons-link settings" href="#"></a></li>
+            <li><a class="settings-buttons-link profile" href="#"></a></li>
+            <li><a class="settings-buttons-link sign-out" href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-path">
+      <ol>
+        <li><a class="path-link" href="#">Фільми</a></li>
+        <li><a class="path-link" href="#">Сонік У Кіно</a></li>
+        <li><a class="path-link active" href="#">Придбати квиток</a></li>
+      </ol>
+    </nav>
+    <main>
+      <aside class="advertisement">
+        <h2 class="other-films">Інші фільми</h2>
+        <article class="poster">
+          <h3><a href="#">Душа</a></h3>
+          <a href="#" class="adv-poster-container">
+            <img src="assets/soul.jpg" alt="Душа" />
+          </a>
+          <div class="adv-info">
+            <p class="adv-date">з 17 лютого</p>
+            <p class="adv-time">12:00, 14:00, 16:00</p>
+          </div>
+        </article>
+        <article class="poster">
+          <h3><a href="#">Диво-жінка 1984</a></h3>
+          <a href="#" class="adv-poster-container">
+            <img src="assets/wonder-woman.jpg" alt="Диво-жінка 1984" />
+          </a>
+          <div class="adv-info">
+            <p class="adv-date">з 17 лютого</p>
+            <p class="adv-time">12:00, 14:00, 16:00</p>
+          </div>
+        </article>
+      </aside>
+      <section class="hall">
+        <article class="about-film">
+          <div class="film-poster">
+            <img src="assets/sonic.jpg" alt="Сонік в кіно" />
+          </div>
+          <div class="information">
+            <h1>Сонік в кіно</h1>
+            <p class="description">
+              Одна далека та не схожа на Землю планета в небезпеці. Щоб її
+              врятувати неймовірно швидкий, веселий і по-справжньому відважний
+              їжак Сонік телепортувався до нашого рідного дому, а саме до США.
+              Стрибок напруги після того, як енергійний їжак приземлився у нас,
+              привів до зникнення електрики на всьому Північно-Західному
+              узбережжі країни, що не пройшло повз увагу Пентагону. За Соніком
+              уже почала полювання влада, і головний мисливець – доктор
+              Роботник, який хоче захопити весь світ. Але першою людиною, що
+              зустрілася їжаку, був Том Вачовськи. Це звичайний хлопець, який
+              вирішив допомогти Соніку та не дати Роботнику здійснити свій
+              жахливий план.
+            </p>
+            <form class="film-info">
+              <div class="time-block">
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time1"
+                    value="12:00"
+                  />
+                  <div class="input-label"><time>12:00</time></div>
+                </label>
+                <label>
+                  <input
+                    checked
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time2"
+                    value="14:00"
+                  />
+                  <div class="input-label"><time>14:00</time></div>
+                </label>
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time3"
+                    value="15:00"
+                  />
+                  <div class="input-label"><time>15:00</time></div>
+                </label>
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time4"
+                    value="17:30"
+                  />
+                  <div class="input-label"><time>17:30</time></div>
+                </label>
+                <label>
+                  <input
+                    disabled
+                    class="radio-box"
+                    type="radio"
+                    name="time"
+                    id="time5"
+                    value="19:00"
+                  />
+                  <div class="input-label"><time>19:00</time></div>
+                </label>
+              </div>
+              <div class="date-block">
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date1"
+                    value="2021-02-17"
+                  />
+                  <div class="input-label">
+                    <time datetime="2021-02-17">17 лют</time>
+                  </div>
+                </label>
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date2"
+                    value="2021-02-18"
+                  />
+                  <div class="input-label">
+                    <time datetime="2021-02-18">18 лют</time>
+                  </div>
+                </label>
+                <label>
+                  <input
+                    checked
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date3"
+                    value="2021-02-9"
+                  />
+                  <div class="input-label">
+                    <time datetime="2021-02-19">19 лют</time>
+                  </div>
+                </label>
+                <label>
+                  <input
+                    disabled
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date4"
+                    value="2021-02-20"
+                  />
+                  <div class="input-label">
+                    <time datetime="2021-02-20">20 лют</time>
+                  </div>
+                </label>
+                <label>
+                  <input
+                    class="radio-box"
+                    type="radio"
+                    name="date"
+                    id="date5"
+                    value="2021-02-21"
+                  />
+                  <div class="input-label">
+                    <time datetime="2021-02-21">21 лют</time>
+                  </div>
+                </label>
+              </div>
+            </form>
+          </div>
+        </article>
+        <div class="sits">
+          <div class="screen">
+            <div class="first-half"></div>
+            <div class="second-half"></div>
+            <div class="screen-label">Екран</div>
+          </div>
+          <form class="sits-buttons">
+            <div class="hall-row">
+              <div class="row-number">1</div>
+              <label>
+                <input type="checkbox" value="1" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" value="2" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" value="3" class="sit-check" disabled />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" value="4" class="sit-check" disabled />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" value="5" class="sit-check" disabled />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" value="6" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" value="7" class="sit-check" />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" value="8" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" value="9" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" value="10" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">2</div>
+              <label>
+                <input type="checkbox" value="11" class="sit-check" disabled />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" value="12" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" value="13" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" value="14" class="sit-check" />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" value="15" class="sit-check" />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" value="16" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" value="17" class="sit-check" />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" value="18" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" value="19" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" value="20" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">3</div>
+              <label>
+                <input type="checkbox" value="21" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" value="22" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" value="23" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" value="24" class="sit-check" />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" value="25" class="sit-check" />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" value="26" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" value="27" class="sit-check" />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" value="28" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" value="29" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" value="30" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">4</div>
+              <label>
+                <input type="checkbox" value="31" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" value="32" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" value="33" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" value="34" class="sit-check" disabled />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" value="35" class="sit-check" />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" value="36" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" value="37" class="sit-check" />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" value="38" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" value="39" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" value="40" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">5</div>
+              <label>
+                <input type="checkbox" value="41" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" value="42" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" value="43" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" value="44" class="sit-check" />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" value="45" class="sit-check" />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" value="46" class="sit-check" disabled />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" value="47" class="sit-check" disabled />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" value="48" class="sit-check" disabled />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" value="49" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" value="50" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+            <div class="hall-row">
+              <div class="row-number">6</div>
+              <label>
+                <input type="checkbox" value="51" class="sit-check" />
+                <div class="sit-text">1</div>
+              </label>
+              <label>
+                <input type="checkbox" value="52" class="sit-check" />
+                <div class="sit-text">2</div>
+              </label>
+              <label>
+                <input type="checkbox" value="53" class="sit-check" />
+                <div class="sit-text">3</div>
+              </label>
+              <label>
+                <input type="checkbox" value="54" class="sit-check" />
+                <div class="sit-text">4</div>
+              </label>
+              <label>
+                <input type="checkbox" value="55" class="sit-check" disabled />
+                <div class="sit-text">5</div>
+              </label>
+              <label>
+                <input type="checkbox" value="56" class="sit-check" />
+                <div class="sit-text">6</div>
+              </label>
+              <label>
+                <input type="checkbox" value="57" class="sit-check" disabled />
+                <div class="sit-text">7</div>
+              </label>
+              <label>
+                <input type="checkbox" value="58" class="sit-check" />
+                <div class="sit-text">8</div>
+              </label>
+              <label>
+                <input type="checkbox" value="59" class="sit-check" />
+                <div class="sit-text">9</div>
+              </label>
+              <label>
+                <input type="checkbox" value="60" class="sit-check" />
+                <div class="sit-text">10</div>
+              </label>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="tickets-container">
+        <div class="tickets">
+          <h2>Обрані квитки</h2>
+          <div class="check">
+            <div class="heading">
+              <div>Місце</div>
+              <div>Ціна</div>
+            </div>
+            <ul>
+              <li>
+                <div class="sit-name">31</div>
+                <div class="sit-price">60 грн</div>
+              </li>
+              <li>
+                <div class="sit-name">32</div>
+                <div class="sit-price">60 грн</div>
+              </li>
+              <li>
+                <div class="sit-name">33</div>
+                <div class="sit-price">60 грн</div>
+              </li>
+            </ul>
+            <div class="check-sum">
+              <div class="check-sum-label">Сума:</div>
+              <div class="check-sum-amount">180 грн</div>
+            </div>
+          </div>
+          <button class="buy-tickets">Придбати</button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
