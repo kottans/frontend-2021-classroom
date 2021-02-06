@@ -337,6 +337,13 @@ main {
   background-color: white;
 }
 
+.seats-input:focus {
+  border: 2px solid #2ea151;
+  transition: 0.2s ease-in;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
 .seats-input:hover {
   cursor: pointer;
 }
@@ -401,6 +408,7 @@ main {
   height: 50px;
   font-size: 1.2rem;
   font-weight: 600;
+  text-transform: uppercase;
   background-color: #2ea151;
   color: #fff;
   border-radius: 4px;

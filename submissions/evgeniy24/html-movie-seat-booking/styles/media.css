@@ -78,7 +78,3 @@
     height: 17px;
   }
 }
-
-/*Iphones X > landscape */
-@media only screen and (min-width: 812px) and (max-height: 415px) {
-}
