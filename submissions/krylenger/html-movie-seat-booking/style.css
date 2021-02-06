@@ -96,6 +96,7 @@
 .choose-section__main-title {
   display: flex;
   justify-content: center;
+  font-size: 14px;
   font-weight: 300;
 }
 
