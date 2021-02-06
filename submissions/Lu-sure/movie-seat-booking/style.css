@@ -2,15 +2,227 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-size: 16px;
 }
 
 body {
-    background-color:mintcream;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(208, 227, 235);
 }
 
-.wrapper {
+.booking-wrapper {
     display: flex;
+    flex-wrap: wrap;
     width: 800px;
-    background-color: midnightblue;
+    height: auto;
+    background-color: rgb(78, 104, 160);;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 10px white;
+}
+
+.film-info-wrapper {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    background-color:  rgb(22, 22, 51);
+}
+
+.film-name {
+    padding: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(105, 45, 76);
+}
+
+.film-info-container {
+    padding: 0 20px;
+}
+
+.film-info, .slash {
+    display: inline-block;
+    margin: 5px 2px;
+    font-style: normal;
+}
+
+.poster {
+    width: 80%;
+    margin: 30px 10%;
+    box-shadow: 0px 0px 10px 7px white;
+}
+
+.seat-form {
+    width: 65%;
+}
+
+.seat-form-heading {
+    margin: 20px auto;
+    font-size: 2em;
+    color: rgb(247, 111, 111);
+    text-align: center;
+}
+
+.seats-instruction {
+    text-align: center;
+}
+
+.seat-example {
+    margin: 0 10px;
+}
+
+.seat-example::before{
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    width: 2em;
+    height: 2em;
+    background-size: cover;
+}
+
+.seat-available::before{
+
+    background-image: url(img/available-seat.svg);
+}
+
+.seat-selected::before {
+    background-image: url(img/selected-seat.svg);
+    box-shadow: 0px 0px 2px 2px rgb(132, 240, 128);
+    border-radius: 3px;
+}
+
+.seat-taken::before,
+.seat-checkbox:disabled + .seat-icon {
+    box-shadow: 0px 0px 2px 2px rgb(247, 111, 111);
+    border-radius: 3px;
+    background-image: url(img/selected-seat.svg);
+}
+
+.screen {
+    margin: 40px 15px 20px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.3em;
+    border-radius: 60%;
+    box-shadow: 0 5px 2px 2px rgb(105, 45, 76) inset;
+}
+
+.seats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+.seat-row {
+    position: relative;
+    bottom: 0.8em;ock;
+    color:  rgb(247, 111, 111);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.seat-icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background-image: url(img/available-seat.svg);
+    background-size: cover;
+    margin: 3px;
+}
+
+.seat-icon:hover {
+    cursor:pointer;
+    background-image: url(img/focused-seat.svg);
+}
+
+.seat-checkbox:not(:disabled):checked + .seat-icon {
+    background-image: url(img/selected-seat.svg);
+    box-shadow: 0px 0px 2px 2px rgb(132, 240, 128);
+    border-radius: 3px;
+}
+
+.seat-checkbox:focus + .seat-icon,
+.seat-icon:focus,
+.seat-checkbox:checked:focus + .seat-icon {
+    background-image: url(img/focused-seat.svg);
+}
+
+.confirm-but {
+    width: 200px;
+    height: 50px;
+    margin: 30px 150px;
+    font: 700 1.5em 'Josefin Sans', sans-serif;
+    color: white;
+    background-color: rgb(105, 45, 76);
+    border: solid 2px;
+    border-radius: 4px;
+}
+
+.confirm-but:focus {
+    outline-style: none;
+    background-color:  rgb(247, 111, 111);
+}
+
+.footer {
+    min-height: 70px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(73, 73, 105);
+}
+.credits > a {
+    color: white;
+}
+
+.credits {
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .booking-wrapper {
+        width: 100%;
+    }
+    .footer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .row-end {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .film-info-wrapper {
+        width: 100%;
+    }
+    .seat-form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .seat-icon {
+        margin: 1px;
+    }
+
+    .seat-example {
+        margin: 0 3px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .seat-icon {
+        width: 1.5em;
+        height: 1.5em;
+    }
 }
