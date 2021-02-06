@@ -7,1336 +7,1338 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="body">
-    <section class="container-half-screen film-info">
-      <header class="film-info__header">
-        <h1 class="film-info__title">eX machina</h1>
-        <p class="film-info__subtitle">Drama, Sci-Fi, Thriller</p>
-        <p class="film-info__rate">9.4</p>
-      </header>
-      <div>
-        <p class="film-info__description">
-          A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by
-          evaluating the human qualities of a highly advanced humanoid A.I.
-        </p>
-      </div>
-    </section>
-    <main class="container-half-screen container-half-screen--grey">
-      <form class="container-half-screen--choose-section" action="#">
-        <header class="choose-section__header">
-          <button
-            class="choose-section__header-button choose-section__header-button--back"
-            aria-label="Go Back"
-          ></button>
-          <h2 class="choose-section__title">Step 3/3</h2>
-          <button
-            class="choose-section__header-button choose-section__header-button--filters"
-            aria-label="Settings"
-          ></button>
+  <body>
+    <div class="container">
+      <section class="container-half-screen film-info">
+        <header class="film-info__header">
+          <h1 class="film-info__title">eX machina</h1>
+          <p class="film-info__subtitle">Drama, Sci-Fi, Thriller</p>
+          <p class="film-info__rate">9.4</p>
         </header>
-        <section class="choose-section__main">
-          <h5 class="choose-section__main-title">
-            <em class="text-italic"
-              >Please choose <span class="text-bold">date</span>, <b class="text-bold">time</b> and
-              <b class="text-bold">seat</b>.</em
-            >
-          </h5>
-          <div class="choose-section__time-container">
-            <label class="choose-section__time-label">
-              <input class="choose-section__input visually-hidden" type="radio" value='A' name="date" id="dateMon" />
-              <time class="choose-section__time">
-                <span datetime="2021-02-01" class="choose-section__time--bold">Mon</span>
-                <span datetime="2021-02-01" class="choose-section__time-number">1</span>
-              </time>
-            </label>
-            <label class="choose-section__time-label">
-              <input checked class="choose-section__input visually-hidden" type="radio" value='B' name="date" id="dateTue" />
-              <time class="choose-section__time">
-                <span datetime="2021-02-02" class="choose-section__time--bold">Tue</span>
-                <span datetime="2021-02-02" class="choose-section__time-number">2</span>
-              </time>
-            </label>
-            <label class="choose-section__time-label">
-              <input class="choose-section__input visually-hidden" type="radio" value='C' name="date" id="dateWed" />
-              <time class="choose-section__time">
-                <span datetime="2021-02-03" class="choose-section__time--bold">Wed</span>
-                <span datetime="2021-02-03" class="choose-section__time-number">3</span>
-              </time>
-            </label>
-            <label class="choose-section__time-label">
-              <input class="choose-section__input visually-hidden" type="radio" value='D' name="date" id="dateTh" />
-              <time class="choose-section__time">
-                <span datetime="2021-02-04" class="choose-section__time--bold">Th</span>
-                <span datetime="2021-02-04" class="choose-section__time-number">4</span>
-              </time>
-            </label>
-            <label class="choose-section__time-label">
-              <input class="choose-section__input visually-hidden" type="radio" value='E' name="date" id="dateFr" />
-              <time class="choose-section__time">
-                <span datetime="2021-02-05" class="choose-section__time--bold">Fr</span>
-                <span datetime="2021-02-05" class="choose-section__time-number">5</span>
-              </time>
-            </label>
-          </div>
-          <div class="choose-section__time-container">
-            <label class="choose-section__time-label">
-              <input class="choose-section__input visually-hidden" type="radio" value='F' name="time" id="time15" />
-              <span class="choose-section__time">
-                <time datetime="15:00" class="choose-section__time--bold">15:00</time>
-                <span class="choose-section__time-number">7$</span>
-              </span>
-            </label>
-            <label class="choose-section__time-label">
-              <input checked class="choose-section__input visually-hidden" type="radio" value='G' name="time" id="time19" />
-              <span class="choose-section__time">
-                <time datetime="19:00" class="choose-section__time--bold">19:00</time>
-                <span class="choose-section__time-number">7$</span>
-              </span>
-            </label>
-            <label class="choose-section__time-label">
-              <input class="choose-section__input visually-hidden" type="radio" value='H' name="time" id="time21" />
-              <span class="choose-section__time">
-                <time datetime="21:00" class="choose-section__time--bold">21:00</time>
-                <span class="choose-section__time-number">7$</span>
-              </span>
-            </label>
-          </div>
-          <img class="choose-section__image-screen" src="screen.png" alt="screen" />
-          <div class="choose-section__hall-container">
-            <div class="choose-section__hall">
-              <label class="choose-section__label" for="seat1">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat1"
-                  value="seat1"
-                  aria-label="1st seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat2">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat2"
-                  value="seat2"
-                  aria-label="2nd seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat3">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat3"
-                  value="seat3"
-                  aria-label="3rd seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat4">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat4"
-                  value="seat4"
-                  aria-label="4th seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat5">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat5"
-                  value="seat5"
-                  aria-label="4th seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat6">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat6"
-                  value="seat6"
-                  aria-label="5th seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat7">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat7"
-                  value="seat7"
-                  aria-label="6th seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat8">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat8"
-                  value="seat8"
-                  aria-label="7th seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat9">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat9"
-                  value="seat9"
-                  aria-label="8th seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat10">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat10"
-                  value="seat10"
-                  aria-label="9th seat 1st row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat11">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat11"
-                  value="seat11"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat12">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat12"
-                  value="seat12"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat13">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat13"
-                  value="seat13"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat14">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat14"
-                  value="seat14"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat15">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat15"
-                  value="seat15"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat16">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat16"
-                  value="seat16"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat17">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat17"
-                  value="seat17"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat18">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat18"
-                  value="seat18"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat19">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat19"
-                  value="seat19"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat20">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat20"
-                  value="seat20"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat21">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat21"
-                  value="seat21"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat22">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat22"
-                  value="seat22"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat23">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat23"
-                  value="seat23"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat24">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat24"
-                  value="seat24"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat25">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat25"
-                  value="seat25"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat26">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat26"
-                  value="seat26"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat27">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat27"
-                  value="seat27"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat28">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat28"
-                  value="seat28"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat29">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat29"
-                  value="seat29"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat30">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat30"
-                  value="seat30"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat31">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat31"
-                  value="seat31"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat32">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat32"
-                  value="seat32"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat33">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat33"
-                  value="seat33"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat34">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat34"
-                  value="seat34"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat35">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat35"
-                  value="seat35"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat36">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat36"
-                  value="seat36"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat37">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat37"
-                  value="seat37"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat38">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat38"
-                  value="seat38"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat39">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat39"
-                  value="seat39"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat40">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat40"
-                  value="seat40"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat41">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat41"
-                  value="seat41"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat42">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat42"
-                  value="seat42"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat43">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat43"
-                  value="seat43"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat44">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat44"
-                  value="seat44"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat45">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat45"
-                  value="seat45"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat46">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat46"
-                  value="seat46"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat47">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat47"
-                  value="seat47"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat48">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat48"
-                  value="seat48"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat49">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat49"
-                  value="seat49"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat50">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat50"
-                  value="seat50"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat51">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat51"
-                  value="seat51"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat52">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat52"
-                  value="seat52"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat53">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat53"
-                  value="seat53"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat54">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat54"
-                  value="seat54"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat55">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat55"
-                  value="seat55"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat56">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat56"
-                  value="seat56"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat57">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat57"
-                  value="seat57"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat58">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat58"
-                  value="seat58"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat59">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat59"
-                  value="seat59"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat60">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat60"
-                  value="seat60"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat61">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat61"
-                  value="seat61"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat62">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat62"
-                  value="seat62"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat63">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat63"
-                  value="seat63"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat64">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat64"
-                  value="seat64"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat65">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat65"
-                  value="seat65"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat66">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat66"
-                  value="seat66"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat67">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat67"
-                  value="seat67"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat68">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat68"
-                  value="seat68"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat69">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat69"
-                  value="seat69"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat70">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat70"
-                  value="seat70"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat71">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat71"
-                  value="seat71"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat72">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat72"
-                  value="seat72"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat73">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat73"
-                  value="seat73"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat74">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat74"
-                  value="seat74"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat75">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat75"
-                  value="seat75"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat76">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat76"
-                  value="seat76"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat77">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat77"
-                  value="seat77"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat78">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat78"
-                  value="seat78"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat79">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat79"
-                  value="seat79"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat80">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat80"
-                  value="seat80"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat81">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat81"
-                  value="seat81"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat82">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat82"
-                  value="seat82"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat83">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat83"
-                  value="seat83"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat84">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat84"
-                  value="seat84"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat85">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat85"
-                  value="seat85"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label choose-section__label--disabled" for="seat86">
-                <input
-                  disabled
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat86"
-                  value="seat86"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span choose-section__span--disabled"></span>
-              </label>
-              <label class="choose-section__label" for="seat87">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat87"
-                  value="seat87"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat88">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat88"
-                  value="seat88"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat89">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat89"
-                  value="seat89"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat90">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat90"
-                  value="seat90"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat91">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat91"
-                  value="seat91"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat92">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat92"
-                  value="seat92"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat93">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat93"
-                  value="seat93"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat94">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat94"
-                  value="seat94"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat95">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat95"
-                  value="seat95"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat96">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat96"
-                  value="seat96"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat97">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat97"
-                  value="seat97"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat98">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat98"
-                  value="seat98"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat99">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat99"
-                  value="seat99"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat100">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat100"
-                  value="seat100"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat101">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat101"
-                  value="seat101"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat102">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat102"
-                  value="seat102"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat103">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat103"
-                  value="seat103"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat104">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat104"
-                  value="seat104"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat105">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat105"
-                  value="seat105"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat106">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat106"
-                  value="seat106"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat107">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat107"
-                  value="seat107"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat108">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat108"
-                  value="seat108"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat109">
-                <input
-                  class="choose-section__input visually-hidden"
-                  type="checkbox"
-                  name="seat"
-                  id="seat109"
-                  value="seat109"
-                  aria-label="seat row"
-                />
-                <span class="choose-section__span"></span>
-              </label>
-              <label class="choose-section__label" for="seat110">
-                <input class="choose-section__input visually-hidden" type="checkbox" name="seat" id="seat110" />
-                <span class="choose-section__span"></span>
+        <div>
+          <p class="film-info__description">
+            A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by
+            evaluating the human qualities of a highly advanced humanoid A.I.
+          </p>
+        </div>
+      </section>
+      <main class="container-half-screen container-half-screen--grey">
+        <form class="choose-section" action="#">
+          <header class="choose-section__header">
+            <button
+              class="choose-section__header-button choose-section__header-button--back"
+              aria-label="Go Back"
+            ></button>
+            <h2 class="choose-section__title">Step 3/3</h2>
+            <button
+              class="choose-section__header-button choose-section__header-button--filters"
+              aria-label="Settings"
+            ></button>
+          </header>
+          <section class="choose-section__main">
+            <h5 class="choose-section__main-title">
+              <em class="text-italic"
+                >Please choose <span class="text-bold">date</span>, <b class="text-bold">time</b> and
+                <b class="text-bold">seat</b>.</em
+              >
+            </h5>
+            <div class="choose-section__time-container">
+              <label class="choose-section__time-label">
+                <input class="choose-section__input visually-hidden" type="radio" value='A' name="date" id="dateMon" />
+                <time class="choose-section__time">
+                  <span datetime="2021-02-01" class="choose-section__time--bold">Mon</span>
+                  <span datetime="2021-02-01" class="choose-section__time-number">1</span>
+                </time>
+              </label>
+              <label class="choose-section__time-label">
+                <input checked class="choose-section__input visually-hidden" type="radio" value='B' name="date" id="dateTue" />
+                <time class="choose-section__time">
+                  <span datetime="2021-02-02" class="choose-section__time--bold">Tue</span>
+                  <span datetime="2021-02-02" class="choose-section__time-number">2</span>
+                </time>
+              </label>
+              <label class="choose-section__time-label">
+                <input class="choose-section__input visually-hidden" type="radio" value='C' name="date" id="dateWed" />
+                <time class="choose-section__time">
+                  <span datetime="2021-02-03" class="choose-section__time--bold">Wed</span>
+                  <span datetime="2021-02-03" class="choose-section__time-number">3</span>
+                </time>
+              </label>
+              <label class="choose-section__time-label">
+                <input class="choose-section__input visually-hidden" type="radio" value='D' name="date" id="dateTh" />
+                <time class="choose-section__time">
+                  <span datetime="2021-02-04" class="choose-section__time--bold">Th</span>
+                  <span datetime="2021-02-04" class="choose-section__time-number">4</span>
+                </time>
+              </label>
+              <label class="choose-section__time-label">
+                <input class="choose-section__input visually-hidden" type="radio" value='E' name="date" id="dateFr" />
+                <time class="choose-section__time">
+                  <span datetime="2021-02-05" class="choose-section__time--bold">Fr</span>
+                  <span datetime="2021-02-05" class="choose-section__time-number">5</span>
+                </time>
               </label>
             </div>
-          </div>
-          <div class="choose-section__hall-legend">
-            <div class="choose-section__span choose-section__span-legend">available</div>
-            <div class="choose-section__span choose-section__span-legend choose-section__span-legend--selected">
-              selected
+            <div class="choose-section__time-container">
+              <label class="choose-section__time-label">
+                <input class="choose-section__input visually-hidden" type="radio" value='F' name="time" id="time15" />
+                <span class="choose-section__time">
+                  <time datetime="15:00" class="choose-section__time--bold">15:00</time>
+                  <span class="choose-section__time-number">7$</span>
+                </span>
+              </label>
+              <label class="choose-section__time-label">
+                <input checked class="choose-section__input visually-hidden" type="radio" value='G' name="time" id="time19" />
+                <span class="choose-section__time">
+                  <time datetime="19:00" class="choose-section__time--bold">19:00</time>
+                  <span class="choose-section__time-number">7$</span>
+                </span>
+              </label>
+              <label class="choose-section__time-label">
+                <input class="choose-section__input visually-hidden" type="radio" value='H' name="time" id="time21" />
+                <span class="choose-section__time">
+                  <time datetime="21:00" class="choose-section__time--bold">21:00</time>
+                  <span class="choose-section__time-number">7$</span>
+                </span>
+              </label>
             </div>
-            <div class="choose-section__span choose-section__span-legend choose-section__span-legend--sold">sold</div>
-          </div>
-        </section>
-        <footer class="choose-section__footer">
-          <div class="choose-section__checkout-information choose-section__footer--container-half">2 tickets</div>
-          <button class="checkout-seats__checkout-button choose-section__footer--container-half" type="submit">
-            Buy / $21.50
-          </button>
-        </footer>
-      </form>
-    </main>
+            <img class="choose-section__image-screen" src="screen.png" alt="screen" />
+            <div class="choose-section__hall-container">
+              <div class="choose-section__hall">
+                <label class="choose-section__label" for="seat1">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat1"
+                    value="seat1"
+                    aria-label="1st seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat2">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat2"
+                    value="seat2"
+                    aria-label="2nd seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat3">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat3"
+                    value="seat3"
+                    aria-label="3rd seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat4">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat4"
+                    value="seat4"
+                    aria-label="4th seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat5">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat5"
+                    value="seat5"
+                    aria-label="4th seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat6">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat6"
+                    value="seat6"
+                    aria-label="5th seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat7">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat7"
+                    value="seat7"
+                    aria-label="6th seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat8">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat8"
+                    value="seat8"
+                    aria-label="7th seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat9">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat9"
+                    value="seat9"
+                    aria-label="8th seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat10">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat10"
+                    value="seat10"
+                    aria-label="9th seat 1st row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat11">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat11"
+                    value="seat11"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat12">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat12"
+                    value="seat12"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat13">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat13"
+                    value="seat13"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat14">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat14"
+                    value="seat14"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat15">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat15"
+                    value="seat15"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat16">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat16"
+                    value="seat16"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat17">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat17"
+                    value="seat17"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat18">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat18"
+                    value="seat18"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat19">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat19"
+                    value="seat19"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat20">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat20"
+                    value="seat20"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat21">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat21"
+                    value="seat21"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat22">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat22"
+                    value="seat22"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat23">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat23"
+                    value="seat23"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat24">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat24"
+                    value="seat24"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat25">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat25"
+                    value="seat25"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat26">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat26"
+                    value="seat26"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat27">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat27"
+                    value="seat27"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat28">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat28"
+                    value="seat28"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat29">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat29"
+                    value="seat29"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat30">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat30"
+                    value="seat30"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat31">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat31"
+                    value="seat31"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat32">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat32"
+                    value="seat32"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat33">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat33"
+                    value="seat33"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat34">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat34"
+                    value="seat34"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat35">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat35"
+                    value="seat35"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat36">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat36"
+                    value="seat36"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat37">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat37"
+                    value="seat37"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat38">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat38"
+                    value="seat38"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat39">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat39"
+                    value="seat39"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat40">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat40"
+                    value="seat40"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat41">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat41"
+                    value="seat41"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat42">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat42"
+                    value="seat42"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat43">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat43"
+                    value="seat43"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat44">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat44"
+                    value="seat44"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat45">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat45"
+                    value="seat45"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat46">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat46"
+                    value="seat46"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat47">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat47"
+                    value="seat47"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat48">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat48"
+                    value="seat48"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat49">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat49"
+                    value="seat49"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat50">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat50"
+                    value="seat50"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat51">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat51"
+                    value="seat51"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat52">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat52"
+                    value="seat52"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat53">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat53"
+                    value="seat53"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat54">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat54"
+                    value="seat54"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat55">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat55"
+                    value="seat55"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat56">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat56"
+                    value="seat56"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat57">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat57"
+                    value="seat57"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat58">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat58"
+                    value="seat58"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat59">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat59"
+                    value="seat59"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat60">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat60"
+                    value="seat60"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat61">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat61"
+                    value="seat61"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat62">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat62"
+                    value="seat62"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat63">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat63"
+                    value="seat63"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat64">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat64"
+                    value="seat64"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat65">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat65"
+                    value="seat65"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat66">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat66"
+                    value="seat66"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat67">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat67"
+                    value="seat67"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat68">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat68"
+                    value="seat68"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat69">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat69"
+                    value="seat69"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat70">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat70"
+                    value="seat70"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat71">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat71"
+                    value="seat71"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat72">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat72"
+                    value="seat72"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat73">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat73"
+                    value="seat73"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat74">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat74"
+                    value="seat74"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat75">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat75"
+                    value="seat75"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat76">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat76"
+                    value="seat76"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat77">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat77"
+                    value="seat77"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat78">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat78"
+                    value="seat78"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat79">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat79"
+                    value="seat79"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat80">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat80"
+                    value="seat80"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat81">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat81"
+                    value="seat81"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat82">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat82"
+                    value="seat82"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat83">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat83"
+                    value="seat83"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat84">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat84"
+                    value="seat84"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat85">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat85"
+                    value="seat85"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label choose-section__label--disabled" for="seat86">
+                  <input
+                    disabled
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat86"
+                    value="seat86"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span choose-section__span--disabled"></span>
+                </label>
+                <label class="choose-section__label" for="seat87">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat87"
+                    value="seat87"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat88">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat88"
+                    value="seat88"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat89">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat89"
+                    value="seat89"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat90">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat90"
+                    value="seat90"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat91">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat91"
+                    value="seat91"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat92">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat92"
+                    value="seat92"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat93">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat93"
+                    value="seat93"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat94">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat94"
+                    value="seat94"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat95">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat95"
+                    value="seat95"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat96">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat96"
+                    value="seat96"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat97">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat97"
+                    value="seat97"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat98">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat98"
+                    value="seat98"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat99">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat99"
+                    value="seat99"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat100">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat100"
+                    value="seat100"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat101">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat101"
+                    value="seat101"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat102">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat102"
+                    value="seat102"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat103">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat103"
+                    value="seat103"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat104">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat104"
+                    value="seat104"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat105">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat105"
+                    value="seat105"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat106">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat106"
+                    value="seat106"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat107">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat107"
+                    value="seat107"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat108">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat108"
+                    value="seat108"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat109">
+                  <input
+                    class="choose-section__input visually-hidden"
+                    type="checkbox"
+                    name="seat"
+                    id="seat109"
+                    value="seat109"
+                    aria-label="seat row"
+                  />
+                  <span class="choose-section__span"></span>
+                </label>
+                <label class="choose-section__label" for="seat110">
+                  <input class="choose-section__input visually-hidden" type="checkbox" name="seat" id="seat110" />
+                  <span class="choose-section__span"></span>
+                </label>
+              </div>
+            </div>
+            <div class="choose-section__hall-legend">
+              <div class="choose-section__span choose-section__span-legend">available</div>
+              <div class="choose-section__span choose-section__span-legend choose-section__span-legend--selected">
+                selected
+              </div>
+              <div class="choose-section__span choose-section__span-legend choose-section__span-legend--sold">sold</div>
+            </div>
+          </section>
+          <footer class="choose-section__footer">
+            <div class="choose-section__checkout-information choose-section__footer--container-half">2 tickets</div>
+            <button class="checkout-seats__checkout-button choose-section__footer--container-half" type="submit">
+              Buy / $21.50
+            </button>
+          </footer>
+        </form>
+      </main>
+    </div>
   </body>
 </html>
 

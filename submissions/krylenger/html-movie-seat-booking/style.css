@@ -3,7 +3,7 @@
   font-family: Helvetica;
 }
 
-.body {
+.container {
   display: flex;
   width: 100%;
 }
@@ -52,7 +52,7 @@
   background-color: rgb(241, 239, 239);
 }
 
-.container-half-screen--choose-section {
+.choose-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
