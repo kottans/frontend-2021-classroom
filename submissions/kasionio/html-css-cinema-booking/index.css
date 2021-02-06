@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  min-width: 320px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.header_main {
+  background-color: #008b81;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.screen_text {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.seat:checked + label,
+.selected {
+  background-color: pink;
+}
+
+.seat:disabled + label,
+.unavailable {
+  background-color: #c9c9c9;
+}
+
+.seat:disabled + label:hover {
+  cursor: not-allowed;
+}
+
+.seat:focus + label {
+  outline: 1px solid red;
+}
+
+.square {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+.available {
+  background-color: #008b81;
+}
+
+.submit-button {
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #375f81;
+  outline: none;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: #294b69;
+}
+
+.submit-button:active {
+  border: 1px #fff solid;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.label {
+  display: inline-block;
+  margin: 6px;
+  width: 30px;
+  height: 30px;
+  background-color: #008b81;
+  border: #375f81 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comfort {
+  width: 40px;
+  margin: 10px;
+}
+
+.footer {
+  background-color: #008b81;
+}
+
+.footer-content {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  width: 50vw;
+}
+
+.legend-item,
+.price-item {
+  margin: 10px;
+}
+
+.legend,
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.legend::after,
+.price::after {
+  content: '';
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+
+.email:before {
+  content: '\2709  ';
+}
+
+.tel::before {
+  content: '\1F57F  ';
+}
+
+.poster-container {
+  width: 33%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.main-container {
+  width: 500px;
+  background-color: #728673;
+}
+
+.left-poster {
+  background: url(img/sex-education_left.png) no-repeat right;
+}
+
+.right-poster {
+  background: url(img/sex-education_right.png) no-repeat left;
+}
+
+@media screen and (max-width: 500px) {
+  .poster-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .footer-content {
+    flex-direction: column;
+    width: 100%;
+  }
+}
