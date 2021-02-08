@@ -12,7 +12,7 @@ body {
 .wrapper {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .cinema {
@@ -58,6 +58,7 @@ body {
 
 .seat-place {
   margin: 10px 24px;
+  cursor: pointer;
 }
 
 .seat-place:focus-within {
@@ -77,10 +78,19 @@ body {
   clip: rect(0 0 0 0);
 }
 
+.seat-number-sample,
+.seat-number {
+  padding: 10px 10px;
+  background-color: #87ceeb;
+  border-radius: 5px;
+}
+
+.seat-number-sample_choosed,
 .seat-checkbox:checked ~ .seat-number {
   background-color: green;
 }
 
+.seat-number-sample_occupied,
 .seat-checkbox:disabled ~ .seat-number {
   background-color: grey;
 }
@@ -91,12 +101,6 @@ body {
 
 .seat-checkbox:checked ~ .seat-number:hover {
   background-color: #00ff00;
-}
-
-.seat-number {
-  padding: 10px 10px;
-  background-color: #87ceeb;
-  border-radius: 5px;
 }
 
 .seat-number:hover {
