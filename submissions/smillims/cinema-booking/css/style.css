@@ -135,6 +135,8 @@ label,
 .label-menu {
   display: block;
   width: 64px;
+
+  cursor: pointer;
 }
 
 .input-menu:checked + .label-menu {
@@ -280,6 +282,8 @@ label,
   font-size: 20px;
 
   color: #000;
+
+  cursor: pointer;
 }
 
 .seating {
@@ -330,6 +334,10 @@ label,
   display: flex;
   justify-content: center;
   max-height: 40px;
+}
+
+.seating-container label {
+  cursor: pointer;
 }
 
 .label-seating-place-green {
