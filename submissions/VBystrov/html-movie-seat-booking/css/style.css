@@ -61,6 +61,10 @@ body {
   cursor: pointer;
 }
 
+.seat-place_sample {
+  cursor: default;
+}
+
 .seat-place:focus-within {
   color: red;
 }
