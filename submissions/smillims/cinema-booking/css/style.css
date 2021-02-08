@@ -139,6 +139,10 @@ label,
   cursor: pointer;
 }
 
+.input-menu:focus + .label-menu {
+  outline: 1px solid #000;
+}
+
 .input-menu:checked + .label-menu {
   position: absolute;
   right: 0px;
@@ -236,6 +240,12 @@ label,
 .aside-menu-button:hover {
   background-color: rgb(216, 27, 27);
 }
+.aside-menu-button:active {
+  background-color: #aa2e2edc;
+}
+.aside-menu-button:focus {
+  outline: 2px solid #000;
+}
 
 .container {
   display: flex;
@@ -284,6 +294,11 @@ label,
   color: #000;
 
   cursor: pointer;
+}
+
+.choose-date:focus,
+.choose-time:focus {
+  outline: 1px solid #000;
 }
 
 .seating {
@@ -351,6 +366,13 @@ label,
   border-radius: 129px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
+.label-seating-place-green:hover {
+  background-color: #94be5e;
+}
+.label-seating-place-green:active {
+  background-color: #87ab57a9;
+}
+
 .label-seating-place-yellow {
   width: 30px;
   height: 27px;
@@ -362,6 +384,12 @@ label,
   border-radius: 129px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
+.label-seating-place-yellow:hover {
+  background-color: #ebb001;
+}
+.label-seating-place-yellow:active {
+  background-color: #f9bd0bb2;
+}
 .label-seating-place-blue {
   width: 53px;
   height: 36.28px;
@@ -372,6 +400,12 @@ label,
   transition: background-color 0.3s;
   border-radius: 70px;
 }
+.label-seating-place-blue:hover {
+  background-color: #4b24c2;
+}
+.label-seating-place-blue:active {
+  background-color: #5a3bb7c0;
+}
 .label-seating-place-blue:nth-of-type(2n) {
   margin-right: 20px;
 }
@@ -381,6 +415,11 @@ label,
 .seating-place-blue:checked + .label-seating-place-blue {
   background-color: red;
   transition: background-color 0.5s;
+}
+.seating-place-green:checked + .label-seating-place-green:active,
+.seating-place-yellow:checked + .label-seating-place-yellow:active,
+.seating-place-blue:checked + .label-seating-place-blue:active {
+  background-color: rgba(255, 0, 0, 0.808);
 }
 
 .seating-place-green:focus + .label-seating-place-green,
