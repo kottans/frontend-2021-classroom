@@ -84,8 +84,6 @@
 }
 
 .placement {
-  display: grid;
-  grid-template-rows: repeat(6, [row] 1fr);
   background-image: url(./Images/background.jpg);
   width: 100%;
   height: 925px;
@@ -93,15 +91,12 @@
 }
 
 .screen {
-  display: grid;
   width: 80%;
   padding: 15px;
+  margin: 0 auto;
   text-align: center;
-  justify-self: center;
-  align-self: center;
   background-color: rgba(255, 255, 255, 0.6);
   opacity: 0.8;
-  order: 3;
 }
 
 .screen p {
@@ -112,22 +107,17 @@
 
 .calendar_wrap {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 1fr 5fr 1fr;
   align-items: center;
+  margin: 10px;
   background-color: rgba(0, 0, 0, 0.6);
   list-style-type: none;
-  order: 1;
 }
 
 .calendar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column: span 5;
   list-style-type: none;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   padding-inline-start: 0px;
 }
 
@@ -186,10 +176,8 @@
 }
 
 .time_wrap {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  margin: 60px 10px;
   background-color: rgba(0, 0, 0, 0.6);
-  order: 2;
 }
 
 .time_wrap_title {
@@ -198,16 +186,15 @@
   padding-left: 2em;
   color: aliceblue;
   letter-spacing: 4px;
+  padding-top: 10px;
 }
 
 .time_wrap_inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: center;
   list-style-type: none;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
   padding-inline-start: 0px;
+  padding-bottom: 10px;
 }
 
 .time_item {
@@ -245,6 +232,9 @@
   margin-block-end: 0em;
   padding: 40px;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .seats_item::before {
@@ -269,14 +259,15 @@
 
 .seats {
   display: grid;
-  grid-row: span 2;
   grid-template-columns: repeat(10, 1fr);
-  min-width: 400px;
+  gap: 10px;
+  width: 400px;
+  margin: 60px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
-  justify-self: center;
   border: rgb(216, 208, 208) solid;
   background-color: rgba(255, 255, 255, 0.6);
-  order: 4;
 }
 
 .seat {
@@ -284,6 +275,7 @@
   height: 30px;
   width: 30px;
   cursor: pointer;
+  margin: auto;
 }
 
 .seat_input {
@@ -291,19 +283,18 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  margin: 0;
   width: 30px;
   height: 30px;
 }
 
 .seat_number {
-  position: relative;
-  z-index: 2;
-  top: 3px;
-  left: 4px;
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 auto;
   background: rgb(95, 90, 90);
   color: rgb(255, 255, 255);
   transition: all ease-in-out 0.3s;
