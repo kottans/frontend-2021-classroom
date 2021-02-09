@@ -170,6 +170,7 @@ main {
   max-width: 450px;
 
   height: 100%;
+
 }
 
 .checkbox_control {
@@ -201,6 +202,9 @@ main {
 
 .checkbox_control:disabled + .checkbox_label {
   background-color: gray;
+  border-color: white;
+
+  cursor: not-allowed;
 }
 
 .checkbox_control:active + .checkbox_label {
@@ -223,9 +227,9 @@ main {
   align-items: center;
   flex-wrap: nowrap;
 
-  width: 95%;
+  width: 100%;
   height: calc(100vh / 15);
-  min-height: 25px;
+  min-height: 35px;
   max-height: 40px;
 }
 
