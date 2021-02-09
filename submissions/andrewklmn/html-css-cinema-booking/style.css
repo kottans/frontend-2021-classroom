@@ -85,10 +85,6 @@ main {
 }
 
 .hidden {
-  display: none;
-}
-
-.disappeared {
   position: absolute;
   width: 1px;
   height: 1px;
