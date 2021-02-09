@@ -117,8 +117,10 @@ main {
 .about {
   margin: 0;
   padding: 10px;
-
+  padding-bottom: 20px;
   text-align: justify;
+
+  border-bottom: solid 3px gray;
 }
 
 .crew {
@@ -133,10 +135,6 @@ main {
   margin: 0;
   padding: 0px;
   text-align: left;
-}
-
-.poster hr {
-  width: 100%;
 }
 
 .interactive {
