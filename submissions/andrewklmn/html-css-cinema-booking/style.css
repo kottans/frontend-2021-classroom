@@ -147,6 +147,11 @@ main {
 
   width: 35%;
   height: 100%;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .summary_info {
@@ -286,6 +291,7 @@ main {
 
 .seat_control:disabled + .seat_label {
   cursor: not-allowed;
+  border: solid 3px white;
 }
 
 .seat_control:checked + .seat_label {
