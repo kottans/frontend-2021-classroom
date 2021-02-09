@@ -43,7 +43,7 @@ nav {
   width: 100%;
 }
 
-nav > ol {
+nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
