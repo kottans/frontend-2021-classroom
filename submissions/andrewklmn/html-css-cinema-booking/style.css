@@ -137,7 +137,7 @@ main {
   text-align: left;
 }
 
-.interactive {
+.form_area {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -389,7 +389,7 @@ footer {
     width: 35%;
   }
 
-  .interactive {
+  .form_area {
     width: 40%;
   }
 
@@ -409,7 +409,7 @@ footer {
     width: 100%;
   }
   .poster,
-  .interactive {
+  .form_area {
     width: 100%;
     height: auto;
   }
