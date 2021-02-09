@@ -8,12 +8,17 @@ body {
   text-align: center;
 }
 
-h1 {
+h1, h3 {
   margin-top: 10px;
   margin-bottom: 5px;
 
   font-size: 16px;
   color: #333;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
 }
 
 header {
@@ -75,7 +80,6 @@ main {
   margin-top: 61px;
 
   width: 100%;
-  height: calc(100vh - 78px);
 
   background-color: white;
 }
@@ -229,8 +233,8 @@ main {
 
   width: 100%;
   height: calc(100vh / 15);
-  min-height: 35px;
-  max-height: 40px;
+  min-height: 30px;
+  max-height: 45px;
 }
 
 .seat {
@@ -251,6 +255,7 @@ main {
 
   width: 80%;
   height: 100%;
+  max-height: 25px;
 
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
