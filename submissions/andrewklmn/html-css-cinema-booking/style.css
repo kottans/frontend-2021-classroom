@@ -170,11 +170,11 @@ main {
   max-width: 450px;
 }
 
-.checkbox_control {
+.radio_control {
   position: absolute;
 }
 
-.checkbox_label {
+.radio_label {
   display: inline-table;
   padding: 5px;
   border: solid 3px white;
@@ -189,26 +189,26 @@ main {
   cursor: pointer;
 }
 
-.checkbox_label:hover {
+.radio_label:hover {
   border: solid 3px yellow;
 }
 
-.checkbox_control:focus + .checkbox_label {
+.radio_control:focus + .radio_label {
   border: solid 3px cyan;
 }
 
-.checkbox_control:disabled + .checkbox_label {
+.radio_control:disabled + .radio_label {
   background-color: gray;
   border-color: white;
 
   cursor: not-allowed;
 }
 
-.checkbox_control:active + .checkbox_label {
+.radio_control:active + .radio_label {
   border: solid 3px yellow;
 }
 
-.checkbox_control:checked + .checkbox_label {
+.radio_control:checked + .radio_label {
   background-color: #BB0000;
   color: white;
 }
