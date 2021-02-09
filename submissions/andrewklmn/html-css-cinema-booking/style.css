@@ -379,6 +379,21 @@ footer {
   background-color: #343434;
 
 }
+@media screen and (max-width: 1050px) {
+
+  .poster {
+    width: 35%;
+  }
+
+  .interactive {
+    width: 40%;
+  }
+
+  .summary_info {
+    width: 25%;
+  }
+  
+}
 
 @media screen and (max-width: 800px) {
   main {
