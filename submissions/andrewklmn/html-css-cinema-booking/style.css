@@ -336,16 +336,17 @@ main {
 .ticket {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 
   margin-bottom: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 20px;
 
   width: 70%;
 
   font-family: 'Courier New', Courier, monospace;
   font-size: 12px;
+  text-align: center;
   color: black;
 
   border: solid steelblue 2px;
@@ -358,7 +359,7 @@ main {
 
 .ticket_header {
   font-weight: bold;
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: steelblue;
 }
 
