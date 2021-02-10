@@ -184,6 +184,7 @@ body {
 	margin: 15px auto 0 auto;
 	text-align: center;
 	line-height: 30px;
+	border: none;
 }
 .seats_labels .form__seat:before{
 	cursor: unset;
