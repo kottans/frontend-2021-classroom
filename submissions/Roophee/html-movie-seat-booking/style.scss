@@ -7,13 +7,16 @@ $darkGreen: #1B5E20;
 $lineColor: #9E9E9E;
 $bgColor1: #1a1919;
 $bgColor2: #4242423f;
+$bgColor3: #161616;
 $red: #c62828;
 $lightRed: #ef5350;
+$shadowColor: #E0E0E0;
+$hoverBlue:  #1565C0;
 
 :root {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 300;
     box-sizing: border-box;
 }
 
@@ -26,9 +29,6 @@ body {
 .container {
     margin: auto;
     width: 80vw;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
 }
 
 .header {
@@ -37,7 +37,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     border-bottom: 1px solid $lineColor;
 
     &__container {
@@ -46,13 +45,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
     }
 
     &__nav {
         display: flex;
         justify-content: center;
-        min-width: 450px;
         font-size: 1.25rem;
         order:1;
 
@@ -123,16 +120,19 @@ body {
             }
         }
         &-login-btn {
-            width: 70px;
-            height: 30px;
             font-size: 1.25rem;
-            text-align: center;
+            font-family: inherit;
+            font-weight: 300;
+            letter-spacing: 2px;
             background-color: $green;
-            border-radius: 10px;
+            border-radius: 6px;
+            border-color: $font-color;
+            border-width: thin;
             color: $font-color;
             padding:  7px 10px;
-            margin-left: 10px;
+            margin: 0 10px;
             cursor: pointer;
+            box-shadow: 1px 1px 3px 1px $darkGreen;
 
             &:hover {
                 background-color: #388E3C;
@@ -180,10 +180,19 @@ body {
 
 .table {
 
-    &-border{
-        color: $font-color;
-        border-bottom: 1px solid $lineColor;
-        margin: 0;
+    &-border {
+
+        &  .table-header {
+            color: $font-color;
+            border-bottom: 1px solid $lineColor;
+            margin: 0;
+        }
+
+        &  .table-data {
+            color: $font-color;
+            border-bottom: 1px solid $lineColor;
+            margin: 0;
+        }
     }
 
     &-header {
@@ -209,22 +218,22 @@ body {
     align-items: center;
     color: $font-color;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     &-label {
     z-index: 2;
-    display: inline-block;
     width: 87%;
     background-color: $bgColor1;
     border-radius: 7px;
-    padding: 0;
-    text-align: center;
-    font-size: 1.25rem;
-
-    & p {
-        margin: 0;
-        padding: 10px;
-    }
+    box-shadow: 1px 1px 3px 1px $darkGreen;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: inherit;
+    letter-spacing: 1px;
+    color: $font-color;
+    border: 1px solid $darkGreen;
+    cursor: pointer;
 
     &:hover {
         color: $green;
@@ -233,7 +242,7 @@ body {
 
     &:active {
         color: $darkGreen;
-        background-color: $bgColor1;
+        background-color: $bgColor3;
     }
 }
     &-trailer {
@@ -243,7 +252,6 @@ body {
         margin-top: 0;
         padding: 20px 0;
         width: 87%;
-        background-color: $bgColor2;
         transition: margin-top  .5s linear;
     }
 }
@@ -259,16 +267,19 @@ label {
     color: $green;
     font-size: 1.1rem;
     background-color: $bgColor2;
+    font-weight: 400;
+    cursor: pointer;
 
 }
 
 input+label:hover {
     color: $font-color;
-    background-color: #1565C0;
+    background-color: $hoverBlue;
 }
 
 input:disabled+label {
     color: #616161;
+    cursor: not-allowed;
 }
 
 input:focus+label {
@@ -291,7 +302,7 @@ table {
     border-top: 12px solid $green;
     border-bottom-color: $black;
     border-radius: 50%;
-    content:" ";
+    content: " ";
 }
 
 .content {
@@ -317,6 +328,12 @@ table {
 
 .seats {
 
+    &__label h2 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
     &__body {
         width: 95%;
         display: flex;
@@ -326,6 +343,7 @@ table {
         background-color: $bgColor2;
         border-radius: 15px;
         padding-bottom: 15px;
+        font-weight: 600;
 
         &-table-seats {
             display: flex;
@@ -341,12 +359,30 @@ table {
             align-items: center;
 
             &-btn button {
-                width: 150px;
+                width: 190px;
                 height: 60px;
                 background-color: $bgColor1;
                 color: $darkGreen;
                 border-radius: 5px;
+                border: 2px solid $green;
                 font-size: 1.2rem;
+                box-shadow: 1px 1px 3px 1px $darkGreen;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $hoverBlue;
+                    color: $font-color;
+                }
+
+                &:active {
+                    background-color: $red;
+                    color: $font-color;
+                }
+
+                &:focus {
+                    background-color: $red;
+                    color: $font-color;
+                }
             }
         }
     }
@@ -386,10 +422,12 @@ table {
 
         &:disabled+label {
             background-color: #3E2723;
+            cursor: not-allowed;
         }
     }
 }
 
+input[name='ticketDate'],
 input[name='ticketTime'],
 input[name='ticketType'],
 input[name='ticketCustom'] {
@@ -446,11 +484,9 @@ input[name='ticketCustom'] {
     }
 }
 
-.weight400 {
-    font-weight: 400;
-}
-
 .whitespaces {
+    font-weight: 700;
+
     &::before {
         content:"\00A0";
     }
@@ -488,12 +524,14 @@ input[name='ticketCustom'] {
 }
 
 @media screen and (max-width:1087px) {
+
     .header__account-login-btn {
                 font-size: 1.2rem;
             }
         }
 
 @media screen and (max-width:1060px) {
+
     .header {
         height: 120px;
 
@@ -532,7 +570,6 @@ input[name='ticketCustom'] {
     .header{
 
         &__nav{
-            min-width: 350px;
             font-size: 1rem;
 
                 &-item{
@@ -542,13 +579,11 @@ input[name='ticketCustom'] {
                 &-list{
                     justify-content: center;
                 }
-
         }
 
         &__search-form-input {
             font-size: .8rem;
             width: 180px;
-
         }
 
         &__account {
@@ -561,20 +596,16 @@ input[name='ticketCustom'] {
                 margin-left: 5px;
             }
         }
+    }
 
-        .seats__body-table-seats-place+label {
-            font-size: .75rem;
-        }
-
-        .seats__body-table {
-            border-spacing: 10px;
-        }
+    .content__seats {
+        width: 100%;
     }
 }
 
 @media screen and (max-width:529px) {
     .container {
-        width: 90vw;
+        width: 93vw;
     }
 
     .header {
@@ -585,23 +616,25 @@ input[name='ticketCustom'] {
             }
 
             &__nav{
-                // min-width: 350px;
                 font-size: 1rem;
 
                 &-item {
-                    // margin: 0;
                     padding: 0;
                 }
             }
         }
 
+    .content__seats {
+        width: 100%;
+    }
+
     .seats__body {
 
         &-table {
-        border-spacing: 5px;
+        border-spacing: 2px;
 
             &-seats-place+label {
-                font-size: .8rem;
+                font-size: 1rem;
             }
         }
     }
@@ -615,16 +648,28 @@ input[name='ticketCustom'] {
 
     .header {
             &__container {
-                justify-content: space-between;
+                justify-content: center;
                 flex-direction: column;
             }
             &__nav {
-                min-width: 300px;
+                width: 100%;
                 margin-top: 5px;
                 font-size: .8rem;
 
+                &-list {
+                    width: 98%;
+                    justify-content: space-between;
+                    margin-top: 5px;
+                }
+
                 &-item {
-                    margin: 2px;
+                    margin: 0;
+                    font-size: .8rem;
+                    font-weight: 600;
+                }
+
+                &-item a {
+                    padding: 0 2px;
                 }
             }
 
@@ -657,7 +702,7 @@ input[name='ticketCustom'] {
     }
 
     .seats__body-table {
-        border-spacing: 5px;
+        border-spacing: 3px;
 
         &-seats-place+label {
             font-size: 1rem;

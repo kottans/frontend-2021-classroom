@@ -11,7 +11,10 @@ const resetVideoSrc = function() {
 
 trailerButton.addEventListener('click',function(e){
     if (!trailerSection.classList.contains('hide')){
+        videoFrame.tabIndex-=1;
         setTimeout(resetVideoSrc, 500);
+        } else{
+            videoFrame.tabIndex=0;
         }
     trailerSection.classList.toggle('hide');
 })
