@@ -8,7 +8,7 @@
   .aside-menu {
     width: 270px;
   }
-  .aside-menu-h2 {
+  .aside-menu-h1 {
     font-size: 70px;
   }
   .tickets,
@@ -49,7 +49,7 @@
     left: 50px;
   }
 
-  .aside-menu-block-h2 {
+  .aside-menu-block-h1 {
     height: 100px;
   }
 

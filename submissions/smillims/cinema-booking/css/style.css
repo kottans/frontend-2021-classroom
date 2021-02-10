@@ -165,7 +165,7 @@ label,
   border-radius: 20px;
 }
 
-.aside-menu-block-h2 {
+.aside-menu-block-h1 {
   height: 136px;
 
   background: #ffffff;
@@ -175,7 +175,7 @@ label,
   justify-content: center;
 }
 
-.aside-menu-h2 {
+.aside-menu-h1 {
   display: flex;
   align-items: center;
   font-size: 90px;
