@@ -6,13 +6,24 @@
   text-decoration: none;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .main {
   display: flex;
   justify-content: center;
+  flex: 1 0 auto;
+  background: url(img/sex-education_left.png) no-repeat calc(50% - 500px),
+    url(img/sex-education_right.png) no-repeat calc(50% + 500px),
+    linear-gradient(0deg, #99fff8, white 50%, #99fff8);
 }
 
 .header {
@@ -24,6 +35,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   line-height: 2;
+  flex: 0 0 auto;
 }
 
 .article {
@@ -33,6 +45,11 @@ body {
   align-items: center;
   height: 100%;
   text-align: center;
+}
+
+.main-container {
+  width: 500px;
+  background-color: #728673;
 }
 
 .screen_text {
@@ -55,7 +72,12 @@ body {
 }
 
 .seat:focus + label {
-  outline: 1px solid red;
+  border: 1px solid red;
+}
+
+.seat:active + label {
+  transform: scale(1.3);
+  border: 2px solid red;
 }
 
 .square {
@@ -106,6 +128,10 @@ body {
   background-color: #008b81;
   border: #375f81 1px solid;
   border-radius: 4px;
+}
+
+label:hover {
+  background-color: #02dfd0;
   cursor: pointer;
 }
 
@@ -116,6 +142,7 @@ body {
 
 .footer {
   background-color: #008b81;
+  flex: 0 0 auto;
 }
 
 .footer-content {
@@ -155,28 +182,9 @@ body {
   content: '\1F57F  ';
 }
 
-.poster-container {
-  width: 33%;
-  height: auto;
-  opacity: 0.8;
-}
-
-.main-container {
-  width: 500px;
-  background-color: #728673;
-}
-
-.left-poster {
-  background: url(img/sex-education_left.png) no-repeat right;
-}
-
-.right-poster {
-  background: url(img/sex-education_right.png) no-repeat left;
-}
-
-@media screen and (max-width: 500px) {
-  .poster-container {
-    display: none;
+@media screen and (max-width: 680px) {
+  .main {
+    background: linear-gradient(0deg, #99fff8, white 50%, #99fff8);
   }
 }
 
