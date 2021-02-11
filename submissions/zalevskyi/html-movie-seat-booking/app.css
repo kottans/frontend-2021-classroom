@@ -40,14 +40,21 @@
     text-align: center;
     vertical-align: middle;
     border-radius: 5%;
+    cursor: pointer;
 }
 .visually_hidden {
     position: absolute;
     clip-path: circle(0%);
     appearance: none;
 }
-.seat__input:focus + .seat {
+.seat__input:focus + .seat,
+.seat:hover,
+.seat:focus {
     box-shadow: 0 0 0 0.3vw green;
+}
+.seat:active,
+.seat__input:checked + .seat:active {
+    background: indianred;
 }
 .seat__input:checked + .seat,
 .seats_legend__wrapper .booked {
@@ -56,6 +63,10 @@
 .seat__input:disabled + .seat,
 .seats_legend__wrapper .not_available {
     background: lightgrey;
+}
+.seat__input:disabled + .seat:hover {
+    box-shadow: none;
+    cursor: not-allowed;
 }
 .row{
     margin: 10px;
@@ -75,6 +86,15 @@
     background: lightcoral;
     font-size: 1.2rem;
     font-weight: normal;
+    cursor: pointer;
+}
+.book__button:hover,
+.book__button:focus {
+    outline: solid green 0.4vw;
+}
+.book__button:active {
+    background: indianred;
+    color: white;
 }
 @media screen and (min-width: 700px) {
     .film__title, .film__date, .film__time {
@@ -90,8 +110,14 @@
         line-height: 35px;
         margin: 3.5px;
     }
-    .seat__input:focus + .seat {
+    .seat__input:focus + .seat,
+    .seat:hover,
+    .seat:focus {
         box-shadow: 0 0 0 2.1px green;
+    }
+    .book__button:hover,
+    .book__button:focus {
+        outline: solid green 2.8px;
     }
 }
 @media screen and (max-width: 500px) {
