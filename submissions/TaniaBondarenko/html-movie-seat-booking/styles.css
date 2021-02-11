@@ -22,10 +22,6 @@ body {
   fill: grey;
 }
 
-.screenImg:hover {
-  fill: black;
-}
-
 .screenText {
   text-align: center;
   margin-bottom: 10px;
@@ -45,7 +41,7 @@ body {
 .badgeSeat.lux,
 .badgeSeat.vip,
 .booking {
-  box-shadow: 2px 3px 4px #020204;
+  box-shadow: 1px 2px 3px #020204;
 }
 
 .posterImg {
@@ -134,21 +130,21 @@ hr {
   margin-bottom: 10px;
 }
 
-.seat:focus {
+.hiddenCheckbox:focus + .seat {
   outline: none;
-  box-shadow: 6px 6px 5px black;
   border-top-right-radius: 30%;
   border-top-left-radius: 30%;
 }
 
 .seat:hover,
 .booking:hover,
-.seat:active {
-  box-shadow: 6px 6px 5px white;
+.seat:active,
+.hiddenCheckbox:focus + .seat {
+  box-shadow: 3px 5px 4px #020204;
 }
 
-.hiddenCheckbox:hover + .seatLabel .seat,
-.hiddenCheckbox:focus + .seatLabel .seat {
+.hiddenCheckbox:hover + .seat,
+.hiddenCheckbox:focus + .seat {
   cursor: pointer;
 }
 
@@ -157,31 +153,35 @@ hr {
 }
 
 .hiddenCheckbox {
-  opacity: 0;
   position: absolute;
-  height: 1px;
   width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.hiddenCheckbox:checked + .seatLabel .seat,
-.seat.booked,
+.hiddenCheckbox.booked:checked + .seat.booked,
 .booking,
 .occupiedSeat {
   background-color: #b09a86;
 }
 
-.hiddenCheckbox:checked + .seatLabel .seat,
+.hiddenCheckbox:checked + .seat,
 .rowVip .hiddenCheckbox:checked + .seat {
   background-color: #a32432;
+  box-shadow: 6px 6px 5px white;
 }
 
-.hiddenCheckbox.disabled.notActive + .seatLabel .seat,
+.hiddenCheckbox.disabled.notActive + .seat,
 .blockedSeat {
   background-color: #ef4222;
   cursor: not-allowed;
 }
 
-.hiddenCheckbox.booked + .seatLabel .seat.booked {
+.hiddenCheckbox.booked + .seat.booked {
   cursor: not-allowed;
 }
 
