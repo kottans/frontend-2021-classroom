@@ -15,7 +15,7 @@ body {
   flex-direction: row;
   justify-content: center;
   margin: auto;
-  background-color: #f6edea;
+  background-color: #e3d5c6;
 }
 
 .screenImg {
@@ -141,6 +141,12 @@ hr {
   border-top-left-radius: 30%;
 }
 
+.seat:hover,
+.booking:hover,
+.seat:active {
+  box-shadow: 6px 6px 5px white;
+}
+
 .hiddenCheckbox:hover + .seatLabel .seat,
 .hiddenCheckbox:focus + .seatLabel .seat {
   cursor: pointer;
@@ -179,7 +185,6 @@ hr {
   cursor: not-allowed;
 }
 
-.booking:hover,
 .booking:focus,
 .booking:active {
   background-color: #eba963;
