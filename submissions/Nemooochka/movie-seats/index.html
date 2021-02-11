@@ -2,9 +2,300 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>Movie seats</title>
 </head>
 <body>
-
+    <header>
+        <div class="container">
+            <h2>
+                Your favourite movie
+            </h2>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="cinema">
+                <div class="cinema-tickets_types">
+                    <div class="cinema-tickets_type type-good">
+                        <span class="rectangle"></span>
+                        <span class="type">GOOD -</span>
+                        <span class="price">125</span>
+                        <span class="currency">грн</span>
+                    </div>
+                    <div class="cinema-tickets_type type-lux">
+                        <span class="rectangle"></span>
+                        <span class="type">Super Lux -</span>
+                        <span class="price">215</span>
+                        <span class="currency">грн</span>
+                    </div>
+                </div>
+                <div class="cinema-screen">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 806 21" fill="#061420">
+                        <path d="M3.2,20l-2,0.2l-0.3-4l2-0.2C136.2,5.3,269.6,0,403,0s266.8,5.3,400.2,16l2,0.2l-0.3,4l-2-0.2 C669.5,9.3,536.3,4,403,4S136.4,9.3,3.2,20z"></path>
+                    </svg>
+                    <span>Screen</span>
+                </div>
+                <div class="cinema-hall">
+                    <form action="" autocomplete="off">
+                        <div class="seats-row">
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_1" name="seat_1_1" aria-label="1 row 1 seat">
+                                <label for="seat_1_1"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_2" name="seat_1_2" aria-label="1 row 2 seat">
+                                <label for="seat_1_2"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_3" name="seat_1_3" aria-label="1 row 3 seat">
+                                <label for="seat_1_3"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_4" name="seat_1_4" aria-label="1 row 4 seat">
+                                <label for="seat_1_4"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_5" name="seat_1_5" aria-label="1 row 5 seat">
+                                <label for="seat_1_5"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_6" name="seat_1_6" aria-label="1 row 6 seat">
+                                <label for="seat_1_6"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_7" name="seat_1_7" aria-label="1 row 7 seat">
+                                <label for="seat_1_7"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_8" name="seat_1_8" aria-label="1 row 8 seat">
+                                <label for="seat_1_8"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_1_9" name="seat_1_9" aria-label="1 row 9 seat">
+                                <label for="seat_1_9"></label>
+                            </div>
+                        </div>
+                        <div class="seats-row">
+                            <div class="seat">
+                                <input type="checkbox" id="seat_2_1" name="seat_2_1" aria-label="2 row 1 seat">
+                                <label for="seat_2_1"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_2_2" name="seat_2_2" aria-label="2 row 2 seat">
+                                <label for="seat_2_2"></label>
+                            </div>
+                            <div class="seat seat-booked">
+                                <input type="checkbox" id="seat_2_3" name="seat_2_3" aria-label="2 row 3 seat" checked disabled>
+                                <label for="seat_2_3"></label>
+                            </div>
+                            <div class="seat seat-booked">
+                                <input type="checkbox" id="seat_2_4" name="seat_2_4" aria-label="2 row 4 seat" checked disabled>
+                                <label for="seat_2_4"></label>
+                            </div>
+                            <div class="seat seat-booked">
+                                <input type="checkbox" id="seat_2_5" name="seat_2_5" aria-label="2 row 5 seat" checked disabled>
+                                <label for="seat_2_5"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_2_6" name="seat_2_6" aria-label="2 row 6 seat">
+                                <label for="seat_2_6"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_2_7" name="seat_2_7" aria-label="2 row 7 seat">
+                                <label for="seat_2_7"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_2_8" name="seat_2_8" aria-label="2 row 8 seat">
+                                <label for="seat_2_8"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_2_9" name="seat_2_9" aria-label="2 row 9 seat">
+                                <label for="seat_2_9"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_2_10" name="seat_2_10" aria-label="2 row 10 seat">
+                                <label for="seat_2_10"></label>
+                            </div>
+                        </div>
+                        <div class="seats-row">
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_1" name="seat_3_1" aria-label="3 row 1 seat">
+                                <label for="seat_3_1"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_2" name="seat_3_2" aria-label="3 row 2 seat">
+                                <label for="seat_3_2"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_3" name="seat_3_3" aria-label="3 row 3 seat">
+                                <label for="seat_3_3"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_4" name="seat_3_4" aria-label="3 row 4 seat">
+                                <label for="seat_3_4"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_5" name="seat_3_5" aria-label="3 row 5 seat">
+                                <label for="seat_3_5"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_6" name="seat_3_6" aria-label="3 row 6 seat">
+                                <label for="seat_3_6"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_7" name="seat_3_7" aria-label="3 row 7 seat">
+                                <label for="seat_3_7"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_8" name="seat_3_8" aria-label="3 row 8 seat">
+                                <label for="seat_3_8"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_9" name="seat_3_9" aria-label="3 row 9 seat">
+                                <label for="seat_3_9"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_3_10" name="seat_3_10" aria-label="3 row 10 seat">
+                                <label for="seat_3_10"></label>
+                            </div>
+                        </div>
+                        <div class="seats-row">
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_1" name="seat_4_1" aria-label="4 row 1 seat">
+                                <label for="seat_4_1"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_2" name="seat_4_2" aria-label="4 row 2 seat">
+                                <label for="seat_4_2"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_3" name="seat_4_3" aria-label="4 row 3 seat">
+                                <label for="seat_4_3"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_4" name="seat_4_4" aria-label="4 row 4 seat">
+                                <label for="seat_4_4"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_5" name="seat_4_5" aria-label="4 row 5 seat">
+                                <label for="seat_4_5"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_6" name="seat_4_6" aria-label="4 row 6 seat">
+                                <label for="seat_4_6"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_7" name="seat_4_7" aria-label="4 row 7 seat">
+                                <label for="seat_4_7"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_8" name="seat_4_8" aria-label="4 row 8 seat">
+                                <label for="seat_4_8"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_9" name="seat_4_9" aria-label="4 row 9 seat">
+                                <label for="seat_4_9"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_4_10" name="seat_4_10" aria-label="4 row 10 seat">
+                                <label for="seat_4_10"></label>
+                            </div>
+                        </div>
+                        <div class="seats-row">
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_1" name="seat_5_1">
+                                <label for="seat_5_1"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_2" name="seat_5_2">
+                                <label for="seat_5_2"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_3" name="seat_5_3">
+                                <label for="seat_5_3"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_4" name="seat_5_4">
+                                <label for="seat_5_4"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_5" name="seat_5_5">
+                                <label for="seat_5_5"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_6" name="seat_5_6">
+                                <label for="seat_5_6"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_7" name="seat_5_7">
+                                <label for="seat_5_7"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_8" name="seat_5_8">
+                                <label for="seat_5_8"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_9" name="seat_5_9">
+                                <label for="seat_5_9"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_5_10" name="seat_5_10">
+                                <label for="seat_5_10"></label>
+                            </div>
+                        </div>
+                        <div class="seats-row seats-row_lux">
+                            <div class="seat seat-booked">
+                                <input type="checkbox" id="seat_6_1" name="seat_6_1" checked disabled>
+                                <label for="seat_6_1"></label>
+                            </div>
+                            <div class="seat seat-booked">
+                                <input type="checkbox" id="seat_6_2" name="seat_6_2" checked disabled>
+                                <label for="seat_6_2"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_6_3" name="seat_6_3">
+                                <label for="seat_6_3"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_6_4" name="seat_6_4">
+                                <label for="seat_6_4"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_6_5" name="seat_6_5">
+                                <label for="seat_6_5"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_6_6" name="seat_6_6">
+                                <label for="seat_6_6"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_6_7" name="seat_6_7">
+                                <label for="seat_6_7"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_6_8" name="seat_6_8">
+                                <label for="seat_6_8"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_6_9" name="seat_6_9">
+                                <label for="seat_6_9"></label>
+                            </div>
+                            <div class="seat">
+                                <input type="checkbox" id="seat_6_10" name="seat_6_10">
+                                <label for="seat_6_10"></label>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button type="button" class="btn">
+                                Buy
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
