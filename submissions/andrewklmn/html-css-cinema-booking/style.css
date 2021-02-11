@@ -48,7 +48,7 @@ nav {
   width: 100%;
 }
 
-nav > ul {
+.menu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
