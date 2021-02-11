@@ -1,0 +1,432 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+h1, h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+
+  font-size: 16px;
+  color: #333;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  background-color: #343434;
+}
+
+.logo {
+  width: 80px;
+  height: 57px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+
+  padding: 0;
+}
+
+.menu > li {
+  list-style-type: none;
+  padding-right: 10px;
+}
+
+.menu a {
+  color: white;
+}
+
+.menu a:hover {
+  color: greenyellow;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+
+  margin: 0;
+  margin-top: 61px;
+
+  width: 100%;
+
+  background-color: white;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+
+  font-size: 16px;
+
+  width: 45%;
+}
+
+.poster_image {
+  width: 100%;
+}
+
+.about {
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 20px;
+  text-align: justify;
+
+  border-bottom: solid 3px gray;
+}
+
+.crew {
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 30px;
+
+  text-align: left;
+}
+
+.crew p {
+  margin: 0;
+  padding: 0px;
+  text-align: left;
+}
+
+.form_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 35%;
+  height: 100%;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.summary_info {
+  width: 20%;
+}
+
+.screen {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.booking_form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 95%;
+  min-width: 200px;
+  max-width: 450px;
+}
+
+.radio_control {
+  position: absolute;
+}
+
+.radio_label {
+  display: inline-table;
+  padding: 5px;
+  border: solid 3px white;
+
+  font-weight: bold;
+  font-size: 14px;
+
+  background-color: green;
+  color: white;
+
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.radio_label:hover {
+  border: solid 3px yellow;
+}
+
+.radio_control:focus + .radio_label {
+  border: solid 3px cyan;
+}
+
+.radio_control:disabled + .radio_label {
+  background-color: gray;
+  border-color: white;
+
+  cursor: not-allowed;
+}
+
+.radio_control:active + .radio_label {
+  border: solid 3px yellow;
+}
+
+.radio_control:checked + .radio_label {
+  background-color: #BB0000;
+  color: white;
+}
+
+.seat_set {
+  width: 100%;
+}
+
+.seat_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  width: 100%;
+  height: calc(100vh / 15);
+  min-height: 30px;
+  max-height: 45px;
+}
+
+.seat {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 9%;
+  height: 100%;
+
+  font-size: 14px;
+}
+
+.seat_label {
+  padding-top: 4px;
+  align-self: center;
+
+  width: 80%;
+  height: 100%;
+  max-height: 25px;
+
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+
+  font-weight: bold;
+  text-align: center;
+  color: white;
+
+  
+  background-image: url('img/seat_template.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+  border: solid 3px #ffffff;
+  background-color: green;
+
+  cursor: pointer;
+}
+
+.seat_control {
+  position: absolute;
+  align-self: center;
+  margin: 0;
+
+  border: none;
+  outline: solid transparent;
+}
+
+.seat_control:focus + .seat_label {
+  border: solid 3px cyan;
+}
+
+.seat_control:disabled + .seat_label {
+  cursor: not-allowed;
+  border: solid 3px white;
+}
+
+.seat_control:checked + .seat_label {
+  background-color: red;
+}
+
+.seat_label:hover {
+  border: solid 3px yellow;
+}
+
+.seat_control:disabled + label.seat_label {
+  background-color: darkgray;
+}
+
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.book_button {
+  height: 44px;
+  width: 70%;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  font-weight: bold;
+  color: white;
+  background-color: #c85000;
+
+  border-radius: 20px;
+  cursor: pointer;
+}
+.book_button:hover {
+  background-color: #f70;
+}
+
+.summary_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 50px;
+  padding: 20px;
+
+  width: 70%;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+
+  border: solid steelblue 2px;
+  border-radius: 20px;
+
+  -webkit-box-shadow: 5px 5px 10px 5px gray;
+  box-shadow: 5px 5px 10px 5px gray;
+  list-style-type: none;
+}
+
+.ticket_header {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: steelblue;
+}
+
+footer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 17px;
+  
+  font-size: 13px;
+  color: lightgray;
+  background-color: #343434;
+
+}
+@media screen and (max-width: 1050px) {
+
+  .poster {
+    width: 35%;
+  }
+
+  .form_area {
+    width: 40%;
+  }
+
+  .summary_info {
+    width: 25%;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    flex-direction: column;
+    height: auto;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+  }
+  .poster,
+  .form_area {
+    width: 100%;
+    height: auto;
+  }
+
+  .crew p {
+    text-align: center;
+  }
+
+  .summary_info {
+    width: 100%;
+
+    flex-direction: row;
+  }
+  .ticket {
+    width: 200px;
+  }
+  footer {
+    font-size: 10px;
+  }
+}
