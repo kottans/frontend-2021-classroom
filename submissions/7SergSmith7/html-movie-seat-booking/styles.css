@@ -6,7 +6,7 @@ body {
 main {
   display: flex;
 }
-.header__title {
+.header {
   text-align: center;
   font-weight: 700;
   margin-bottom: 20px;
@@ -105,8 +105,7 @@ main {
   margin: 0 auto;
 }
 
-.navigation__time__list {
-  list-style-type: none;
+.main__screen-and-seats-block__select__time {
   display: flex;
   width: 100%;
   padding: 0 0;
@@ -132,6 +131,16 @@ main {
   border: 1px solid white;
   color: #828282;
 }
+
+.select__time__item input[type='radio'] {
+  display: none;
+}
+
+.select__time__item input[type='radio']:checked + label .time__list__item {
+  background-color: rgba(95, 151, 235, 0.8);
+  color: black;
+}
+
 .selected-time {
   background-color: rgba(95, 151, 235, 0.8);
   color: black;

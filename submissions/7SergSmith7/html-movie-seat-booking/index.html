@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <h1 class="header__title">Movie Seat Booking</h1>
+      <h1 class="header">Movie Seat Booking</h1>
     </header>
     <main>
       <section class="main__film-description">
@@ -79,23 +79,104 @@
         </div>
       </section>
       <section class="main__screen-and-seats-block">
-        <nav class="main__screen-and-seats-block__navigation">
-          <div class="main__screen-and-seats-block__navigation__date">
+        <nav class="main__screen-and-seats-block__select">
+          <div class="main__screen-and-seats-block__select__date">
             <ul class="navigation__date__list">
               <li class="date__list__item navigation-arrow"><</li>
               <li class="date__list__item selected-date">02 February</li>
               <li class="date__list__item navigation-arrow">></li>
             </ul>
           </div>
-          <div class="main__screen-and-seats-block__navigation__time">
-            <ol class="navigation__time__list">
-              <li class="time__list__item">10:00</li>
-              <li class="time__list__item">11:20</li>
-              <li class="time__list__item selected-time">12:00</li>
-              <li class="time__list__item">16:00</li>
-              <li class="time__list__item">17:20</li>
-              <li class="time__list__item">19:00</li>
-            </ol>
+          <div class="main__screen-and-seats-block__select__time">
+            <div class="select__time__item">
+              <input
+                class="select__time__item__radio"
+                type="radio"
+                name="select-time"
+                id="10:00"
+                value="10:00"
+              />
+              <label for="10:00"
+                ><time class="time__list__item" datetime="2021-02-02 10:00"
+                  >10:00</time
+                ></label
+              >
+            </div>
+
+            <div class="select__time__item">
+              <input
+                class="select__time__item__radio"
+                type="radio"
+                name="select-time"
+                id="11:20"
+                value="11:20"
+              />
+              <label for="11:20"
+                ><time class="time__list__item" datetime="2021-02-02 11:20"
+                  >11:20</time
+                ></label
+              >
+            </div>
+
+            <div class="select__time__item">
+              <input
+                class="select__time__item__radio"
+                type="radio"
+                name="select-time"
+                id="12:00"
+                value="12:00"
+              />
+              <label for="12:00"
+                ><time class="time__list__item" datetime="2021-02-02 12:00"
+                  >12:00</time
+                ></label
+              >
+            </div>
+
+            <div class="select__time__item">
+              <input
+                class="select__time__item__radio"
+                type="radio"
+                name="select-time"
+                id="16:00"
+                value="16:00"
+              />
+              <label for="16:00"
+                ><time class="time__list__item" datetime="2021-02-02 16:00"
+                  >16:00</time
+                ></label
+              >
+            </div>
+
+            <div class="select__time__item">
+              <input
+                class="select__time__item__radio"
+                type="radio"
+                name="select-time"
+                id="17:20"
+                value="17:20"
+              />
+              <label for="17:20"
+                ><time class="time__list__item" datetime="2021-02-02 17:20"
+                  >17:20</time
+                ></label
+              >
+            </div>
+
+            <div class="select__time__item">
+              <input
+                class="select__time__item__radio"
+                type="radio"
+                name="select-time"
+                id="19:00"
+                value="19:00"
+              />
+              <label for="19:00"
+                ><time class="time__list__item" datetime="2021-02-02 19:00"
+                  >19:00</time
+                ></label
+              >
+            </div>
           </div>
         </nav>
         <div class="main__screen-and-seats-block__screen">
@@ -121,6 +202,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-3"
+              value="seat-1-3"
               disabled
             />
             <label
@@ -131,6 +213,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-4"
+              value="seat-1-4"
               disabled
             />
             <label
@@ -141,6 +224,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-5"
+              value="seat-1-5"
               disabled
             />
             <label
@@ -151,6 +235,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-6"
+              value="seat-1-6"
               disabled
             />
             <label
@@ -161,24 +246,28 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-7"
+              value="seat-1-7"
             />
             <label class="seats-list__row__item" for="seat-1-7"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-8"
+              value="seat-1-8"
             />
             <label class="seats-list__row__item" for="seat-1-8"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-9"
+              value="seat-1-9"
             />
             <label class="seats-list__row__item" for="seat-1-9"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-10"
+              value="seat-1-10"
               disabled
             />
             <label
@@ -189,6 +278,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-11"
+              value="seat-1-11"
               disabled
             />
             <label
@@ -199,6 +289,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-1-12"
+              value="seat-1-12"
             />
             <label class="seats-list__row__item" for="seat-1-12"></label>
 
@@ -222,60 +313,70 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-2"
+              value="seat-2-2"
             />
             <label class="seats-list__row__item" for="seat-2-2"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-3"
+              value="seat-2-3"
             />
             <label class="seats-list__row__item" for="seat-2-3"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-4"
+              value="seat-2-4"
             />
             <label class="seats-list__row__item" for="seat-2-4"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-5"
+              value="seat-2-5"
             />
             <label class="seats-list__row__item" for="seat-2-5"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-6"
+              value="seat-2-6"
             />
             <label class="seats-list__row__item" for="seat-2-6"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-7"
+              value="seat-2-7"
             />
             <label class="seats-list__row__item" for="seat-2-7"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-8"
+              value="seat-2-8"
             />
             <label class="seats-list__row__item" for="seat-2-8"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-9"
+              value="seat-2-9"
             />
             <label class="seats-list__row__item" for="seat-2-9"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-10"
+              value="seat-2-10"
             />
             <label class="seats-list__row__item" for="seat-2-10"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-11"
+              value="seat-2-11"
               disabled
             />
             <label
@@ -286,12 +387,14 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-12"
+              value="seat-2-12"
             />
             <label class="seats-list__row__item" for="seat-2-12"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-2-13"
+              value="seat-2-13"
               disabled
             />
             <label
@@ -302,6 +405,7 @@
             <label
               class="seats-list__row__item empty-place"
               for="seat-2-14"
+              value="seat-2-14"
             ></label>
           </div>
           <div class="seats-list__row">
@@ -309,84 +413,98 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-1"
+              value="seat-3-1"
             /><label class="seats-list__row__item" for="seat-3-1"></label>
 
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-2"
+              value="seat-3-2"
             />
             <label class="seats-list__row__item" for="seat-3-2"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-3"
+              value="seat-3-3"
             />
             <label class="seats-list__row__item" for="seat-3-3"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-4"
+              value="seat-3-4"
             />
             <label class="seats-list__row__item" for="seat-3-4"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-5"
+              value="seat-3-5"
             />
             <label class="seats-list__row__item" for="seat-3-5"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-6"
+              value="seat-3-6"
             />
             <label class="seats-list__row__item" for="seat-3-6"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-7"
+              value="seat-3-7"
             />
             <label class="seats-list__row__item" for="seat-3-7"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-8"
+              value="seat-3-8"
             />
             <label class="seats-list__row__item" for="seat-3-8"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-9"
+              value="seat-3-9"
             />
             <label class="seats-list__row__item" for="seat-3-9"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-10"
+              value="seat-3-10"
             />
             <label class="seats-list__row__item" for="seat-3-10"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-11"
+              value="seat-3-11"
             />
             <label class="seats-list__row__item" for="seat-3-11"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-12"
+              value="seat-3-12"
             />
             <label class="seats-list__row__item" for="seat-3-12"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-13"
+              value="seat-3-13"
             />
             <label class="seats-list__row__item" for="seat-3-13"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-3-14"
+              value="seat-3-14"
             />
             <label class="seats-list__row__item" for="seat-3-14"></label>
           </div>
@@ -395,6 +513,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-1"
+              value="seat-4-1"
               disabled
             /><label
               class="seats-list__row__item unavailable-place"
@@ -405,6 +524,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-2"
+              value="seat-4-2"
               disabled
             />
             <label
@@ -415,54 +535,63 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-3"
+              value="seat-4-3"
             />
             <label class="seats-list__row__item" for="seat-4-3"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-4"
+              value="seat-4-4"
             />
             <label class="seats-list__row__item" for="seat-4-4"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-5"
+              value="seat-4-5"
             />
             <label class="seats-list__row__item" for="seat-4-5"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-6"
+              value="seat-4-6"
             />
             <label class="seats-list__row__item" for="seat-4-6"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-7"
+              value="seat-4-7"
             />
             <label class="seats-list__row__item" for="seat-4-7"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-8"
+              value="seat-4-8"
             />
             <label class="seats-list__row__item" for="seat-4-8"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-9"
+              value="seat-4-9"
             />
             <label class="seats-list__row__item" for="seat-4-9"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-10"
+              value="seat-4-10"
             />
             <label class="seats-list__row__item" for="seat-4-10"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-11"
+              value="seat-4-11"
               disabled
             />
             <label
@@ -473,18 +602,21 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-12"
+              value="seat-4-12"
             />
             <label class="seats-list__row__item" for="seat-4-12"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-13"
+              value="seat-4-13"
             />
             <label class="seats-list__row__item" for="seat-4-13"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-4-14"
+              value="seat-4-14"
             />
             <label class="seats-list__row__item" for="seat-4-14"></label>
           </div>
@@ -493,30 +625,35 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-1"
+              value="seat-5-1"
             /><label class="seats-list__row__item" for="seat-5-1"></label>
 
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-2"
+              value="seat-5-2"
             />
             <label class="seats-list__row__item" for="seat-5-2"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-3"
+              value="seat-5-3"
             />
             <label class="seats-list__row__item" for="seat-5-3"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-4"
+              value="seat-5-4"
             />
             <label class="seats-list__row__item" for="seat-5-4"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-5"
+              value="seat-5-5"
               disabled
             />
             <label
@@ -527,36 +664,42 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-6"
+              value="seat-5-6"
             />
             <label class="seats-list__row__item" for="seat-5-6"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-7"
+              value="seat-5-7"
             />
             <label class="seats-list__row__item" for="seat-5-7"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-8"
+              value="seat-5-8"
             />
             <label class="seats-list__row__item" for="seat-5-8"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-9"
+              value="seat-5-9"
             />
             <label class="seats-list__row__item" for="seat-5-9"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-10"
+              value="seat-5-10"
             />
             <label class="seats-list__row__item" for="seat-5-10"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-11"
+              value="seat-5-11"
               disabled
             />
             <label
@@ -567,18 +710,21 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-12"
+              value="seat-5-12"
             />
             <label class="seats-list__row__item" for="seat-5-12"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-13"
+              value="seat-5-13"
             />
             <label class="seats-list__row__item" for="seat-5-13"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-5-14"
+              value="seat-5-14"
             />
             <label class="seats-list__row__item" for="seat-5-14"></label>
           </div>
@@ -587,18 +733,21 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-1"
+              value="seat-6-1"
             /><label class="seats-list__row__item" for="seat-6-1"></label>
 
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-2"
+              value="seat-6-2"
             />
             <label class="seats-list__row__item" for="seat-6-2"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-3"
+              value="seat-6-3"
               disabled
             />
             <label
@@ -609,6 +758,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-4"
+              value="seat-6-4"
               disabled
             />
             <label
@@ -619,6 +769,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-5"
+              value="seat-6-6"
               disabled
             />
             <label
@@ -629,6 +780,7 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-6"
+              value="seat-6-6"
               disabled
             />
             <label
@@ -639,48 +791,56 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-7"
+              value="seat-6-7"
             />
             <label class="seats-list__row__item" for="seat-6-7"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-8"
+              value="seat-6-8"
             />
             <label class="seats-list__row__item" for="seat-6-8"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-9"
+              value="seat-6-9"
             />
             <label class="seats-list__row__item" for="seat-6-9"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-10"
+              value="seat-6-10"
             />
             <label class="seats-list__row__item" for="seat-6-10"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-11"
+              value="seat-6-11"
             />
             <label class="seats-list__row__item" for="seat-6-11"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-12"
+              value="seat-6-12"
             />
             <label class="seats-list__row__item" for="seat-6-12"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-13"
+              value="seat-6-13"
             />
             <label class="seats-list__row__item" for="seat-6-13"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-6-14"
+              value="seat-6-14"
             />
             <label class="seats-list__row__item" for="seat-6-14"></label>
           </div>
@@ -689,84 +849,98 @@
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-1"
+              value="seat-7-1"
             /><label class="seats-list__row__item" for="seat-7-1"></label>
 
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-2"
+              value="seat-7-2"
             />
             <label class="seats-list__row__item" for="seat-7-2"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-3"
+              value="seat-7-3"
             />
             <label class="seats-list__row__item" for="seat-7-3"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-4"
+              value="seat-7-4"
             />
             <label class="seats-list__row__item" for="seat-7-4"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-5"
+              value="seat-7-5"
             />
             <label class="seats-list__row__item" for="seat-7-5"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-6"
+              value="seat-7-6"
             />
             <label class="seats-list__row__item" for="seat-7-6"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-7"
+              value="seat-7-7"
             />
             <label class="seats-list__row__item" for="seat-7-7"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-8"
+              value="seat-7-8"
             />
             <label class="seats-list__row__item" for="seat-7-8"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-9"
+              value="seat-7-9"
             />
             <label class="seats-list__row__item" for="seat-7-9"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-10"
+              value="seat-7-10"
             />
             <label class="seats-list__row__item" for="seat-7-10"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-11"
+              value="seat-7-11"
             />
             <label class="seats-list__row__item" for="seat-7-11"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-12"
+              value="seat-7-12"
             />
             <label class="seats-list__row__item" for="seat-7-12"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-13"
+              value="seat-7-13"
             />
             <label class="seats-list__row__item" for="seat-7-13"></label>
             <input
               type="checkbox"
               class="seats-list__row__input"
               id="seat-7-14"
+              value="seat-7-14"
             />
             <label class="seats-list__row__item" for="seat-7-14"></label>
           </div>
