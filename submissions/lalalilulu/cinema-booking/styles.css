@@ -113,7 +113,7 @@
     color: #024fff;
 }
 
-.movie-sub-info ol {
+.movie-sub-info ul {
     display: flex;
     align-items: center;
     height: 25px;
@@ -308,7 +308,7 @@
     .right-mv-container h1 {
         font-size: 24px;
     }
-    .movie-sub-info ol {
+    .movie-sub-info ul {
         margin: 18px 6px;
     }
     .movie-description {
