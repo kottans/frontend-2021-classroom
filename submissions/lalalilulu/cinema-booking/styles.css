@@ -126,13 +126,24 @@
     margin-right: 12px;
 }
 
-.sub-info:before {
+.movie-sub-info ul li:not(:first-child):before {
     content: "";
     display: block;
     position: relative;
     width: 1px;
     height: 7px;
     background: #024fff;
+    top: 12px;
+    right: 4px;
+}
+
+.movie-sub-info ul li:first-child:before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 1px;
+    height: 7px;
+    background: #fff;
     top: 12px;
     right: 4px;
 }
@@ -157,11 +168,11 @@
     font-size: 24px;
     color: #024fff;
     margin-left: 12px;
-    margin-bottom: 18px;
 }
 
 .seatsBlock {
     text-align:center;
+    margin-top: 12px;
 }
 
 .seatGap {
@@ -309,7 +320,7 @@
         font-size: 24px;
     }
     .movie-sub-info ul {
-        margin: 18px 6px;
+        margin: 18px 0;
     }
     .movie-description {
         width: 90%;
