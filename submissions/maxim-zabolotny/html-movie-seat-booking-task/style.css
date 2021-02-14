@@ -1,0 +1,167 @@
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 2rem;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ticket-price {
+    display: flex;
+    align-items: center;
+}
+
+.ticket-type {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+}
+
+.ticket-type .name {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.ticket-type:last-child {
+    margin-right: 0;
+}
+
+.rectangle {
+    width: 2rem;
+    height: 2.8rem;
+    display: inline-flex;
+    border-radius: .3rem;
+    margin-right: 1rem;
+}
+
+.rectangle:last-child {
+    margin-right: 0;
+}
+
+.rectangle-good {
+    background-color: #95C7F4;
+}
+
+.rectangle-lux {
+    background-color: #FF0000;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    font-weight: 600;
+}
+
+.seats-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.seats__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seats_label {
+    position: relative;
+    padding: .5rem;
+
+}
+
+.seat_checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.seat_view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.4em;
+    width: 1.1em;
+    border-radius: .4rem;
+    background-color: white;
+}
+
+.lux{
+    border: 1px solid #FF0000;
+}
+
+.good{
+    border: 1px solid #95C7F4;
+}
+
+.lux:hover {
+    background-color: #FFE5E3;
+}
+
+.good:hover {
+    background-color: #DCEDFB;
+}
+
+.seat_checkbox:checked ~ .good {
+    background-color: #95C7F4;
+}
+
+.seat_checkbox:checked ~ .lux {
+    background-color: #FF0000;
+}
+
+.seat_checkbox:disabled ~ .seat_view {
+    background-color: #7A7A7A;
+    border: 1px solid #7A7A7A;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 1.5rem;
+    }
+    .seat_view {
+        width: 2rem;
+        height: 2.2rem;
+    }
+  }
+
+@media screen and (max-width: 410px) {
+    .ticket-price {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ticket-type {
+        margin-bottom: 1rem;
+    }
+    .ticket-type:last-child {
+        margin-bottom: 0;
+    }
+    .screen_img {
+        width: 80%;
+    }
+    .seat_view {
+        width: 1.5rem;
+        height: 1.6rem;
+    }
+.seats-form {
+    margin-top: 3rem;
+}
+  }
