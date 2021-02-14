@@ -37,6 +37,11 @@ header {
   user-select: none;
   -webkit-border-radius: 6px;
   border-radius: 6px;
+  transition: opacity 0.2s;
+  -webkit-backface-visibility: hidden;
+}
+.btn:hover, .btn:focus, .btn:active {
+  opacity: 0.7;
 }
 
 .cinema {
@@ -58,6 +63,14 @@ header {
   margin: 5px 30px;
   font-weight: 700;
 }
+.cinema-tickets_type:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 28px;
+  margin-right: 6px;
+  border-radius: 3px;
+}
 .cinema-tickets_type .rectangle {
   width: 20px;
   height: 28px;
@@ -74,10 +87,10 @@ header {
 .cinema-tickets_type .currency {
   font-size: 0.7em;
 }
-.cinema-tickets_type.type-good .rectangle {
+.cinema-tickets_type.type-good:before {
   background-color: #95c7f4;
 }
-.cinema-tickets_type.type-lux .rectangle {
+.cinema-tickets_type.type-lux:before {
   background-color: red;
 }
 .cinema-hall, .cinema-screen {
@@ -88,23 +101,6 @@ header {
 .cinema-hall {
   margin-top: 50px;
   padding: 0 16px;
-}
-.cinema-hall .seats-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.cinema-hall .seats-row_lux {
-  margin-top: 10px;
-}
-.cinema-hall .seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
-  margin-right: 24px;
-}
-.cinema-hall .seats-row_lux .seat label {
-  border-color: red;
-}
-.cinema-hall .seats-row_lux .seat input:checked ~ label {
-  background-color: red;
 }
 .cinema-hall .seat {
   width: 20px;
@@ -160,6 +156,24 @@ header {
   min-width: 250px;
 }
 
+.seats-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.seats-row_lux {
+  margin-top: 10px;
+}
+.seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
+  margin-right: 24px;
+}
+.seats-row_lux .seat label {
+  border-color: red;
+}
+.seats-row_lux .seat input:checked ~ label {
+  background-color: red;
+}
+
 @media (max-width: 500px) {
   .cinema-tickets_types {
     justify-content: flex-start;
@@ -171,7 +185,8 @@ header {
   .cinema-hall .seat {
     margin: 3px;
   }
-  .cinema-hall .seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
+
+  .seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
     margin-right: 14px;
   }
 }
@@ -186,7 +201,7 @@ header {
     margin: 2px;
   }
 
-  .cinema-hall .seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
+  .seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
     margin-right: 10px;
   }
 }
