@@ -10,21 +10,19 @@ const makeTicketTemplate = (ticket) => {
 };
 
 const parseTicket = (ticket) => {
-  console.log('🚀 ~ file: modal.js ~ line 17 ~ parseTicket ~ ticket', ticket);
   const [row, seat] = ticket.split('_');
   const rowNumber = row.split(' ')[1];
   const seatNumber = seat.split(' ')[1];
   return { seatNumber, rowNumber };
 };
 
-function makeTicketPool(cart) {
-  return cart
+const makeTicketPool = (cart) =>
+  cart
     .map((ticket) => {
       const parsedTicket = parseTicket(ticket);
       return makeTicketTemplate(parsedTicket);
     })
     .join('');
-}
 
 const makeModal = (state) => {
   const { cart, totalPrice } = state;
