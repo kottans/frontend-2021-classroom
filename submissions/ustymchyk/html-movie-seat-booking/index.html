@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Cinema</title>
+</head>
+<body>
+  <div class="screen">
+    <h1 class="title">Cinema</h1>
+    <form class="form">
+      <ol class="seance-picker">
+        <li>
+          <select class="select" name="day" required>
+            <option value="" disabled selected>Day</option>
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
+            <option value="sat">Saturday</option>
+            <option value="sun">Sunday</option>
+          </select>
+        </li>
+        <li>
+          <select class="select" name="time" required>
+            <option value="" disabled selected>Time</option>
+            <option value="8:00">8:00</option>
+            <option value="10:30">10:30</option>
+            <option value="13:00">13:00</option>
+            <option value="15:30">15:30</option>
+            <option value="18:00">18:00</option>
+            <option value="20:30">20:30</option>
+          </select>
+        </li>
+      </ol>
+      <div class="display"></div>
+      <ol class="seats">
+        <li class="seat-wrp">
+          <input type="checkbox" value="1:1" name="seat" disabled class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="1:2" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="1:3" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="1:4" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="1:5" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="1:6" name="seat" disabled class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="2:1" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="2:2" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="2:3" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="2:4" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="2:5" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="2:6" name="seat" disabled class="seat seat_ordered">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="3:1" name="seat" disabled class="seat seat_ordered">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="3:2" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="3:3" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="3:4" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="3:5" name="seat" disabled class="seat seat_ordered">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="3:6" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="4:1" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="4:2" name="seat" disabled class="seat seat_ordered">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="4:3" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="4:4" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="4:5" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="4:6" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="5:1" name="seat" disabled class="seat seat_ordered">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="5:2" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="5:3" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="5:4" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="5:5" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp">
+          <input type="checkbox" value="5:6" name="seat" class="seat">
+        </li>
+        <li class="seat-wrp seat-wrp_double">
+          <input type="checkbox" value="6:1" name="seat" class="seat seat_double">
+        </li>
+        <li class="seat-wrp seat-wrp_double">
+          <input type="checkbox" value="6:2" name="seat" disabled class="seat seat_double seat_ordered">
+        </li>
+        <li class="seat-wrp seat-wrp_double">
+          <input type="checkbox" value="6:3" name="seat" class="seat seat_double">
+        </li>
+      </ol>
+      <button type="submit" class="btn">Order</button>
+    </form>
+  </div>
+</body>
+</html>

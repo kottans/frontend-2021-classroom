@@ -1,0 +1,149 @@
+:root {
+  --main-text: rgba(255, 255, 255, 0.8);
+  --main-bg: rgb(40, 40, 40);
+}
+
+@mixin appearance {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.form {
+  display: contents;
+}
+
+.title {
+  margin-bottom: 15px;
+
+  font-size: 30px;
+  text-align: center;
+}
+
+.seance-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+.select {
+  position: relative;
+
+  width: 100%;
+  padding: 5px 0;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-text);
+
+  border: none;
+  background: transparent url(./icons/caret-down.svg) no-repeat right center /
+    20px auto;
+
+  @include appearance();
+}
+
+.display {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: 30px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    width: 500%;
+    padding-top: 500%;
+
+    border-radius: 100%;
+    box-shadow: inset 0 0 10px 0px #fff;
+  }
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  place-items: center;
+
+  margin: 0 auto auto auto;
+  gap: 8px;
+}
+
+.seat-wrp {
+  &_double {
+    grid-column: span 2;
+  }
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+
+  @include appearance();
+
+  &_double {
+    width: 75px;
+  }
+
+  &_ordered {
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:checked {
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:disabled:not(.seat_ordered) {
+    display: none;
+  }
+}
+
+.btn {
+  padding: 5px 0;
+  margin-top: 30px;
+
+  font-size: 22px;
+  color: var(--main-text);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+}
