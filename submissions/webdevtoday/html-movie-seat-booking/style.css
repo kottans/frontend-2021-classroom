@@ -171,10 +171,13 @@ body {
   cursor: pointer;
 }
 .Seat_checkbox:focus + .Seat_view {
-  background-color: var(--Seat-focused-bg-color);
+  border: 3px solid var(--Seat-focused-bg-color);
 }
 .Seat_checkbox:checked + .Seat_view {
   background-color: var(--Seat-selected-bg-color);
+}
+.Seat_checkbox:checked:focus + .Seat_view {
+  border: 3px solid var(--Seat-focused-bg-color);
 }
 .Seat_checkbox:disabled + .Seat_view:hover {
   cursor: not-allowed;
