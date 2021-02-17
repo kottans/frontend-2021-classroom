@@ -7,20 +7,16 @@
 
 body {
   margin: 0;
+  background: url(../img/background_cinema_hall.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url(../img/background_cinema_hall.jpg) no-repeat center;
-  background-size: cover;
+  min-height: 100vh;
 }
 
 .booking_block {
@@ -39,11 +35,11 @@ main {
 .legend_block {
   width: 30px;
   height: 30px;
+  border-radius: 10%;
   margin: 5px;
 }
 
 .legend_item {
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -66,7 +62,12 @@ main {
 .block_item {
   text-align: center;
   max-height: 30px;
+  border-radius: 10%;
   aspect-ratio: 1/1;
+}
+
+.cinema_row {
+  grid-column: 1;
 }
 
 .sold_place {
@@ -95,22 +96,24 @@ main {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  border-radius: 10%;
 }
 
 .check_input:checked ~ .content {
   background: green;
 }
-
-.empty_row {
-  grid-column-start: 1;
-  grid-column-end: 12;
+.check_input:focus ~ .content {
+  box-shadow: 0 0 0 0.1em darkblue;
 }
 
 .screen {
   color: white;
+  grid-column-start: 2;
   grid-column-end: span 10;
   background-color: #d88a04;
   aspect-ratio: auto;
+  text-transform: uppercase;
+  border-radius: 0;
 }
 
 .cost {
@@ -135,12 +138,20 @@ main {
 }
 
 .showtimes_property_header {
-  width: auto;
-}
-
-.showtimes_property_header {
   width: 70px;
   color: #d88a04;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.showtimes_property_value {
+  font-size: 1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.r11p3 {
+  grid-column: 4;
 }
 
 .button_block {
@@ -165,6 +176,9 @@ main {
 }
 
 @media (max-width: 800px) {
+  .booking_block {
+    max-width: 400px;
+  }
   .booking_wrapper {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
@@ -174,6 +188,10 @@ main {
     grid-row-end: auto;
     display: flex;
     grid-area: column-2;
+    padding: 0;
+  }
+  .legend_block {
+    margin-left: 0;
   }
   .cost {
     grid-row-end: auto;
