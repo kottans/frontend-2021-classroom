@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+p, label, div {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+a {
+    color: #fff;
+}
+
+.wrapper {
+    margin: 6% auto 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    background-color: #222831;
+    border-radius: 20px;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.poster {
+    display: flex;
+    width: 100%;
+    background: url("./img/kottans-poster.jpg") center no-repeat;
+    border-top-right-radius: 20px;
+    background-size: cover;
+    height: 60%;
+}
+
+.play {
+    display: flex;
+    width: 160px;
+    height: 40px;
+    margin: 12px auto 0;
+    background-color: #da723c;
+    border: none;
+    align-self: flex-end;
+    border-radius: 6px;
+    color: #fff;
+    letter-spacing: 0.3em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play:hover {
+    background-color: #eb5e0b;
+}
+
+.info {
+    width: 100%;
+    height: 40%;
+    padding: 0 20px 20px;
+    font-size: 15px;
+    background: linear-gradient(to bottom, #03506f, 60%, #ccf2f4);
+    border-bottom-right-radius: 20px;
+
+}
+
+.time {
+    margin-top: 12px;
+}
+
+.hall {
+    margin: 0 auto;
+    min-width: 350px;
+}
+
+.screen {
+    width: 500px;
+    height: 80px;
+    border-top: 2px solid ghostwhite;
+    margin-top: 80px;
+    overflow: hidden;
+    box-shadow: inset 0 40px 38px -40px #e1f2fb;
+}
+
+.all-seats {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 3fr 0.3fr;
+    grid-template-columns: repeat(12, 16px);
+    grid-gap: 12px;
+    margin: 40px 0;
+}
+
+.firsts-seats {
+    grid-row: 1;
+    grid-column: 3 / 11;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(8, 2fr);
+    grid-gap: 12px;
+}
+
+.middle-seats {
+    grid-row: 2;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 12px;
+}
+
+.last-seats {
+    grid-row: 3;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(6, 44px);
+    grid-template-rows: 0.5fr;
+    grid-column-gap: 12px;
+}
+
+.seat-item {
+    background-color: #43658b;
+    width: 16px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.wrapper-time {
+    justify-content: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.vip-seat {
+    width: 44px;
+}
+
+.seat-item:hover {
+    background-color: #5eaaa8;
+}
+
+.visually-hidden:checked + label {
+    background-color: #da723c;
+}
+
+label.seat-item {
+    color: #e3e6ea;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2;
+}
+
+label.not-available {
+    background-color: #2d4059;
+    color: #43658b;
+}
+
+.not-available:hover {
+    background-color: #2d4059;
+    color: #43658b;
+}
+
+@media screen and (max-width: 717px) {
+    .movie-info {
+        display: none;
+    }
+}
