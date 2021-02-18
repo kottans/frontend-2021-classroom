@@ -1,0 +1,91 @@
+.confirm_screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  align-items: center;
+}
+
+.ticket_view {
+  display: flex;
+  flex-direction: row;
+
+  width: 90%;
+  max-width: 840px;
+  
+  border: solid steelblue 2px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  -webkit-box-shadow: 5px 5px 10px 5px gray;
+  box-shadow: 5px 5px 10px 5px gray;
+  list-style-type: none;
+}
+
+.ticket_poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  width: 50%;
+}
+
+.ticket_date_time {
+  padding-bottom: 10px;
+  width: 100%;
+  
+  border-bottom: solid 4px lightgray; 
+}
+
+.ticket_seats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  align-content: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 90%;
+}
+
+.ticket_total {
+  padding-top: 10px;
+
+  width: 100%;
+  border-top: solid 4px lightgray;
+}
+
+@media screen and (max-width: 800px) {
+
+  .ticket_view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  
+    width: 80%;
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .ticket_details {
+    width: 100%;
+  }
+}
