@@ -70,7 +70,7 @@ const addToCart = ({target}) => {
     if(target.classList.contains('hall__seat-data')) {
         const data = target.dataset.value;
         const [rowTicket, seatTicket, typeTicket] = data.split('-');
-        isCartEmpty();
+        isCartEmpty()
 
         if(target.checked) {
             changeSeatStatus(target, typeTicket);
@@ -99,12 +99,11 @@ const addSelectedTicket = (row, seat, type) => {
 
 const removeSelectedTicket = (row, seat) => {
     let data = JSON.parse(window.sessionStorage.getItem('serverData'));
-    let aaa = data.selected.filter((ticket) => {
+    data.selected = data.selected.filter((ticket) => {
         if(`${ticket.row}-${ticket.seat}` !== `${row}-${seat}`) {
             return ticket;
         }
     })
-    data.selected = aaa;
     window.sessionStorage.setItem('serverData', JSON.stringify(data));
 }
 
@@ -116,22 +115,23 @@ const isCartEmpty = () => {
     if(selectedTikets.length === 0) {
         emptyCart.classList.toggle('no-display');
         fullCart.classList.toggle('no-display');
+        return true;
     }
 
-    return;
+    return false;
 }
 
 const setTotalPrice = () => {
-    let selectedTikets = getSelectedTikets();
-    let countTikets = 0;
-    let totalPrice = 0;
-    isCartEmpty();
+    if(!isCartEmpty()) {
+        let selectedTikets = getSelectedTikets();
+        let countTikets = selectedTikets.length;
+        let initialSum= 0;
+        let totalPrice = selectedTikets.reduce((sum, price) => {
+            return sum + ticketPrice[price.type];
+        }, initialSum);
 
-    selectedTikets.forEach((ticket)=> {
-        countTikets++;
-        totalPrice += ticketPrice[ticket.type];
-    })
-    priceCart.innerText = `Кількість: ${countTikets} шт. Ціна: ${totalPrice} грн.`; 
+        priceCart.innerText = `Кількість: ${countTikets} шт. Ціна: ${totalPrice} грн.`; 
+    }
 }
 
 const createJSON = () => {
@@ -149,7 +149,7 @@ const init = async () => {
     renderData(await getData());
     createJSON();
     hall.addEventListener('click', addToCart);
-    hall.addEventListener('touchstart', addToCart);
+    hall.addEventListener('touchstart', addToCart, {capture: true});
 }
 
 window.onload = init();
