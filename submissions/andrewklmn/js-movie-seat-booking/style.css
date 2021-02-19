@@ -328,6 +328,11 @@ main {
   cursor: pointer;
 }
 
+.btn:focus {
+  border: solid 2px blue;
+  outline: none;
+}
+
 .book_button {
   width: 70%;
   background-color: #c85000;

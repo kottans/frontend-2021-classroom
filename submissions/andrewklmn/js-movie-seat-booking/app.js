@@ -18,16 +18,18 @@ let lastSelectedTime = selectorForm.querySelector('.time_selector > .radio_contr
 const showConfirmScreen = () => {
   mainScreen.classList.add('hidden');
   confirmationScreen.classList.remove('hidden');
+  cancelButton.focus();
 };
 
 const hideConfirmScreen = () => {
   confirmationScreen.classList.add('hidden');
   mainScreen.classList.remove('hidden');
+  bookButton.focus();
 };
 
 const payButtonListener = () => {
   alert('Action disabled!');
-}
+};
 
 const bookButtonListener = (event) => {
   const selectedSeats = selectorForm.querySelectorAll('.seat_control:checked');
