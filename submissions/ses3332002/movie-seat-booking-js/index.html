@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Homework02</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Наши котики</h1>
+      <img
+        class="poster"
+        src="./img/poster.jpg"
+        alt="постер фильма Наши котики"
+      />
+      <time datetime="2020-02-04" class="session_date">04.02.2020</time>
+      <time datetime="18:00" class="session_time">18-00</time>
+    </header>
+    <section class="auditorium">
+      <h2>Выберите места</h2>
+      <form name="auditorium__selection" autocomplete="off"></form>
+      <aside class="auditorium__description">
+        <div class="descriptions__wrapper">
+          <div class="description"></div>
+          <div class="description description-vip"></div>
+          <div class="description__text">- свободно</div>
+        </div>
+        <div class="descriptions__wrapper">
+          <div class="description description-busy"></div>
+          <div class="description description-vip description-busy"></div>
+          <div class="description__text">- занято</div>
+        </div>
+        <div class="descriptions__wrapper">
+          <div class="description description-disabled"></div>
+          <div class="description__text">- недоступно</div>
+        </div>
+      </aside>
+    </section>
+    <section class="pre_order pre_order-hidden">
+      <h2>Выбранные места</h2>
+      <ol class="pre_order__list"></ol>
+    </section>
+    <section class="order_confirmation order_confirmation-hidden">
+      <div class="order_confirmation__popup">
+        <h2>Подтверждение заказа</h2>
+        <div class="order_confirmation__text"></div>
+        <button
+          class="order_confirmation__button order_confirmation__button-confirm"
+        >
+          Подтвердить
+        </button>
+        <button
+          class="order_confirmation__button order_confirmation__button-cancel"
+        >
+          Отменить
+        </button>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
