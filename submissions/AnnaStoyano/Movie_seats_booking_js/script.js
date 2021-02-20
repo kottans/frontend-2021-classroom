@@ -24,7 +24,7 @@ function selectSeats(seats, target, showedSeatsList) {
     if (target.checked) {
         seats.push(target.value);
     } else if (!target.checked) {
-        const seatIndex = seats.indexOf(target);
+        const seatIndex = seats.indexOf(target.value);
         seats.splice(seatIndex, 1);
     }
     fillSeatsInfo(seats, showedSeatsList);
@@ -38,7 +38,6 @@ function buyTicket(seats, popup__wrapper) {
 
 function fillSeatsInfo(seats, seatsList) {
     const seatsWrapper = seatsList.closest('.selected-seats');
-    console.log(seatsWrapper);
     if (seats && seats.length > 0) {
         const checkedSeatsString = seats.map(seat => `<li>${seat}</li>`).join('\n');
         seatsList.innerHTML = checkedSeatsString;
