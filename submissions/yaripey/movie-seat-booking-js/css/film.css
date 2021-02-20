@@ -1,0 +1,363 @@
+.film-poster {
+  height: 600px;
+  width: 400px;
+  background-size: cover;
+}
+
+.main {
+  width: 100%;
+}
+
+.information {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 700px;
+  /* min-width: 400px; */
+}
+
+.description p {
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.input-label {
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  font-weight: 500;
+  color: teal;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  max-width: 150px;
+  text-align: center;
+}
+
+.input-label:hover {
+  background: teal;
+  color: white;
+}
+
+.radio-box:disabled + .input-label {
+  color: grey;
+}
+
+.radio-box:disabled:hover + .input-label {
+  background: none;
+  color: grey;
+  cursor: default;
+}
+
+.radio-box:checked + .input-label {
+  border: 2px solid teal;
+}
+
+.screen {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.first-half,
+.second-half {
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.first-half {
+  background: teal;
+  width: 80%;
+  height: 15px;
+}
+
+.second-half {
+  background: grey;
+  width: 90%;
+  height: 25px;
+}
+
+.seats-buttons {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hall-row {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: space-between;
+  z-index: 1;
+  padding: 5px;
+}
+
+.hall-row:nth-child(2n) {
+  background: lightgrey;
+}
+
+.seat-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.screen-label {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  color: teal;
+  font-weight: 600;
+}
+
+.seat-check {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.seat-text {
+  line-height: 40px;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  color: teal;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.seat-text:hover {
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.seat-check:before {
+  display: block;
+  content: "";
+  background: grey;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.seat-check:checked + .seat-text {
+  background: teal;
+  color: white;
+}
+
+.seat-check:disabled + .seat-text {
+  background: lightgrey;
+  color: grey;
+}
+
+.seat-check:disabled:hover + .seat-text {
+  transform: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  cursor: default;
+}
+
+.row-number {
+  font-size: 25px;
+  padding: 10px;
+  color: grey;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+}
+
+legend {
+  font-size: 25px;
+  margin: 20px;
+}
+
+.tickets-container {
+  width: 70%;
+}
+
+.heading,
+.check-sum {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.buy-tickets,
+.home-link {
+  width: 100%;
+  border: none;
+  background: #ff4545;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+.buy-tickets:disabled {
+  background: grey;
+}
+
+.buy-tickets:disabled:hover {
+  background: grey;
+  cursor: default;
+  color: white;
+}
+
+.heading,
+.check-sum {
+  display: flex;
+  padding: 5px;
+  background: teal;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-between;
+}
+
+.check ul {
+  list-style: none;
+}
+
+.check ul li:nth-child(2n) {
+  background: lightgrey;
+}
+
+.check ul li {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+}
+
+.buy-tickets:hover,
+.home-link:hover {
+  background: white;
+  color: #ff4545;
+}
+
+.tickets-check {
+  width: 70%;
+}
+
+.tickets-purchased-text {
+  font-size: 35px;
+}
+
+.date-block,
+.time-block {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.ticket-block {
+  margin: 20px 0;
+  border-bottom: dotted 1px grey;
+  padding-bottom: 20px;
+}
+
+.ticket-blocks {
+  margin-bottom: 30px;
+}
+
+.date-block,
+.time-block {
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .information {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .film-poster {
+    margin-bottom: 20px;
+  }
+
+  .date-time-form {
+    margin: auto;
+  }
+
+  .about-film {
+    width: 70%;
+    margin: auto;
+  }
+
+  .row-number {
+    font-size: 15px;
+  }
+
+  .hall-row:nth-child(2n) {
+    height: 40px;
+    background-color: white;
+  }
+
+  .hall-row {
+    padding: 0px;
+  }
+  .seat-text {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .seat-check:before {
+    width: 25px;
+    height: 25px;
+  }
+
+  .seat-text:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .description p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .film-poster {
+    width: 300px;
+    height: 500px;
+    background-position: center;
+  }
+
+  .description p {
+    font-size: 15px;
+  }
+}
