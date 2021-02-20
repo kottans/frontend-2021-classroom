@@ -13,4 +13,6 @@ administrationLink.addEventListener('click', (e) => {
   pageSwitcher('?page=administration')
 })
 
+window.onpopstate = (e) => {pageInit()}
+
 pageInit()
