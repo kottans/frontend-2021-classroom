@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The second task: booking movie tickets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="left-header-part">
+        <a aria-label="Cinemax main page" href="#"><img class="logo-img" src="assets/cinemax-logo.svg"></a>
+    </div>
+    <div class="right-header-part">
+        <ul>
+            <li><a aria-label="Newsletter section" class="settings-links newsletter" href="#"></a></li>
+            <li><a aria-label="Settings section" class="settings-links setting" href="#"></a></li>
+        </ul>
+    </div>
+</header>
+<main class="main">
+    <div class="movie-container">
+        <div class="left-mv-container">
+            <div class="movie-images">
+                <div class="image-card"><img src="assets/tenet_1.jpg" alt="Shot from the movie Tenet(2020)"></div>
+                <div class="image-card"><img src="assets/tenet_2.jpg" alt="Shot from the movie Tenet(2020)"></div>
+                <div class="image-card"><img src="assets/tenet_3.jpg" alt="Shot from the movie Tenet(2020)"></div>
+                <div class="image-card"><img src="assets/tenet_4.jpeg" alt="Shot from the movie Tenet(2020)"></div>
+            </div>
+            <div class="key-info">
+                <p class="info"><b>Premiere: </b>
+                    <time datetime="2020-08-22">22 August 2020</time>
+                </p>
+                <p class="info"><b>Country, year:  </b>UK, USA, 2020</p>
+                <p class="info"><b>Director: </b>Christopher Nolan</p>
+                <p class="info"><b>Starring: </b>John David Washington, Robert Pattinson, Michael Caine</p>
+            </div>
+        </div>
+        <div class="right-mv-container">
+            <h1>Tenet</h1>
+            <nav class="movie-sub-info">
+                <ul>
+                    <li class="sub-info">Action, Drama</li>
+                    <li class="sub-info">16+</li>
+                    <li class="sub-info">2h 30m</li>
+                </ul>
+            </nav>
+            <p class="movie-description">Temporal and, as always, mind-blowing thriller by Christopher Nolan.
+                After the war epic "Dunkirk", Christopher Nolan decided to return to his usual mind games and the strictest secrecy.
+                In a twilight world of international espionage, an unnamed CIA operative, known as The Protagonist,
+                is recruited by a mysterious organization called Tenet to participate in a global assignment that unfolds beyond real time.
+                The mission: prevent Andrei Sator, a renegade Russian oligarch with precognition abilities, from starting World War III.
+                The Protagonist will soon master the art of "time inversion" as a way of countering the threat that is to come.</p>
+        </div>
+    </div>
+    <div class="movie-session">
+        <div class="movie-choose">
+            <time datetime="2021-02-05T22:30:00" class="date-time">5 February, <b>22:30</b></time>
+            <div>
+                <table class="seatsBlock">
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td></td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td><input aria-label="row 1 seat 1" type="checkbox" class="seats" value="1-1" disabled="disabled"></td>
+                        <td><input aria-label="row 1 seat 2" type="checkbox" class="seats" value="1-2" disabled="disabled"></td>
+                        <td><input aria-label="row 1 seat 3" type="checkbox" class="seats" value="1-3"></td>
+                        <td><input aria-label="row 1 seat 4" type="checkbox" class="seats" value="1-4"></td>
+                        <td><input aria-label="row 1 seat 5" type="checkbox" class="seats" value="1-5"></td>
+                        <td><input aria-label="row 1 seat 6" type="checkbox" class="seats" value="1-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 1 seat 7" type="checkbox" class="seats" value="1-7"></td>
+                        <td><input aria-label="row 1 seat 8" type="checkbox" class="seats" value="1-8"></td>
+                        <td><input aria-label="row 1 seat 9" type="checkbox" class="seats" value="1-9"></td>
+                        <td><input aria-label="row 1 seat 10" type="checkbox" class="seats" value="1-10" disabled="disabled"></td>
+                        <td><input aria-label="row 1 seat 11" type="checkbox" class="seats" value="1-11" disabled="disabled"></td>
+                        <td><input aria-label="row 1 seat 12" type="checkbox" class="seats" value="1-12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td><input aria-label="row 2 seat 1" type="checkbox" class="seats" value="2-1"></td>
+                        <td><input aria-label="row 2 seat 2" type="checkbox" class="seats" value="2-2"></td>
+                        <td><input aria-label="row 2 seat 3" type="checkbox" class="seats" value="2-3"></td>
+                        <td><input aria-label="row 2 seat 4" type="checkbox" class="seats" value="2-4"></td>
+                        <td><input aria-label="row 2 seat 5" type="checkbox" class="seats" value="2-5"></td>
+                        <td><input aria-label="row 2 seat 6" type="checkbox" class="seats" value="2-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 2 seat 7" type="checkbox" class="seats" value="2-7"></td>
+                        <td><input aria-label="row 2 seat 8" type="checkbox" class="seats" value="2-8"></td>
+                        <td><input aria-label="row 2 seat 9" type="checkbox" class="seats" value="2-9"></td>
+                        <td><input aria-label="row 2 seat 10" type="checkbox" class="seats" value="2-10"></td>
+                        <td><input aria-label="row 2 seat 11" type="checkbox" class="seats" value="2-11"></td>
+                        <td><input aria-label="row 2 seat 12" type="checkbox" class="seats" value="2-12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td><input aria-label="row 3 seat 1" type="checkbox" class="seats" value="3-1"></td>
+                        <td><input aria-label="row 3 seat 2" type="checkbox" class="seats" value="3-2"></td>
+                        <td><input aria-label="row 3 seat 3" type="checkbox" class="seats" value="3-3" disabled="disabled"></td>
+                        <td><input aria-label="row 3 seat 4" type="checkbox" class="seats" value="3-4" disabled="disabled"></td>
+                        <td><input aria-label="row 3 seat 5" type="checkbox" class="seats" value="3-5" disabled="disabled"></td>
+                        <td><input aria-label="row 3 seat 6" type="checkbox" class="seats" value="3-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 3 seat 7" type="checkbox" class="seats" value="3-7"></td>
+                        <td><input aria-label="row 3 seat 8" type="checkbox" class="seats" value="3-8"></td>
+                        <td><input aria-label="row 3 seat 9" type="checkbox" class="seats" value="3-9"></td>
+                        <td><input aria-label="row 3 seat 10" type="checkbox" class="seats" value="3-10"></td>
+                        <td><input aria-label="row 3 seat 11" type="checkbox" class="seats" value="3-11"></td>
+                        <td><input aria-label="row 3 seat 12" type="checkbox" class="seats" value="3-12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td><input aria-label="row 4 seat 1" type="checkbox" class="seats" value="4-1"></td>
+                        <td><input aria-label="row 4 seat 2" type="checkbox" class="seats" value="4-2"></td>
+                        <td><input aria-label="row 4 seat 3" type="checkbox" class="seats" value="4-3"></td>
+                        <td><input aria-label="row 4 seat 4" type="checkbox" class="seats" value="4-4"></td>
+                        <td><input aria-label="row 4 seat 5" type="checkbox" class="seats" value="4-5"></td>
+                        <td><input aria-label="row 4 seat 6" type="checkbox" class="seats" value="4-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 4 seat 7" type="checkbox" class="seats" value="4-7"></td>
+                        <td><input aria-label="row 4 seat 8" type="checkbox" class="seats" value="4-8"></td>
+                        <td><input aria-label="row 4 seat 9" type="checkbox" class="seats" value="4-9"></td>
+                        <td><input aria-label="row 4 seat 10" type="checkbox" class="seats" value="4-10"></td>
+                        <td><input aria-label="row 4 seat 11" type="checkbox" class="seats" value="4-11"></td>
+                        <td><input aria-label="row 4 seat 12" type="checkbox" class="seats" value="4-12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td><input aria-label="row 5 seat 1" type="checkbox" class="seats" value="5-1"></td>
+                        <td><input aria-label="row 5 seat 2" type="checkbox" class="seats" value="5-2"></td>
+                        <td><input aria-label="row 5 seat 3" type="checkbox" class="seats" value="5-3"></td>
+                        <td><input aria-label="row 5 seat 4" type="checkbox" class="seats" value="5-4"></td>
+                        <td><input aria-label="row 5 seat 5" type="checkbox" class="seats" value="5-5"></td>
+                        <td><input aria-label="row 5 seat 6" type="checkbox" class="seats" value="5-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 5 seat 7" type="checkbox" class="seats" value="5-7"></td>
+                        <td><input aria-label="row 5 seat 8" type="checkbox" class="seats" value="5-8"></td>
+                        <td><input aria-label="row 5 seat 9" type="checkbox" class="seats" value="5-9" disabled="disabled"></td>
+                        <td><input aria-label="row 5 seat 10" type="checkbox" class="seats" value="5-10" disabled="disabled"></td>
+                        <td><input aria-label="row 5 seat 11" type="checkbox" class="seats" value="5-11" disabled="disabled"></td>
+                        <td><input aria-label="row 5 seat 12" type="checkbox" class="seats" value="5-12" disabled="disabled"></td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td><input aria-label="row 6 seat 1" type="checkbox" class="seats" value="6-1"></td>
+                        <td><input aria-label="row 6 seat 2" type="checkbox" class="seats" value="6-2"></td>
+                        <td><input aria-label="row 6 seat 3" type="checkbox" class="seats" value="6-3"></td>
+                        <td><input aria-label="row 6 seat 4" type="checkbox" class="seats" value="6-4"></td>
+                        <td><input aria-label="row 6 seat 5" type="checkbox" class="seats" value="6-5"></td>
+                        <td><input aria-label="row 6 seat 6" type="checkbox" class="seats" value="6-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 6 seat 7" type="checkbox" class="seats" value="6-7"></td>
+                        <td><input aria-label="row 6 seat 8" type="checkbox" class="seats" value="6-8"></td>
+                        <td><input aria-label="row 6 seat 9" type="checkbox" class="seats" value="6-9"></td>
+                        <td><input aria-label="row 6 seat 10" type="checkbox" class="seats" value="6-10"></td>
+                        <td><input aria-label="row 6 seat 11" type="checkbox" class="seats" value="6-11"></td>
+                        <td><input aria-label="row 6 seat 12" type="checkbox" class="seats" value="6-12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td><input aria-label="row 7 seat 1" type="checkbox" class="seats" value="7-1"></td>
+                        <td><input aria-label="row 7 seat 2" type="checkbox" class="seats" value="7-2"></td>
+                        <td><input aria-label="row 7 seat 3" type="checkbox" class="seats" value="7-3"></td>
+                        <td><input aria-label="row 7 seat 4" type="checkbox" class="seats" value="7-4"></td>
+                        <td><input aria-label="row 7 seat 5" type="checkbox" class="seats" value="7-5"></td>
+                        <td><input aria-label="row 7 seat 6" type="checkbox" class="seats" value="7-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 7 seat 7" type="checkbox" class="seats" value="7-7"></td>
+                        <td><input aria-label="row 7 seat 8" type="checkbox" class="seats" value="7-8"></td>
+                        <td><input aria-label="row 7 seat 9" type="checkbox" class="seats" value="7-9"></td>
+                        <td><input aria-label="row 7 seat 10" type="checkbox" class="seats" value="7-10"></td>
+                        <td><input aria-label="row 7 seat 11" type="checkbox" class="seats" value="7-11"></td>
+                        <td><input aria-label="row 7 seat 12" type="checkbox" class="seats" value="7-12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td><input aria-label="row 8 seat 1" type="checkbox" class="seats" value="8-1"></td>
+                        <td><input aria-label="row 8 seat 2" type="checkbox" class="seats" value="8-2"></td>
+                        <td><input aria-label="row 8 seat 3" type="checkbox" class="seats" value="8-3"></td>
+                        <td><input aria-label="row 8 seat 4" type="checkbox" class="seats" value="8-4"></td>
+                        <td><input aria-label="row 8 seat 5" type="checkbox" class="seats" value="8-5"></td>
+                        <td><input aria-label="row 8 seat 6" type="checkbox" class="seats" value="8-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 8 seat 7" type="checkbox" class="seats" value="8-7"></td>
+                        <td><input aria-label="row 8 seat 8" type="checkbox" class="seats" value="8-8"></td>
+                        <td><input aria-label="row 8 seat 9" type="checkbox" class="seats" value="8-9"></td>
+                        <td><input aria-label="row 8 seat 10" type="checkbox" class="seats" value="8-10"></td>
+                        <td><input aria-label="row 8 seat 11" type="checkbox" class="seats" value="8-11"></td>
+                        <td><input aria-label="row 8 seat 12" type="checkbox" class="seats" value="8-12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td><input aria-label="row 9 seat 1" type="checkbox" class="seats" value="9-1"></td>
+                        <td><input aria-label="row 9 seat 2" type="checkbox" class="seats" value="9-2"></td>
+                        <td><input aria-label="row 9 seat 3" type="checkbox" class="seats" value="9-3"></td>
+                        <td><input aria-label="row 9 seat 4" type="checkbox" class="seats" value="9-4"></td>
+                        <td><input aria-label="row 9 seat 5" type="checkbox" class="seats" value="9-5"></td>
+                        <td><input aria-label="row 9 seat 6" type="checkbox" class="seats" value="9-6"></td>
+                        <td class="seatGap"></td>
+                        <td><input aria-label="row 9 seat 7" type="checkbox" class="seats" value="9-7"></td>
+                        <td><input aria-label="row 9 seat 8" type="checkbox" class="seats" value="9-8"></td>
+                        <td><input aria-label="row 9 seat 9" type="checkbox" class="seats" value="9-9"></td>
+                        <td><input aria-label="row 9 seat 10" type="checkbox" class="seats" value="9-10"></td>
+                        <td><input aria-label="row 9 seat 11" type="checkbox" class="seats" value="9-11"></td>
+                        <td><input aria-label="row 9 seat 12" type="checkbox" class="seats" value="9-12"></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <article class="order">
+            <p class="before-order">Select seats to book tickets</p>
+        </article>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
