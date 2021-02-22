@@ -16,7 +16,7 @@ body {
     flex-wrap: wrap;
     width: 800px;
     height: auto;
-    background-color: rgb(78, 104, 160);;
+    background-color: rgb(78, 104, 160);
     margin: 0 auto;
     box-shadow: 0 0 20px 10px white;
 }
@@ -39,9 +39,16 @@ body {
     padding: 0 20px;
 }
 
-.film-info, .slash {
+.film-info {
     display: inline-block;
     margin: 5px 2px;
+    font-style: normal;
+}
+
+.film-info::after {
+    content: '|';
+    display: inline-block;
+    padding-left: 7px;
     font-style: normal;
 }
 
@@ -80,7 +87,6 @@ body {
 }
 
 .seat-available::before{
-
     background-image: url(img/available-seat.svg);
 }
 
@@ -166,9 +172,16 @@ body {
     border-radius: 4px;
 }
 
-.confirm-but:focus {
+.confirm-but:focus,
+.confirm-but:hover {
     outline-style: none;
     background-color:  rgb(247, 111, 111);
+    cursor: pointer;
+}
+
+.confirm-but:active {
+    color: rgb(105, 45, 76);
+    background-color: white;
 }
 
 .footer {
