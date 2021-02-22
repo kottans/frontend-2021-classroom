@@ -5,10 +5,10 @@
 }
 
 body {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-image: url('./assets/background-image.jpg');
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   font-family: 'Balsamiq Sans', cursive;
   font-family: 'Montserrat', sans-serif;
@@ -66,6 +66,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-top: -150px;
+  padding-right: 40px;
 }
 
 .seats__info {
@@ -138,10 +139,10 @@ body {
   content: '';
   display: flex;
   justify-content: center;
-  margin-left: 45px;
+  margin-left: 15px;
   -moz-margin-start: 25px;
   margin-bottom: 30px;
-  width: 420px;
+  width: 500px;
   border-bottom: 3px solid #000000;
 }
 
@@ -154,23 +155,23 @@ body {
 }
 
 .row {
+  display: flex;
   flex-direction: row;
-  padding: 3px;
-  margin-right: 82px;
+  padding: 5px;
 }
 
 .seat__option {
-  margin-bottom: 0.5em;
-}
-
-.last {
-  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  margin: auto 8px;
 }
 
 .seat__input {
-  margin: 15px;
+  margin: 0;
   -moz-margin-start: 12px;
+  -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   width: 1px;
   height: 1px;
   opacity: 0;
@@ -180,12 +181,20 @@ body {
 
 .seat__number {
   position: absolute;
-  margin: 10px;
+  margin: auto;
+  padding-top: 2px;
   width: 20px;
   height: 20px;
   border-radius: 4px;
   box-shadow: 0 0 0 0.1em #6f6f70;
   background-color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  color: #858585;
+}
+
+.seat__number:hover {
+  background-color: #3ed145;
 }
 
 .seat__input:checked + .seat__number {
@@ -231,9 +240,6 @@ body {
 @media (max-width: 1120px) {
   .movie-hall {
     margin-top: -160px;
-  }
-  .row {
-    margin-right: 50px;
     padding: 0;
   }
 }
@@ -265,7 +271,7 @@ body {
     margin-top: -200px;
   }
   .screen__title::after {
-    margin-left: 35px;
+    margin-left: 10px;
   }
 }
 
@@ -284,6 +290,13 @@ body {
   }
   .movie__infolist-item {
     font-size: 14px;
+  }
+  .screen__title::after {
+    margin-left: 16px;
+    width: 430px;
+  }
+  .seat {
+    margin-left: 3px;
   }
 }
 
@@ -306,6 +319,7 @@ body {
   }
   .movie-hall {
     margin-top: 10px;
+    margin-right: 10px;
   }
   .seats__info-text {
     font-size: 13px;
@@ -329,7 +343,7 @@ body {
     border-radius: 2px;
   }
   .screen {
-    margin-left: -10px;
+    margin-left: 2px;
   }
   .screen__title {
     font-size: 15px;
@@ -337,14 +351,19 @@ body {
   .screen__title::after {
     width: 360px;
   }
-  .seat__input {
-    margin: 12px;
+  .row {
+    padding: 4px;
+  }
+  .seat__option {
+    margin-top: -5px;
+    margin: auto 5px;
   }
   .seat__number {
-    margin: 5px;
+    padding-top: 0px;
     width: 17px;
     height: 17px;
     border-radius: 2px;
+    font-size: 13px;
   }
   .button__container {
     margin-top: 25px;
@@ -363,18 +382,12 @@ body {
   }
   .screen__title::after {
     width: 300px;
-    margin-left: 30px;
+    margin-left: 20px;
   }
-  .row {
-    margin-right: 35px;
-  }
-  .seat__input {
-    margin: 10px;
+  .seat__option {
+    margin: auto 2px;
   }
   .seat__number {
-    margin: 0px;
-    width: 15px;
-    height: 15px;
     border-radius: 1px;
   }
 }
@@ -394,7 +407,7 @@ body {
     font-size: 11px;
   }
   .seats__info {
-    justify-content: flex-end;
+    margin-left: 5px;
   }
   .seats__info-text {
     padding: 3px;
@@ -422,13 +435,13 @@ body {
   }
   .screen__title::after {
     width: 250px;
-    margin-left: 43px;
+    margin-left: 20px;
   }
   .row {
-    margin-right: 20px;
+    padding: 2px;
   }
-  .seat__input {
-    margin: 8px;
+  .seat__option {
+    margin: auto 2px;
   }
   .button__container {
     margin-top: 10px;
