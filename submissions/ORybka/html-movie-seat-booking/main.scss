@@ -82,7 +82,14 @@ body {
   box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 972px) {
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 860px) {
   .main-container {
     width: 100%;
     height: 100%;
@@ -136,13 +143,13 @@ body {
 .menu-item {
   padding-bottom: 0.5rem;
   border-bottom: 0.2rem solid transparent;
+}
 
-  &:hover {
-    padding-bottom: 0.5rem;
-    color: color(green);
-    border-bottom: 0.2rem solid color(green);
-    transition: border-bottom 0.5s;
-  }
+.previous-menu-item:hover {
+  padding-bottom: 0.5rem;
+  color: color(green);
+  border-bottom: 0.2rem solid color(green);
+  transition: border-bottom 0.5s;
 }
 
 .active-menu-item {
@@ -472,10 +479,14 @@ input:disabled:hover {
   height: 2rem;
   width: 10rem;
   margin: 0.5rem auto 0;
-  padding-top: 0.3rem;
   text-align: center;
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
   color: #fff;
   background-color: color(green);
+  outline: solid transparent;
+  border: 1px solid transparent;
 
   &:hover {
     background-color: #00ffdd;
