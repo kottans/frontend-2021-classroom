@@ -1,4 +1,4 @@
-import makeModal from './modal';
+import makeModal from './modal.js';
 
 const makeMsg = (ticketsAmount, totalPrice) => {
   if (!ticketsAmount) return 'No seat selected';
@@ -19,17 +19,15 @@ export default () => {
   };
 
   const form = document.querySelector('form');
-  form.addEventListener('change', (event) => {
+  form.addEventListener('click', (event) => {
     const { currentTarget } = event;
-    const seats = null || currentTarget.elements;
-    const checkedSeats = Array.from(seats)
-      .filter((seat) => seat.checked)
-      .map((seat) => seat.value);
 
-    state.cart = checkedSeats;
-    state.ticketsAmount = checkedSeats.length;
+    const seats = currentTarget.querySelectorAll('input:checked');
+    const seatsData = Array.from(seats).map((seat) => seat.value);
+
+    state.cart = seatsData;
+    state.ticketsAmount = seatsData.length;
     state.totalPrice = state.ticketsAmount * state.ticketPrice;
-
     render(state);
   });
 
