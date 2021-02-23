@@ -3,9 +3,6 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   margin: 0;
 }
@@ -16,6 +13,7 @@ main {
   min-width: 400px;
   width: 1000px;
   height: 800px;
+  margin: 0 auto;
   border-radius: 30px;
   background-color: #151933;
   font-family: 'Montserrat', sans-serif;
@@ -40,6 +38,11 @@ h2 {
   font-weight: 600;
 }
 
+h3 {
+  color: #99a3bc;
+  font-size: 16px;
+}
+
 p {
   color: #99a3bc;
   font-weight: 200;
@@ -48,6 +51,29 @@ p {
 form {
   width: 60%;
   height: 300px;
+}
+
+fieldset {
+  margin-top: 20px;
+  border: none;
+  color: #99a3bc;
+}
+
+legend {
+  padding-left: 20px;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+time {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
 }
 
 .movie {
@@ -77,22 +103,6 @@ form {
   overflow-y: auto;
 }
 
-fieldset {
-  margin-top: 20px;
-  border: none;
-  color: #99a3bc;
-}
-
-legend {
-  padding-left: 20px;
-}
-
-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .date-selector {
   display: flex;
   justify-content: space-around;
@@ -115,8 +125,8 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 80px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   margin: 0;
   border-radius: 5px;
 }
@@ -126,12 +136,21 @@ input {
   background-color: #75fd6f61;
 }
 
-.date-input:focus {
-  outline: none;
-  box-shadow: 0 3px 8px 2px #75fd6f61;
+.date-input:active {
+  box-shadow: 0 3px 8px 2px #76fd6f;
 }
 
-.day {
+.date-input:focus {
+  outline: none;
+  box-shadow: 0 3px 8px 2px #76fd6fcb;
+}
+
+.date-input:hover {
+  cursor: pointer;
+  background-color: #75fd6f61;
+}
+
+.week-day {
   margin: 0 0 auto 0;
   font-size: 1em;
 }
@@ -170,21 +189,27 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 50px;
+  width: 100%;
+  height: 100%  ;
   margin: 0;
   border: 2px solid #20243d;
   border-radius: 30px;
 }
 
-.time-input:checked {
+.time-input:checked,
+.time-input:active {
   border: 1px solid #75fd6f;
   background-color: #75fd6f61;
 }
 
 .time-input:focus {
   outline: none;
-  box-shadow: 0 3px 8px 2px #75fd6f61;
+  box-shadow: 0 3px 8px 2px #76fd6fcb;
+}
+
+.time-input:hover {
+  cursor: pointer;
+  background-color: #75fd6f61;
 }
 
 .hall {
@@ -214,6 +239,12 @@ input {
   height: 20px;
   border-radius: 5px;
   background-color: #3e4256;
+}
+
+.seat:hover,
+.seat:focus {
+  cursor: pointer;
+  background-color: #76fd6f80;
 }
 
 .seat:checked,
@@ -263,7 +294,7 @@ input {
 .price {
   width: 150px;
   margin: 0;
-  font-weight: bold;
+  font-weight: 600;
   color: white;
   font-size: 24px;
 }
@@ -280,6 +311,14 @@ input {
 
 .submit-button:hover {
   cursor: pointer;
+}
+
+@media screen and (min-height: 820px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 695px) {
