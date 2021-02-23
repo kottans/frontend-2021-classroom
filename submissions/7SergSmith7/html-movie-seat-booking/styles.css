@@ -95,14 +95,23 @@ main {
   color: red;
   cursor: pointer;
 }
+.main__screen-and-seats-block__select__date {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  padding: 0 0;
+  margin: 10px auto;
+}
+
+.date__list__item {
+  display: none;
+}
 
 .navigation__date__list {
   list-style-type: none;
-  display: flex;
-  width: 160px;
-  padding: 0 0;
-  justify-content: space-between;
-  margin: 0 auto;
+  padding-left: 0;
+  margin: 0;
+  padding-top: 4px;
 }
 
 .main__screen-and-seats-block__select__time {
@@ -114,6 +123,9 @@ main {
 .navigation-arrow {
   color: #2a6fd7;
   font-weight: 700;
+  height: 30px;
+  border: none;
+  background-color: white;
 }
 
 .navigation-arrow:hover {
@@ -122,6 +134,7 @@ main {
 
 .selected-date {
   font-weight: 300;
+  display: block;
 }
 .time__list__item {
   font-weight: 300;
