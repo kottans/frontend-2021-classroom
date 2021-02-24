@@ -1,58 +1,55 @@
 const seatsForm = document.querySelector('#tickets');
 const seatsCart = document.querySelector('#cart-tickets');
 const cartTotal = document.querySelector('#cart-total');
-const confirmButton = document.querySelector('#cart-confirm');
-const cancelButton = document.querySelector('#cart-cancel');
+const cartConfirmButton = document.querySelector('#cart-confirm');
+const cartCancelButton = document.querySelector('#cart-cancel');
 const modal = document.querySelector('#modal');
 const modalConfirmButton = modal.querySelector('#modal-confirm');
 const modalCancelButton = modal.querySelector('#modal-cancel');
 const modalTotal = modal.querySelector('#modal-total');
-const modalSeats = modal.querySelector('#modal-tickets');
-let selectedSeatsStore = [];
+const modalAmount = modal.querySelector('#modal-tickets');
 const PRICE = 5;
 
-const createSelectedSeatsTemplates = (selectedSeats) => {
-  const templates = selectedSeats.map(
-    (seat) => `<div class="selected-seats__ticket">
-                    <p class="ticket__location">${seat}</p>
-                    <p class="ticket__price">$${PRICE.toFixed(2)}</p>
-                </div>`
-  );
-  return templates;
+const createSeatTemplate = (seat) => {
+  const template = `<div class="selected-seats__ticket">
+      <p class="ticket__location">${seat}</p>
+      <p class="ticket__price">$${PRICE.toFixed(2)}</p>
+    </div>`;
+  return template;
 };
 
-const addSeat = (seatToAdd, selectedSeats) => {
-  selectedSeats.push(seatToAdd);
+const createTotalTemplate = (seatsAmount) => {
+  const total = (PRICE * seatsAmount).toFixed(2);
+  const template = `Total: $${total}`;
+  return template;
 };
 
-const showTotal = (selectedSeats) => {
-  let total = (PRICE * selectedSeats.length).toFixed(2);
-  cartTotal.textContent = `Total: $${total}`;
+const updateModal = (seatsAmount) => {
+  modalAmount.textContent = seatsAmount
+    ? `Seats: ${seatsAmount}`
+    : 'No seats selected';
+  modalTotal.textContent = seatsAmount ? createTotalTemplate(seatsAmount) : '';
+  modalConfirmButton.style.display = seatsAmount ? 'block' : 'none';
 };
 
-const updateCart = (selectedSeats) => {
-  let seats = createSelectedSeatsTemplates(selectedSeats);
-  seatsCart.innerHTML = '';
-  seats.forEach((seat) => {
-    seatsCart.innerHTML += seat;
-  });
-  if (seats.length === 0) {
-    seatsCart.innerHTML = '<p class="cart__empty">No seats selected yet</p>';
+const clearCart = () => {
+  seatsCart.innerHTML = '<p class="cart__empty">No seats selected yet</p>';
+  cartTotal.textContent = 'Total: $0.00';
+  updateModal(0);
+};
+
+const updateCart = (selectedSeatsNodeList) => {
+  const seatsAmount = selectedSeatsNodeList.length;
+  updateModal(seatsAmount);
+  if (!seatsAmount) {
+    clearCart();
+  } else {
+    seatsCart.innerHTML = '';
+    selectedSeatsNodeList.forEach((seat) => {
+      seatsCart.innerHTML += createSeatTemplate(seat.value);
+    });
+    cartTotal.textContent = createTotalTemplate(seatsAmount);
   }
-  showTotal(selectedSeats);
-};
-
-const removeSeat = (seatToRemove, selectedSeats) => {
-  let index = selectedSeats.indexOf(seatToRemove);
-  selectedSeats.splice(index, 1);
-};
-
-const updateModal = (selectedSeats) => {
-  let seats = selectedSeats.length;
-  let total = (seats * PRICE).toFixed(2);
-  modalSeats.textContent = seats > 0 ? `Seats: ${seats}` : 'No seats selected';
-  modalTotal.textContent = seats > 0 ? `Total: $${total}` : '';
-  modalConfirmButton.style.display = seats > 0 ? 'block' : 'none';
 };
 
 const showModal = () => {
@@ -63,28 +60,13 @@ const hideModal = () => {
   modal.style.display = 'none';
 };
 
-seatsForm.addEventListener('click', ({ target }) => {
-  let seat = target.closest('.seat__input');
-  if (seat) {
-    if (seat.checked) {
-      addSeat(seat.value, selectedSeatsStore);
-    } else {
-      removeSeat(seat.value, selectedSeatsStore);
-    }
-    updateCart(selectedSeatsStore);
-  }
+seatsForm.addEventListener('change', () => {
+  const seats = seatsForm.querySelectorAll('input:checked');
+  updateCart(seats);
 });
 
-confirmButton.addEventListener('click', () => {
-  updateModal(selectedSeatsStore);
-  showModal();
-});
+cartCancelButton.addEventListener('click', clearCart);
 
-cancelButton.addEventListener('click', () => {
-  selectedSeatsStore = [];
-  updateCart(selectedSeatsStore);
-});
+cartConfirmButton.addEventListener('click', showModal);
 
-modalCancelButton.addEventListener('click', () => {
-  hideModal();
-});
+modalCancelButton.addEventListener('click', hideModal);
