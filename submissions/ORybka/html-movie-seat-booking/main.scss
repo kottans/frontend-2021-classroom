@@ -21,8 +21,6 @@ h6 {
 
 a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
 }
 
 ol,
@@ -143,19 +141,25 @@ body {
 .menu-item {
   padding-bottom: 0.5rem;
   border-bottom: 0.2rem solid transparent;
-}
+  color: #fff;
 
-.previous-menu-item:hover {
-  padding-bottom: 0.5rem;
-  color: color(green);
-  border-bottom: 0.2rem solid color(green);
-  transition: border-bottom 0.5s;
+  &:hover {
+    padding-bottom: 0.5rem;
+    color: color(green);
+    border-bottom: 0.2rem solid color(green);
+    transition: border-bottom 0.5s;
+  }
 }
 
 .active-menu-item {
   padding-bottom: 0.5rem;
   color: color(green);
   border-bottom: 0.2rem solid color(green);
+  pointer-events: none;
+}
+
+.next-menu-item {
+  pointer-events: none;
 }
 
 .film-description {
@@ -487,8 +491,10 @@ input:disabled:hover {
   background-color: color(green);
   outline: solid transparent;
   border: 1px solid transparent;
+  cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #00ffdd;
     color: #000;
   }
