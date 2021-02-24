@@ -1,0 +1,207 @@
+* {
+  background: whitesmoke;
+  margin: 0;
+}
+.title {
+  padding: 10px;
+  text-align: center;
+  background: lightsalmon;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+.film__title,
+.film__date,
+.film__time {
+  width: 75vw;
+  margin: 10px auto;
+  text-align: left;
+}
+.legend {
+  margin-top: 20px;
+  text-align: center;
+}
+.description {
+  font-size: 1em;
+  line-height: 1em;
+}
+.screen {
+  width: 75vw;
+  margin: 20px auto;
+  box-shadow: 0px 5px 0px lightskyblue;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hall {
+  margin-top: 3vh;
+}
+.seat {
+  display: inline-block;
+  width: 5vw;
+  height: 5vw;
+  line-height: 5vw;
+  margin: 0.5vw;
+  background: lightgreen;
+  font-size: 3vw;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5%;
+  cursor: pointer;
+}
+.visually_hidden {
+  position: absolute;
+  clip-path: circle(0%);
+  appearance: none;
+}
+.seat__input:focus + .seat,
+.seat:hover,
+.seat:focus {
+  box-shadow: 0 0 0 0.3vw green;
+}
+.seat:active,
+.seat__input:checked + .seat:active {
+  background: indianred;
+}
+.seat__input:checked + .seat,
+.legend .booked {
+  background: lightcoral;
+}
+.seat__input:disabled + .seat,
+.legend .not_available {
+  background: lightgrey;
+}
+.seat__input:disabled + .seat:hover {
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.row {
+  margin: 10px;
+  padding: 0;
+  border: none;
+  text-align: center;
+}
+.order {
+  margin: 20px;
+  text-align: center;
+}
+.order_description {
+  font-size: 1.5em;
+}
+.order_details {
+  margin: 10px auto;
+  width: 300px;
+  border-collapse: collapse;
+  font-size: 1.2em;
+}
+.order_details_heading {
+  background: lightgreen;
+  padding: 0.4em;
+}
+.order_list .order_list_row:nth-child(even) {
+  background-color: lightgrey;
+}
+.order_list_data {
+  background: inherit;
+  padding: 0.3em;
+}
+.order_summary {
+  margin: 10px auto;
+  width: 300px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-align: left;
+}
+.booking_button {
+  width: 200px;
+  height: 40px;
+  background: lightcoral;
+  font-size: 1.2rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+.booking_button:hover,
+.booking_button:focus {
+  outline: solid green 0.4vw;
+}
+.booking_button:active {
+  background: indianred;
+  color: white;
+}
+.result {
+  margin: 5vh;
+  text-align: center;
+  font-size: 2em;
+  color: green;
+}
+.removed {
+  display: none;
+}
+@media screen and (min-width: 950px) {
+  .main {
+    display: grid;
+    grid-template-areas:
+      'film empty'
+      'legend empty'
+      'hall order'
+      'result result';
+  }
+  .film {
+    grid-area: film;
+  }
+  .legend {
+    grid-area: legend;
+  }
+  .hall {
+    grid-area: hall;
+  }
+  .order {
+    grid-area: order;
+    margin: 0px;
+  }
+  .result {
+    grid-area: result;
+  }
+}
+@media screen and (min-width: 700px) {
+  .film__title,
+  .film__date,
+  .film__time {
+    width: 525px;
+  }
+  .screen {
+    width: 525px;
+  }
+  .seat {
+    width: 35px;
+    height: 35px;
+    font-size: 21px;
+    line-height: 35px;
+    margin: 3.5px;
+  }
+  .seat__input:focus + .seat,
+  .seat:hover,
+  .seat:focus {
+    box-shadow: 0 0 0 2.1px green;
+  }
+  .booking_button:hover,
+  .booking_button:focus {
+    outline: solid green 2.8px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .film__title,
+  .film__date,
+  .film__time {
+    width: 90vw;
+  }
+  .screen {
+    width: 90vw;
+  }
+  .seat {
+    width: 6vw;
+    height: 6vw;
+    line-height: 6vw;
+  }
+  .row {
+    margin: 4vw 0vw;
+  }
+}
