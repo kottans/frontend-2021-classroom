@@ -330,7 +330,36 @@ fieldset {
 .order {
   padding: 20px;
   display: flex;
-  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.order.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.88);
+}
+.tickets {
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tickets li {
+  padding: 10px;
+  font-size: 18px;
+}
+.tickets li span:first-child {
+  margin-right: 20px;
+}
+.buttons {
+  padding: 10px;
+  margin-top: 20px;
 }
 .order__submit {
   padding: 10px 60px;
@@ -338,7 +367,7 @@ fieldset {
   background-color: red;
   border: 3px solid red;
   color: white;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 .order__submit:hover,
 .order__submit:focus {
@@ -348,6 +377,9 @@ fieldset {
 }
 .order__submit:focus {
   outline: none;
+}
+.hidden {
+  display: none;
 }
 @media (max-width: 1255px) {
   .poster {
