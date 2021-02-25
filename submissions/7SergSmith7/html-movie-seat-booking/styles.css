@@ -89,6 +89,8 @@ main {
   margin: auto 0;
   color: #2a6fd7;
   font-weight: 700;
+  border: none;
+  background-color: white;
 }
 
 .row__delete-icon:hover {
