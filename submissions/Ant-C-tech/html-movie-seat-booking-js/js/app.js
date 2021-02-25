@@ -141,20 +141,20 @@ const dateSliderInit = () => {
   };
 
   const updateSliderHiddenElements = () => {
-      inputCollection.forEach((date, index) => {
-        if (
-          index >= currentFirstElementIndex + sliderShowedLength ||
-          index < currentFirstElementIndex
-        ) {
-          date.disabled = true;
-        } else {
-          date.disabled = !checkIsAvailableOrderTicketCertainDay(
-            movie["booking available state"]["date"][date.defaultValue],
-            date.defaultValue
-          );
-        }
-      });
-  }
+    inputCollection.forEach((date, index) => {
+      if (
+        index >= currentFirstElementIndex + sliderShowedLength ||
+        index < currentFirstElementIndex
+      ) {
+        date.disabled = true;
+      } else {
+        date.disabled = !checkIsAvailableOrderTicketCertainDay(
+          movie["booking available state"]["date"][date.defaultValue],
+          date.defaultValue
+        );
+      }
+    });
+  };
 
   updateSliderHiddenElements();
 
@@ -290,6 +290,7 @@ const checkAvailableTimeForToday = () => {
         getMovieTimeInHours(movieTime.defaultValue) <= getCurrentTimeInHours()
       ) {
         movieTime.disabled = true;
+        movieTime.checked = false;
       }
     });
   } else {
@@ -330,6 +331,15 @@ const checkIsAvailableToOrderSeats = () => {
   );
 };
 
+const clearHallSection = () => {
+  const seats = document.querySelectorAll(".seat__input");
+
+  seats.forEach((seat) => {
+    seat.disabled = false;
+    seat.checked = false;
+  });
+};
+
 const addTakenSeatsToHallSection = () => {
   const seats = document.querySelectorAll(".seat__input");
 
@@ -341,6 +351,7 @@ const addTakenSeatsToHallSection = () => {
     getChosenAttributes("#hallType")
   ][getChosenAttributes("#movieTime")].forEach((seat) => {
     seats[seat].disabled = true;
+    seats[seat].checked = false;
   });
 };
 
@@ -821,61 +832,65 @@ const addListenerIntoSeatBookingScreen = () => {
   );
 
   controlSection.addEventListener("click", ({ target }) => {
-    if (target.classList.contains("movieDate__radioInput")) {
-      checkAvailableTimeForToday();
-    }
-
-    if (
-      target.tagName.toLowerCase() === "input" &&
-      checkIsAvailableToChoseSeats()
-    ) {
-      addTakenSeatsToHallSection();
-    }
-
-    if (
-      target.tagName.toLowerCase() === "input" &&
-      checkIsAvailableToOrderSeats()
-    ) {
+    const makeActiveBuyButton = () => {
       removeClassFromElement(buyTicketButton, "siteButton-disabled");
       buyTicketButton.setAttribute("href", "#");
+      buyTicketButton.addEventListener("click", confirmTicket, { once: true });
+    };
 
-      buyTicketButton.addEventListener(
-        "click",
-        () => {
-          writeDataIntoUserOrderObject();
+    const makeDisabledBuyButton = () => {
+      addClassToElement(buyTicketButton, "siteButton-disabled");
+      buyTicketButton.removeAttribute("href");
+      buyTicketButton.removeEventListener("click", confirmTicket, { once: true });
+    };
 
-          const modalElementContent = createModalScreen(
-            "confirmTicket",
-            "confirmTicket__title",
-            textContentForApp["confirmTicketScreen"][
-              "confirmTicketScreenTitle"
-            ],
-            "movieDescription__content",
-            createOrderListContent,
-            createControlElements.bind(this, [
-              [
-                "backToChoseSeatSectionFromConfirmTicketScreen",
-                textContentForApp["confirmTicketScreen"][
-                  "btnBackToMainScreenText"
-                ],
-              ],
-              [
-                "confirmOrder",
-                textContentForApp["confirmTicketScreen"]["btnConfirmTicket"],
-              ],
-            ])
-          );
-
-          changeScreen(
-            "hideAnimationForNextScreenHorizontal",
-            "angle90_horizontal",
-            modalElementContent,
-            "showAnimationForNextScreenHorizontal",
-            addListenerIntoConfirmTicketScreen
-          );
-        },
-        { once: true }
+    const confirmTicket = () => {
+      writeDataIntoUserOrderObject();
+      const modalElementContent = createModalScreen(
+        "confirmTicket",
+        "confirmTicket__title",
+        textContentForApp["confirmTicketScreen"]["confirmTicketScreenTitle"],
+        "movieDescription__content",
+        createOrderListContent,
+        createControlElements.bind(this, [
+          [
+            "backToChoseSeatSectionFromConfirmTicketScreen",
+            textContentForApp["confirmTicketScreen"]["btnBackToMainScreenText"],
+          ],
+          [
+            "confirmOrder",
+            textContentForApp["confirmTicketScreen"]["btnConfirmTicket"],
+          ],
+        ])
       );
+      changeScreen(
+        "hideAnimationForNextScreenHorizontal",
+        "angle90_horizontal",
+        modalElementContent,
+        "showAnimationForNextScreenHorizontal",
+        addListenerIntoConfirmTicketScreen
+      );
+    };
+
+    if (target.type === "radio") {
+      if (target.classList.contains("movieDate__radioInput")) {
+        checkAvailableTimeForToday();
+      }
+      checkIsAvailableToChoseSeats()
+        ? addTakenSeatsToHallSection()
+        : clearHallSection();
+      if (!checkIsAvailableToOrderSeats()) {
+        makeDisabledBuyButton();
+      }
+    } else if (target.type === "checkbox") {
+      if (!checkIsAvailableToChoseSeats()) {
+        clearHallSection();
+      }
+      if (checkIsAvailableToOrderSeats()) {
+        makeActiveBuyButton();
+      } else {
+        makeDisabledBuyButton();
+      }
     }
   });
 };

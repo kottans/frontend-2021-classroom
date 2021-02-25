@@ -17,7 +17,7 @@ const movie = {
         trapped in a surreal nightmare.`,
     "IMBd rating": "5.8",
     "IMBd link": "https://www.imdb.com/title/tt8368406/",
-    premiere: "2021-02-23",
+    premiere: "2021-02-24",
     duration: "1h 39m",
     poster: {
       "poster src": "./img/poster.jpg", //750x1000
@@ -63,17 +63,17 @@ const movie = {
       "Cinema 4Dx": false,
     },
     date: {
-      "2021-02-23": true,
       "2021-02-24": true,
-      "2021-02-25": false,
+      "2021-02-25": true,
       "2021-02-26": true,
-      "2021-02-27": true,
+      "2021-02-27": false,
       "2021-02-28": true,
       "2021-03-01": true,
       "2021-03-02": true,
-      "2021-03-03": true,
+      "2021-03-03": false,
       "2021-03-04": true,
       "2021-03-05": true,
+      "2021-03-06": true,
     },
     time: {
       "14:00": true,

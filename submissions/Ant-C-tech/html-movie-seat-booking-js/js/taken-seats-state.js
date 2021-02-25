@@ -19,23 +19,6 @@ const getArrayOfRandomIntWithRandomLength = () => {
 
 // Result of server work
 const takenSeatsState = {
-  "2021-02-23": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
   "2021-02-24": {
     General: {
       "14:00": getArrayOfRandomIntWithRandomLength(),
@@ -190,6 +173,23 @@ const takenSeatsState = {
     },
   },
   "2021-03-05": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-06": {
     General: {
       "14:00": getArrayOfRandomIntWithRandomLength(),
       "17:00": getArrayOfRandomIntWithRandomLength(),
