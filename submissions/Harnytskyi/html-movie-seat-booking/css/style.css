@@ -1,0 +1,210 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: url(../img/background_cinema_hall.jpg) no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.booking_block {
+  max-width: 800px;
+  width: 100%;
+}
+
+.booking_wrapper {
+  background: rgba(250, 250, 250, 0.9);
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(57px, auto);
+}
+
+.legend_block {
+  width: 30px;
+  height: 30px;
+  border-radius: 10%;
+  margin: 5px;
+}
+
+.legend_item {
+  flex-wrap: wrap;
+}
+
+.hall_container {
+  grid-row-end: span 9;
+  grid-column-end: span 1;
+  padding: 10px;
+}
+
+.hall {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 380px;
+  min-width: 252px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(11, 1fr);
+}
+
+.block_item {
+  text-align: center;
+  max-height: 30px;
+  border-radius: 10%;
+  aspect-ratio: 1/1;
+}
+
+.cinema_row {
+  grid-column: 1;
+}
+
+.sold_place {
+  color: white;
+  background-color: #8f8d8e;
+}
+
+.standart_place {
+  color: white;
+  background-color: #95c7f4;
+}
+
+.comfort_place {
+  color: white;
+  background-color: #d00400;
+}
+
+.check_input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+.check_input:checked ~ .content {
+  background: green;
+}
+.check_input:focus ~ .content {
+  box-shadow: 0 0 0 0.1em darkblue;
+}
+
+.screen {
+  color: white;
+  grid-column-start: 2;
+  grid-column-end: span 10;
+  background-color: #d88a04;
+  aspect-ratio: auto;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.cost {
+  grid-column-end: span 1;
+  grid-row-end: span 5;
+  padding: 15px;
+}
+
+.legend {
+  grid-column-end: span 1;
+  grid-row-end: span 4;
+  justify-content: center;
+  padding: 15px;
+}
+
+.showtimes_propery,
+.legend_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.showtimes_property_header {
+  width: 70px;
+  color: #d88a04;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.showtimes_property_value {
+  font-size: 1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.r11p3 {
+  grid-column: 4;
+}
+
+.button_block {
+  display: flex;
+  justify-content: center;
+}
+
+.book_button {
+  color: white;
+  background-color: #d88a04;
+  border: 2px solid transparent;
+  margin-top: 20px;
+  height: 30px;
+}
+
+.book_button:hover {
+  background-color: orange;
+}
+
+.book_button:active {
+  border-color: black;
+}
+
+@media (max-width: 800px) {
+  .booking_block {
+    max-width: 400px;
+  }
+  .booking_wrapper {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: 'column-1' 'column-2 ' 'column-3';
+  }
+  .legend {
+    grid-row-end: auto;
+    display: flex;
+    grid-area: column-2;
+    padding: 0;
+  }
+  .legend_block {
+    margin-left: 0;
+  }
+  .cost {
+    grid-row-end: auto;
+    justify-self: center;
+    grid-area: column-3;
+    padding: 35px 20px;
+  }
+  .hall_container {
+    grid-area: column-1;
+    grid-row-end: auto;
+  }
+  main {
+    position: relative;
+    bottom: unset;
+  }
+}
