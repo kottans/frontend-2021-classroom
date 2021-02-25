@@ -67,23 +67,96 @@
         </aside>
         <div class="booking-wrap">
           <section class="session-date">
+            <h2 class="template__header">Choose Date and Time</h2>
             <ol class="date__list">
-              <li class="date__item"><a href="">1 MON</a></li>
-              <li class="date__item item--active"><a href="">2 TUE</a></li>
-              <li class="date__item"><a href="">3 WED</a></li>
-              <li class="date__item"><a href="">4 THU</a></li>
-              <li class="date__item"><a href="">5 FRI</a></li>
-              <li class="date__item"><a href="">6 SAT</a></li>
-              <li class="date__item"><a href="">5 SUN</a></li>
+              <li>
+                <label>
+                  <input
+                    class="date__input visually-hidden"
+                    type="radio"
+                    name="date"
+                    value="2021-02-01"
+                    aria-label="2021 February 1 "
+                  />
+                  <div class="date__item">1 Feb</div>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    class="date__input visually-hidden"
+                    type="radio"
+                    name="date"
+                    value="2021-02-02"
+                    aria-label="2021 February 2 "
+                  />
+                  <div class="date__item">2 Feb</div>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    class="date__input visually-hidden"
+                    type="radio"
+                    name="date"
+                    value="2021-02-03"
+                    aria-label="2021 February 3 "
+                  />
+                  <div class="date__item">3 Feb</div>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    class="date__input visually-hidden"
+                    type="radio"
+                    name="date"
+                    value="2021-02-04"
+                    aria-label="2021 February 4 "
+                  />
+                  <div class="date__item">4 Feb</div>
+                </label>
+              </li>
             </ol>
           </section>
           <section class="session-time">
             <ol class="time__list">
-              <li class="time__item"><a href="">11:00</a></li>
-              <li class="time__item"><a href="">15:00</a></li>
-              <li class="time__item"><a href="">17:30</a></li>
-              <li class="time__item item--active"><a href="">19:30</a></li>
-              <li class="time__item"><a href="">22:00</a></li>
+              <li>
+                <label>
+                  <input
+                    class="time__input visually-hidden"
+                    type="radio"
+                    name="time"
+                    value="15:00"
+                    aria-label="3 p.m."
+                  />
+                  <div class="time__item">15:00</div>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    class="time__input visually-hidden"
+                    type="radio"
+                    name="time"
+                    value="17:00"
+                    aria-label="5 p.m."
+                  />
+                  <div class="time__item">17:00</div>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    class="time__input visually-hidden"
+                    type="radio"
+                    name="time"
+                    value="19:00"
+                    aria-label="7 p.m."
+                  />
+                  <div class="time__item">19:00</div>
+                </label>
+              </li>
             </ol>
           </section>
           <section class="cinema-hall">
@@ -105,17 +178,17 @@
                 <ul class="left-sector">
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="112" />
+                      <input class="seats-input" type="checkbox" value="1_12_10" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="111" />
+                      <input class="seats-input" type="checkbox" value="1_11_10" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="110" />
+                      <input class="seats-input" type="checkbox" value="1_10_10" />
                     </label>
                   </li>
                   <li>
@@ -123,116 +196,96 @@
                       <input
                         class="seats-input"
                         type="checkbox"
-                        value="212"
+                        value="2_12"
                         disabled
                       />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="211" />
+                      <input class="seats-input" type="checkbox" value="2_11_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="210" />
+                      <input class="seats-input" type="checkbox" value="2_10_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="312" />
+                      <input class="seats-input" type="checkbox" value="3_12_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="311" />
+                      <input class="seats-input" type="checkbox" value="3_11_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="310" />
+                      <input class="seats-input" type="checkbox" value="3_10_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="412" />
+                      <input class="seats-input" type="checkbox" value="4_12_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="411" />
+                      <input class="seats-input" type="checkbox" value="4_11_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="410" />
+                      <input class="seats-input" type="checkbox" value="4_10_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="512" />
+                      <input class="seats-input" type="checkbox" value="5_12_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="511" />
+                      <input class="seats-input" type="checkbox" value="5_11_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="510" />
+                      <input class="seats-input" type="checkbox" value="5_10_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="612" />
+                      <input class="seats-input" type="checkbox" value="6_12_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="611" />
+                      <input class="seats-input" type="checkbox" value="6_11_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="610" />
+                      <input class="seats-input" type="checkbox" value="6_10_14" />
                     </label>
                   </li>
                 </ul>
                 <ul class="center">
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="19" />
+                      <input class="seats-input" type="checkbox" value="1_9_10" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="18" />
+                      <input class="seats-input" type="checkbox" value="1_8_10" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="17" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      <input
-                        class="seats-input"
-                        type="checkbox"
-                        value="16"
-                        disabled
-                      />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      <input class="seats-input" type="checkbox" value="15" />
-                    </label>
-                  </li>
-                  <li>
-                    <label>
-                      <input class="seats-input" type="checkbox" value="14" />
+                      <input class="seats-input" type="checkbox" value="1_7_10" />
                     </label>
                   </li>
                   <li>
@@ -240,7 +293,27 @@
                       <input
                         class="seats-input"
                         type="checkbox"
-                        value="29"
+                        value="1_6"
+                        disabled
+                      />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" value="1_5_10" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input class="seats-input" type="checkbox" value="1_4_10" />
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input
+                        class="seats-input"
+                        type="checkbox"
+                        value="2_9_12"
                         disabled
                       />
                     </label>
@@ -250,166 +323,166 @@
                       <input
                         class="seats-input"
                         type="checkbox"
-                        value="28"
+                        value="2_8_12"
                         disabled
                       />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="27" />
+                      <input class="seats-input" type="checkbox" value="2_7_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="26" />
+                      <input class="seats-input" type="checkbox" value="2_6_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="25" />
+                      <input class="seats-input" type="checkbox" value="2_5_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="24" />
+                      <input class="seats-input" type="checkbox" value="2_4_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="39" />
+                      <input class="seats-input" type="checkbox" value="3_9_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="38" />
+                      <input class="seats-input" type="checkbox" value="3_8_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="37" />
+                      <input class="seats-input" type="checkbox" value="3_7_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="36" />
+                      <input class="seats-input" type="checkbox" value="3_6_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="35" />
+                      <input class="seats-input" type="checkbox" value="3_5_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="34" />
+                      <input class="seats-input" type="checkbox" value="3_4_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="49" />
+                      <input class="seats-input" type="checkbox" value="4_9_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="48" />
+                      <input class="seats-input" type="checkbox" value="4_8_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="47" />
+                      <input class="seats-input" type="checkbox" value="4_7_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="46" />
+                      <input class="seats-input" type="checkbox" value="4_6_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" vale=45"" />
+                      <input class="seats-input" type="checkbox" value="4_5_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="44" />
+                      <input class="seats-input" type="checkbox" value="4_4_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="59" />
+                      <input class="seats-input" type="checkbox" value="5_9_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="58" />
+                      <input class="seats-input" type="checkbox" value="5_8_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="57" />
+                      <input class="seats-input" type="checkbox" value="5_7_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="56" />
+                      <input class="seats-input" type="checkbox" value="5_6_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="55" />
+                      <input class="seats-input" type="checkbox" value="5_5_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="54" />
+                      <input class="seats-input" type="checkbox" value="5_4_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="69" />
+                      <input class="seats-input" type="checkbox" value="6_9_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="68" />
+                      <input class="seats-input" type="checkbox" value="6_8_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="67" />
+                      <input class="seats-input" type="checkbox" value="6_7_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="66" />
+                      <input class="seats-input" type="checkbox" value="6_6_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="65" />
+                      <input class="seats-input" type="checkbox" value="6_5_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="64" />
+                      <input class="seats-input" type="checkbox" value="6_4_14" />
                     </label>
                   </li>
                 </ul>
                 <ul class="right-sector">
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="13" />
+                      <input class="seats-input" type="checkbox" value="1_3_10" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="12" />
+                      <input class="seats-input" type="checkbox" value="1_2_10" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="11" />
+                      <input class="seats-input" type="checkbox" value="1_1_10" />
                     </label>
                   </li>
                   <li>
@@ -417,79 +490,79 @@
                       <input
                         class="seats-input"
                         type="checkbox"
-                        value="23"
+                        value="2_3"
                         disabled
                       />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="22" />
+                      <input class="seats-input" type="checkbox" value="2_2_10" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="21" />
+                      <input class="seats-input" type="checkbox" value="2_1_10" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="33" />
+                      <input class="seats-input" type="checkbox" value="3_3_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="32" />
+                      <input class="seats-input" type="checkbox" value="3_2_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="31" />
+                      <input class="seats-input" type="checkbox" value="3_1_12" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="43" />
+                      <input class="seats-input" type="checkbox" value="4_3_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="42" />
+                      <input class="seats-input" type="checkbox" value="4_2_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="41" />
+                      <input class="seats-input" type="checkbox" value="4_1_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="51" />
+                      <input class="seats-input" type="checkbox" value="5_1_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="52" />
+                      <input class="seats-input" type="checkbox" value="5_2_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="51" />
+                      <input class="seats-input" type="checkbox" value="5_1_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="63" />
+                      <input class="seats-input" type="checkbox" value="6_3_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="62" />
+                      <input class="seats-input" type="checkbox" value="6_2_14" />
                     </label>
                   </li>
                   <li>
                     <label>
-                      <input class="seats-input" type="checkbox" value="61" />
+                      <input class="seats-input" type="checkbox" value="6_1_14" />
                     </label>
                   </li>
                 </ul>
@@ -504,10 +577,16 @@
               </div>
             </form>
           </section>
+          <section class="booking-information">
+            <h2 class="template__header">Selected tickets</h2>
+            <div class="summary-date"></div>
+            <ul class="summary-position"></ul>
+          </section>
           <button class="booking__button">book now</button>
         </div>
       </main>
       <footer></footer>
     </div>
+    <script src="./js/app.js"></script>
   </body>
 </html>

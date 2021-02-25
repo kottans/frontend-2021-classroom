@@ -37,6 +37,7 @@ body {
   line-height: 1.5;
 }
 
+ul,
 ul[class],
 ol[class] {
   list-style: none;
