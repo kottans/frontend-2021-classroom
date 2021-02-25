@@ -1,0 +1,394 @@
+body {
+  width: 1440px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+main {
+  display: flex;
+}
+.header {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.main__film-description {
+  width: 35%;
+  padding: 0 50px;
+}
+
+.main__screen-and-seats-block {
+  width: 65%;
+}
+.main__film-description__film-image {
+  width: 216px;
+  float: left;
+}
+.main__film-description__film-title {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.main__film-description__film-year {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.main__film-description__selected-seats-info {
+  margin-top: 250px;
+}
+.selected-seats-info__title {
+  font-size: 20px;
+  font-weight: 400;
+}
+.selected-seats-info__total-cost-block {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.selected-seats-info__seats-list {
+  border-top: 1px solid #2a6fd7;
+  border-bottom: 1px solid #2a6fd7;
+  display: flex;
+  flex-direction: column;
+}
+.selected-seats-info__total-cost-block {
+  display: flex;
+  width: 145px;
+  justify-content: space-between;
+  margin-left: auto;
+}
+.selected-seats-info__total-cost-block__total-cost {
+  font-weight: 700;
+}
+.selected-seats-info__seats-list__row {
+  display: flex;
+  justify-content: space-between;
+}
+.seats-list__row__seats {
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.row__seats {
+  display: flex;
+  flex-direction: column;
+}
+.row__seats span:nth-child(1) {
+  margin: auto;
+  font-weight: 700;
+  font-size: 20px;
+}
+.row__seats span:nth-child(2) {
+  margin: auto;
+  font-weight: 300;
+  font-size: 16px;
+}
+.row__delete-icon {
+  margin: auto 0;
+  color: #2a6fd7;
+  font-weight: 700;
+  border: none;
+  background-color: white;
+}
+
+.row__delete-icon:hover {
+  color: red;
+  cursor: pointer;
+}
+.main__screen-and-seats-block__select__date {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  padding: 0 0;
+  margin: 10px auto;
+}
+
+.date__list__item {
+  display: none;
+}
+
+.navigation__date__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  padding-top: 4px;
+}
+
+.main__screen-and-seats-block__select__time {
+  display: flex;
+  width: 100%;
+  padding: 0 0;
+  justify-content: space-between;
+}
+.navigation-arrow {
+  color: #2a6fd7;
+  font-weight: 700;
+  height: 30px;
+  border: none;
+  background-color: white;
+}
+
+.navigation-arrow:hover {
+  cursor: pointer;
+}
+
+.selected-date {
+  font-weight: 300;
+  display: block;
+}
+.time__list__item {
+  font-weight: 300;
+  padding: 2px 5px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid white;
+  color: #828282;
+}
+
+.select__time__item input[type='radio'] {
+  display: none;
+}
+
+.select__time__item input[type='radio']:checked + label .time__list__item {
+  background-color: rgba(95, 151, 235, 0.8);
+  color: black;
+}
+
+.selected-time {
+  background-color: rgba(95, 151, 235, 0.8);
+  color: black;
+}
+.time__list__item:hover {
+  background-color: rgba(95, 151, 235, 0.8);
+  color: black;
+  cursor: pointer;
+}
+.time__list__item:focus {
+  border: 1px solid rgba(95, 151, 235, 0.8);
+}
+
+.main__screen-and-seats-block__screen__image {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.main__screen-and-seats-block__screen__title {
+  margin: 10px 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.seats-list__row__item {
+  background: rgba(20, 46, 102, 0.8);
+  width: 38px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.seats-list__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.seats-list__row__input {
+  position: absolute;
+  left: -100vw;
+}
+
+.seats-list__row__input:checked + .seats-list__row__item {
+  background: rgba(42, 111, 215, 0.5);
+}
+
+.seats-list__row__item:hover {
+  border: 1px solid red;
+  cursor: pointer;
+}
+.seats-list__row__input:focus + .seats-list__row__item,
+.seats-list__row__item:focus {
+  border: 1px solid red;
+}
+
+.empty-place {
+  opacity: 0;
+}
+
+.empty-place:hover,
+.empty-place:focus {
+  cursor: auto;
+  border: 1px solid white;
+}
+
+.main__screen-and-seats-block__seats-list {
+  border-bottom: 1px solid #2a6fd7;
+  padding-bottom: 30px;
+  border-radius: 1px;
+  margin-bottom: 20px;
+}
+
+.unavailable-place {
+  background: rgba(181, 190, 206, 0.5);
+}
+
+.unavailable-place:hover,
+.unavailable-place:focus {
+  cursor: auto;
+  border: 1px solid white;
+}
+.main__screen-and-seats-block__info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.info__place-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.free {
+  background: rgba(20, 46, 102, 0.8);
+}
+.taken {
+  background: rgba(181, 190, 206, 0.5);
+}
+.selected {
+  background: rgba(95, 151, 235, 0.8);
+}
+.info__definition {
+  font-weight: 300;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.selected-seats-info__checkout-btn {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  color: white;
+  background-color: #2a6fd7;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 30px;
+  border: 1px solid white;
+}
+.selected-seats-info__checkout-btn:hover,
+.selected-seats-info__checkout-btn:focus {
+  border: 1px solid #2a6fd7;
+  color: #2a6fd7;
+  background-color: white;
+}
+
+@media screen and (max-width: 1400px) {
+  body {
+    width: 1100px;
+  }
+  .main__film-description__film-image {
+    width: 200px;
+  }
+  .main__film-description {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body {
+    width: 1000px;
+  }
+  .main__film-description__film-image {
+    width: 180px;
+  }
+  .main__film-description {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    width: 950px;
+  }
+  .main__film-description__film-image {
+    width: 160px;
+  }
+  .main__film-description {
+    padding: 0 10px;
+  }
+  .seats-list__row__item {
+    width: 30px;
+    height: 40px;
+  }
+  .seats-list__row__seats {
+    width: 200px;
+  }
+  .main__film-description__selected-seats-info {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    width: 650px;
+  }
+  .main__film-description__film-image {
+    width: 120px;
+  }
+  .main__film-description {
+    padding: 0 10px;
+  }
+  .seats-list__row__item {
+    width: 22px;
+    height: 30px;
+  }
+  .seats-list__row__seats {
+    width: 160px;
+  }
+  .main__film-description__film-title {
+    font-size: 30px;
+  }
+  .main__film-description__selected-seats-info {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    width: 350px;
+  }
+  section {
+    margin: 0 0;
+  }
+  .main__film-description__film-image {
+    width: 130px;
+  }
+  .main__film-description {
+    padding: 0 10px;
+  }
+  .seats-list__row__item {
+    width: 22px;
+    height: 30px;
+  }
+  .main__film-description__selected-seats-info {
+    margin-top: 130px;
+  }
+  main {
+    flex-direction: column;
+  }
+  section {
+    margin: auto;
+  }
+  .selected-seats-info__checkout-btn {
+    margin-bottom: 30px;
+  }
+  .main__screen-and-seats-block {
+    width: 300px;
+  }
+  .main__film-description {
+    width: 300px;
+    padding: 0 30px;
+  }
+}
