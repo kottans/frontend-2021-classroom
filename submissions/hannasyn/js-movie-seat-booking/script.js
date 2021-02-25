@@ -1,12 +1,19 @@
-/* eslint-disable no-param-reassign */
+/* eslint-disable no-alert */
 const bookingButton = document.querySelector('#booking-button');
 const hall = document.querySelector('.hall');
-const bookedField = document.querySelector('.booked');
 const checkoutScreen = document.querySelector('#checkout');
 const backButton = document.querySelector('#back-button');
 const payButton = document.querySelector('#pay-button');
-const checkoutContent = document.querySelector('#checkout-content');
 const sceduleContainer = document.querySelector('.schedule');
+const bookedContainer = document.querySelector('.booked__container');
+const dateContainer = document.querySelector('#dateContainer');
+const timeContainer = document.querySelector('#timeContainer');
+const bookedItemContainer = document.querySelector('#bookedItemContainer');
+const checkoutTickets = document.querySelector('#checkoutTickets');
+const checkoutDate = document.querySelector('#checkoutDate');
+const checkoutTime = document.querySelector('#checkoutTime');
+const checkoutTotalPrice = document.querySelector('#checkoutTotalPrice');
+const body = document.querySelector('body');
 const price = 10;
 
 const ticketTemplate = `
@@ -16,34 +23,40 @@ const ticketTemplate = `
     <p class="booked__price">Price: $<span class="highlight-text">${price}</span></p>
   </div>`;
 
-function addTicket(container, templateItem) {
-  container.insertAdjacentHTML('beforeend', templateItem);
+function addTicket(ticket) {
+  bookedItemContainer.insertAdjacentHTML('beforeend', ticket);
 }
 
-function removeTicket(container, item) {
-  container.removeChild(item);
+function removeTicket(item) {
+  bookedItemContainer.removeChild(item);
 }
 
 function uncheckSeats() {
   const checkedSeats = document.querySelectorAll('.seats__input:checked');
-  // eslint-disable-next-line no-return-assign
-  checkedSeats.forEach((seat) => (seat.checked = false));
+  checkedSeats.forEach((seat) => {
+    // eslint-disable-next-line no-param-reassign
+    seat.checked = false;
+  });
 }
 
-function clearBookedField({ target }) {
+function clearBookedField() {
+  bookedContainer.classList.remove('show');
+  bookedItemContainer.innerHTML = '';
+  uncheckSeats();
+}
+
+function clickedScedule({ target }) {
   if (target.classList.contains('schedule__input')) {
-    bookedField.innerHTML = '';
-    uncheckSeats();
+    clearBookedField();
   }
 }
 
-function fillBookedField(templateMain, templateItem, target, container, item) {
-  if (!bookedField.hasChildNodes()) {
-    bookedField.innerHTML = templateMain;
-  } else if (!target.checked) {
-    removeTicket(container, item);
+function fillBookedField(ticket, target, item) {
+  if (!target.checked) {
+    removeTicket(item);
   } else {
-    addTicket(container, templateItem);
+    bookedContainer.classList.add('show');
+    addTicket(ticket);
   }
 }
 
@@ -55,34 +68,18 @@ function setBookedField({ target }) {
   const [rowNum, seatNum] = target.value.split('-');
   const chosenDate = document.querySelector('.input-date:checked').value;
   const chosenTime = document.querySelector('.input-time:checked').value;
+
   const ticketId = target.value;
   const chosenTicket = ticketTemplate
     .replace('{{ ticketId }}', `${ticketId}`)
     .replace('{{ rowNum }}', `${rowNum}`)
     .replace('{{ seatNum }}', `${seatNum}`);
+  dateContainer.innerHTML = chosenDate;
+  timeContainer.innerHTML = chosenTime;
 
-  const bookedTemplate = `<div class="booked__container">
-    <h4 class="booked__title">Your booking:</h4>
-    <p class="booked__date">
-      Date: <span class="highlight-text">${chosenDate}</span>
-    </p>
-    <p class="booked__time">
-      Time: <span class="highlight-text">${chosenTime}</span>
-    </p>
-    ${chosenTicket}
-  </div>`;
+  const currentBookedItem = document.getElementById(`${ticketId}`);
 
-  const bookedContainer = document.querySelector('.booked__container');
-  const bookedItem = document.getElementById(`${ticketId}`);
-
-  fillBookedField(
-    bookedTemplate,
-    chosenTicket,
-    target,
-    bookedContainer,
-    // eslint-disable-next-line comma-dangle
-    bookedItem
-  );
+  fillBookedField(chosenTicket, target, currentBookedItem);
 }
 
 function fillCheckout() {
@@ -92,49 +89,50 @@ function fillCheckout() {
 
   let totalPrice = 0;
 
-  const checkoutTemplate = `
-  <p class="checkout__details">
-    Date: <span class="highlight-text">${chosenDate}</span>
-  </p>
-  <p class="checkout__details">
-    Time: <span class="highlight-text">${chosenTime}</span>
-  </p>
-        
-  ${chosenTickets
+  checkoutDate.innerHTML = chosenDate;
+  checkoutTime.innerHTML = chosenTime;
+
+  const chosenTicket = chosenTickets
     .map((ticket) => {
       const [rowNum, seatNum] = ticket.value.split('-');
       totalPrice += price;
       const checkoutTicketTemplate = ticketTemplate
         .replace('{{ rowNum }}', `${rowNum}`)
-        .replace('{{ seatNum }}', `${seatNum}`);
+        .replace('{{ seatNum }}', `${seatNum}`)
+        .replace('id="{{ ticketId }}"', '');
       return checkoutTicketTemplate;
     })
-    .join('')}
-        <div class="checkout__price">
-          Total: $<span class="highlight-text">${totalPrice}</span>
-        </div>
-  `;
-  checkoutContent.innerHTML = checkoutTemplate;
+    .join('');
+
+  checkoutTotalPrice.innerHTML = totalPrice;
+  checkoutTickets.innerHTML = chosenTicket;
 }
 
 function showCheckoutScreen(e) {
   e.preventDefault();
+  if (!bookedItemContainer.hasChildNodes()) {
+    alert('First choose your seat!');
+    return;
+  }
   fillCheckout();
+  body.classList.add('lock');
   checkoutScreen.classList.add('show');
 }
 
-backButton.addEventListener('click', () => {
+function closeCheckoutScreen() {
   checkoutScreen.classList.remove('show');
-});
+  body.classList.remove('lock');
+}
 
 payButton.addEventListener('click', () => {
-  // eslint-disable-next-line no-alert
   alert('Thank you for order!');
   setTimeout(() => {
-    checkoutScreen.classList.remove('show');
+    closeCheckoutScreen();
+    clearBookedField();
   }, 1000);
 });
 
-sceduleContainer.addEventListener('click', clearBookedField);
+backButton.addEventListener('click', closeCheckoutScreen);
+sceduleContainer.addEventListener('click', clickedScedule);
 hall.addEventListener('click', setBookedField);
 bookingButton.addEventListener('click', showCheckoutScreen);
