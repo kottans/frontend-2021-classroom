@@ -15,6 +15,26 @@ body {
   min-height: 100vh;
 }
 
+.tickets {
+  background-color: #e0e0d1;
+  margin: 20px;
+  box-shadow: 0 0 5px 5px grey;
+  border-radius: 25px;
+  align-self: flex-start;
+  min-height: 400px;
+  min-width: 250px;
+  overflow-y: auto;
+}
+
+.ticket {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 25px;
+  padding: 5px;
+  background-color: #8585ad;
+  border-radius: 25px;
+}
+
 .cinema {
   width: 900px;
   background-color: #e0e0d1;
