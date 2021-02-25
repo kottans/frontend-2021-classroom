@@ -6,7 +6,7 @@ import {
   payButton,
 } from './module/config';
 
-import showScreen from './module/screen-shower';
+import showScreen from './module/screen-show';
 import { payButtonListener, bookButtonListener } from './module/button-listeners';
 import updateTicket from './module/ticket-updater';
 
