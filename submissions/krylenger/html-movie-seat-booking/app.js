@@ -35,34 +35,6 @@ createTicketTemplate = ([row, seat], index) => `<div class="chosen-tickets__tick
   <span class="chosen-tickets__span-bold">7$</span>
 </div>`;
 
-const emptyContainer = (container) => {
-  container.innerHTML = '';
-};
-
-const convertStringRowSeatToNumberValues = (stringValue) =>
-  stringValue.split('.').map((stringNumber) => parseInt(stringNumber));
-
-const renderConfirmationTickets = (chosenSeatsArray, containerWhereRender) => {
-  emptyContainer(containerWhereRender);
-  chosenSeatsArray.forEach((ticketValue, index) => {
-    const rowSeatArray = convertStringRowSeatToNumberValues(ticketValue);
-    const newTicket = createTicketTemplate(rowSeatArray, index);
-    containerWhereRender.innerHTML += newTicket;
-  });
-};
-
-const renderButtonInformation = (button, chosenSeatsState) => {
-  console.log(button, chosenSeatsState);
-  let ticketWord = 'tickets';
-  if (chosenSeatsState.length === 1) ticketWord = 'ticket';
-  button.innerHTML = `Buy ${chosenSeatsState.length} ${ticketWord} for $${chosenSeatsState.length * 7}.00`;
-};
-
-const render = (chosenSeatsState) => {
-  renderConfirmationTickets(chosenSeatsState, ticketsContainer);
-  renderButtonInformation(checkoutButton, chosenSeatsState);
-};
-
 createModalConfirmationTemplate = () => `<section class="choose-section__chosen-tickets choose-section__chosen-tickets--modal chosen-tickets__modal-wrapper" id="choose-section__chosen-tickets">
 <div class="chosen-tickets chosen-tickets__inner" id="chosen-tickets__inner">
   <div class="chosen-tickets__header">
@@ -85,30 +57,54 @@ const createModalConfirmation = (modalConfirmationTemplate) => {
   bodyContainer.append(modalConfirmation);
 };
 
+const emptyContainer = (container) => {
+  container.innerHTML = '';
+};
+
+const convertStringRowSeatToNumberValues = (stringValue) =>
+  stringValue.split('.').map((stringNumber) => parseInt(stringNumber));
+
+const renderConfirmationTickets = (chosenSeatsArray, containerWhereRender) => {
+  emptyContainer(containerWhereRender);
+  chosenSeatsArray.forEach((ticketValue, index) => {
+    const rowSeatArray = convertStringRowSeatToNumberValues(ticketValue);
+    const newTicket = createTicketTemplate(rowSeatArray, index);
+    containerWhereRender.innerHTML += newTicket;
+  });
+};
+
+const renderButtonInformation = (chosenSeatsState, button) => {
+  let ticketWord = 'tickets';
+  if (chosenSeatsState.length === 1) ticketWord = 'ticket';
+  button.innerHTML = `Buy ${chosenSeatsState.length} ${ticketWord} for $${chosenSeatsState.length * 7}.00`;
+};
+
+const render = (chosenSeatsState, containerWhereRenderTickets, buttonToRenderTotalInformation) => {
+  renderConfirmationTickets(chosenSeatsState, containerWhereRenderTickets);
+  renderButtonInformation(chosenSeatsState, buttonToRenderTotalInformation);
+};
+
 const renderModalConfirmation = (template, chosenSeatsState) => {
   createModalConfirmation(template);
 
   const ticketsContainerModal = document.getElementById('chosen-tickets__tickets-container--modal');
-  renderConfirmationTickets(chosenSeatsState, ticketsContainerModal);
-
   const buttonCloseModalConfirmation = document.getElementById('chosen-tickets__button--go-back');
   const modalWrapper = document.getElementById('modal-wrapper');
   const checkoutButtonModal = document.getElementById('checkout-seats__checkout-button--modal');
 
-  renderButtonInformation(checkoutButtonModal, chosenSeatsState);
+  render(chosenSeatsState, ticketsContainerModal, checkoutButtonModal);
 
   buttonCloseModalConfirmation.addEventListener('click', () => {
     modalWrapper.remove();
   });
 };
 
-const addEventListeners = () => {
-  let chosenSeatsState = state.chosenSeats;
+const addEventListeners = (chosenSeatsState) => {
 
   hall.addEventListener('click', ({ target }) => {
     if (target.name !== 'seat') return;
     chosenSeatsState = updateChosenSeats(target.value, chosenSeatsState);
-    render(chosenSeatsState);
+    render(chosenSeatsState, ticketsContainer, checkoutButton);
   });
 
   checkoutButton.addEventListener('click', ({ target }) => {
@@ -117,7 +113,9 @@ const addEventListeners = () => {
 };
 
 const initApp = () => {
-  addEventListeners();
+  let chosenSeatsState = state.chosenSeats;
+
+  addEventListeners(chosenSeatsState);
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
