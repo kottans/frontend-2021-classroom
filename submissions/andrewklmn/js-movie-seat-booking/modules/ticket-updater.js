@@ -6,10 +6,8 @@ import {
   ticketDateTime,
   ticketSeats,
   ticketTotal,
+  lastSelected,
 } from './config';
-
-let lastSelectedDate = selectorForm.querySelector('.date_selector > .radio_control:checked').getAttribute('aria-label');
-let lastSelectedTime = selectorForm.querySelector('.time_selector > .radio_control:checked').getAttribute('aria-label');
 
 export default function updateTicket() {
   const selectedSeats = [...selectorForm.querySelectorAll('.seat_control:checked')];
@@ -22,11 +20,11 @@ export default function updateTicket() {
   const selectedDate = selectorForm.querySelector('.date_selector > .radio_control:checked').getAttribute('aria-label');
   const selectedTime = selectorForm.querySelector('.time_selector > .radio_control:checked').getAttribute('aria-label');
 
-  if (selectedDate !== lastSelectedDate
-      || selectedTime !== lastSelectedTime) {
-    selectedSeats.forEach(seat => seat.checked = false);
-    lastSelectedDate = selectedDate;
-    lastSelectedTime = selectedTime;
+  if (selectedDate !== lastSelected.date
+      || selectedTime !== lastSelected.time) {
+    selectedSeats.forEach(seat => { seat.checked = false; });
+    lastSelected.date = selectedDate;
+    lastSelected.time = selectedTime;
     draftTicket.innerHTML = initialTicketView;
     return;
   }
@@ -54,4 +52,4 @@ export default function updateTicket() {
     return `<div>row #${seatPosition[1]}, seat #${seatPosition[2]}</div>`;
   }).join('')}`;
   ticketTotal.innerHTML = `Price: $${total.toFixed(2)}`;
-};
+}

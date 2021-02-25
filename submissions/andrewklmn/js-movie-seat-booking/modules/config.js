@@ -11,6 +11,10 @@ const ticketSeats = document.querySelector('.ticket_seats');
 const ticketTotal = document.querySelector('.ticket_total');
 const cancelButton = document.querySelector('.cancel_confirm_button');
 const payButton = document.querySelector('.confirm_button');
+const lastSelected = {
+  date: selectorForm.querySelector('.date_selector > .radio_control:checked').getAttribute('aria-label'),
+  time: selectorForm.querySelector('.time_selector > .radio_control:checked').getAttribute('aria-label')
+};
 
 export {
   mainScreen,
@@ -25,4 +29,5 @@ export {
   ticketTotal,
   cancelButton,
   payButton,
+  lastSelected,
 };
