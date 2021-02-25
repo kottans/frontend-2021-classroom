@@ -15,9 +15,6 @@
   .aside-menu-button {
     width: 250px;
   }
-  .tickets p {
-    font-size: 55px;
-  }
   .aside-menu-button {
     font-size: 65px;
   }
@@ -128,9 +125,8 @@
   }
 
   .seating-container {
-    max-width: 480px;
     margin: 0;
-    margin-left: 110px;
+    margin-left: 190px;
   }
 
   .label-seating-place-blue {
