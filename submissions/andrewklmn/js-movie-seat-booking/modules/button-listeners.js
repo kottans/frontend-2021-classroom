@@ -1,4 +1,4 @@
-import showScreen from './screen-shower';
+import showScreen from './screen-show';
 import {
   screens,
   selectorForm,
