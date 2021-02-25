@@ -25,6 +25,12 @@ function getRowHTML(seats, rowZeroBased) {
     <legend class='visually_hidden'>Row ${row} seats</legend>
     ${seats.map(getSeatHTML, row).join('')}</fieldset>`
 }
+/**
+ * Generates HTML code for a seat
+ * Must be used as callback for Array.map()
+ * with obligatory passing in a row number as thisArg of Array.map()
+ * @this {number} row number
+ */
 function getSeatHTML(available, seatInRowZeroBased) {
   const seatInRow = seatInRowZeroBased + 1
   const seat = seatCode(this, seatInRow)
