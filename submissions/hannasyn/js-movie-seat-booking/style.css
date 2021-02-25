@@ -76,6 +76,10 @@ h6 {
   font-weight: inherit;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .header {
   background-color: #111111;
 }
@@ -125,7 +129,6 @@ h6 {
 
 .main {
   background-color: #191919;
-  position: relative;
 }
 .main__message {
   line-height: 60px;
@@ -279,6 +282,7 @@ h6 {
 .hall {
   margin: 30px 0 0;
   text-align: center;
+  position: relative;
 }
 .hall__title {
   color: #c2c2c2;
@@ -390,12 +394,17 @@ h6 {
   color: #65b6e9;
 }
 .booked__container {
+  display: none;
   padding: 20px;
   background-color: #353535;
   border: 2px solid #747474;
   border-radius: 20px;
   color: #c2c2c2;
 }
+.booked__container.show {
+  display: block;
+}
+
 .booked__time {
   margin: 10px 0;
 }
@@ -416,7 +425,7 @@ h6 {
 
 .checkout {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -425,13 +434,15 @@ h6 {
   height: 100%;
   background-color: #191919;
   color: #ffffff;
+  overflow: auto;
 }
 .checkout.show {
   display: block;
 }
+
 .checkout__container {
   max-width: 70vw;
-  margin: 80px auto;
+  margin: 8% auto;
   font-size: 20px;
   text-align: center;
 }
@@ -468,6 +479,7 @@ h6 {
   position: relative;
   padding: 0 0 20px;
   margin: 0 0 30px;
+  font-size: 28px;
 }
 .checkout__price::after {
   content: '';

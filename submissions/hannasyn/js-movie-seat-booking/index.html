@@ -372,23 +372,45 @@
               </label>
             </div>
           </div>
-          <section class="booked"></section>
+          <section class="booked">
+            <div class="booked__container">
+              <h4 class="booked__title">Your booking:</h4>
+              <p class="booked__date">
+                Date: <span id="dateContainer" class="highlight-text">{{chosenDate}}</span>
+              </p>
+              <p class="booked__time">
+                Time: <span id="timeContainer" class="highlight-text">{{chosenTime}}</span>
+              </p>
+              <div id="bookedItemContainer"></div>
+            </div>
+          </section>
           <button id="booking-button" type="submit" class="seats__button button">Confirm</button>
         </form>
+        <section id="checkout" class="checkout">
+          <div class="checkout__container">
+            <h4 class="checkout__title">Your order info:</h4>
+            <p class="checkout__details">Movie: <span class="highlight-text">"Soul"</span></p>
+            <div>
+              <p class="checkout__details">
+                Date: <span id="checkoutDate" class="highlight-text">{{chosenDate}}</span>
+              </p>
+              <p class="checkout__details">
+                Time: <span id="checkoutTime" class="highlight-text">{{chosenTime}}</span>
+              </p>
+              <div id="checkoutTickets"></div>
+              <div class="checkout__price">
+                Total: $<span id="checkoutTotalPrice" class="highlight-text">{{totalPrice}}</span>
+              </div>
+            </div>
+            <div class="checkout__buttons">
+              <button id="back-button" class="checkout__button button">Dismiss</button>
+              <button id="pay-button" class="checkout__button button">Pay</button>
+            </div>
+          </div>
+        </section>
       </section>
     </div>
-    <section id="checkout" class="checkout">
-      <div class="checkout__container">
-        <h4 class="checkout__title">Your order info:</h4>
-        <p class="checkout__details">Movie: <span class="highlight-text">"Soul"</span></p>
-        <div id="checkout-content"></div>
-        
-        <div class="checkout__buttons">
-          <button id="back-button" class="checkout__button button">Dismiss</button>
-          <button id="pay-button" class="checkout__button button">Pay</button>
-        </div>
-      </div>
-    </section>
+    
   </main>
   <footer class="footer">
     <div class="container">
