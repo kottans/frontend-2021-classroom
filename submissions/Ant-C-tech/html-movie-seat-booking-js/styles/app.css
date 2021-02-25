@@ -257,7 +257,13 @@ main {
 
   background-color: var(--main-color);
 
-  user-select: none;
+  -webkit-user-select: none;
+
+     -moz-user-select: none;
+
+      -ms-user-select: none;
+
+          user-select: none;
 }
 
 /* /MovieType Section */
@@ -793,7 +799,9 @@ main {
   line-height: 1.5;
   font-family: var(--main-font);
   color: var(--active-font-color);
-  writing-mode: tb-rl;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
   transform: rotate(180deg);
 }
 
@@ -830,7 +838,9 @@ main {
   line-height: 1;
   font-family: var(--main-font);
   color: var(--active-font-color);
-  writing-mode: tb-rl;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
   transform: rotate(180deg);
 }
 
@@ -872,7 +882,9 @@ main {
   line-height: 1;
   font-family: var(--main-font);
   color: var(--main-color);
-  writing-mode: tb-rl;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
   transform: rotate(180deg);
 }
 
@@ -1046,7 +1058,18 @@ main {
 /* ========== Classes for interaction ========== */
 
 .hideAnimationForNextScreenVertical {
-  animation: hideElementForNextScreenVertical 0.7s;
+  -webkit-animation: hideElementForNextScreenVertical 0.7s;
+          animation: hideElementForNextScreenVertical 0.7s;
+}
+
+@-webkit-keyframes hideElementForNextScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
 }
 
 @keyframes hideElementForNextScreenVertical {
@@ -1060,7 +1083,18 @@ main {
 }
 
 .showAnimationForNextScreenVertical {
-  animation: showElementForNextScreenVertical 0.7s;
+  -webkit-animation: showElementForNextScreenVertical 0.7s;
+          animation: showElementForNextScreenVertical 0.7s;
+}
+
+@-webkit-keyframes showElementForNextScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, -90deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
 }
 
 @keyframes showElementForNextScreenVertical {
@@ -1074,7 +1108,18 @@ main {
 }
 
 .hideAnimationForPreviousScreenVertical {
-  animation: hideElementForPreviousScreenVertical 0.7s;
+  -webkit-animation: hideElementForPreviousScreenVertical 0.7s;
+          animation: hideElementForPreviousScreenVertical 0.7s;
+}
+
+@-webkit-keyframes hideElementForPreviousScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, -90deg);
+  }
 }
 
 @keyframes hideElementForPreviousScreenVertical {
@@ -1088,7 +1133,18 @@ main {
 }
 
 .showAnimationForPreviousScreenVertical {
-  animation: showElementForPreviousScreenVertical 0.7s;
+  -webkit-animation: showElementForPreviousScreenVertical 0.7s;
+          animation: showElementForPreviousScreenVertical 0.7s;
+}
+
+@-webkit-keyframes showElementForPreviousScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
 }
 
 @keyframes showElementForPreviousScreenVertical {
@@ -1102,7 +1158,18 @@ main {
 }
 
 .hideAnimationForNextScreenHorizontal {
-  animation: hideElementForNextScreenHorizontal 0.7s;
+  -webkit-animation: hideElementForNextScreenHorizontal 0.7s;
+          animation: hideElementForNextScreenHorizontal 0.7s;
+}
+
+@-webkit-keyframes hideElementForNextScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
 }
 
 @keyframes hideElementForNextScreenHorizontal {
@@ -1116,7 +1183,18 @@ main {
 }
 
 .showAnimationForNextScreenHorizontal {
-  animation: showElementForNextScreenHorizontal 0.7s;
+  -webkit-animation: showElementForNextScreenHorizontal 0.7s;
+          animation: showElementForNextScreenHorizontal 0.7s;
+}
+
+@-webkit-keyframes showElementForNextScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
 }
 
 @keyframes showElementForNextScreenHorizontal {
@@ -1130,7 +1208,18 @@ main {
 }
 
 .hideAnimationForPreviousScreenHorizontal {
-  animation: hideElementForPreviousScreenHorizontal 0.7s;
+  -webkit-animation: hideElementForPreviousScreenHorizontal 0.7s;
+          animation: hideElementForPreviousScreenHorizontal 0.7s;
+}
+
+@-webkit-keyframes hideElementForPreviousScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
 }
 
 @keyframes hideElementForPreviousScreenHorizontal {
@@ -1144,7 +1233,18 @@ main {
 }
 
 .showAnimationForPreviousScreenHorizontal {
-  animation: showElementForPreviousScreenHorizontal 0.7s;
+  -webkit-animation: showElementForPreviousScreenHorizontal 0.7s;
+          animation: showElementForPreviousScreenHorizontal 0.7s;
+}
+
+@-webkit-keyframes showElementForPreviousScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
 }
 
 @keyframes showElementForPreviousScreenHorizontal {
@@ -1362,19 +1462,23 @@ main {
 /* Animation of change screen for mobile and tablet */
 @media screen and (max-width: 768px) {
   .hideAnimationForNextScreenVertical {
-    animation: hideElementForNextScreenHorizontal 0.7s;
+    -webkit-animation: hideElementForNextScreenHorizontal 0.7s;
+            animation: hideElementForNextScreenHorizontal 0.7s;
   }
 
   .showAnimationForNextScreenVertical {
-    animation: showElementForNextScreenHorizontal 0.7s;
+    -webkit-animation: showElementForNextScreenHorizontal 0.7s;
+            animation: showElementForNextScreenHorizontal 0.7s;
   }
 
   .hideAnimationForPreviousScreenVertical {
-    animation: hideElementForPreviousScreenHorizontal 0.7s;
+    -webkit-animation: hideElementForPreviousScreenHorizontal 0.7s;
+            animation: hideElementForPreviousScreenHorizontal 0.7s;
   }
 
   .showAnimationForPreviousScreenVertical {
-    animation: showElementForPreviousScreenHorizontal 0.7s;
+    -webkit-animation: showElementForPreviousScreenHorizontal 0.7s;
+            animation: showElementForPreviousScreenHorizontal 0.7s;
   }
 
   .angle90_vertical {
