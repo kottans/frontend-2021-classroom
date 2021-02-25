@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-alert */
 const bookingButton = document.querySelector('#booking-button');
 const hall = document.querySelector('.hall');
@@ -51,46 +52,41 @@ function clickedScedule({ target }) {
   }
 }
 
-function fillBookedField(ticket, target, item) {
-  if (!target.checked) {
-    removeTicket(item);
-  } else {
-    bookedContainer.classList.add('show');
-    addTicket(ticket);
-  }
+function createTicket(target) {
+  const [rowNum, seatNum] = target.value.split('-');
+
+  return ticketTemplate
+    .replace('{{ ticketId }}', `${target.value}`)
+    .replace('{{ rowNum }}', `${rowNum}`)
+    .replace('{{ seatNum }}', `${seatNum}`);
 }
 
-function setBookedField({ target }) {
+function fillBookedField({ target }) {
   if (!target.classList.contains('seats__input')) {
     return;
   }
 
-  const [rowNum, seatNum] = target.value.split('-');
-  const chosenDate = document.querySelector('.input-date:checked').value;
-  const chosenTime = document.querySelector('.input-time:checked').value;
-
-  const ticketId = target.value;
-  const chosenTicket = ticketTemplate
-    .replace('{{ ticketId }}', `${ticketId}`)
-    .replace('{{ rowNum }}', `${rowNum}`)
-    .replace('{{ seatNum }}', `${seatNum}`);
-  dateContainer.innerHTML = chosenDate;
-  timeContainer.innerHTML = chosenTime;
-
-  const currentBookedItem = document.getElementById(`${ticketId}`);
-
-  fillBookedField(chosenTicket, target, currentBookedItem);
+  const chosenTicket = document.getElementById(target.value);
+  if (chosenTicket) {
+    removeTicket(chosenTicket);
+  } else {
+    bookedContainer.classList.add('show');
+    dateContainer.innerHTML = document.querySelector(
+      '.input-date:checked',
+    ).value;
+    timeContainer.innerHTML = document.querySelector(
+      '.input-time:checked',
+    ).value;
+    addTicket(createTicket(target));
+  }
 }
 
 function fillCheckout() {
-  const chosenDate = document.querySelector('.input-date:checked').value;
-  const chosenTime = document.querySelector('.input-time:checked').value;
   const chosenTickets = [...document.querySelectorAll('.seats__input:checked')];
-
   let totalPrice = 0;
 
-  checkoutDate.innerHTML = chosenDate;
-  checkoutTime.innerHTML = chosenTime;
+  checkoutDate.innerHTML = document.querySelector('.input-date:checked').value;
+  checkoutTime.innerHTML = document.querySelector('.input-time:checked').value;
 
   const chosenTicket = chosenTickets
     .map((ticket) => {
@@ -134,5 +130,5 @@ payButton.addEventListener('click', () => {
 
 backButton.addEventListener('click', closeCheckoutScreen);
 sceduleContainer.addEventListener('click', clickedScedule);
-hall.addEventListener('click', setBookedField);
+hall.addEventListener('click', fillBookedField);
 bookingButton.addEventListener('click', showCheckoutScreen);
