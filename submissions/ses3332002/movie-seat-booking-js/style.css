@@ -109,6 +109,13 @@ input[type='checkbox'] {
   position: absolute;
   -webkit-appearance: none;
   appearance: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .description-vip,
@@ -381,6 +388,10 @@ input[type='checkbox'][data-type='vip']:disabled:checked + .seat::after {
 
   .pre_order h2 {
     font-size: 16px;
+  }
+
+  .pre_order__item {
+    font-size: 14px;
   }
 
   .pre_order__list {

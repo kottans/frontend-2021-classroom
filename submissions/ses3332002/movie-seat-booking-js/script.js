@@ -1,5 +1,3 @@
-'use strict';
-
 const regularSeatPrice = 50;
 const vipSeatPrice = 100;
 const vipTag = 'vip';
@@ -18,95 +16,59 @@ const seats = [
 let selectedSeats = [];
 
 const seatsForm = document.forms.auditorium__selection;
-seatsForm.addEventListener('submit', submitOrder);
-seatsForm.addEventListener('change', calculatePreOrder);
+let formSubmitButton;
 
 const auditorium = document.querySelector('.auditorium');
 const preOrder = document.querySelector('.pre_order');
 const ticketsList = preOrder.querySelector('.pre_order__list');
 const orderConfirmationWindow = document.querySelector('.order_confirmation');
-const orderConfirmationText = orderConfirmationWindow.querySelector(
-  '.order_confirmation__text'
-);
-const confirmButton = orderConfirmationWindow.querySelector(
-  '.order_confirmation__button-confirm'
-);
-const cancelButton = orderConfirmationWindow.querySelector(
-  '.order_confirmation__button-cancel'
-);
-
-initAuditorium();
-
-function initAuditorium() {
-  let renderString = '';
-  seats.forEach((item, i) => {
-    renderString += `<div class="auditorium__row">${prepareRow(item, i)}</div>`;
-  });
-  renderString += `<input type="submit" class="seats_submit" value="Заказать">`;
-  seatsForm.innerHTML = renderString;
-}
+const orderConfirmationText = orderConfirmationWindow.querySelector('.order_confirmation__text');
+const confirmButton = orderConfirmationWindow.querySelector('.order_confirmation__button-confirm');
+const cancelButton = orderConfirmationWindow.querySelector('.order_confirmation__button-cancel');
 
 function prepareRow(rowData, rowIndex) {
   let rowString = '';
   rowData.forEach((item, i) => {
     switch (item) {
       case 0:
-        rowString += `<input type="checkbox" id="seat${
-          rowIndex + 1 + '_' + (i + 1)
-        }"/><label for="seat${rowIndex + 1}_${
+        rowString += `<input type="checkbox" id="seat${`${rowIndex + 1}_${i + 1}`}"/><label for="seat${rowIndex + 1}_${
           i + 1
         }" class="seat" data-price="${regularSeatPrice}"></label>`;
         break;
       case 1:
-        rowString += `<input type="checkbox" id="seat${rowIndex + 1}_${
-          i + 1
-        }" disabled /><label for="seat${rowIndex + 1}_${
-          i + 1
-        }" class="seat"></label>`;
+        rowString += `<input type="checkbox" id="seat${rowIndex + 1}_${i + 1}" disabled /><label for="seat${
+          rowIndex + 1
+        }_${i + 1}" class="seat"></label>`;
         break;
       case 2:
-        rowString += `<input type="checkbox" id="seat${rowIndex + 1}_${
-          i + 1
-        }" disabled checked /><label for="seat${rowIndex + 1}_${
-          i + 1
-        }" class="seat"></label>`;
+        rowString += `<input type="checkbox" id="seat${rowIndex + 1}_${i + 1}" disabled checked /><label for="seat${
+          rowIndex + 1
+        }_${i + 1}" class="seat"></label>`;
         break;
       case 3:
-        rowString += `<input type="checkbox" id="seat${rowIndex + 1}_${
-          i + 1
-        }" data-type="vip"><label for="seat${rowIndex + 1}_${
-          i + 1
-        }" class="seat" data-price="${vipSeatPrice}" /></label>`;
+        rowString += `<input type="checkbox" id="seat${rowIndex + 1}_${i + 1}" data-type="vip"><label for="seat${
+          rowIndex + 1
+        }_${i + 1}" class="seat" data-price="${vipSeatPrice}" /></label>`;
         break;
       case 4:
         rowString += `<input type="checkbox" id="seat${rowIndex + 1}_${
           i + 1
-        }" disabled checked data-type="vip"/><label for="seat${rowIndex + 1}_${
-          i + 1
-        }" class="seat"/></label>`;
+        }" disabled checked data-type="vip"/><label for="seat${rowIndex + 1}_${i + 1}" class="seat"/></label>`;
     }
   });
   return rowString;
 }
 
-function calculatePreOrder() {
-  let checkedNodeList = seatsForm.querySelectorAll(
-    'input[type=checkbox]:checked:not(:disabled)'
-  );
-  if (checkedNodeList.length > 0) {
-    selectedSeats = [...checkedNodeList].map(({ id, dataset }) => [
-      parseInt(id.slice(4)),
-      parseInt(id.slice(id.indexOf('_') + 1)),
-      dataset['type'],
-    ]);
-    prepareTicketsList();
-    auditorium.classList.add('auditorium-tight');
-    preOrder.classList.remove('pre_order-hidden');
-  } else if (checkedNodeList.length == 0) {
-    selectedSeats = [];
-    auditorium.classList.remove('auditorium-tight');
-    preOrder.classList.add('pre_order-hidden');
-  }
+function initAuditorium() {
+  let renderString = '';
+  seats.forEach((item, i) => {
+    renderString += `<div class="auditorium__row">${prepareRow(item, i)}</div>`;
+  });
+  renderString += '<input type="submit" class="seats_submit" value="Заказать">';
+  seatsForm.innerHTML = renderString;
+  formSubmitButton = seatsForm.querySelector('.seats_submit');
+  seatsForm.addEventListener('submit', submitSelectedTickets);
+  seatsForm.addEventListener('change', calculatePreOrder);
 }
 
 function prepareTicketsList() {
@@ -117,46 +79,85 @@ function prepareTicketsList() {
   ticketsList.innerHTML = renderString;
 }
 
-function submitOrder(e) {
-  e.preventDefault();
-  if (selectedSeats.length == 0) {
-    return;
+function calculatePreOrder() {
+  const checkedNodeList = seatsForm.querySelectorAll('input[type=checkbox]:checked:not(:disabled)');
+  if (checkedNodeList.length > 0) {
+    selectedSeats = [...checkedNodeList].map(({ id, dataset }) => [
+      parseInt(id.slice(4), 10),
+      parseInt(id.slice(id.indexOf('_') + 1), 10),
+      dataset.type,
+    ]);
+    prepareTicketsList();
+    auditorium.classList.add('auditorium-tight');
+    preOrder.classList.remove('pre_order-hidden');
+  } else if (checkedNodeList.length === 0) {
+    selectedSeats = [];
+    auditorium.classList.remove('auditorium-tight');
+    preOrder.classList.add('pre_order-hidden');
   }
-  confirmOrder();
 }
 
 function confirmOrder() {
-  orderConfirmationText.innerHTML = `Вы заказали ${
-    selectedSeats.length
-  } ${performTicketsString(
+  function payOrder() {
+    location.reload();
+  }
+
+  function cancelOrder() {
+    orderConfirmationWindow.classList.toggle('order_confirmation-hidden');
+    document.removeEventListener('keydown', modalKeyHandler);
+    confirmButton.removeEventListener('click', payOrder);
+    cancelButton.removeEventListener('click', cancelOrder);
+    formSubmitButton.focus();
+  }
+
+  function modalKeyHandler(e) {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === confirmButton) {
+          e.preventDefault();
+          cancelButton.focus();
+        }
+      } else {
+        if (document.activeElement === cancelButton) {
+          e.preventDefault();
+          confirmButton.focus();
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      cancelOrder();
+    }
+  }
+
+  function performTicketsString(ticketsNumber) {
+    const words = ['билет', 'билета', 'билетов'];
+    if (Math.abs(ticketsNumber % 100) > 20) ticketsNumber %= 10;
+    return words[(ticketsNumber > 4 || ticketsNumber === 0) + (ticketsNumber !== 1)];
+  }
+
+  function calculatePrice() {
+    return selectedSeats.reduce(
+      (sum, item) => (item[2] === vipTag ? (sum += vipSeatPrice) : (sum += regularSeatPrice)),
+      0
+    );
+  }
+
+  orderConfirmationText.innerHTML = `Вы заказали ${selectedSeats.length} ${performTicketsString(
     selectedSeats.length
   )} на сумму ${calculatePrice()} грн`;
   orderConfirmationWindow.classList.toggle('order_confirmation-hidden');
   confirmButton.focus();
   confirmButton.addEventListener('click', payOrder);
   cancelButton.addEventListener('click', cancelOrder);
+  document.addEventListener('keydown', modalKeyHandler);
 }
 
-function performTicketsString(number) {
-  const words = ['билет', 'билета', 'билетов'];
-  if ((number = Math.abs(number % 100)) > 20) number %= 10;
-  return words[(number > 4 || number == 0) + (number != 1)];
+function submitSelectedTickets(e) {
+  e.preventDefault();
+  if (selectedSeats.length === 0) {
+    return;
+  }
+  confirmOrder();
 }
 
-function calculatePrice() {
-  return selectedSeats.reduce(
-    (sum, item) =>
-      item[2] == vipTag ? (sum += vipSeatPrice) : (sum += regularSeatPrice),
-    0
-  );
-}
-
-function payOrder() {
-  location.reload();
-}
-
-function cancelOrder() {
-  orderConfirmationWindow.classList.toggle('order_confirmation-hidden');
-  confirmButton.removeEventListener('click', payOrder);
-  cancelButton.removeEventListener('click', cancelOrder);
-}
+initAuditorium();
