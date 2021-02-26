@@ -68,10 +68,6 @@ nav {
   background-color: #3d2634;
 }
 
-.movie-info {
-  margin: auto;
-}
-
 .movie-date {
   display: block;
 
@@ -133,7 +129,6 @@ nav {
 
 .booking-form {
   width: 90%;
-  margin-bottom: 10vh;
 }
 
 .booking-form::before {
@@ -148,7 +143,18 @@ nav {
   border-bottom: 2px solid rgb(255 255 255 / 49%);
   border-top-left-radius: 34px;
   border-top-right-radius: 34px;
+  -webkit-animation: shine 1.5s infinite alternate;
   animation: shine 1.5s infinite alternate;
+}
+
+#purchased-tickets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .hall-view {
@@ -175,10 +181,12 @@ nav {
 }
 
 .row-2 .seat-view {
+  -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
 }
 
 .row-3 .seat-view {
+  -webkit-filter: brightness(0.6);
   filter: brightness(0.6);
 }
 
@@ -214,6 +222,7 @@ nav {
 }
 
 .btn-buy {
+  flex-shrink: 0;
   height: 44px;
   width: 200px;
   background-color: #8a94ff;
@@ -230,6 +239,17 @@ nav {
 
 .btn-buy:active {
   background-color: rgb(172 140 88);
+}
+
+@-webkit-keyframes shine {
+  from {
+    box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 20%);
+    border-bottom: 2px solid rgb(255 255 255 / 10%);
+  }
+  to {
+    box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 50%);
+    border-bottom: 2px solid rgb(255 255 255 / 40%);
+  }
 }
 
 @keyframes shine {
@@ -278,9 +298,9 @@ nav {
     margin-bottom: 20px;
   }
 
-  .booking-form {
+  /* .booking-form {
     margin-bottom: 10%;
-  }
+  } */
 
   .booking-form::before {
     margin-bottom: 80px;
@@ -307,11 +327,16 @@ nav {
   }
 
   .seat-view:hover {
+    -webkit-filter: brightness(160%);
     filter: brightness(160%);
   }
 
   .seat-view {
     box-shadow: inset 0px -10px 2px 10px rgb(255 255 255 / 40%);
+  }
+
+  #purchased-tickets {
+    height: 10vh;
   }
 
   .btn-buy {
