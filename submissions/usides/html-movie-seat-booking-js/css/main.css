@@ -113,7 +113,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   max-width: 700px;
-  min-height: 721px;
+  min-height: 730px;
   width: 100%;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
@@ -381,7 +381,7 @@ body {
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
   left: 50%;
-  bottom: 1rem;
+  bottom: 0.7rem;
   margin-top: 1rem;
   padding: 0.5rem;
   font-family: 'Russo One', sans-serif;
