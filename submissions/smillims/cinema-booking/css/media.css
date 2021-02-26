@@ -38,12 +38,12 @@
 
   .aside-menu {
     display: block;
-    width: 630px;
+    width: 510px;
     height: 440px;
 
     position: absolute;
     top: 780px;
-    left: 50px;
+    left: 200px;
   }
 
   .aside-menu-block-h1 {
@@ -54,9 +54,13 @@
     display: none;
   }
 
+  .movie-block-inside {
+    width: 100%;
+  }
+
   .tickets,
   .aside-menu-button {
-    width: 600px;
+    min-width: 485px;
     margin-bottom: 7px;
   }
   .aside-menu-button {
@@ -68,8 +72,7 @@
   }
 
   .container {
-    position: absolute;
-    width: 200px;
+    margin: 0 auto;
   }
 
   .main {
@@ -80,20 +83,21 @@
 
 @media screen and (max-width: 1000px) {
   .aside-menu {
-    width: 500px;
+    width: 450px;
   }
 
   .tickets,
   .aside-menu-button {
-    width: 460px;
+    min-width: 430px;
   }
 
   .aside-menu-button {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   .container {
-    width: 500px;
+    width: 200px;
+    margin-left: 120px;
   }
 
   .main {
@@ -133,18 +137,19 @@
     min-width: 50px;
     border-radius: 70px;
   }
+}
 
-  .seating-place-green:nth-of-type(n + 53),
-  .label-seating-place-green:nth-of-type(n + 53),
-  .seating-place-yellow:nth-of-type(n + 27),
-  .label-seating-place-yellow:nth-of-type(n + 27),
-  .seating-place-blue:nth-of-type(n + 9),
-  .label-seating-place-blue:nth-of-type(n + 9) {
-    display: none;
+@media screen and (max-width: 900px) {
+  .aside-menu {
+    left: 105px;
+  }
+
+  .container {
+    margin-left: 30px;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .input-menu,
   .label-menu {
     display: none;
@@ -156,8 +161,7 @@
   }
 
   .container {
-    width: 300px;
-    left: -50px;
+    margin-left: -40px;
   }
 
   .main-form {
@@ -188,16 +192,16 @@
 @media screen and (max-width: 600px) {
   .aside-menu {
     width: 370px;
-    margin-left: -90px;
+    margin-left: -120px;
   }
 
   .tickets,
   .aside-menu-button {
-    width: 330px;
+    min-width: 330px;
   }
 
-  .container {
-    max-width: 100px;
+  .aside-menu-button {
+    margin-left: 20px;
   }
 
   .main {
@@ -210,6 +214,14 @@
     margin-left: -20px;
   }
 
+  .seating-container {
+    margin-left: 120px;
+  }
+
+  .seating-screen {
+    max-width: 300px;
+  }
+
   .seating-screen svg {
     width: 300px;
     left: 0px;
@@ -220,24 +232,26 @@
 
     font-size: 25px;
   }
-  .seating-place-green:nth-of-type(n + 37),
-  .label-seating-place-green:nth-of-type(n + 37),
-  .seating-place-yellow:nth-of-type(n + 19),
-  .label-seating-place-yellow:nth-of-type(n + 19),
-  .seating-place-blue:nth-of-type(n + 7),
-  .label-seating-place-blue:nth-of-type(n + 7) {
-    display: none;
+
+  .seating-name {
+    right: -20px;
   }
 }
 
 @media screen and (max-width: 465px) {
   .aside-menu {
     width: 350px;
+    left: 120px;
+    margin-bottom: 10px;
   }
 
   .tickets,
   .aside-menu-button {
     width: 310px;
+  }
+
+  .aside-menu-button {
+    margin-left: 10px;
   }
 
   .container {
@@ -266,9 +280,20 @@
   }
 }
 
-@media screen and (max-width: 400px) {
-  .container {
-    max-width: 100px;
+@media screen and (max-width: 415px) {
+  .aside-menu {
+    width: 300px;
+    left: 110px;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    min-width: 230px;
+  }
+
+  .aside-menu-button {
+    width: 280px;
+    height: 80px;
   }
 
   .main-poster {
@@ -284,10 +309,5 @@
 
   .seating {
     margin-left: -45px;
-  }
-
-  .seating-place-blue:nth-of-type(n + 5),
-  .label-seating-place-blue:nth-of-type(n + 5) {
-    display: none;
   }
 }

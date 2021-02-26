@@ -195,7 +195,7 @@ label,
 }
 
 .tickets {
-  min-width: 280px;
+  width: 280px;
   max-width: 280px;
   height: 70px;
 
@@ -204,6 +204,7 @@ label,
   align-items: center;
 
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 
   margin: 0 auto;
   margin-bottom: 6px;
@@ -228,6 +229,10 @@ label,
 }
 
 .aside-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 280px;
 
   font-size: 70px;
@@ -236,6 +241,7 @@ label,
   margin-bottom: 10px;
 
   border-radius: 0px 0px 10px 10px;
+  padding-top: 5px;
 
   color: #fff;
   background-color: #aa2e2e;
