@@ -40,8 +40,11 @@ header {
   transition: opacity 0.2s;
   -webkit-backface-visibility: hidden;
 }
-.btn:hover, .btn:focus, .btn:active {
-  opacity: 0.6;
+.btn:hover, .btn:focus {
+  opacity: 0.7;
+}
+.btn:active {
+  filter: saturate(0.8);
 }
 
 .cinema {
