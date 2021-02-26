@@ -96,7 +96,6 @@
   }
 
   .container {
-    width: 200px;
     margin-left: 120px;
   }
 
@@ -254,10 +253,6 @@
     margin-left: 10px;
   }
 
-  .container {
-    max-width: 100px;
-  }
-
   .main {
     font-size: 30px;
   }
@@ -280,7 +275,7 @@
   }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 422px) {
   .aside-menu {
     width: 300px;
     left: 110px;

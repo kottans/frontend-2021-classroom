@@ -203,7 +203,7 @@ label,
   justify-content: space-around;
   align-items: center;
 
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
   margin: 0 auto;
@@ -259,7 +259,7 @@ label,
 .container {
   display: flex;
   flex-direction: column;
-  width: 950px;
+  max-width: 950px;
   margin: 0 auto;
 }
 

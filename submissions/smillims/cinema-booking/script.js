@@ -1,8 +1,8 @@
 const formSeating = document.querySelector('.form-seating');
 
-const asideMenuGreen = document.querySelector('.aside-menu-tickets-green');
-const asideMenuYellow = document.querySelector('.aside-menu-tickets-yellow');
-const asideMenuBlue = document.querySelector('.aside-menu-tickets-blue');
+const asideMenuGreenTicket = document.querySelector('.aside-menu-tickets-green');
+const asideMenuYellowTicket = document.querySelector('.aside-menu-tickets-yellow');
+const asideMenuBlueTicket = document.querySelector('.aside-menu-tickets-blue');
 
 function checkClick(e) {
 	const targetSeating = e.target.closest('.seating-input');
@@ -13,17 +13,17 @@ function checkClick(e) {
 }
 
 function numberOfTickets(target) {
-	const targetInputValue = target.value
+	const targetInputValue = target.value;
 	const [row, seat] = targetInputValue.split('-');
 
-	if(target.getAttribute('name') === 'green' && target.checked || target.getAttribute('name') === 'yellow' && target.checked || target.getAttribute('name') === 'blue' && target.checked) {
-		generateBlock(target, row, seat, targetInputValue);
+	if((target.getAttribute('name') === 'green' || target.getAttribute('name') === 'yellow' || target.getAttribute('name') === 'blue') && target.checked) {
+		generateTicketInfoBlock(target, row, seat, targetInputValue);
 	} else if (!target.checked) {
-		removeBlock(targetInputValue);
+		removeTicketInfoBlock(targetInputValue);
 	}
 }
 
-function generateBlock(target, row, seat, id) {
+function generateTicketInfoBlock(target, row, seat, id) {
 	const divMoviePlace = document.createElement('div');
 	
 	divMoviePlace.classList.add('movie-block-inside');
@@ -39,17 +39,17 @@ function generateBlock(target, row, seat, id) {
 										</div>`;
 
 	if(target.getAttribute('name') === 'green' && target.checked){
-		asideMenuGreen.appendChild(divMoviePlace);
+		asideMenuGreenTicket.appendChild(divMoviePlace);
 	} else if(target.getAttribute('name') === 'yellow' && target.checked) {
-		asideMenuYellow.appendChild(divMoviePlace);
+		asideMenuYellowTicket.appendChild(divMoviePlace);
 	} else if(target.getAttribute('name') === 'blue' && target.checked) {
-		asideMenuBlue.appendChild(divMoviePlace);
+		asideMenuBlueTicket.appendChild(divMoviePlace);
 	}
 }
 
-function removeBlock(id) {
-	const qqq = document.querySelectorAll('.movie-block-inside');
-	qqq.forEach(item => {
+function removeTicketInfoBlock(id) {
+	const movieBlockInside = document.querySelectorAll('.movie-block-inside');
+	movieBlockInside.forEach(item => {
 		if (item.dataset.id === id){
 			item.remove();
 		}
