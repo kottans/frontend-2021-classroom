@@ -22,12 +22,12 @@ function addTicket(value, typeOfSeat, row, place){
         value: value,
         typeOfSeat: typeOfSeat,
         row: row,
-        place: place
+        place: place,
     });
     totalCost += priceOfTicket[typeOfSeat];
 }
 function removeTicket(ticketForDelete, typeOfSeat){
-    selectedTickets = selectedTickets.filter(item => item.value != ticketForDelete);
+    selectedTickets = selectedTickets.filter(item => item.value !== ticketForDelete);
     totalCost -= priceOfTicket[typeOfSeat];
 }
 function parseSeatValue(seatValue){
@@ -38,7 +38,6 @@ function parseSeatValue(seatValue){
     let place = seatInfo.slice(p+1, seatInfo.length).join('');
     return [row, place];
 }
-var checkedElement;
 function uncheckPlace(seatValue){
     let elementForUncheck = document.querySelector("input[value="+ seatValue + "]");
     elementForUncheck.checked = false;
