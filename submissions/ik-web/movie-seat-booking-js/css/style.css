@@ -1,0 +1,439 @@
+/* Varibles
+------------------------------------ */
+:root {
+    --body-bg-color: #0a0138;
+    --main-bg-color: #fff;
+    --common-text-color: #000;
+    --common-border-color: #000;
+    --movie-format-bg-color: #acaaaa;
+    --screen-color: #000;
+    --seat-checked-color: #00ccff;
+    --seat-unchecked-color: #b9b9b9;
+    --seat-disabled-color: #ff0000;
+    --btn-font-color: #fff;
+    --btn-bg-color:  #1c2bff;
+    --btn-hover-font-color: #fff;
+    --btn-hover-bg-color: #020977;
+    --ticket-border-color: #5a5a5a;
+}
+
+/* Common styles 
+------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--common-text-color);
+    background-color:var(--body-bg-color);
+}
+
+address {
+    font-style: normal;
+}
+
+/* Page styles 
+------------------------------------ */
+.main {
+    width: 94vw;
+    min-height: 94vh;
+    margin: 3vh auto;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: var(--main-bg-color);
+    box-shadow: 2px 2px 20px 2px #000;
+}
+
+/* Movie info styles
+------------------------------------ */
+.movie-info__title {
+    font-size: 40px;
+}
+
+.movie-info__inner {
+    display: flex;
+    padding: 15px 0;
+}
+
+.movie-info__poster {
+    max-width: 300px;
+    width: 100%;
+}
+
+.movie-info__about {
+    padding-left: 20px;
+}
+
+.movie-info__about-item {
+    margin-bottom: 15px;
+    padding-left: 22px;
+}
+
+.about-item__format {
+    width: 50px;
+    padding: 4px 2px 2px 2px;
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--movie-format-bg-color);
+    border-radius: 4px;
+}
+
+.about-item__map {
+    background: url(../img/map.svg) 2px center / contain no-repeat;
+}
+
+.about-item__date {
+    background: url(../img/date.svg) left center / contain no-repeat;
+
+}
+
+.about-item__time {
+    background: url(../img/time.svg) left center / contain no-repeat;
+
+}
+
+/* Booking seats styles 
+------------------------------------ */
+.booking-seats {
+    padding-top: 65px;
+}
+
+.booking-seats__title {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.booking-seats__cinema-hall {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cinema-hall__screen {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.cinema-hall__screen:after {
+    content: '';
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: 6px;
+    margin: 0 auto;
+    background-color: var(--screen-color);
+    border-radius: 20px 20px 0 0;
+}
+
+.cinema-hall__seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cinema-hall__row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.cinema-hall__check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.cinema-hall__check:hover + .cinema-hall__seat {
+    border: 3px solid var(--btn-bg-color);
+}
+
+.cinema-hall__check:focus + .cinema-hall__seat {
+    outline: 3px double #000;
+}
+
+.cinema-hall__check:checked ~ .cinema-hall__seat {
+    background-color: var(--seat-checked-color);
+}
+
+.cinema-hall__check:disabled ~ .cinema-hall__seat {
+    background-color: var(--seat-disabled-color);
+    border: 1px solid #000;
+}
+
+.cinema-hall__seat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 48px;
+    margin: 0 3px;
+    border-radius: 5px;
+    border: 1px solid var(--common-border-color);
+    background-color: var(--seat-unchecked-color);
+}
+
+.cinema-hall__seats-status {
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.seats-status__item {
+    padding-left: 30px;
+    position: relative;
+}
+
+.seats-status__item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 20px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid var(--common-border-color);
+}
+
+.seats-status__item--disabled:before {background-color: var(--seat-disabled-color);}
+.seats-status__item--checked:before {background-color: var(--seat-checked-color);}
+.seats-status__item--unchecked:before {background-color: var(--seat-unchecked-color);}
+
+/* Seats checked styles
+------------------------------------ */
+.cinema-hall__selected-seats-block {  
+    display: none;
+    max-width: 350px;
+    margin: 0 auto 30px;
+}
+
+.cinema-hall__selected-seats-block.active {
+    display: block;
+}
+
+.cinema-hall__selected-seats-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 180px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+.cinema-hall__selected-seats-list::-webkit-scrollbar {
+    width: 6px;
+    background-color: var(--ticket-border-color);
+    border-radius: 4px;
+}
+
+.cinema-hall__selected-seats-list::-webkit-scrollbar-thumb {
+    background-color: var(--seat-checked-color);
+    border-radius: 4px;
+}
+
+.cinema-hall__selected-seat {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    margin: 5px auto;
+    padding: 10px 0;
+    border: 1px solid var(--ticket-border-color);
+    border-radius: 5px;
+}
+
+.seat-price {
+    padding: 4px 3px 2px 32px;
+    background: url(../img/price-tag.svg) left center no-repeat;
+}
+
+.cinema-hall__seats-total-info {
+    margin: 10px 0 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.button {
+    padding: 10px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--btn-hover-font-color);
+    border: none;
+    background-color: var(--btn-bg-color);
+    border-radius: 5px;
+    transition: background-color .1s linear;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--btn-hover-bg-color);
+}
+
+.button:focus {
+    outline: none;
+    background-color: var(--btn-hover-bg-color);
+}
+
+.cinema-hall__button {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* Confirmation window styles
+------------------------------------ */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: var(--body-bg-color);
+    transition: opacity .1s linear, z-index .1s linear;
+}
+
+.modal.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.modal__confirmation-window {
+    padding: 40px;
+    text-align: center;
+    background-color: var(--main-bg-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 2px #000;
+}
+
+.modal__info {
+    margin-bottom: 40px;
+    font-size: 26px;
+    line-height: 1.5;
+}
+
+.modal__button {
+    width: 120px;
+    margin: 0 10px;
+}
+
+.button--return {
+    background-color: #949191;
+}
+
+/* Media
+------------------------------------ */
+@media (max-width: 767px) {
+    .main {
+        padding: 40px 15px;
+    }
+
+    .movie-info__poster {
+        max-width: 250px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    .main {
+        padding: 20px 15px;
+    }
+
+    .movie-info__title {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .movie-info__inner {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .movie-info__about {
+        padding-left: 0;
+    }
+
+    .movie-info__poster {
+        max-width: 540px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .movie-info__about-item {
+        padding-left: 27px;
+        font-size: 18px;
+    }
+
+    .about-item__format {
+        padding: 4px 10px 2px 10px;
+    }
+
+    .booking-seats {
+        padding-top: 30px;
+    }
+
+    .cinema-hall__button {
+        width: 100%;
+        padding: 15px;
+        font-size: 22px;
+    }
+
+    .booking-seats__title {
+        margin-bottom: 30px;
+    }
+
+    .cinema-hall__seats-status {
+        margin: 30px auto 40px;
+    }
+
+    .cinema-hall__seat {
+        width: 30px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 425px) {
+    .cinema-hall__seat {
+        width: 20px;
+        height: 25px;
+    }
+
+    .cinema-hall__selected-seats-list {
+        padding: 0 10px;
+    }
+
+    .cinema-hall__selected-seat {
+        width: 100%;
+    }
+
+    .modal__confirmation-window {
+        padding: 40px 10px;
+    }
+}
