@@ -5,8 +5,8 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-image: url('./assets/background-image.jpg');
   background-size: auto;
   background-repeat: no-repeat;
@@ -164,6 +164,7 @@ body {
   width: 20px;
   height: 20px;
   margin: auto 8px;
+  cursor: pointer;
 }
 
 .seat__input {
@@ -218,7 +219,7 @@ body {
 
 .seats__purchase {
   width: 150px;
-  height: 50px;
+  height: 40px;
   font-family: inherit;
   font-size: 16px;
   font-weight: bold;
@@ -239,8 +240,8 @@ body {
 
 @media (max-width: 1120px) {
   .movie-hall {
-    margin-top: -160px;
     padding: 0;
+    margin-left: -50px;
   }
 }
 
@@ -260,6 +261,7 @@ body {
   }
   .movie-hall {
     margin-top: 40px;
+    margin-left: 0;
   }
   .button__container {
     margin-bottom: 30px;
