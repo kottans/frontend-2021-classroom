@@ -5,7 +5,7 @@ const seatsData = [
             row: 1,
             seat: 1,
             price: 4,
-            booked: true
+            booked: false
         },
         {
             seatId: 2,

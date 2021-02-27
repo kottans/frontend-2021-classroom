@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <li>
                 <label>
-                    <input type="checkbox" class="cinema-hall__check" data-row="${row}" data-seat="${seat}" value="${seatId}" data-price="${price}" ${booked ? "disabled" : ""}>
+                    <input type="checkbox" name="seat[]" class="cinema-hall__check" data-row="${row}" data-seat="${seat}" value="${seatId}" data-price="${price}" ${booked ? "disabled" : ""}>
                     <span class="cinema-hall__seat">${seat}</span>
                 </label>
             </li>
@@ -73,23 +73,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const doClickButtons = () => {
         const modalWindow = document.querySelector('.modal');
-        doClickButtonContinue(modalWindow);
-        doClickButtonReturn(modalWindow);
+        const mainBlock = document.querySelector('.main');
+        doClickButtonContinue(modalWindow, mainBlock);
+        doClickButtonReturn(modalWindow, mainBlock);
     };
 
-    const doClickButtonContinue = modalWindow => {
+    const doClickButtonContinue = (modalWindow, mainBlock) => {
         const buttonContinue = document.querySelector('.cinema-hall__button');
 
         buttonContinue.addEventListener('click', () => {
             modalWindow.classList.add('active');
+            mainBlock.style.display = 'none';
         });
     }
 
-    const doClickButtonReturn = modalWindow => {
+    const doClickButtonReturn = (modalWindow, mainBlock) => {
         const buttonReturn = document.querySelector('.button--return');
 
         buttonReturn.addEventListener('click', () => {
             modalWindow.classList.remove('active');
+            mainBlock.style.display = '';
         });
     }
 
