@@ -1,0 +1,311 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  margin: 30px 0 40px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  padding: 12px;
+  vertical-align: middle;
+  border: 1px solid #0000;
+  color: #fff;
+  background-color: red;
+  outline-color: red;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+  -webkit-backface-visibility: hidden;
+}
+.btn:hover, .btn:focus {
+  opacity: 0.7;
+}
+.btn:active {
+  filter: saturate(0.8);
+}
+.btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.btn-gray {
+  background-color: #CBCDFF;
+  outline-color: #CBCDFF;
+}
+.btn-small {
+  padding: 8px 12px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cinema {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.cinema-tickets_types {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+.cinema-tickets_type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 30px;
+  font-weight: 700;
+}
+.cinema-tickets_type:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 28px;
+  margin-right: 6px;
+  border-radius: 3px;
+}
+.cinema-tickets_type .rectangle {
+  width: 20px;
+  height: 28px;
+  margin-right: 6px;
+  border-radius: 3px;
+}
+.cinema-tickets_type .type {
+  text-transform: uppercase;
+}
+.cinema-tickets_type .price {
+  margin-left: 5px;
+  margin-right: 3px;
+}
+.cinema-tickets_type .currency {
+  font-size: 0.7em;
+}
+.cinema-tickets_type.type-good:before {
+  background-color: #95c7f4;
+}
+.cinema-tickets_type.type-lux:before {
+  background-color: red;
+}
+.cinema-hall, .cinema-screen {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cinema-hall {
+  margin-top: 50px;
+  padding: 0 16px;
+}
+.cinema-hall .seat {
+  width: 20px;
+  height: 30px;
+  margin: 4px;
+}
+.cinema-hall .seat input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.cinema-hall .seat input:checked ~ label {
+  background-color: #95c7f4;
+}
+.cinema-hall .seat label {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #6caadf;
+  border-radius: 3px;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
+}
+.cinema-hall .seat-booked label {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cinema-hall .seat-booked label:after {
+  content: "x";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.cinema-hall .action {
+  margin: 50px 0 30px;
+}
+.cinema-hall .action .btn {
+  width: 60%;
+  min-width: 250px;
+}
+
+.seats-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.seats-row_lux {
+  margin-top: 10px;
+}
+.seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
+  margin-right: 24px;
+}
+.seats-row_lux .seat label {
+  border-color: red;
+}
+.seats-row_lux .seat input:checked ~ label {
+  background-color: red;
+}
+
+.ticket-block {
+  width: 360px;
+  margin: 0 auto;
+}
+.ticket-block .wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 0;
+  padding: 24px 40px;
+  border: 1px solid #000;
+}
+.ticket-block h4 {
+  margin: 0 0 20px;
+  text-align: left;
+}
+.ticket-block .list-of-tickets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ticket-block .list-of-tickets li {
+  display: flex;
+  margin-bottom: 6px;
+}
+.ticket-block .list-of-tickets li:last-of-type {
+  margin-bottom: 0;
+}
+.ticket-block .list-of-tickets li .seatRow {
+  margin-right: 10px;
+}
+.ticket-block .list-of-tickets li .seatNumber {
+  margin-right: 50px;
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.modal-order {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.modal-order .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 310px;
+  padding: 30px 50px;
+  background-color: #fff;
+  z-index: 3;
+}
+.modal-order .modal-content h4 {
+  margin: 0 0 20px;
+}
+.modal-order .modal-content .order-info {
+  margin-bottom: 20px;
+}
+.modal-order .modal-content .order-info_row {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 500px) {
+  .cinema-tickets_types {
+    justify-content: flex-start;
+  }
+
+  .cinema-hall {
+    margin-top: 34px;
+  }
+  .cinema-hall .seat {
+    margin: 3px;
+  }
+
+  .seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
+    margin-right: 14px;
+  }
+}
+@media (max-width: 350px) {
+  header {
+    margin: 30px 0;
+  }
+
+  .cinema-hall .seat {
+    width: 18px;
+    height: 28px;
+    margin: 2px;
+  }
+
+  .seats-row_lux .seat:nth-of-type(2n):not(:last-of-type) {
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
