@@ -34,10 +34,6 @@ li {
     list-style: none;
 }
 
-html, body {
-    overflow-x: hidden;
-}
-
 body {
     color: var(--common-text-color);
     background-color:var(--body-bg-color);

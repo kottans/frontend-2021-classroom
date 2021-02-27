@@ -74,25 +74,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const doClickButtons = () => {
         const modalWindow = document.querySelector('.modal');
         const mainBlock = document.querySelector('.main');
-        doClickButtonContinue(modalWindow, mainBlock);
-        doClickButtonReturn(modalWindow, mainBlock);
+        const body = document.querySelector('body');
+        doClickButtonContinue(modalWindow, mainBlock, body);
+        doClickButtonReturn(modalWindow, mainBlock, body);
     };
 
-    const doClickButtonContinue = (modalWindow, mainBlock) => {
+    const doClickButtonContinue = (modalWindow, mainBlock, body) => {
         const buttonContinue = document.querySelector('.cinema-hall__button');
 
         buttonContinue.addEventListener('click', () => {
             modalWindow.classList.add('active');
-            mainBlock.style.display = 'none';
+            mainBlock.style.visibility = 'hidden';
+            body.style.overflow = 'hidden';
         });
     }
 
-    const doClickButtonReturn = (modalWindow, mainBlock) => {
+    const doClickButtonReturn = (modalWindow, mainBlock, body) => {
         const buttonReturn = document.querySelector('.button--return');
 
         buttonReturn.addEventListener('click', () => {
             modalWindow.classList.remove('active');
-            mainBlock.style.display = '';
+            mainBlock.style.visibility = null;
+            body.style.overflow = null;
         });
     }
 
