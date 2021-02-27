@@ -1,7 +1,7 @@
 body {
   width: 1440px;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 main {
   display: flex;
@@ -147,11 +147,11 @@ main {
   color: #828282;
 }
 
-.select__time__item input[type='radio'] {
+.select__time__item input[type="radio"] {
   display: none;
 }
 
-.select__time__item input[type='radio']:checked + label .time__list__item {
+.select__time__item input[type="radio"]:checked + label .time__list__item {
   background-color: rgba(95, 151, 235, 0.8);
   color: black;
 }
