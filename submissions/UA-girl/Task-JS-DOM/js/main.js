@@ -1,77 +1,76 @@
-(function () {
-  const menu = document.querySelector('.navigation-list');
-  const menuButton = document.querySelector('.navigation-button');
-  const form = document.querySelector('.booking-form');
-  const table = document.querySelector('.order-table');
-  let order = {
-    city: 'Київ',
-    date: '2021-01-30',
-    time: '10:00',
-    place: [],
-    total: 0,
+const menu = document.querySelector('.navigation-list');
+const menuButton = document.querySelector('.navigation-button');
+const form = document.querySelector('.booking-form');
+const table = document.querySelector('.order-table');
 
-    dateString: function () {
-      const [year, month, date] = this.date.split('-');
-      return `${date}.${month}.${year}p.`;
-    },
+class Order {
+    constructor(city, date, time) {
+        this.city = city;
+        this.date = date;
+        this.time = time;
+        this.place = [];
+        this.total = 0
+    }
 
-    placeString: function () {
-      return this.place
-        .map((p) => {
-          const [row, seat] = p.value.split(' ');
-          return `${row} ряд ${seat} місце`;
-        })
-        .join('; ');
-    },
+    stringifyDate() {
+        const [year, month, date] = this.date.split('-');
+        return `${date}.${month}.${year}p.`;
+    }
 
-    totalString: function () {
-      this.total = 0;
-      this.place.forEach((p) => {
-        this.total += +p.dataset.price;
-      });
-      return `${this.total}грн.`;
-    },
-  };
+    stringifyPlace() {
+        let resPlace = [];
+        this.place.forEach(p => {
+            const [row, seat] = p.value.split(' ');
+            resPlace.push(`${row} ряд ${seat} місце`);
+        });
+        return resPlace.join('; ');
+    }
 
-  function updateTable(name, value) {
+    stringifyTotal() {
+        this.total = 0;
+        this.place.forEach(p => {
+            this.total += +p.dataset.price;
+        });
+        return `${this.total}грн.`;
+    }
+}
+
+function updateTableOrder(name, value) {
     table.querySelector(`.${name}`).textContent = value;
-  }
+}
 
-  function inputHandler(e) {
+function inputHandler(e) {
     e.preventDefault();
-    const { name, value } = e.target;
+    const {name, value} = e.target;
     let newValue, newTotal;
-    switch (name) {
-      case 'place':
-        order['place'] = Array.from(
-          form.querySelectorAll('input[type="checkbox"]:checked')
-        );
-        newTotal = order['totalString']();
-        break;
-      default:
+    if (name === 'place') {
+        order.place = form.querySelectorAll('input[type="checkbox"]:checked');
+        newTotal = order.stringifyTotal();
+    } else {
         order[name] = value;
     }
-    const methodName = `${name}String`;
-    newValue = order[methodName] ? order[methodName]() : value;
-    updateTable(name, newValue);
+    const methodName = `stringify${name.charAt(0).toUpperCase() + name.slice(1)}`;
+    newValue = (order[methodName]) ? order[methodName]() : value;
+    updateTableOrder(name, newValue);
     if (newTotal) {
-      updateTable('total', newTotal);
+        updateTableOrder('total', newTotal);
     }
-  }
+}
 
-  menuButton.addEventListener('click', function () {
+let order = new Order('Київ', '2021-01-30', '10:00');
+
+menuButton.addEventListener('click', function () {
     if (this.classList.contains('navigation-button__open')) {
-      this.classList.remove('navigation-button__open');
-      this.classList.add('navigation-button__close');
+        this.classList.remove('navigation-button__open');
+        this.classList.add('navigation-button__close');
     } else {
-      this.classList.add('navigation-button__open');
-      this.classList.remove('navigation-button__close');
+        this.classList.add('navigation-button__open');
+        this.classList.remove('navigation-button__close');
     }
     menu.classList.toggle('navigation-list__active');
-  });
+});
 
-  window.onload = function () {
+window.onload = function () {
     document.querySelector('.navigation').classList.remove('navigation-nojs');
     form.addEventListener('input', inputHandler);
-  };
-})();
+};
