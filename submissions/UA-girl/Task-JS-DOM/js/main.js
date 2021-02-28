@@ -74,8 +74,6 @@ function inputHandler(e) {
     order.updateTableOrder(name);
 }
 
-let order = new Order();
-
 menuButton.addEventListener('click', function () {
     if (this.classList.contains('navigation-button__open')) {
         this.classList.remove('navigation-button__open');
@@ -86,6 +84,8 @@ menuButton.addEventListener('click', function () {
     }
     menu.classList.toggle('navigation-list__active');
 });
+
+let order = new Order();
 
 window.addEventListener('load', function () {
     document.querySelector('.navigation').classList.remove('navigation-nojs');
