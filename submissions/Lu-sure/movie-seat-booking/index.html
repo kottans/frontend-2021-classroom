@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Seat Booking</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="booking-wrapper">
+      <section class="film-info-wrapper">
+        <h1 class="film-name">"The Silence of the Lambs"</h1>
+        <div class="film-info-container">
+          <time datetime="2021-02-14" class="film-info">Feb 14, 2021</time>
+          <time datetime="16:20" class="film-info">16:20</time>
+          <address class="film-info">Kyiv, 13 Lector st</address>
+          <time datetime="PT1H58M" class="film-info">1h 58min</time>
+          <span class="film-info">2D</span>
+          <span class="film-info">Crime, Drama, Thriller</span>
+        </div>
+
+        <img
+          src="img/poster.jpg"
+          alt="the pale woman's face with brown eyes and brown-yellow butterfly on lips"
+          class="poster"
+        />
+      </section>
+
+      <section class="seat-form">
+        <h2 class="seat-form-heading">Choose your seats:</h2>
+
+        <div class="seats-instruction">
+          <span class="seat-example seat-available">Available</span>
+          <span class="seat-example seat-selected">Selected</span>
+          <span class="seat-example seat-taken">Taken</span>
+        </div>
+
+        <div class="screen">screen</div>
+
+        <form action="" class="seats-container">
+          <div>
+            <span class="seat-row">row 1</span>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="1-1"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="1-2"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="1-3"
+                checked
+                disabled
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="1-4"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="1-5"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="1-6"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <span class="seat-row row-end">row 1</span>
+          </div>
+
+          <div>
+            <span class="seat-row">row 2</span>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="2-1"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="2-2"
+                checked
+                disabled
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input type="checkbox" class="seat-checkbox visually-hidden"
+              value=2-3" checked disabled>
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="2-4"
+                checked
+                disabled
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="2-5"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="2-6"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <span class="seat-row row-end">row 2</span>
+          </div>
+
+          <div>
+            <span class="seat-row">row 3</span>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="3-1"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="3-2"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="3-3"
+                checked
+                disabled
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="3-4"
+                checked
+                disabled
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="3-5"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="3-6"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="3-7"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="3-8"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <span class="seat-row row-end">row 3</span>
+          </div>
+
+          <div>
+            <span class="seat-row">row 4</span>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="4-1"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="4-2"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="4-3"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="4-4"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="4-5"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="4-6"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="4-7"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="4-8"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <span class="seat-row row-end">row 4</span>
+          </div>
+
+          <div>
+            <span class="seat-row">row 5</span>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="5-1"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="5-2"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="5-3"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="5-4"
+                checked
+                disabled
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="5-5"
+                checked
+                disabled
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="5-6"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="5-7"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="5-8"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <span class="seat-row row-end">row 5</span>
+          </div>
+
+          <div>
+            <span class="seat-row">row 6</span>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="6-1"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="6-2"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="6-3"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="6-4"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="6-5"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="6-6"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="6-7"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <label class="seat">
+              <input
+                type="checkbox"
+                class="seat-checkbox visually-hidden"
+                value="6-8"
+              />
+              <span class="seat-icon"></span>
+            </label>
+            <span class="seat-row row-end">row 6</span>
+          </div>
+
+          <input class="confirm-but" type="submit" value="Book now" />
+        </form>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="credits">
+        Icons made by
+        <a href="https://www.freepik.com" title="Freepik"> Freepik </a>
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon">
+          www.flaticon.com
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

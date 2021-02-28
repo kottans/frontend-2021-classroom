@@ -1,0 +1,509 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+li {
+  list-style-type: none;
+}
+
+address {
+  font-style: normal;
+}
+
+$colors: (
+  green: #0fac97,
+);
+
+@function color($colors-name) {
+  @return map-get($colors, $colors-name);
+}
+
+html {
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, transparent, 30%, #000), url(assets/posters/background.jpg);
+  background-size: cover;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  height: 40rem;
+  background-color: #00000090;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width: 972px) {
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .main-container {
+    margin-top: 10rem;
+    height: 120vh;
+  }
+}
+
+.main-film-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 65%;
+  height: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main-film-container {
+    flex-direction: column;
+  }
+
+  .breadcrumbs {
+    justify-content: center;
+  }
+
+  .menu {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+  }
+}
+
+.menu-item {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid transparent;
+  color: #fff;
+
+  &:hover {
+    padding-bottom: 0.5rem;
+    color: color(green);
+    border-bottom: 0.2rem solid color(green);
+    transition: border-bottom 0.5s;
+  }
+}
+
+.active-menu-item {
+  padding-bottom: 0.5rem;
+  color: color(green);
+  border-bottom: 0.2rem solid color(green);
+  pointer-events: none;
+}
+
+.next-menu-item {
+  pointer-events: none;
+}
+
+.film-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 35%;
+  height: 111%;
+  padding: 0 0 5rem 2rem;
+  margin-top: -3rem;
+  background-image: url(assets/posters/poster.jpeg);
+  background-size: cover;
+  background-position: 50% 25%;
+  color: #fff;
+  line-height: 2rem;
+}
+
+.film-title {
+  position: absolute;
+  margin-top: 2.5rem;
+  font-size: 2rem;
+}
+
+.film-date,
+.film-time,
+.ticket-price {
+  align-items: center;
+  justify-content: flex-start;
+  height: 1rem;
+  font-size: 1.2rem;
+}
+
+.film-item {
+  margin-left: 0.3rem;
+}
+
+.icon {
+  height: 1.5rem;
+  width: auto;
+}
+
+.film-address {
+  margin-bottom: 6rem;
+  font-size: 1rem;
+
+  .film-item {
+    margin-left: 0;
+  }
+
+  .icon {
+    height: 1rem;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .film-description {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    height: 20rem;
+    padding: 0;
+    margin-top: 1rem;
+    background-image: url(assets/posters/poster.jpeg);
+    background-size: 130%;
+    background-position: 0% 5%;
+    line-height: 1rem;
+  }
+
+  .film-information {
+    margin: 0 0 1rem 1rem;
+  }
+
+  .film-title {
+    margin-top: 2.1rem;
+  }
+
+  .film-address {
+    margin-bottom: 4rem;
+  }
+}
+
+.film-date {
+  margin-right: 1.5rem;
+}
+
+.ticket-price {
+  margin-top: 1.5rem;
+}
+
+.car-selection-container {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  height: 100%;
+}
+
+.legend-container {
+  position: relative;
+  margin: 2rem 0 1rem;
+  padding-left: 1rem;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 180%;
+    right: 50%;
+    margin-right: -7.5rem;
+    width: 15rem;
+    height: 0.2rem;
+    background-color: color(green);
+    opacity: 0.5;
+  }
+}
+
+.legend-item {
+  position: relative;
+  margin: 0 2rem 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+  }
+}
+
+@mixin setSVGButton($items) {
+  @each $item in $items {
+    .item-#{$item}::before {
+      background-image: url(assets/cars/#{$item}.png);
+    }
+  }
+}
+
+@include setSVGButton(('unavailable', 'selected', 'sedan', 'jeep'));
+
+.screen-container {
+  position: relative;
+  margin: 2rem 0 3rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -6rem;
+    width: 12rem;
+    height: 4rem;
+    background-image: url(assets/posters/background1.jpg);
+    background-size: cover;
+    background-position: 25% 50%;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 20px 22px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .car-selection-container {
+    width: 100%;
+  }
+
+  .legend-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto 1rem;
+    justify-content: center;
+    width: 100%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 120%;
+      right: 50%;
+      margin-right: -7.5rem;
+      width: 15rem;
+      height: 0.2rem;
+      background-color: color(green);
+      opacity: 0.5;
+    }
+  }
+
+  .legend-item {
+    margin: 0 2rem 0.5rem;
+  }
+
+  .screen-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 4rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -6rem;
+    }
+  }
+}
+
+.cars-container {
+  display: flex;
+  align-items: center;
+  height: 22rem;
+  width: 30rem;
+  margin: 2rem auto 0;
+}
+
+.first-row {
+  height: 2.5rem;
+  width: 50%;
+
+  .car-sedan {
+    background-size: 50%;
+  }
+}
+
+.second-row {
+  height: 3.5rem;
+  width: 60%;
+
+  .car-sedan {
+    background-size: 60%;
+  }
+}
+
+.third-row {
+  height: 4.5rem;
+  width: 70%;
+
+  .car-sedan {
+    background-size: 70%;
+  }
+}
+
+.forth-row {
+  height: 5rem;
+  width: 80%;
+
+  .car-sedan {
+    background-size: 80%;
+  }
+}
+
+.fifth-row {
+  height: 6rem;
+  width: 90%;
+
+  .car-jeep {
+    background-size: 90%;
+  }
+}
+
+.car-sedan {
+  background-image: url(assets/cars/sedan.png);
+  height: 90%;
+  width: 6rem;
+
+  &.unavailable {
+    background-image: url(assets/cars/sedan-unavailable.png);
+  }
+}
+
+.car-jeep {
+  background-image: url(assets/cars/jeep.png);
+  height: 100%;
+  width: 7rem;
+
+  &.unavailable {
+    background-image: url(assets/cars/jeep-unavailable.png);
+  }
+}
+
+.car-jeep,
+.car-sedan {
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 10%;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    border: 0.1rem solid #808080;
+    outline: 0;
+  }
+
+  &:checked {
+    background-color: color(green);
+    border: 0.1rem solid #808080;
+    outline: 0;
+  }
+
+  &:focus {
+    border: 0.1rem solid #808080;
+    outline: 0;
+  }
+}
+
+input:disabled:hover {
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+.button-container {
+  width: 100%;
+}
+
+.confirm-button {
+  display: block;
+  height: 2rem;
+  width: 10rem;
+  margin: 0.5rem auto 0;
+  text-align: center;
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: color(green);
+  outline: solid transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #00ffdd;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .cars-container {
+    height: 22rem;
+    width: 20rem;
+    margin: 2rem auto 0;
+  }
+}
