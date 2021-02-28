@@ -87,7 +87,7 @@ menuButton.addEventListener('click', function () {
     menu.classList.toggle('navigation-list__active');
 });
 
-window.onload = function () {
+window.addEventListener('load', function () {
     document.querySelector('.navigation').classList.remove('navigation-nojs');
     form.addEventListener('input', inputHandler);
-};
+});
