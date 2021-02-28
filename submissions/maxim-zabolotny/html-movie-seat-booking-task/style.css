@@ -133,6 +133,21 @@ body {
     border: 1px solid #7A7A7A;
 }
 
+.button-next {
+    padding: 1rem 5rem;
+    margin-top: 1rem;
+    border: 1px solid #0000;
+    color: #fff;
+    background-color: red;
+    outline-color: red;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+
 @media screen and (max-width: 767px) {
     body {
         font-size: 1.5rem;
@@ -165,3 +180,4 @@ body {
     margin-top: 3rem;
 }
   }
+  
