@@ -12,6 +12,16 @@ body {
   background-color: #2a2a38;
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background-color: #444;
+}
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #aaa;
+}
+
 :focus {
   outline: none;
 }
@@ -200,6 +210,9 @@ body {
 .cart__tickets {
   margin-top: 10px;
   padding: 0 10px;
+  overflow-y: auto;
+  max-height: 300px;
+  scrollbar-width: thin;
 }
 
 .cart__total {
@@ -316,16 +329,6 @@ body {
 }
 
 @media (min-width: 770px) {
-  ::-webkit-scrollbar {
-    width: 3px;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #444;
-  }
-  ::-webkit-scrollbar-thumb:vertical {
-    background-color: #aaa;
-  }
-
   .booking-container {
     height: 610px;
     display: grid;
@@ -348,12 +351,6 @@ body {
     grid-column: 2;
     grid-row: 1 / 3;
     height: 560px;
-  }
-
-  .cart__tickets {
-    overflow-y: auto;
-    height: 300px;
-    scrollbar-width: thin;
   }
 }
 
