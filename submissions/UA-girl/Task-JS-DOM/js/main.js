@@ -3,61 +3,78 @@ const menuButton = document.querySelector('.navigation-button');
 const form = document.querySelector('.booking-form');
 const table = document.querySelector('.order-table');
 
-class Order {
-    constructor(city, date, time) {
-        this.city = city;
-        this.date = date;
-        this.time = time;
-        this.place = [];
-        this.total = 0
+class Seat {
+    constructor(row, place, price) {
+        this.row = row;
+        this.seat = place;
+        this.price = price;
     }
 
-    stringifyDate() {
-        const [year, month, date] = this.date.split('-');
-        return `${date}.${month}.${year}p.`;
-    }
-
-    stringifyPlace() {
-        let resPlace = [];
-        this.place.forEach(p => {
-            const [row, seat] = p.value.split(' ');
-            resPlace.push(`${row} ряд ${seat} місце`);
-        });
-        return resPlace.join('; ');
-    }
-
-    stringifyTotal() {
-        this.total = 0;
-        this.place.forEach(p => {
-            this.total += +p.dataset.price;
-        });
-        return `${this.total}грн.`;
+    getSeat() {
+        return `${this.row} ряд ${this.seat} місце`
     }
 }
 
-function updateTableOrder(name, value) {
-    table.querySelector(`.${name}`).textContent = value;
+class Order {
+    constructor(city = 'Київ', date = '2021-01-30', time = '10:00') {
+        this.city = city;
+        this._date = date;
+        this.time = time;
+        this._place = [];
+        this._total = 0
+    }
+
+    get date() {
+        const [year, month, date] = this._date.split('-');
+        return `${date}.${month}.${year}p.`;
+    }
+
+    set date(newDate) {
+        this._date = newDate;
+    }
+
+    get place() {
+        return this._place.map((place) => {
+            return place.getSeat();
+        }).join('; ');
+    }
+
+    set place(newPlace) {
+        const price = +newPlace.dataset.price;
+        const [row, seat] = newPlace.value.split(' ');
+        const oldSeat = this._place.find(place => place.row === row && place.seat === seat);
+        if (oldSeat) {
+            const ind = this._place.indexOf(oldSeat);
+            this._place.splice(ind, ind + 1);
+            this._total -= price;
+            return
+        }
+        this._place.push(new Seat(row, seat, price));
+        this._total += price;
+    }
+
+    get total() {
+        return `${this._total}грн.`;
+    }
+
+    updateTableOrder(name) {
+        table.querySelector(`.${name}`).textContent = this[name];
+    }
 }
 
 function inputHandler(e) {
     e.preventDefault();
     const {name, value} = e.target;
-    let newValue, newTotal;
     if (name === 'place') {
-        order.place = form.querySelectorAll('input[type="checkbox"]:checked');
-        newTotal = order.stringifyTotal();
+        order.place = e.target;
+        order.updateTableOrder('total');
     } else {
         order[name] = value;
     }
-    const methodName = `stringify${name.charAt(0).toUpperCase() + name.slice(1)}`;
-    newValue = (order[methodName]) ? order[methodName]() : value;
-    updateTableOrder(name, newValue);
-    if (newTotal) {
-        updateTableOrder('total', newTotal);
-    }
+    order.updateTableOrder(name);
 }
 
-let order = new Order('Київ', '2021-01-30', '10:00');
+let order = new Order();
 
 menuButton.addEventListener('click', function () {
     if (this.classList.contains('navigation-button__open')) {

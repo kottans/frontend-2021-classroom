@@ -1,376 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="buy a movie ticket online">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="buy a movie ticket online" />
     <title>movie seat booking</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="booking-container">
-        <header class="header">
-            <h1 class="header__title">Choose your seats</h1>
-            <div class="example">
-                <div class="example__item">
-                    <div class="example__icon example__icon--not-available"></div>
-                    <div class="example__hyphen"></div>
-                    <p class="example__desc">N/A</p>
-                </div>
-                <div class="example__item">
-                    <div class="example__icon example__icon--selected"></div>
-                    <div class="example__hyphen"></div>
-                    <p class="example__desc">Selected</p>
-                </div>
-                <div class="example__item">
-                    <div class="example__icon example__icon--available"></div>
-                    <div class="example__hyphen"></div>
-                    <p class="example__desc">A</p>
-                </div>
+      <header class="header">
+        <h1 class="header__title">Choose your seats</h1>
+        <div class="example">
+          <div class="example__item">
+            <div class="example__icon example__icon--not-available"></div>
+            <div class="example__hyphen"></div>
+            <p class="example__desc">N/A</p>
+          </div>
+          <div class="example__item">
+            <div class="example__icon example__icon--selected"></div>
+            <div class="example__hyphen"></div>
+            <p class="example__desc">Selected</p>
+          </div>
+          <div class="example__item">
+            <div class="example__icon example__icon--available"></div>
+            <div class="example__hyphen"></div>
+            <p class="example__desc">A</p>
+          </div>
+        </div>
+      </header>
+
+      <main class="cinema">
+        <section class="cinema__screen">
+          <h2 class="visually-hidden">Screen</h2>
+          <img src="./img/screen.svg" class="screen__img" alt="screen" />
+        </section>
+        <section class="cinema__hall">
+          <h2 class="visually-hidden">cinema hall</h2>
+          <form class="hall__seats" id="tickets">
+            <div class="hall__seats--front">
+              <label class="seat">
+                <input
+                  aria-label="row 1 seat 1"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="1"
+                  disabled
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 1 seat 2"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="2"
+                  disabled
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 1 seat 3"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="3"
+                  disabled
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 1 seat 4"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="4"
+                  disabled
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 1 seat 5"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="5"
+                  disabled
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 1 seat 6"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="6"
+                  disabled
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 2 seat 1"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="7"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 2 seat 2"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="8"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 2 seat 3"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="9"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 2 seat 4"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="10"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 2 seat 5"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="11"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 2 seat 6"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="12"
+                />
+                <span class="seat__icon"></span>
+              </label>
             </div>
-        </header>
 
-        <main class="cinema">
-            <section class="cinema__screen">
-                <h2 class="visually-hidden">Screen</h2>
-                <img src="./img/screen.svg" class="screen__img" alt="screen">
-            </section>
-            <section class="cinema__hall">
-                <h2 class="visually-hidden">cinema hall</h2>
-                <form class="hall__seats" id="tickets">
-                    <div class="hall__seats--front">
-                        <label class="seat">
-                            <input aria-label="row 1 seat 1" type="checkbox" class="seat__input visually-hidden" id="1"
-                                disabled>
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 1 seat 2" type="checkbox" class="seat__input visually-hidden" id="2"
-                                disabled>
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 1 seat 3" type="checkbox" class="seat__input visually-hidden" id="3"
-                                disabled>
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 1 seat 4" type="checkbox" class="seat__input visually-hidden" id="4"
-                                disabled>
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 1 seat 5" type="checkbox" class="seat__input visually-hidden" id="5"
-                                disabled>
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 1 seat 6" type="checkbox" class="seat__input visually-hidden" id="6"
-                                disabled>
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 2 seat 1" type="checkbox" class="seat__input visually-hidden" id="7">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 2 seat 2" type="checkbox" class="seat__input visually-hidden" id="8">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 2 seat 3" type="checkbox" class="seat__input visually-hidden" id="9">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 2 seat 4" type="checkbox" class="seat__input visually-hidden"
-                                id="10">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 2 seat 5" type="checkbox" class="seat__input visually-hidden"
-                                id="11">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 2 seat 6" type="checkbox" class="seat__input visually-hidden"
-                                id="12">
-                            <span class="seat__icon"></span>
-                        </label>
-                    </div>
+            <div class="hall__seats--middle">
+              <label class="seat">
+                <input
+                  aria-label="row 3 seat 1"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="13"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 3 seat 2"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="14"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 3 seat 3"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="15"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 3 seat 4"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="16"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 3 seat 5"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="17"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 3 seat 6"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="18"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 3 seat 7"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="19"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 3 seat 8"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="20"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 4 seat 1"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="21"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 4 seat 2"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="22"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 4 seat 3"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="23"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 4 seat 4"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="24"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 4 seat 5"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="25"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 4 seat 6"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="26"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 4 seat 7"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="27"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 4 seat 8"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="28"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 5 seat 1"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="29"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 5 seat 2"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="30"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 5 seat 3"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="31"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 5 seat 4"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="32"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 5 seat 5"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="33"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 5 seat 6"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="34"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 5 seat 7"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="35"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 5 seat 8"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="36"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 6 seat 1"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="37"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 6 seat 2"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="38"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 6 seat 3"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="39"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 6 seat 4"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="40"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 6 seat 5"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="41"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 6 seat 6"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="42"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 6 seat 7"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="43"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 6 seat 8"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="44"
+                />
+                <span class="seat__icon"></span>
+              </label>
+            </div>
 
-                    <div class="hall__seats--middle">
-                        <label class="seat">
-                            <input aria-label="row 3 seat 1" type="checkbox" class="seat__input visually-hidden"
-                                id="13">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 3 seat 2" type="checkbox" class="seat__input visually-hidden"
-                                id="14">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 3 seat 3" type="checkbox" class="seat__input visually-hidden"
-                                id="15">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 3 seat 4" type="checkbox" class="seat__input visually-hidden"
-                                id="16">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 3 seat 5" type="checkbox" class="seat__input visually-hidden"
-                                id="17">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 3 seat 6" type="checkbox" class="seat__input visually-hidden"
-                                id="18">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 3 seat 7" type="checkbox" class="seat__input visually-hidden"
-                                id="19">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 3 seat 8" type="checkbox" class="seat__input visually-hidden"
-                                id="20">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 4 seat 1" type="checkbox" class="seat__input visually-hidden"
-                                id="21">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 4 seat 2" type="checkbox" class="seat__input visually-hidden"
-                                id="22">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 4 seat 3" type="checkbox" class="seat__input visually-hidden"
-                                id="23">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 4 seat 4" type="checkbox" class="seat__input visually-hidden"
-                                id="24">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 4 seat 5" type="checkbox" class="seat__input visually-hidden"
-                                id="25">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 4 seat 6" type="checkbox" class="seat__input visually-hidden"
-                                id="26">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 4 seat 7" type="checkbox" class="seat__input visually-hidden"
-                                id="27">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 4 seat 8" type="checkbox" class="seat__input visually-hidden"
-                                id="28">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 5 seat 1" type="checkbox" class="seat__input visually-hidden"
-                                id="29">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 5 seat 2" type="checkbox" class="seat__input visually-hidden"
-                                id="30">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 5 seat 3" type="checkbox" class="seat__input visually-hidden"
-                                id="31">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 5 seat 4" type="checkbox" class="seat__input visually-hidden"
-                                id="32">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 5 seat 5" type="checkbox" class="seat__input visually-hidden"
-                                id="33">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 5 seat 6" type="checkbox" class="seat__input visually-hidden"
-                                id="34">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 5 seat 7" type="checkbox" class="seat__input visually-hidden"
-                                id="35">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 5 seat 8" type="checkbox" class="seat__input visually-hidden"
-                                id="36">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 6 seat 1" type="checkbox" class="seat__input visually-hidden"
-                                id="37">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 6 seat 2" type="checkbox" class="seat__input visually-hidden"
-                                id="38">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 6 seat 3" type="checkbox" class="seat__input visually-hidden"
-                                id="39">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 6 seat 4" type="checkbox" class="seat__input visually-hidden"
-                                id="40">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 6 seat 5" type="checkbox" class="seat__input visually-hidden"
-                                id="41">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 6 seat 6" type="checkbox" class="seat__input visually-hidden"
-                                id="42">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 6 seat 7" type="checkbox" class="seat__input visually-hidden"
-                                id="43">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 6 seat 8" type="checkbox" class="seat__input visually-hidden"
-                                id="44">
-                            <span class="seat__icon"></span>
-                        </label>
-                    </div>
-
-                    <div class="hall__seats--back">
-                        <label class="seat">
-                            <input aria-label="row 7 seat 1" type="checkbox" class="seat__input visually-hidden"
-                                id="45">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 2" type="checkbox" class="seat__input visually-hidden"
-                                id="46">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 3" type="checkbox" class="seat__input visually-hidden"
-                                id="47">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 4" type="checkbox" class="seat__input visually-hidden"
-                                id="48">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 5" type="checkbox" class="seat__input visually-hidden"
-                                id="49">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 6" type="checkbox" class="seat__input visually-hidden"
-                                id="50">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 7" type="checkbox" class="seat__input visually-hidden"
-                                id="51">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 8" type="checkbox" class="seat__input visually-hidden"
-                                id="52">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 9" type="checkbox" class="seat__input visually-hidden"
-                                id="53">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 7 seat 10" type="checkbox" class="seat__input visually-hidden"
-                                id="54">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 1" type="checkbox" class="seat__input visually-hidden"
-                                id="55">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 2" type="checkbox" class="seat__input visually-hidden"
-                                id="56">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 3" type="checkbox" class="seat__input visually-hidden"
-                                id="57">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 4" type="checkbox" class="seat__input visually-hidden"
-                                id="58">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 5" type="checkbox" class="seat__input visually-hidden"
-                                id="59">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 6" type="checkbox" class="seat__input visually-hidden"
-                                id="60">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 7" type="checkbox" class="seat__input visually-hidden"
-                                id="61">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 8" type="checkbox" class="seat__input visually-hidden"
-                                id="62">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 9" type="checkbox" class="seat__input visually-hidden"
-                                id="63">
-                            <span class="seat__icon"></span>
-                        </label>
-                        <label class="seat">
-                            <input aria-label="row 8 seat 10" type="checkbox" class="seat__input visually-hidden"
-                                id="64">
-                            <span class="seat__icon"></span>
-                        </label>
-                    </div>
-                </form>
-                <button class="submit-btn" form="tickets" type="submit">Book Now</button>
-            </section>
-        </main>
+            <div class="hall__seats--back">
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 1"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="45"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 2"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="46"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 3"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="47"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 4"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="48"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 5"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="49"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 6"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="50"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 7"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="51"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 8"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="52"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 9"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="53"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 7 seat 10"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="54"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 1"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="55"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 2"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="56"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 3"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="57"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 4"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="58"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 5"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="59"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 6"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="60"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 7"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="61"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 8"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="62"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 9"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="63"
+                />
+                <span class="seat__icon"></span>
+              </label>
+              <label class="seat">
+                <input
+                  aria-label="row 8 seat 10"
+                  type="checkbox"
+                  class="seat__input visually-hidden"
+                  id="64"
+                />
+                <span class="seat__icon"></span>
+              </label>
+            </div>
+          </form>
+          <button class="submit-btn" form="tickets" type="submit">
+            Book Now
+          </button>
+        </section>
+      </main>
     </div>
-</body>
-
+  </body>
 </html>

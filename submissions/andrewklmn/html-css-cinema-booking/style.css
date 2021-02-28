@@ -8,7 +8,8 @@ body {
   text-align: center;
 }
 
-h1, h3 {
+h1,
+h3 {
   margin-top: 15px;
   margin-bottom: 5px;
 
@@ -212,7 +213,7 @@ main {
 }
 
 .radio_control:checked + .radio_label {
-  background-color: #BB0000;
+  background-color: #bb0000;
   color: white;
 }
 
@@ -262,12 +263,11 @@ main {
   text-align: center;
   color: white;
 
-  
   background-image: url('img/seat_template.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  
+
   border: solid 3px #ffffff;
   background-color: green;
 
@@ -377,14 +377,12 @@ footer {
 
   width: 100%;
   height: 17px;
-  
+
   font-size: 13px;
   color: lightgray;
   background-color: #343434;
-
 }
 @media screen and (max-width: 1050px) {
-
   .poster {
     width: 35%;
   }
@@ -396,7 +394,6 @@ footer {
   .summary_info {
     width: 25%;
   }
-  
 }
 
 @media screen and (max-width: 800px) {
