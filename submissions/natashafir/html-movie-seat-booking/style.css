@@ -88,7 +88,7 @@ a {
 }
 
 .screen {
-    width: 500px;
+    max-width: 500px;
     height: 80px;
     border-top: 2px solid ghostwhite;
     margin-top: 80px;
@@ -168,14 +168,14 @@ a {
     background-color: #da723c;
 }
 
-label.seat-item {
+.seat-item {
     color: #e3e6ea;
     font-size: 12px;
     text-align: center;
     line-height: 2;
 }
 
-label.not-available {
+.not-available {
     background-color: #2d4059;
     color: #43658b;
 }
