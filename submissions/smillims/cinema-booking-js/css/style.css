@@ -196,16 +196,20 @@ label,
 
 .tickets {
   width: 280px;
+  max-width: 280px;
   height: 70px;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
 
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
   margin: 0 auto;
   margin-bottom: 6px;
 }
-.tickets p {
+.tickets .numbers-tickets {
   color: #fff;
   font-size: 60px;
 }
@@ -225,6 +229,10 @@ label,
 }
 
 .aside-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 280px;
 
   font-size: 70px;
@@ -233,6 +241,7 @@ label,
   margin-bottom: 10px;
 
   border-radius: 0px 0px 10px 10px;
+  padding-top: 5px;
 
   color: #fff;
   background-color: #aa2e2e;
@@ -250,7 +259,7 @@ label,
 .container {
   display: flex;
   flex-direction: column;
-  width: 950px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -321,7 +330,7 @@ label,
 }
 
 .seating-container {
-  max-width: 600px;
+  max-width: 340px;
 
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -454,4 +463,44 @@ label,
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.movie {
+  max-width: 280px;
+  height: 70px;
+
+  font-size: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  color: #fff;
+  overflow-y: scroll;
+}
+
+.movie-block-inside {
+  width: 280px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  font-size: 20px;
+  padding: 3px;
+}
+.movie-block-inside:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+
+  margin-top: 3px;
+
+  background-color: #000;
+}
+
+.movie-first-column,
+.movie-second-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
