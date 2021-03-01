@@ -17,8 +17,11 @@ const ticketPrice = {
 
 const getData = () => {
     return fetch('./data/data.json')
-     .then(res => res.json())
-     .then((data) => data);
+            .then(response => {
+                if (response.ok) return response.json();
+                    throw new Error(response.status);
+            })
+            .then((data) => data);
 }   
 
 const reverseDate = (date) => date.split("-").reverse().join("-");
@@ -39,7 +42,7 @@ const renderData = (data) => {
         const seat = document.querySelector(`#seat${item.row}-${item.seat}`);
         seat.closest('.hall__seat').classList.add('no-hover');
         seat.setAttribute("disabled", "");
-        seat.nextElementSibling.classList.add(`${item.type}--active`);  
+        seat.nextElementSibling.classList.add('hall__seat--block');  
     });
 }
 
@@ -149,7 +152,6 @@ const init = async () => {
     renderData(await getData());
     createJSON();
     hall.addEventListener('click', addToCart);
-    hall.addEventListener('touchstart', addToCart, {capture: true});
 }
 
 window.onload = init();

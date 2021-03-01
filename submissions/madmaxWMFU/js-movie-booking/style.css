@@ -244,6 +244,17 @@ nav.breadcrumb [aria-current="page"] {
     background-color: #f0f5f9;  
 }
 
+.hall__seat--block {
+    border: solid 1px #c8c8c8;
+    border-radius: 3px;
+    background-color: #e4e4e4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -1px;
+    background-image: url('../images/block.svg');
+}
+
+.hall__seat-data:focus + .hall__seat-inner,
 .hall__seat-data:hover + .hall__seat-inner {
     border-color: rgb(211, 49, 226);
     box-shadow: 0 2px 10px rgb(217 81 160), 0 0px rgb(228 18 18 / 22%);
