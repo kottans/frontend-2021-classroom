@@ -13,6 +13,27 @@ body {
     margin: 0;
 }
 
+.location {
+    background-image: url('../images/location.svg');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.calendar {
+    background-image: url('../images/calendar.svg');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.clock {
+    background-image: url('../images/clock.svg');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
 .logo {
     background-color: #000;
 }
@@ -115,7 +136,6 @@ nav.breadcrumb [aria-current="page"] {
     line-height: 23px;
     font-style: normal;
     font-weight: 300;
-    margin-left: 8px;
 }
 
 .cinema-screen {

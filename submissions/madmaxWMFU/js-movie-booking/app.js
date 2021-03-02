@@ -1,10 +1,6 @@
 const hall = document.querySelector('.hall');
 const cart = document.querySelector('.form__cart');
-const filmPoster = document.querySelector('.cinema-info__image');
-const filmTitle = document.querySelector('.description__title');
-const filmHall = document.querySelector('.description__hall');
-const filmDate = document.querySelector('.description__date');
-const filmTime = document.querySelector('.description__time');
+const filmInfo = document.querySelector(".cinema-info");
 const emptyCart = document.querySelector('.tikets__wrap');
 const fullCart = document.querySelector('.tikets__form');
 const priceCart = document.querySelector('.form__total');
@@ -27,17 +23,29 @@ const getData = () => {
 const reverseDate = (date) => date.split("-").reverse().join("-");
 
 const renderData = (data) => {
-    filmPoster.src = data.poster;
-    filmTitle.innerText = `"${data.film}"`;
-    filmHall.innerText = `Зал №${data.hall}`;
-
     const [date, time] = data.datetime.split(' ');
-    filmDate.innerText = reverseDate(date);
-    filmDate.setAttribute('datetime', date);
-
-    filmTime.innerText = time;
-    filmTime.setAttribute('datetime', time);
-
+    const wrapTemplate = document.createElement('template');
+    const infoTemplate = `
+        <img class="cinema-info__image" src="${data.poster}" alt="film">
+        <div class="cinema-info__description description">
+            <h3 class="description__title">"${data.film}"</h3>
+            <p class="description__hall">Зал №${data.hall}</p>
+            <div class="description__text">
+                <span class="location"></span>
+                <address>м.Київ пр. Голосіївський 116</address>
+            </div>
+            <p class="description__text">
+                <span class="calendar"></span>
+                <time class="description__date" datetime="${date}">${reverseDate(date)}</time>
+            </p>
+            <p class="description__text">
+                <span class="clock"></span>
+                <time class="description__time" datetime="${time}">${time}</time>
+            </p>
+        </div>
+    `;
+    wrapTemplate.innerHTML = infoTemplate;
+    filmInfo.appendChild(wrapTemplate.content);
     data.selected.forEach((item) => {
         const seat = document.querySelector(`#seat${item.row}-${item.seat}`);
         seat.closest('.hall__seat').classList.add('no-hover');
@@ -54,13 +62,13 @@ const renderCart = (ticket) => {
             <span class="form__ticket-seat">Місце: ${seat}</span>
             <span class="form__ticket-price">Ціна: ${ticketPrice[price]}</span>
         </div>`;
-    var ticketWrap = document.createElement("template");
+    const ticketWrap = document.createElement("template");
     ticketWrap.innerHTML = template;
     cart.appendChild(ticketWrap.content);
 }
 
 const deleteFromCart = (id) => {
-    Array.from(cart.children).forEach((item) => {
+    cart.querySelectorAll('.form__ticket').forEach((item) => {
         if(item.getAttribute('id') === id) {
            item.remove(); 
         }
@@ -138,6 +146,10 @@ const setTotalPrice = () => {
 }
 
 const createJSON = () => {
+    const filmTitle = filmInfo.querySelector('.description__title');
+    const filmDate = filmInfo.querySelector('.description__hall');
+    const filmTime = filmInfo.querySelector('.description__date');
+    const filmHall = filmInfo.querySelector('.description__time');
     const cart =  {
         "film": filmTitle.innerText,
         "datetime": `${reverseDate(filmDate.innerText)} ${filmTime.innerText}`,
@@ -148,11 +160,11 @@ const createJSON = () => {
     window.sessionStorage.setItem("serverData", JSON.stringify(cart));
 }
 
-const init = async () => {
+const init = async () => {  
     renderData(await getData());
     createJSON();
     hall.addEventListener('click', addToCart);
 }
 
-window.onload = init();
+document.addEventListener('DOMContentLoaded', init);
 
