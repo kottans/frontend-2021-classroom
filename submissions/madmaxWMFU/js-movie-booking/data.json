@@ -1,0 +1,58 @@
+{   
+    "film": "Душа",
+    "poster": "./images/cartoon.jpeg",
+    "datetime": "2021-01-01 12:00",
+    "hall": 2,
+    "selected": [
+        {
+            "row": 5,
+            "seat": 2,
+            "type": "special" 
+        },
+        {
+            "row": 6,
+            "seat": 17,
+            "type": "special"
+        },
+        {
+            "row": 8,
+            "seat": 11,
+            "type": "ordinary" 
+        },
+        {
+            "row": 8,
+            "seat": 12,
+            "type": "ordinary"
+        },
+        {
+            "row": 5,
+            "seat": 8,
+            "type": "ordinary" 
+        },
+        {
+            "row": 5,
+            "seat": 9,
+            "type": "ordinary"
+        },
+        {
+            "row": 11,
+            "seat": 5,
+            "type": "comfort" 
+        },
+        {
+            "row": 11,
+            "seat": 6,
+            "type": "comfort"
+        },
+        {
+            "row": 11,
+            "seat": 7,
+            "type": "comfort"  
+        },
+        {
+            "row": 11,
+            "seat": 8,
+            "type": "comfort" 
+        }
+    ]
+}
