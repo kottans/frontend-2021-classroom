@@ -24,7 +24,6 @@ const reverseDate = (date) => date.split("-").reverse().join("-");
 
 const renderData = (data) => {
     const [date, time] = data.datetime.split(' ');
-    const wrapTemplate = document.createElement('template');
     const infoTemplate = `
         <img class="cinema-info__image" src="${data.poster}" alt="film">
         <div class="cinema-info__description description">
@@ -42,10 +41,8 @@ const renderData = (data) => {
                 <span class="clock"></span>
                 <time class="description__time" datetime="${time}">${time}</time>
             </p>
-        </div>
-    `;
-    wrapTemplate.innerHTML = infoTemplate;
-    filmInfo.appendChild(wrapTemplate.content);
+        </div>`;
+    filmInfo.innerHTML = infoTemplate;
     data.selected.forEach((item) => {
         const seat = document.querySelector(`#seat${item.row}-${item.seat}`);
         seat.closest('.hall__seat').classList.add('no-hover');
