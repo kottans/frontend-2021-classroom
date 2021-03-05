@@ -9,8 +9,10 @@ import {
   lastSelected,
 } from './config';
 
+import getSelectedSeats from './seat-selector';
+
 export default function updateTicket() {
-  const selectedSeats = [...selectorForm.querySelectorAll('.seat_control:checked')];
+  const selectedSeats = getSelectedSeats(selectorForm);
 
   if (selectedSeats.length === 0) {
     draftTicket.innerHTML = initialTicketView;

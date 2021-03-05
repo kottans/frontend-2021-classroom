@@ -5,12 +5,14 @@ import {
   cancelButton,
 } from './config';
 
+import getSelectedSeats from './seat-selector';
+
 export const payButtonListener = () => {
   alert('Action disabled!');
 };
 
 export const bookButtonListener = (event) => {
-  const selectedSeats = selectorForm.querySelectorAll('.seat_control:checked');
+  const selectedSeats = getSelectedSeats(selectorForm);
   if (selectedSeats.length > 0) {
     showScreen(screens.confirmation, cancelButton);
   }

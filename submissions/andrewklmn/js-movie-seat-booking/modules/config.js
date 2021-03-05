@@ -17,7 +17,7 @@ const payButton = document.querySelector('.confirm_button');
 
 const lastSelected = {
   date: selectorForm.querySelector('.date_selector > .radio_control:checked').getAttribute('aria-label'),
-  time: selectorForm.querySelector('.time_selector > .radio_control:checked').getAttribute('aria-label')
+  time: selectorForm.querySelector('.time_selector > .radio_control:checked').getAttribute('aria-label'),
 };
 
 export {
