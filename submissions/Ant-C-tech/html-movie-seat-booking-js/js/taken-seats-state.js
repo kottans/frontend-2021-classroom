@@ -19,177 +19,177 @@ const getArrayOfRandomIntWithRandomLength = () => {
 
 // Result of server work
 const takenSeatsState = {
-  "2021-02-24": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-02-25": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-02-26": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-02-27": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-02-28": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-03-01": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-03-02": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-03-03": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-03-04": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
-  "2021-03-05": {
-    General: {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "Digital 2D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-    "IMAX 3D": {
-      "14:00": getArrayOfRandomIntWithRandomLength(),
-      "17:00": getArrayOfRandomIntWithRandomLength(),
-      "20:00": getArrayOfRandomIntWithRandomLength(),
-    },
-  },
   "2021-03-06": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-07": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-08": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-09": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-10": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-11": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-12": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-13": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-14": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-15": {
+    General: {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "Digital 2D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+    "IMAX 3D": {
+      "14:00": getArrayOfRandomIntWithRandomLength(),
+      "17:00": getArrayOfRandomIntWithRandomLength(),
+      "20:00": getArrayOfRandomIntWithRandomLength(),
+    },
+  },
+  "2021-03-16": {
     General: {
       "14:00": getArrayOfRandomIntWithRandomLength(),
       "17:00": getArrayOfRandomIntWithRandomLength(),

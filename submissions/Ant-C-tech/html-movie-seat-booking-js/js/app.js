@@ -61,25 +61,33 @@ const getDayNumberFromDate = (date) => {
 
 // ======================== Main Working Functions =========================================
 
-const checkIsAvailableOrderTicketCertainDay = (isAvailable, date) => {
+const checkIsAvailableOrderTicketForParticularDay = (isAvailable, date) => {
+    const getCurrentYear = () => {
+      return new Date(Date.now()).getFullYear();
+    };
+
   const getCurrentMonth = () => {
     return new Date(Date.now()).getMonth();
   };
+
+    const getMovieYear = (date) => {
+      return new Date(date).getFullYear();
+    };
 
   const getMovieMonth = (date) => {
     return new Date(date).getMonth();
   };
 
-  const getYesterdayDateInDay = () => {
+  const getYesterdayDay = () => {
     return +getDayNumberFromDate(Date.now()) - 1;
   };
 
-  if (!isAvailable) {
-    return false;
-  }
   if (
-    getCurrentMonth() >= getMovieMonth(date) &&
-    getYesterdayDateInDay() >= +getDayNumberFromDate(date)
+    !isAvailable ||
+    getCurrentYear() > getMovieYear ||
+    getCurrentMonth() > getMovieMonth(date) ||
+    (getCurrentMonth() >= getMovieMonth(date) &&
+      getYesterdayDay() >= +getDayNumberFromDate(date))
   ) {
     return false;
   }
@@ -148,7 +156,7 @@ const dateSliderInit = () => {
       ) {
         date.disabled = true;
       } else {
-        date.disabled = !checkIsAvailableOrderTicketCertainDay(
+        date.disabled = !checkIsAvailableOrderTicketForParticularDay(
           movie["booking available state"]["date"][date.defaultValue],
           date.defaultValue
         );
@@ -210,7 +218,7 @@ const writeDataIntoUserOrderObject = () => {
   const createBarcodeNumber = () => {
     const barcodeNumber = [];
 
-    Array.from(chosenSeats).forEach(() =>
+    chosenSeats.forEach(() =>
       barcodeNumber.push(
         getRandomIntegerWithCertainLength(
           0,
@@ -226,7 +234,7 @@ const writeDataIntoUserOrderObject = () => {
   const createTicketNumber = () => {
     const ticketNumber = [];
 
-    Array.from(chosenSeats).forEach(() =>
+    chosenSeats.forEach(() =>
       ticketNumber.push(
         `${getRandomIntegerWithCertainLength(
           0,
@@ -458,7 +466,7 @@ const createContentOfMovieDateSection = () => {
         name="movie-date"
         value=${key}
          ${
-           checkIsAvailableOrderTicketCertainDay(
+           checkIsAvailableOrderTicketForParticularDay(
              movie["booking available state"]["date"][key],
              key
            )
@@ -841,7 +849,9 @@ const addListenerIntoSeatBookingScreen = () => {
     const makeDisabledBuyButton = () => {
       addClassToElement(buyTicketButton, "siteButton-disabled");
       buyTicketButton.removeAttribute("href");
-      buyTicketButton.removeEventListener("click", confirmTicket, { once: true });
+      buyTicketButton.removeEventListener("click", confirmTicket, {
+        once: true,
+      });
     };
 
     const confirmTicket = () => {
