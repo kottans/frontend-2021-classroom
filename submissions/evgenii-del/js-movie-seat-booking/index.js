@@ -2,7 +2,7 @@ const closePopupBtn = document.querySelector('.js-popup__close');
 const popup = document.querySelector('.js-popup');
 const popupBtn = document.querySelector('.js-popup__btn');
 const overlay = document.querySelector('.js-overlay');
-const form = document.forms[0];
+const form = document.querySelector('.main__inner');
 
 const openPopup = () => {
   popup.classList.add('popup_active');
@@ -14,16 +14,16 @@ const closePopup = () => {
   overlay.classList.remove('overlay_active');
 };
 
-const createTicketsBlock = (seats) => {
+const createTicketsBlock = (seats, seatPrice) => {
   const fragment = document.createDocumentFragment();
   seats.map((seat) => {
     const [row, column] = seat.split('-');
     const block = document.createElement('div');
-    block.className = 'popup__ticket';
+    block.classList.add('popup__ticket');
     block.innerHTML = `
-            <span class="popup__ticket-row">${row} ряд</span>
-            <span class="popup__ticket-column">${column} место</span>
-            <span class="popup__ticket-price">150 грн.</span>
+            <span class="popup__ticket-row">${row} row</span>
+            <span class="popup__ticket-column">${column} place</span>
+            <span class="popup__ticket-price">${seatPrice} UAH</span>
         `;
     return fragment.appendChild(block);
   });
@@ -31,13 +31,14 @@ const createTicketsBlock = (seats) => {
 };
 
 const changeCartData = (values) => {
+  const seatPrice = 150;
   const { months, times, seats } = values;
-  const totalPrice = 150 * seats.length;
+  const totalPrice = seatPrice * seats.length;
   const [technology, time] = times.split('-');
 
   const ticketsBlock = popup.querySelector('.js-popup__tickets');
   const contentBlock = popup.querySelector('.js-popup__content');
-  const ticketsFragment = createTicketsBlock(seats);
+  const ticketsFragment = createTicketsBlock(seats, seatPrice);
 
   ticketsBlock.innerHTML = '';
   contentBlock.innerHTML = `
@@ -48,7 +49,7 @@ const changeCartData = (values) => {
     `;
   popupBtn.innerHTML = `
         Buy
-        <span>${totalPrice} грн.</span>
+        <span>${totalPrice} UAH</span>
     `;
 
   ticketsBlock.appendChild(ticketsFragment);

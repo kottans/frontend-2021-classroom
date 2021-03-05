@@ -48,7 +48,7 @@ body {
   max-width: calc(100% / 7 * 3);
   width: 100%;
   background: top/cover no-repeat
-    url('https://raw.githubusercontent.com/evgenii-del/cinema-app/main/images/banner.webp');
+    url('https://raw.githubusercontent.com/evgenii-del/kottans-cinema-app/main/images/banner.webp');
   border-radius: 10px 0 0 10px;
 }
 
@@ -88,11 +88,11 @@ body {
 }
 
 .aside .aside-clock::after {
-  background-image: url('https://raw.githubusercontent.com/evgenii-del/cinema-app/96c822b94d649ce14b643eb24e7d90ca33e3ca86/images/clock.svg');
+  background-image: url('https://raw.githubusercontent.com/evgenii-del/kottans-cinema-app/e25be5d0cb7316eb16bc621d39b163a3cef614bd/images/clock.svg');
 }
 
 .aside .aside-heart::after {
-  background-image: url('https://raw.githubusercontent.com/evgenii-del/cinema-app/96c822b94d649ce14b643eb24e7d90ca33e3ca86/images/heart.svg');
+  background-image: url('https://raw.githubusercontent.com/evgenii-del/kottans-cinema-app/e25be5d0cb7316eb16bc621d39b163a3cef614bd/images/heart.svg');
 }
 
 .aside .aside__inner-title {
@@ -476,7 +476,7 @@ body {
   top: -9px;
   right: -9px;
   background: center / contain
-    url('https://raw.githubusercontent.com/evgenii-del/cinema-app/96c822b94d649ce14b643eb24e7d90ca33e3ca86/images/close.svg')
+    url('https://raw.githubusercontent.com/evgenii-del/kottans-cinema-app/e25be5d0cb7316eb16bc621d39b163a3cef614bd/images/close.svg')
     no-repeat #5c5c5c;
   background-size: 0.75rem;
   width: 1.5rem;
