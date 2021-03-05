@@ -1,36 +1,46 @@
-let rightSide = document.querySelector(".right-side");
-let form = document.querySelector("#tickets");
-let ticketContainer = document.querySelector(".ticket-container");
-let button = document.querySelector(".submit-button");
-let confirmButton = document.querySelector("#confirm-button");
-let cancelButton = document.querySelector("#cancel-button");
-let seatsSum = document.querySelector(".seats-sum");
-let moneySum = document.querySelector(".money-sum");
-let filter = document.querySelector("#filter");
-let modal = document.querySelector("#modal");
-let message = document.querySelector(".message");
+const form = document.querySelector("#tickets");
+const ticketContainer = document.querySelector("#ticket-container");
+const bookButton = document.querySelector("#menu-button");
+const confirmButton = document.querySelector("#confirm-button");
+const cancelButton = document.querySelector("#cancel-button");
+const seatsSum = document.querySelector("#seats-sum");
+const moneySum = document.querySelector("#money-sum");
+const filter = document.querySelector("#filter");
+const modal = document.querySelector("#modal");
+const message = document.querySelector("#message");
 let ticketSum = 0;
 let ticketCount = 0;
 
-const renderTickets = function(tickets) {
+const renderTickets = function (tickets) {
     let fragmentHtml = "";
     tickets.forEach(element => {
-            fragmentHtml += `<div class="ticket">
+        fragmentHtml += `<div class="ticket">
                                 <p>${element.defaultValue}</p>
                              </div>`
-        });
+    });
     ticketContainer.innerHTML = fragmentHtml;
 }
 
-const renderTotal = function(tickets) {
+const renderTotal = function (tickets) {
     ticketSum = 0;
     ticketCount = tickets.length;
-    tickets.forEach(e=> ticketSum += +e.dataset.price);
+    tickets.forEach(e => ticketSum += +e.dataset.price);
     seatsSum.innerHTML = `${ticketCount}`;
     moneySum.innerHTML = `${ticketSum} \$`;
 }
 
-let renderModal = function() {
+const hideModal = function () {
+    filter.style.display = "none";
+    modal.style.display = "none";
+}
+
+const showModal = function () {
+    filter.style.display = "block";
+    modal.style.display = "block";
+    renderModal();
+}
+
+const renderModal = function () {
     let fragmentHtml = "";
     if (ticketCount === 0) {
         fragmentHtml = `<h3>Please confirm booking</h3>
@@ -46,24 +56,13 @@ let renderModal = function() {
     message.innerHTML = fragmentHtml;
 }
 
-const handleInput = function() {
+const handleInput = function () {
     let choosenSeats = document.querySelectorAll("input:checked");
     renderTickets(choosenSeats);
     renderTotal(choosenSeats);
 }
 
-const hideModal = function() {
-    filter.style.display = "none";
-    modal.style.display = "none";
-}
-
-const showModal = function() {
-    filter.style.display = "block";
-    modal.style.display = "block";
-    renderModal();
-}
-
-button.addEventListener("click", showModal);
+bookButton.addEventListener("click", showModal);
 confirmButton.addEventListener("click", hideModal);
 cancelButton.addEventListener("click", hideModal);
 
