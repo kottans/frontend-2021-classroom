@@ -173,8 +173,10 @@ a {
 }
 
 .selected-seats{
+    max-height: 220px;
+    overflow-y: scroll;
     min-width: 150px;
-    padding: 50px 20px;
+    padding: 20px;
     margin-left: 60px;
     border-left: 2px solid #660708;
 }
