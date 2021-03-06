@@ -36,6 +36,7 @@ header {
 .cinema-hall {
     grid-column: 1;
     grid-row: 3/7;
+    margin: 0.5vw auto 0vw auto;
 }
 
 .selection-bar {
@@ -84,6 +85,7 @@ header {
 .screen>h2 {
     margin: 0 auto;
     width: fit-content;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -92,7 +94,6 @@ header {
     grid-gap: 0.85vw;
     grid-template-columns: repeat(17, 2vw);
     grid-template-rows: repeat(8, 3vw);
-    margin: 1vw auto 0vw;
     padding-top: 1vw;
     width: fit-content;
 }
@@ -195,12 +196,9 @@ span.place {
     font-size: 2vw;
     background-color: #BA181B;
     color: whitesmoke;
+    border: none;
     border-radius: 0.3vw;
     cursor: pointer;
-}
-
-#menu-button {
-    border: none;
 }
 
 #menu-button:focus {
@@ -213,7 +211,6 @@ span.place {
     border: 0.1vw solid white;
 }
 
-/*Дописки   */
 .ticket {
     margin: 0.5vw auto;
     width: 90%;
@@ -226,7 +223,7 @@ span.place {
 #ticket-container {
     margin-top: 10%;
     height: 30.5vw;
-    overflow: overlay;
+    overflow-y: auto;
 }
 
 #ticket-container>p {
@@ -279,11 +276,16 @@ span.place {
     margin-bottom: 6%;
 }
 
-.button-bar>input {
-    margin: 0 20px;
+#cancel-button, #confirm-button {
+    display: block;
+    margin: 0 1.2vw;
     width: 6.5vw;
-    height: 2.5vw;
+    height: 2.2vw;
     font-size: 1.4vw;
+    border: none;
+    border-radius: 0.3vw;
+    background: #ccc;
+    cursor: pointer;
 }
 
 #filter {
@@ -397,6 +399,13 @@ span.place {
 
     #modal {
         width: 62%;
+    }
+
+    #cancel-button, #confirm-button {
+        width: 14.5vw;
+        height: 5.5vw;
+        margin: 0 3.6vw;
+        font-size: 3.4vw;
     }
 
 }
