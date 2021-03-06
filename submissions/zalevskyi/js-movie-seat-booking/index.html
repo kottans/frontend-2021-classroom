@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie seat selection</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link href='./app.css' rel='stylesheet'>
+        <script defer src='./app.js'></script>
+    </head>
+    <body>
+        <header>
+            <h1 class='title'>Book your seats</h1>
+        </header>
+        <main class='main'>
+            <section id='film' class='film'>
+                <p class='film__title'>Film: Matrix</p>
+                <p class='film__date'>Date: <time datetime='2010-01-03'>2010-01-03</time></p>
+                <p class='film__time'>Time: <time datetime='10:30'>10:30</time></p>
+            </section>
+            <section id='legend' class='legend'>
+                <span class='seat'></span>
+                <span class='description'>Available</span>
+                <span class='seat booked'></span>
+                <span class='description'>Booked</span>
+                <span class='seat not_available'></span>
+                <span class='description'>Not Available</span>
+                <div class='screen'>Screen</div>
+            </section>
+            <section id='hall' class='hall'>
+                <form id='booking_hall' autocomplete='off'></form>
+            </section>
+            <section id='order' class='order'>
+                <p class='order_description'>Selected places:</p>
+                <table class='order_details'>
+                    <thead>
+                        <tr>
+                            <th class='order_details_heading'>Row</th>
+                            <th class='order_details_heading'>Seat</th>
+                            <th class='order_details_heading'>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id='order_list' class='order_list'>
+                    </tbody>
+                </table>
+                <div id='order_summary' class='order_summary removed'></div>
+                <input type='submit' form='booking_hall' id='booking_button' class='booking_button removed' value='Book Now'>
+            </section>
+            <section id='result' class='result removed'>
+                <p>Thank you for your order!</p>
+                <p>Booking successful</p>
+            </section>
+        </main>
+    </body>
+</html>
