@@ -1,9 +1,11 @@
-const bodyContainer = document.getElementById('body-container');
-const hall = document.getElementById('choose-section__hall');
-const confirmationSection = document.getElementById('choose-section__chosen-tickets');
-const confirmationSectionInnerContainer = document.getElementById('chosen-tickets__inner');
-const ticketsContainer = document.getElementById('chosen-tickets__tickets-container');
-const checkoutButton = document.getElementById('checkout-seats__checkout-button');
+const bodyContainer = document.getElementById('body-container'),
+      hall = document.getElementById('choose-section__hall'),
+      confirmationSection = document.getElementById('choose-section__chosen-tickets'),
+      confirmationSectionInnerContainer = document.getElementById('chosen-tickets__inner'),
+      ticketsContainer = document.getElementById('chosen-tickets__tickets-container'),
+      checkoutButton = document.getElementById('checkout-seats__checkout-button');
+
+const postPaymentDelay = 2000;
 
 const state = {
   chosenSeats: [],
@@ -64,6 +66,12 @@ const emptyContainer = (container) => {
 const convertStringRowSeatToNumberValues = (stringValue) =>
   stringValue.split('.').map((stringNumber) => parseInt(stringNumber));
 
+const renderSuccessfulPaymentConfirmation = (containerWhereRender, buttonToRenderSuccessfulPayment) => {
+  emptyContainer(containerWhereRender);
+  containerWhereRender.innerHTML = '√ SUCCESSFUL PAYMENT';
+  buttonToRenderSuccessfulPayment.innerHTML = 'SUCCESSFUL';
+}
+
 const renderConfirmationTickets = (chosenSeatsArray, containerWhereRender) => {
   emptyContainer(containerWhereRender);
   chosenSeatsArray.forEach((ticketValue, index) => {
@@ -84,23 +92,42 @@ const render = (chosenSeatsState, containerWhereRenderTickets, buttonToRenderTot
   renderButtonInformation(chosenSeatsState, buttonToRenderTotalInformation);
 };
 
-const renderModalConfirmation = (template, chosenSeatsState) => {
+const renderModalConfirmation = (template, chosenSeatsState, resetStateFunc) => {
   createModalConfirmation(template);
 
-  const ticketsContainerModal = document.getElementById('chosen-tickets__tickets-container--modal');
-  const buttonCloseModalConfirmation = document.getElementById('chosen-tickets__button--go-back');
-  const modalWrapper = document.getElementById('modal-wrapper');
-  const checkoutButtonModal = document.getElementById('checkout-seats__checkout-button--modal');
+  const ticketsContainerModal = document.getElementById('chosen-tickets__tickets-container--modal'),
+        buttonCloseModalConfirmation = document.getElementById('chosen-tickets__button--go-back'),
+        modalWrapper = document.getElementById('modal-wrapper'),
+        checkoutButtonModal = document.getElementById('checkout-seats__checkout-button--modal');
 
   render(chosenSeatsState, ticketsContainerModal, checkoutButtonModal);
 
   buttonCloseModalConfirmation.addEventListener('click', () => {
     modalWrapper.remove();
   });
+  checkoutButtonModal.addEventListener('click', () => {
+    renderSuccessfulPaymentConfirmation(ticketsContainerModal, checkoutButtonModal);
+    resetStateFunc();
+    setTimeout(() => {
+      modalWrapper.remove();
+    }, postPaymentDelay)
+  })
 };
 
-const addEventListeners = (chosenSeatsState) => {
+const initApp = () => {
+  let chosenSeatsState = state.chosenSeats;
 
+  const resetApp = () => {
+    const seatsLabels = hall.children; 
+
+    for (let seatLabel of seatsLabels) {
+      if (seatLabel.firstElementChild.checked) seatLabel.firstElementChild.checked = false;
+    }
+    chosenSeatsState = [];
+    ticketsContainer.innerHTML = '';
+    checkoutButton.innerHTML = 'Buy 0 tickets for $0.00';
+  }
+  
   hall.addEventListener('click', ({ target }) => {
     if (target.name !== 'seat') return;
     chosenSeatsState = updateChosenSeats(target.value, chosenSeatsState);
@@ -108,14 +135,8 @@ const addEventListeners = (chosenSeatsState) => {
   });
 
   checkoutButton.addEventListener('click', ({ target }) => {
-    renderModalConfirmation(createModalConfirmationTemplate(), chosenSeatsState);
+    if (chosenSeatsState.length) renderModalConfirmation(createModalConfirmationTemplate(), chosenSeatsState, resetApp);
   });
-};
-
-const initApp = () => {
-  let chosenSeatsState = state.chosenSeats;
-
-  addEventListeners(chosenSeatsState);
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
