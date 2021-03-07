@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HTML Movie Seat Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="Main">
+        <div class="Main_container">
+            <section class="Top">
+                <div class="Top_container">
+                    <h3 class="Top_title">Choose your seats</h3>
+                    <button class="Top_button ShoppingBasketButton">
+                        <div class="ShoppingBasketButton_container">
+                            <svg class="ShoppingBasketButton_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+                                <g>
+                                    <g id="shopping-cart">
+                                        <path d="M153,408c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S181.05,408,153,408z M0,0v51h51l91.8,193.8L107.1,306    c-2.55,7.65-5.1,17.85-5.1,25.5c0,28.05,22.95,51,51,51h306v-51H163.2c-2.55,0-5.1-2.55-5.1-5.1v-2.551l22.95-43.35h188.7    c20.4,0,35.7-10.2,43.35-25.5L504.9,89.25c5.1-5.1,5.1-7.65,5.1-12.75c0-15.3-10.2-25.5-25.5-25.5H107.1L84.15,0H0z M408,408    c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S436.05,408,408,408z"/>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div class="ShoppingBasketButton_count">0</div>
+                        </div>
+                    </button>
+                </div>
+            </section>
+            <section class="Middle">
+                <div class="Middle_container">
+                    <div class="Hints">
+                        <div class="Hints_container">
+                            <div class="Hint Hint--notAvailable">N/A</div>
+                            <div class="Hint Hint--selected">Selected</div>
+                            <div class="Hint Hint--available">A</div>
+                        </div>
+                    </div>
+                    <div class="CinemaScreen">
+                        <div class="CinemaScreen_layer CinemaScreen_mainLayer"></div>
+                        <div class="CinemaScreen_layer CinemaScreen_bottomLayer"></div>
+                    </div>
+                    <form class="Form" id="CinemaSeats">
+                        <fieldset class="Form_container Seats">
+                            <legend class="sr-only">A seat in cinema number</legend>
+                            <div class="Seats_row">
+
+                                <div class="Seats_col Seats_col--leftSide">
+                                    <label class="Form_label Seat Seat--dropRight">
+                                        <input type="checkbox" name="rows[1][]" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">1</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[2][]" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">1</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[2][]" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">2</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[3][]" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">1</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[3][]" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">2</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[4][]" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">1</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[4][]" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">2</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[5][]" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">1</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[5][]" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">2</span>
+                                    </label>
+                                </div>
+
+                                <div class="Seats_col">
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[1][]" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">2</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[1][]" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">3</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[1][]" value="4" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">4</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[1][]" value="5" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">5</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[2][]" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">3</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[2][]" value="4" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">4</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[2][]" value="5" class="Seat_checkbox">
+                                        <span class="Seat_view">5</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[2][]" value="6" class="Seat_checkbox">
+                                        <span class="Seat_view">6</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[3][]" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">3</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[3][]" value="4" class="Seat_checkbox">
+                                        <span class="Seat_view">4</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[3][]" value="5" class="Seat_checkbox">
+                                        <span class="Seat_view">5</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[3][]" value="6" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">6</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[4][]" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">3</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[4][]" value="4" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">4</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[4][]" value="5" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">5</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[4][]" value="6" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">6</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[5][]" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">3</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[5][]" value="4" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">4</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[5][]" value="5" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">5</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[5][]" value="6" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">6</span>
+                                    </label>
+                                </div>
+
+                                <div class="Seats_col Seats_col--rightSide">
+                                    <label class="Form_label Seat Seat--dropLeft">
+                                        <input type="checkbox" name="rows[1][]" value="6" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">6</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[2][]" value="7" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">7</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[2][]" value="8" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">8</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[3][]" value="7" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">7</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[3][]" value="8" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">8</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[4][]" value="7" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">7</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[4][]" value="8" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">8</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[5][]" value="7" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">7</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[5][]" value="8" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">8</span>
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="Seats_row">
+                                <div class="Seats_col Seats_col--leftSide">
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[6][]" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">1</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[6][]" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">2</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[7][]" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">1</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[7][]" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">2</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[8][]" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">1</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[8][]" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">2</span>
+                                    </label>
+                                </div>
+                                <div class="Seats_col">
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[6][]" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">3</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[6][]" value="4" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">4</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[6][]" value="5" class="Seat_checkbox">
+                                        <span class="Seat_view">5</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[6][]" value="6" class="Seat_checkbox">
+                                        <span class="Seat_view">6</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[7][]" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">3</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[7][]" value="4" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">4</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[7][]" value="5" class="Seat_checkbox">
+                                        <span class="Seat_view">5</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[7][]" value="6" class="Seat_checkbox">
+                                        <span class="Seat_view">6</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[8][]" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">3</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[8][]" value="4" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">4</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[8][]" value="5" class="Seat_checkbox">
+                                        <span class="Seat_view">5</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[8][]" value="6" class="Seat_checkbox">
+                                        <span class="Seat_view">6</span>
+                                    </label>
+                                </div>
+                                <div class="Seats_col Seats_col--rightSide">
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[6][]" value="7" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">7</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[6][]" value="8" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">8</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[7][]" value="7" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">7</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[7][]" value="8" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">8</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[8][]" value="7" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">7</span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="rows[8][]" value="8" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view">8</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="Middle_shoppingBasket ShoppingBasket">
+                        <div class="ShoppingBasket_container">
+                            <h3 class="ShoppingBasket_title">You are buying:</h3>
+                            <div class="ShoppingBasket_content">
+                                <ol class="ShoppingBasket_list"></ol>
+                                <div class="ShoppingBasket_total">
+                                    <div class="ShoppingBasket_count"></div>
+                                    <div class="ShoppingBasket_cost"></div>
+                                    <button type="submit" class="Button" form="CinemaSeats">Book Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
