@@ -140,6 +140,7 @@
 
 .chosen-tickets__inner {
   width: 50%;
+  max-width: 350px;
   height: 70%;
   margin: auto;
   border-radius: 10px;
