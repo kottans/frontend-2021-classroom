@@ -4,10 +4,19 @@ const SEAT_CONTROL = document.querySelector('.seat-control');
 const SUBMIT_BUTTON = document.querySelector('.submit-button');
 const TICKET_WRAPPER = document.querySelector('.ticket-wrapper');
 const TICKET_VALUES = document.querySelectorAll('.ticket__value');
-const ORDER_INFO_LIST = document.querySelector('.order__info-list');
-const ORDER_TOTAL_PRICE = document.querySelector('.order__total-price-value');
+const ORDER_SEAT_VALUE_LIST = document.querySelector('.order__seat-value-list');
+const ORDER_PLACEHOLDER_ITEM = `
+  <li class="order__seat-value-item order__placeholder-item">
+    <div>
+      <span>Row</span>
+      <span class="order__row"></span>
+      <span>/&nbsp;Seat&nbsp;</span>
+      <span class="order__seat"></span>
+    </div>
+    <span class="order__price">$</span>
+  </li>`;
+const ORDER_TOTAL_PRICE = document.querySelector('.order__total-price');
 const SEAT_PRICE = 18;
-const RENDERED_ORDER_INFO_ITEMS = {};
 
 SUBMIT_BUTTON.addEventListener('click', (e) => {
   e.preventDefault();
@@ -20,15 +29,11 @@ TICKET_WRAPPER.addEventListener('click', () => {
   hideTicketWrapper();
   resetTicket();
 });
-SEAT_CONTROL.addEventListener('input', updateOrderInfoList);
-
-function getSeatHtml(value) {
-  const [row, seat] = value.split('_');
-  return `<li class="ticket__seat-value-item">Row
-              <span class="ticket__row-value">${row}</span>/ Seat
-              <span class="ticket__seat-value">${seat}<span>
-            </li>`;
-}
+SEAT_CONTROL.addEventListener('input', () => {
+  const checkedSeats = SEAT_CONTROL.querySelectorAll(':checked');
+  updateOrderSeatValueList(checkedSeats);
+  updateOrderTotalPrice(checkedSeats);
+});
 
 function fillTicket() {
   const day = DAY_CONTROL.querySelector('.day-control__input:checked').value;
@@ -38,7 +43,7 @@ function fillTicket() {
   } = TIME_CONTROL.querySelector('input:checked');
   const seat = Array.prototype.map
     .call(SEAT_CONTROL.querySelectorAll('input:checked'), (input) =>
-      getSeatHtml(input.value)
+      getTicketSeatValueItem(input.value)
     )
     .join('');
 
@@ -47,6 +52,14 @@ function fillTicket() {
   TICKET_VALUES.forEach((ticketValue) =>
     ticketValue.insertAdjacentHTML('afterbegin', values[ticketValue.id] || '-')
   );
+}
+
+function getTicketSeatValueItem(value) {
+  const [row, seat] = value.split('_');
+  return `<li class="ticket__seat-value-item">Row
+            <span class="ticket__row-value">${row}</span>/ Seat
+            <span class="ticket__seat-value">${seat}<span>
+          </li>`;
 }
 
 function showTicketWrapper() {
@@ -61,39 +74,31 @@ function resetTicket() {
   TICKET_VALUES.forEach((ticketValue) => (ticketValue.textContent = ''));
 }
 
-function updateOrderInfoList({ srcElement, srcElement: { value } }) {
-  if (srcElement.checked) {
-    addOrderInfoItem(value);
+function updateOrderSeatValueList(checkedSeats) {
+  let orderSeatValueItems = '';
+  if (!checkedSeats.length) {
+    orderSeatValueItems = ORDER_PLACEHOLDER_ITEM;
   } else {
-    removeOrderInfoItem(value);
+    checkedSeats.forEach(
+      (seat) => (orderSeatValueItems += getOrderSeatValueItem(seat))
+    );
   }
+  ORDER_SEAT_VALUE_LIST.innerHTML = orderSeatValueItems;
 }
 
-function addOrderInfoItem(value) {
-  const infoItem = createOrderInfoItem(value);
-  ORDER_INFO_LIST.append(infoItem);
-  RENDERED_ORDER_INFO_ITEMS[value] = infoItem;
-  ORDER_TOTAL_PRICE.textContent = +ORDER_TOTAL_PRICE.textContent + SEAT_PRICE;
-}
-
-function createOrderInfoItem(value) {
+function getOrderSeatValueItem({ value }) {
   const [row, seat] = value.split('_');
-
-  const infoItem = document.createElement('li');
-  infoItem.classList.add('order__info-item');
-  infoItem.innerHTML = `<div>
-        <span>Row</span>
-        <span class="order__row-value">${row}</span>
-        <span>/&nbsp;Seat&nbsp;</span>
-        <span class="order__seat-value">${seat}</span>
-       </div>
-       <span class="order__price-value">$18</span>`;
-
-  return infoItem;
+  return `<li class="order__seat-value-item">
+            <div>
+              <span>Row</span>
+              <span class="order__row">${row}</span>
+              <span>/&nbsp;Seat&nbsp;</span>
+              <span class="order__seat">${seat}</span>
+            </div>
+            <span class="order__price">$18</span>
+          </li>`;
 }
 
-function removeOrderInfoItem(value) {
-  RENDERED_ORDER_INFO_ITEMS[value].remove();
-  delete RENDERED_ORDER_INFO_ITEMS[value];
-  ORDER_TOTAL_PRICE.textContent = +ORDER_TOTAL_PRICE.textContent - SEAT_PRICE;
+function updateOrderTotalPrice(checkedSeats) {
+  ORDER_TOTAL_PRICE.textContent = checkedSeats.length * SEAT_PRICE;
 }

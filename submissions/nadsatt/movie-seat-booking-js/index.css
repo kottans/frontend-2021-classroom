@@ -412,20 +412,20 @@ body {
   letter-spacing: 2px;
   padding: 10px;
 }
-.order__info-list {
+.order__seat-value-list {
   position: relative;
   max-height: 120px;
   overflow: scroll;
   padding: 0 1rem;
 }
-.order__info-item {
+.order__seat-value-item {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
   font-size: .8rem;
 }
-.order__info-list::before,
-.order__info-list::after {
+.order__seat-value-list::before,
+.order__seat-value-list::after {
   content: '';
   display: block;
   border-bottom: 1px solid var(--gold);
@@ -441,8 +441,8 @@ body {
   color: var(--gold);
   font-weight: bold;
 }
-.order__seat-value,
-.order__row-value {
+.order__seat,
+.order__row {
   color: var(--gold);
   font-weight: bold;
 }
