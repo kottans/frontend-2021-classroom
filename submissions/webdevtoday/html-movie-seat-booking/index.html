@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>HTML Movie Seat Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="Main">
+        <div class="Main_container">
+
+            <section class="Top">
+                <div class="Top_container">
+                    <h3 class="Top_title">Choose your seats</h3>
+                </div>
+            </section>
+
+            <section class="Middle">
+                <div class="Middle_container">
+
+                    <div class="Hints">
+                        <div class="Hints_container">
+                            <div class="Hint Hint--notAvailable">N/A</div>
+                            <div class="Hint Hint--selected">Selected</div>
+                            <div class="Hint Hint--available">A</div>
+                        </div>
+                    </div>
+
+                    <div class="CinemaScreen">
+                        <div class="CinemaScreen_layer CinemaScreen_mainLayer"></div>
+                        <div class="CinemaScreen_layer CinemaScreen_bottomLayer"></div>
+                    </div>
+
+                    <form class="Form">
+                        <fieldset class="Form_container Seats">
+                            <legend class="sr-only">A seat in cinema number</legend>
+                            <div class="Seats_row">
+
+                                <div class="Seats_col Seats_col--leftSide">
+                                    <label class="Form_label Seat Seat--dropRight">
+                                        <input type="checkbox" name="seats" value="1" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="2" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="3" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="4" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="5" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="6" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="7" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="8" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="9" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                </div>
+
+                                <div class="Seats_col">
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="10" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="11" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="12" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="13" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="14" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="15" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="16" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="17" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="18" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="19" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="20" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="21" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="22" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="23" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="24" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="25" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="26" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="27" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="28" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="29" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                </div>
+
+                                <div class="Seats_col Seats_col--rightSide">
+                                    <label class="Form_label Seat Seat--dropLeft">
+                                        <input type="checkbox" name="seats" value="30" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="31" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="32" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="33" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="34" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="35" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="36" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="37" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="38" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="Seats_row">
+
+                                <div class="Seats_col Seats_col--leftSide">
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="39" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="40" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="41" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="42" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="43" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="44" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                </div>
+
+                                <div class="Seats_col">
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="45" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="46" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="47" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="48" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="49" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="50" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="51" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="52" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="53" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="54" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="55" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="56" class="Seat_checkbox">
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                </div>
+
+                                <div class="Seats_col Seats_col--rightSide">
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="57" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="58" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="59" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="60" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="61" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                    <label class="Form_label Seat">
+                                        <input type="checkbox" name="seats" value="62" class="Seat_checkbox" disabled>
+                                        <span class="Seat_view"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </div>
+            </section>
+
+
+
+        </div>
+    </main>
+</body>
+</html>
