@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+:root {
+    --max-width-content: 500px;
+
+    --Main-bg-color: #252432;
+
+    --Top-text-color: #c6c6cd;
+
+    --Hint-text-color: #666684;
+
+    --Hint-notAvailable-bg-color: #35334b;
+    --Hint-selected-bg-color: #37e7f7;
+    --Hint-available-bg-color: #ffffff;
+
+    --CinemaScreen-bg-color: #f8f7f5;
+
+    --Seat-notAvailable-bg-color: #444451;
+    --Seat-selected-bg-color: #37e7f7;
+    --Seat-focused-bg-color: rgb(255, 238, 0);
+    --Seat-available-bg-color: #ffffff;
+    --Seat-width: 30px;
+    --Seat-height: 25px;
+
+    --Seats-gap: 10px;
+    --Seats-col-width: calc(var(--Seat-width) * 4 + var(--Seats-gap) * 4);
+
+    --Button-bg-color: #44b755;
+}
+
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.lock-body {
+    overflow: hidden;
+}
+
+.Main {
+    min-width: 360px;
+    min-height: 100vh;
+    background-color: var(--Main-bg-color);
+}
+.Main_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Top {
+    text-align: center;
+    color: var(--Top-text-color);
+}
+.Top_container {
+    padding: 15px;
+}
+.Top_title {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+.Top_button {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(-10%, 10%);
+}
+
+.Middle {
+    flex-grow: 1;
+}
+.Middle_shoppingBasket {
+    margin: 0 auto;
+    position: relative;
+    max-width: var(--max-width-content);
+}
+
+.Hints_container {
+    margin: 0 auto;
+    padding: 30px 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: var(--max-width-content);
+}
+
+.Hint {
+    display: flex;
+    align-items: center;
+    color: var(--Hint-text-color);
+}
+.Hint::before {
+    content: "";
+    margin: 0 15px 0 0;
+    display: block;
+    width: 30px;
+    height: 25px;
+}
+.Hint--notAvailable::before {
+    background-color: var(--Hint-notAvailable-bg-color);
+}
+.Hint--selected::before {
+    background-color: var(--Hint-selected-bg-color);
+}
+.Hint--available::before {
+    background-color: var(--Hint-available-bg-color);
+}
+
+.CinemaScreen {
+    position: relative;
+    margin: 30px auto;
+    max-width: var(--max-width-content);
+    height: 150px;
+    overflow: hidden;
+    background-color: var(--Main-bg-color);
+}
+.CinemaScreen_layer {
+    position: absolute;
+    left: 50%;
+    width: 130%;
+    height: 100%;
+    border-radius: 50% 50% 0 0;
+    transform: translateX(-50%);
+}
+.CinemaScreen_mainLayer {
+    top: 0;
+    background:
+        linear-gradient(130deg, transparent 0%, transparent 40%, var(--CinemaScreen-bg-color) 40%, var(--CinemaScreen-bg-color) 77%, var(--Main-bg-color) 77%),
+        linear-gradient(55deg, var(--Main-bg-color) 0%, var(--Main-bg-color) 23%, var(--CinemaScreen-bg-color) 23%, var(--CinemaScreen-bg-color) 40%)
+}
+.CinemaScreen_bottomLayer {
+    top: 60%;
+    background-color: var(--Main-bg-color);
+}
+
+.Seat--dropRight {
+    margin-right: calc(var(--Seat-width) + var(--Seats-gap));
+}
+.Seat--dropLeft {
+    margin-left: calc(var(--Seat-width) + var(--Seats-gap));
+}
+.Seat_checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+.Seat_view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--Seat-width);
+    height: var(--Seat-height);
+    background-color: var(--Seat-available-bg-color);
+}
+.Seat_checkbox + .Seat_view:hover {
+    cursor: pointer;
+}
+.Seat_checkbox:focus + .Seat_view {
+    border: 3px solid var(--Seat-focused-bg-color);
+}
+.Seat_checkbox:checked + .Seat_view {
+    background-color: var(--Seat-selected-bg-color);
+}
+.Seat_checkbox:checked:focus + .Seat_view {
+    border: 3px solid var(--Seat-focused-bg-color);
+}
+.Seat_checkbox:disabled + .Seat_view:hover {
+    cursor: not-allowed;
+}
+.Seat_checkbox:disabled + .Seat_view {
+    background-color: var(--Seat-notAvailable-bg-color);
+    color: #fff;
+}
+
+.Seats {
+    border: none;
+}
+.Seats_row {
+    display: flex;
+    justify-content: center;
+}
+.Seats_col {
+    margin-bottom: calc(var(--Seat-height) + var(--Seats-gap) * 2);
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: var(--Seats-gap);
+    width: var(--Seats-col-width);
+}
+.Seats_col--leftSide {
+    padding: 0 var(--Seat-width);
+}
+.Seats_col--rightSide {
+    padding-left: calc(var(--Seat-width) + var(--Seats-gap) * 2);
+    padding-right: var(--Seat-width);
+}
+
+.Button {
+    margin: 0 auto;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    max-width: var(--max-width-content);
+    border: none;
+    color: #fff;
+    background-color: var(--Button-bg-color);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.Button:hover {
+    opacity: .7;
+}
+
+.ShoppingBasket {
+    color: #fff;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.ShoppingBasket--active {
+    opacity: 1;
+}
+.ShoppingBasket_container {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: calc(50% + var(--max-width-content) / 2);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ShoppingBasket_title {
+    padding: 0 0 5px 0;
+}
+.ShoppingBasket_list {
+    padding: 5px 0 5px 10px;
+    max-height: 78vh;
+    overflow-y: auto;
+    list-style-position: inside;
+    scrollbar-width: thin;
+}
+.ShoppingBasket_list::-webkit-scrollbar {
+    width: 7px;
+    background-color: #fff;
+}
+.ShoppingBasket_list::-webkit-scrollbar-button {
+    background-color: var(--Main-bg-color);
+    height: 10px;
+}
+.ShoppingBasket_list::-webkit-scrollbar-thumb {
+    background-color: var(--Main-bg-color);
+    border: 1px solid #fff;
+}
+.ShoppingBasket_total {
+    padding: 5px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ShoppingBasketButton {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: none;
+    z-index: 1;
+}
+.ShoppingBasketButton--active .ShoppingBasketButton_container::before {
+    content: "X";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2.5em;
+}
+.ShoppingBasketButton--active .ShoppingBasketButton_svg {
+    display: none;
+}
+.ShoppingBasketButton--active .ShoppingBasketButton_count {
+    display: none;
+}
+.ShoppingBasketButton_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.ShoppingBasketButton_svg {
+    fill: var(--Top-text-color);
+}
+.ShoppingBasketButton_count {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 0;
+    color: #fff;
+    background-color: #ff0000;
+    transition: opacity .5s ease;
+}
+.ShoppingBasketButton_count--active {
+    opacity: 1;
+}
+
+@media (min-width: 650px) and (max-width: 1000px) {
+    .ShoppingBasket_container {
+        position: static;
+        height: auto;
+    }
+}
+
+@media (max-width: 649px) {
+    :root {
+        --Seat-width: 30px;
+        --Seat-height: 25px;
+        --Seats-gap: 5px;
+    }
+    .Top_button {
+        display: block;
+    }
+    .CinemaScreen {
+        height: 125px;
+    }
+    .CinemaScreen_mainLayer {
+        background:
+            linear-gradient(130deg, transparent 0%, transparent 40%, var(--CinemaScreen-bg-color) 40%, var(--CinemaScreen-bg-color) 73%, var(--Main-bg-color) 73%),
+            linear-gradient(55deg, var(--Main-bg-color) 0%, var(--Main-bg-color) 27%, var(--CinemaScreen-bg-color) 27%, var(--CinemaScreen-bg-color) 40%)
+    }
+
+    .Seats_col--leftSide {
+        padding: 0 var(--Seat-width) 0 0;
+        width: calc(var(--Seats-col-width) - var(--Seat-width));
+    }
+    .Seats_col--rightSide {
+        padding-right: 0;
+        width: calc(var(--Seats-col-width) - var(--Seat-width));
+    }
+
+    .ShoppingBasket_container {
+        top: 0;
+        right: -200%;
+        width: 100%;
+        background-color: var(--Main-bg-color);
+        transition: right .5s ease;
+    }
+    .ShoppingBasket_container--active {
+        right: 0;
+    }
+}
