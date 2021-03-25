@@ -1,0 +1,308 @@
+@media screen and (max-width: 1450px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .aside-menu {
+    width: 270px;
+  }
+  .aside-menu-h1 {
+    font-size: 70px;
+  }
+  .tickets,
+  .aside-menu-button {
+    width: 250px;
+  }
+  .aside-menu-button {
+    font-size: 65px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    position: relative;
+  }
+
+  .header-menu {
+    position: relative;
+    right: -60px;
+    top: 15px;
+  }
+
+  .input-menu,
+  .label-menu {
+    display: none;
+  }
+
+  .aside-menu {
+    display: block;
+    width: 510px;
+    height: 440px;
+
+    position: absolute;
+    top: 780px;
+    left: 200px;
+  }
+
+  .aside-menu-block-h1 {
+    height: 100px;
+  }
+
+  .asime-menu-poster {
+    display: none;
+  }
+
+  .movie-block-inside {
+    width: 100%;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    min-width: 485px;
+    margin-bottom: 7px;
+  }
+  .aside-menu-button {
+    margin-left: 13px;
+  }
+
+  .aside-menu-tickets-green {
+    margin-top: 20px;
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .main {
+    margin: 0 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .aside-menu {
+    width: 450px;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    min-width: 430px;
+  }
+
+  .aside-menu-button {
+    margin-left: 10px;
+  }
+
+  .container {
+    margin-left: 120px;
+  }
+
+  .main {
+    width: 600px;
+    font-size: 40px;
+
+    margin-top: 30px;
+    margin-left: 100px;
+  }
+
+  .main-poster {
+    max-width: 500px;
+    max-height: 300px;
+
+    border-radius: 50px;
+  }
+
+  .seating {
+    width: 600px;
+  }
+
+  .seating-screen svg {
+    width: 500px;
+    left: 0px;
+  }
+
+  .seating-screen::after {
+    left: 210px;
+  }
+
+  .seating-container {
+    margin: 0;
+    margin-left: 190px;
+  }
+
+  .label-seating-place-blue {
+    min-width: 50px;
+    border-radius: 70px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .aside-menu {
+    left: 105px;
+  }
+
+  .container {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .input-menu,
+  .label-menu {
+    display: none;
+  }
+
+  .aside-menu {
+    display: flex;
+    margin-left: -60px;
+  }
+
+  .container {
+    margin-left: -40px;
+  }
+
+  .main-form {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .aside-menu {
+    top: 650px;
+  }
+
+  .main {
+    margin-left: 70px;
+  }
+
+  .main-poster {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .main-form {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aside-menu {
+    width: 370px;
+    margin-left: -120px;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    min-width: 330px;
+  }
+
+  .aside-menu-button {
+    margin-left: 20px;
+  }
+
+  .main {
+    width: 450px;
+    margin-left: 55px;
+  }
+
+  .seating {
+    width: 450px;
+    margin-left: -20px;
+  }
+
+  .seating-container {
+    margin-left: 120px;
+  }
+
+  .seating-screen {
+    max-width: 300px;
+  }
+
+  .seating-screen svg {
+    width: 300px;
+    left: 0px;
+  }
+
+  .seating-screen::after {
+    left: 120px;
+
+    font-size: 25px;
+  }
+
+  .seating-name {
+    right: -20px;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .aside-menu {
+    width: 350px;
+    left: 120px;
+    margin-bottom: 10px;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    width: 310px;
+  }
+
+  .aside-menu-button {
+    margin-left: 10px;
+  }
+
+  .main {
+    font-size: 30px;
+  }
+
+  .main-poster {
+    order: 2;
+    margin-left: 10px;
+  }
+
+  .main-form {
+    order: 1;
+    margin-left: -50px;
+  }
+
+  .choose-date,
+  .choose-time {
+    width: 60px;
+
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 422px) {
+  .aside-menu {
+    width: 300px;
+    left: 110px;
+  }
+
+  .tickets,
+  .aside-menu-button {
+    min-width: 230px;
+  }
+
+  .aside-menu-button {
+    width: 280px;
+    height: 80px;
+  }
+
+  .main-poster {
+    max-width: 250px;
+    max-height: 250px;
+
+    margin-left: 35px;
+  }
+
+  .main-form {
+    margin-left: -80px;
+  }
+
+  .seating {
+    margin-left: -45px;
+  }
+}
