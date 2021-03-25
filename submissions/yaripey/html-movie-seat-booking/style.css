@@ -1,0 +1,699 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: teal;
+  font-weight: 300;
+  font-size: 40px;
+  margin: 15px;
+  transition: all 0.2s ease;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.logo:hover {
+  background: teal;
+  color: white;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.site-path ol {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 10px;
+  list-style: none;
+}
+
+.path-link {
+  position: relative;
+  padding: 15px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: grey;
+}
+
+.path-link:hover {
+  text-decoration: underline;
+}
+
+.path-link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: grey;
+  right: -3px;
+  border-radius: 15px;
+  top: 25px;
+}
+
+.path-link.active:before,
+.path-link.active:after {
+  display: none;
+}
+
+.path-link.active {
+  color: teal;
+}
+
+.settings-buttons ul {
+  display: flex;
+  list-style: none;
+}
+
+.settings-buttons-link {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-size: 30% 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease;
+}
+
+.settings-buttons-link.profile {
+  background-image: url("assets/user-circle-solid-teal.svg");
+}
+
+.settings-buttons-link.sign-out {
+  background-image: url("assets/sign-out-alt-solid-red.svg");
+}
+
+.settings-buttons-link.settings {
+  background-image: url("assets/cog-solid-teal.svg");
+}
+
+.settings-buttons-link.profile:hover {
+  background-color: teal;
+  background-image: url("assets/user-circle-solid-white.svg");
+}
+
+.settings-buttons-link.sign-out:hover {
+  background-color: #ff4545;
+  background-image: url("assets/sign-out-alt-solid-white.svg");
+}
+
+.settings-buttons-link.settings:hover {
+  background-color: teal;
+  background-image: url("assets/cog-solid-white.svg");
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.advertisement {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  background-color: white;
+}
+
+.poster:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.poster h3 {
+  order: 2;
+  padding: 15px;
+}
+
+.poster h3 a {
+  color: teal;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.adv-poster-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  order: 1;
+}
+
+.adv-info {
+  order: 3;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.adv-poster-container img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -50px;
+}
+
+.hall {
+  width: 50%;
+}
+
+.tickets-container {
+  width: 350px;
+  position: relative;
+}
+
+.tickets {
+  position: sticky;
+  background: white;
+  top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+}
+
+.tickets h2 {
+  font-family: "Roboto", sans-serif;
+  color: teal;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.heading,
+.check-sum {
+  display: flex;
+  padding: 5px;
+  background: teal;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-between;
+}
+
+.check {
+  margin: 10px 0;
+}
+
+.check ul {
+  list-style: none;
+}
+
+.check ul li {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+}
+
+.check ul li:nth-child(2n) {
+  background: lightgrey;
+}
+
+.buy-tickets {
+  width: 100%;
+  border: none;
+  background: #ff4545;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+.buy-tickets:hover {
+  background: white;
+  color: #ff4545;
+}
+
+.other-films {
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: teal;
+}
+
+.about-film {
+  display: flex;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  margin: 10px;
+}
+
+.film-poster img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.information {
+  padding: 15px;
+}
+
+.description {
+  font-family: "Roboto", sans-serif;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.date-block,
+.time-block {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.radio-box {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.input-label {
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: teal;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.input-label:hover {
+  background: teal;
+  color: white;
+}
+
+.radio-box:disabled + .input-label {
+  color: grey;
+}
+
+.radio-box:disabled:hover + .input-label {
+  background: none;
+  color: grey;
+  cursor: default;
+}
+
+.radio-box:checked + .input-label {
+  border: 2px solid teal;
+}
+
+.sits {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.first-half,
+.second-half {
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.first-half {
+  background: teal;
+  width: 80%;
+  height: 15px;
+}
+
+.second-half {
+  background: grey;
+  width: 90%;
+  height: 25px;
+}
+
+.sits-buttons {
+  margin-top: 20px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hall-row {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: center;
+  z-index: 1;
+  padding: 5px;
+}
+
+.screen-label {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  color: teal;
+  font-weight: 600;
+}
+
+.hall-row:nth-child(2n) {
+  background: lightgrey;
+}
+
+.sit-check {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.sit-text {
+  line-height: 40px;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  color: teal;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.sit-text:hover {
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.sit-check:before {
+  display: block;
+  content: "";
+  background: grey;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sit-check:checked + .sit-text {
+  background: teal;
+  color: white;
+}
+
+.sit-check:disabled + .sit-text {
+  background: lightgrey;
+  color: grey;
+}
+
+.sit-check:disabled:hover + .sit-text {
+  transform: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  cursor: default;
+}
+
+.row-number {
+  font-size: 25px;
+  padding: 10px;
+  color: grey;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+}
+
+footer {
+  background: black;
+  width: 100%;
+}
+
+input:focus + .sit-text {
+  outline: 1px solid black;
+}
+
+@media (max-width: 1850px) {
+  .advertisement {
+    width: 200px;
+    margin: 20px;
+  }
+
+  .poster {
+    width: 100%;
+  }
+
+  .tickets-container {
+    width: 200px;
+  }
+
+  .tickets {
+    width: 100%;
+  }
+
+  .tickets h2 {
+    font-size: 20px;
+  }
+
+  .buy-tickets {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .film-poster {
+    min-width: 200px;
+  }
+
+  .film-poster img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .sit-text {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .sit-check:before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .row-number {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1060px) {
+  header {
+    height: 70px;
+  }
+
+  .logo {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .settings-buttons-link {
+    width: 70px;
+    height: 70px;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hall {
+    order: 1;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sit-text {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .sit-check:before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tickets {
+    margin: 0px;
+  }
+
+  .tickets-container {
+    order: 2;
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .buy-tickets {
+    width: 20%;
+  }
+
+  .advertisement {
+    order: 3;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .poster {
+    width: 300px;
+  }
+}
+
+@media (max-width: 750px) {
+  .about-film {
+    flex-direction: column;
+  }
+
+  .sits-buttons {
+    width: 100%;
+  }
+
+  .advertisement {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .poster {
+    width: 80%;
+    min-height: 500px;
+  }
+
+  .adv-poster-container img {
+    top: -20%;
+  }
+}
+
+@media (max-width: 530px) {
+  header {
+    height: 50px;
+    position: sticky;
+    top: 0px;
+    z-index: 2000;
+  }
+
+  .settings-buttons-link {
+    height: 50px;
+    width: 50px;
+  }
+
+  .information h1 {
+    font-size: 30px;
+  }
+
+  .sit-text {
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .sit-check:before {
+    width: 25px;
+    height: 25px;
+  }
+
+  .sit-text:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .buy-tickets {
+    width: 200px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .path-link {
+    font-size: 12px;
+  }
+
+  .path-link:before {
+    top: 18px;
+  }
+
+  .row-number {
+    font-size: 15px;
+  }
+
+  .hall-row:nth-child(2n) {
+    height: 40px;
+    background-color: white;
+  }
+
+  .hall-row {
+    padding: 0px;
+  }
+}
