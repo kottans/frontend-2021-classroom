@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #a1a0a6;
+  border: none;
+}
+
+body {
+  background-color: #101117;
+}
+
+.booking-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  width: 100%;
+
+  background-color: #222131;
+}
+
+@media (orientation: portrait) {
+  .booking-popup {
+    height: 100vh;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  background-color: #191826;
+  font-size: 14px;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 18px;
+}
+
+nav {
+  position: absolute;
+  left: 0px;
+}
+
+.btn-back {
+  width: 40px;
+  height: 40px;
+
+  background-image: url('./arrow_back.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.btn-back:hover {
+  background-color: #27263d;
+}
+
+.btn-back:active {
+  background-color: #3d2634;
+}
+
+.movie-info {
+  margin: auto;
+}
+
+.movie-date {
+  display: block;
+
+  text-align: center;
+  font-size: 14px;
+}
+
+.movie-duration {
+  display: block;
+  padding-top: 8px;
+
+  text-align: center;
+  font-size: 14px;
+}
+
+.movie-name {
+  color: #f3ead5;
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.seats-legend {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 50px auto 10px;
+
+  font-size: 14px;
+}
+
+.seat-color-descr {
+  display: flex;
+  align-items: center;
+
+  color: #6a6885;
+}
+
+.seat-figure {
+  height: 14px;
+  width: 20px;
+  margin-right: 5px;
+
+  border-radius: 2px;
+}
+
+.na {
+  background-color: rgb(109, 109, 109);
+}
+
+.free {
+  background-color: rgb(161, 84, 84);
+}
+
+.selected {
+  background-color: rgb(172 140 88);
+}
+
+.booking-form {
+  width: 90%;
+  margin-bottom: 10vh;
+}
+
+.booking-form::before {
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin: 10px auto 70px;
+
+  content: '';
+  background-color: rgb(0 6 29 / 11%);
+  box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 49%);
+  border-bottom: 2px solid rgb(255 255 255 / 49%);
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+  animation: shine 1.5s infinite alternate;
+}
+
+.hall-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30vw;
+}
+
+.seat {
+  display: block;
+  height: 8vw;
+  width: 8vw;
+}
+
+.seat-view {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  background-color: rgb(195, 0, 0);
+  border-radius: 3px;
+  box-shadow: inset 0px -1.5vw 2px 1.5vw rgb(255 255 255 / 40%);
+}
+
+.row-2 .seat-view {
+  filter: brightness(0.8);
+}
+
+.row-3 .seat-view {
+  filter: brightness(0.6);
+}
+
+.seat-view:hover,
+.btn-back:hover,
+.btn-buy:hover {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.seat-input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.seat-input:disabled ~ .seat-view {
+  background-color: rgb(68, 64, 102);
+}
+
+.seat-input:checked ~ .seat-view {
+  background-color: rgb(167, 103, 0);
+}
+
+.seat-input:focus ~ .seat-view {
+  border: 2px solid rgb(255, 255, 184);
+}
+
+.btn-buy {
+  height: 44px;
+  width: 200px;
+  background-color: #8a94ff;
+  color: #191826;
+  border: none;
+  border-radius: 9px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.btn-buy:hover {
+  background-color: #a2aafd;
+}
+
+.btn-buy:active {
+  background-color: rgb(172 140 88);
+}
+
+@keyframes shine {
+  from {
+    box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 20%);
+    border-bottom: 2px solid rgb(255 255 255 / 10%);
+  }
+  to {
+    box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 50%);
+    border-bottom: 2px solid rgb(255 255 255 / 40%);
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    height: 100vh;
+    display: flex;
+  }
+
+  .booking-popup {
+    position: relative;
+
+    height: 96vh;
+    min-height: 710px;
+    max-height: 960px;
+    width: 700px;
+    margin: auto;
+
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .btn-back {
+    margin-left: 10px;
+    background-size: cover;
+  }
+
+  .movie-date,
+  .movie-duration {
+    font-size: 22px;
+  }
+
+  .movie-name {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .booking-form {
+    margin-bottom: 10%;
+  }
+
+  .booking-form::before {
+    margin-bottom: 80px;
+    height: 30px;
+  }
+
+  .hall-view {
+    height: 208px;
+  }
+
+  .row {
+    padding: 10px;
+  }
+
+  .row:hover {
+    background-color: rgba(0, 0, 0, 0.363);
+    border-radius: 8px;
+  }
+
+  .seat {
+    height: 56px;
+    width: 56px;
+    border: 2px solid transparent;
+  }
+
+  .seat-view:hover {
+    filter: brightness(160%);
+  }
+
+  .seat-view {
+    box-shadow: inset 0px -10px 2px 10px rgb(255 255 255 / 40%);
+  }
+
+  .btn-buy {
+    margin-bottom: 10px;
+  }
+}

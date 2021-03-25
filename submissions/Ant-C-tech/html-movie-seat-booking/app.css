@@ -6,8 +6,8 @@
   --main-font-color: #7c7c7c;
   --active-font-color: #353434;
 
-  --main-font: 'Montserrat', sans-serif;
-  --secondary-font: 'Rubik', sans-serif;
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Rubik", sans-serif;
 }
 
 *,
@@ -99,7 +99,7 @@ main {
 
 .posterSection::after {
   position: absolute;
-  content: '';
+  content: "";
 
   top: 0;
   left: 0;
@@ -271,7 +271,7 @@ main {
 .movieType__radioText::after,
 .movieTime__radioText::after {
   position: absolute;
-  content: '';
+  content: "";
   bottom: -8px;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
@@ -421,7 +421,7 @@ main {
 
 .movieDate__radioText::after {
   position: absolute;
-  content: '';
+  content: "";
   top: -4px;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
@@ -495,7 +495,7 @@ main {
 
 .hall__screen::after {
   position: absolute;
-  content: '';
+  content: "";
   bottom: -52px;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
@@ -579,7 +579,7 @@ main {
 
 .hall__legendItem::before {
   position: absolute;
-  content: '';
+  content: "";
   bottom: 6px;
   left: -20px;
 
