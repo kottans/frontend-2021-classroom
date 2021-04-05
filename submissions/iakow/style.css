@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -12,9 +13,18 @@ body {
 }
 
 .booking-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-bottom: 20px;
   width: 100%;
@@ -29,8 +39,14 @@ body {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   padding: 20px;
@@ -68,10 +84,6 @@ nav {
   background-color: #3d2634;
 }
 
-.movie-info {
-  margin: auto;
-}
-
 .movie-date {
   display: block;
 
@@ -96,7 +108,11 @@ nav {
 }
 
 .seats-legend {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 60%;
   margin: 50px auto 10px;
@@ -105,7 +121,11 @@ nav {
 }
 
 .seat-color-descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   color: #6a6885;
@@ -133,7 +153,7 @@ nav {
 
 .booking-form {
   width: 90%;
-  margin-bottom: 10vh;
+  /* margin-bottom: 10vh; */
 }
 
 .booking-form::before {
@@ -144,16 +164,35 @@ nav {
 
   content: '';
   background-color: rgb(0 6 29 / 11%);
+  -webkit-box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 49%);
   box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 49%);
   border-bottom: 2px solid rgb(255 255 255 / 49%);
   border-top-left-radius: 34px;
   border-top-right-radius: 34px;
+  -webkit-animation: shine 1.5s infinite alternate;
   animation: shine 1.5s infinite alternate;
 }
 
-.hall-view {
+#purchased-tickets {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hall-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 30vw;
 }
@@ -171,14 +210,17 @@ nav {
 
   background-color: rgb(195, 0, 0);
   border-radius: 3px;
+  -webkit-box-shadow: inset 0px -1.5vw 2px 1.5vw rgb(255 255 255 / 40%);
   box-shadow: inset 0px -1.5vw 2px 1.5vw rgb(255 255 255 / 40%);
 }
 
 .row-2 .seat-view {
+  -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
 }
 
 .row-3 .seat-view {
+  -webkit-filter: brightness(0.6);
   filter: brightness(0.6);
 }
 
@@ -189,7 +231,10 @@ nav {
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
@@ -214,6 +259,7 @@ nav {
 }
 
 .btn-buy {
+  flex-shrink: 0;
   height: 44px;
   width: 200px;
   background-color: #8a94ff;
@@ -232,12 +278,27 @@ nav {
   background-color: rgb(172 140 88);
 }
 
-@keyframes shine {
+@-webkit-keyframes shine {
   from {
+    -webkit-box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 20%);
     box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 20%);
     border-bottom: 2px solid rgb(255 255 255 / 10%);
   }
   to {
+    -webkit-box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 50%);
+    box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 50%);
+    border-bottom: 2px solid rgb(255 255 255 / 40%);
+  }
+}
+
+@keyframes shine {
+  from {
+    -webkit-box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 20%);
+    box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 20%);
+    border-bottom: 2px solid rgb(255 255 255 / 10%);
+  }
+  to {
+    -webkit-box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 50%);
     box-shadow: 1px 44px 39px 1px rgb(255 255 255 / 50%);
     border-bottom: 2px solid rgb(255 255 255 / 40%);
   }
@@ -246,6 +307,8 @@ nav {
 @media (min-width: 700px) {
   body {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -278,10 +341,6 @@ nav {
     margin-bottom: 20px;
   }
 
-  .booking-form {
-    margin-bottom: 10%;
-  }
-
   .booking-form::before {
     margin-bottom: 80px;
     height: 30px;
@@ -307,11 +366,17 @@ nav {
   }
 
   .seat-view:hover {
+    -webkit-filter: brightness(160%);
     filter: brightness(160%);
   }
 
   .seat-view {
+    -webkit-box-shadow: inset 0px -10px 2px 10px rgb(255 255 255 / 40%);
     box-shadow: inset 0px -10px 2px 10px rgb(255 255 255 / 40%);
+  }
+
+  #purchased-tickets {
+    height: 10vh;
   }
 
   .btn-buy {
