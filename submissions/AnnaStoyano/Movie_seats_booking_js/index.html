@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script defer src="/script.js"></script>
+    <header class="header">
+        <div class="header__inner flex">
+            <a class="logo-link" href="/">
+                <img class="logo-img" src="./images/Road_Movies.png" alt="Cinema logo">
+            </a>
+            <nav class="navigation">
+                <ul class="navigation__list flex">
+                    <li class="navigation__item"><a href="/">Rental films</a></li>
+                    <li class="navigation__item"><a href="/">Soon</a></li>
+                    <li class="navigation__item"><a href="/">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article class="film-poster">
+            <div class="film-info">
+                <h1 class="film-title">
+                    Palace for Putin. The history of the biggest bribe
+                </h1>
+                <p class="film-description">
+
+                    Today you will see what is considered impossible to see up close. Together with us you will go where
+                    no one is allowed. We will visit Putin. Let's make sure with our own eyes that this person is in
+                    his craving for luxury, for wealth, he completely lost his mind. We will find out with whose money
+                    and how this
+                    luxury. And how, over the past 15 years, the biggest bribe in history has been given and the most
+                    dear palace in the world.
+
+                </p>
+                <div class="rating__wrapper">
+                    <img class="star" src="./images/star.svg" alt="rating star icon">
+                    <strong class="raiting">IMDb: 9.8/10</strong>
+                </div>
+            </div>
+            <img class="film_img" src="./images/film_logo.jpg" alt="Putin's Palace">
+        </article>
+
+        <section class="timeslot">
+            <h3 class="timeslot__title title">Time</h3>
+            <ul class="timeslot__list flex">
+                <li class="timeslot__item">
+                    <button name="time" class="time_btn" value="11:00"><time datetime="11:00">11:00</time></button>
+                </li>
+                <li class="timeslot__item">
+                    <button name="time" class="time_btn" value="13:20"><time datetime="13:20">13:20</time></button>
+                </li>
+                <li class="timeslot__item">
+                    <button name="time" class="time_btn" value="15:40"><time datetime="15:40">15:40</time></button>
+                </li>
+                <li class="timeslot__item">
+                    <button name="time" class="time_btn" value="18:00"><time datetime="18:00">18:00</time></button>
+                </li>
+                <li class="timeslot__item">
+                    <button name="time" class="time_btn" value="20:20"><time datetime="20:20">20:20</time></button>
+                </li>
+                <li class="timeslot__item">
+                    <button name="time" class="time_btn" value="22:40"><time datetime="22:40">22:40</time></button>
+                </li>
+            </ul>
+        </section>
+
+        <section class="cinema-hall-wrapper">
+            <h3 class="hall__title title">Cinema Hall</h3>
+            <div class="cinema-hall flex">
+                <div class="hall">
+                    <div class="hall-info flex">
+                        <div class="hall-info__item flex available"><span class="seat_template-square"></span>-
+                            Available
+                        </div>
+                        <div class="hall-info__item flex checked"><span class="seat_template-square"></span>- Checked
+                        </div>
+                        <div class="hall-info__item flex disabled"><span class="seat_template-square"></span>- Disabled
+                        </div>
+                    </div>
+                    <div class="screen"></div>
+                    <form action="#" id="seats" class="form_seats">
+                        <div class="seats__wrapper">
+                            <fieldset class="cinema-hall__column column-one">
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s1" value="row 1 seat 1">
+                                <label class="seat" for="r1s1" aria-label="1 row 1 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s2" value="row 1 seat 2">
+                                <label class="seat" for="r1s2" aria-label="1 row 2 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r2s1" value="row 2 seat 1">
+                                <label class="seat" for="r2s1" aria-label="2 row 1 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r2s2" value="row 2 seat 2">
+                                <label class="seat" for="r2s2" aria-label="2 row 2 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r3s1" value="row 3 seat 1">
+                                <label class="seat" for="r3s1" aria-label="3 row 1 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r3s2"
+                                    value="row 3seat 2">
+                                <label class="seat" for="r3s2" aria-label="3 row 1 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r4s1"
+                                    value="row 4 seat 1">
+                                <label class="seat" for="r4s1" aria-label="4 row 1 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r4s2" value="row 4 seat 2">
+                                <label class="seat" for="r4s2" aria-label="4 row 2 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r5s1" value="row 5 seat 1">
+                                <label class="seat" for="r5s1" aria-label="5 row 1 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r5s2" value="row 5 seat 2">
+                                <label class="seat" for="r5s2" aria-label="5 row 2 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r6s1" value="row 6 seat 1">
+                                <label class="seat" for="r6s1" aria-label="6 row 1 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r6s2" value="row 6 seat 2">
+                                <label class="seat" for="r6s2" aria-label="6 row 2 seat"></label>
+                            </fieldset>
+                            <fieldset class="cinema-hall__column column-two">
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s3" value="row 1 seat 3">
+                                <label class="seat" for="r1s3" aria-label="1 row 3 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s4" value="row 1 seat 4">
+                                <label class="seat" for="r1s4" aria-label="1 row 4 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s5" value="row 1 seat 5">
+                                <label class="seat" for="r1s5" aria-label="1 row 5 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s6" value="row 1 seat 6">
+                                <label class="seat" for="r1s6" aria-label="1 row 6 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s7" value="row 1 seat 7">
+                                <label class="seat" for="r1s7" aria-label="1 row 7 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s8" value="row 1 seat 8">
+                                <label class="seat" for="r1s8" aria-label="1 row 8 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r2s3" value="row 2 seat 3">
+                                <label class="seat" for="r2s3" aria-label="2 row 3 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r2s4" value="row 2 seat 4">
+                                <label class="seat" for="r2s4" aria-label="2 row 4 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r2s5"
+                                    value="row 2 seat 5">
+                                <label class="seat" for="r2s5" aria-label="2 row 5 seat"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r2s6"
+                                    value="row 2 seat 6">
+                                <label class="seat" aria-label="2 row 6 seat" for="r2s6"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r2s7" value="row 2 seat 7">
+                                <label class="seat" aria-label="2 row 7 seat" for="r2s7"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r2s8" value="row 2 seat 8">
+                                <label class="seat" aria-label="2 row 8 seat" for="r2s8"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r3s3" value="row 3 seat 3">
+                                <label class="seat" aria-label="3 row 3 seat" for="r3s3"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r3s4" value="row 3 seat 4">
+                                <label class="seat" aria-label="3 row 4 seat" for="r3s4"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r3s5" value="row 3 seat 5">
+                                <label class="seat" aria-label="3 row 5 seat" for="r3s5"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r3s6" value="row 3 seat 6">
+                                <label class="seat" aria-label="3 row 6 seat" for="r3s6"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r3s7"
+                                    value="row 3 seat 7">
+                                <label class="seat" aria-label="3 row 7 seat" for="r3s7"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r3s8"
+                                    value="row 3 seat 8">
+                                <label class="seat" aria-label="3 row 8 seat" for="r3s8"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r4s3"
+                                    value="row 4 seat 3">
+                                <label class="seat" aria-label="4 row 3 seat" for="r4s3"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r4s4"
+                                    value="row 4 seat 4">
+                                <label class="seat" aria-label="4 row 4 seat" for="r4s4"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r4s5" value="row 4 seat 5">
+                                <label class="seat" aria-label="4 row 5 seat" for="r4s5"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r4s6" value="row 4 seat 6">
+                                <label class="seat" aria-label="4 row 6 seat" for="r4s6"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r4s7" value="row 4 seat 7">
+                                <label class="seat" aria-label="4 row 7 seat" for="r4s7"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r4s8" value="row 4 seat 8">
+                                <label class="seat" aria-label="4 row 8 seat" for="r4s8"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r5s3" value="row 5 seat 3">
+                                <label class="seat" aria-label="5 row 3 seat" for="r5s3"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r5s4" value="row 5 seat 4">
+                                <label class="seat" aria-label="5 row 4 seat" for="r5s4"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r5s5" value="row 5 seat 5">
+                                <label class="seat" aria-label="5 row 5 seat" for="r5s5"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r5s6"
+                                    value="row 5 seat 6">
+                                <label class="seat" aria-label="5 row 6 seat" for="r5s6"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r5s7"
+                                    value="row 5 seat 7">
+                                <label class="seat" aria-label="5 row 7 seat" for="r5s7"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r5s8"
+                                    value="row 5 seat 8">
+                                <label class="seat" aria-label="5 row 8 seat" for="r5s8"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r6s3"
+                                    value="row 6 seat 3">
+                                <label class="seat" aria-label="6 row 3 seat" for="r6s3"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r6s4" value="row 6 seat 4">
+                                <label class="seat" aria-label="6 row 4 seat" for="r6s4"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r6s5" value="row 6 seat 5">
+                                <label class="seat" aria-label="6 row 5 seat" for="r6s5"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r6s6" value="row 6 seat 6">
+                                <label class="seat" aria-label="6 row 6 seat" for="r6s6"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r6s7" value="row 6 seat 7">
+                                <label class="seat" aria-label="6 row 7 seat" for="r6s7"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r6s8" value="row 6 seat 8">
+                                <label class="seat" aria-label="6 row 8 seat" for="r6s8"></label>
+
+                            </fieldset>
+                            <fieldset class="cinema-hall__column column-three">
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s9" value="row 1 seat 9">
+                                <label class="seat" aria-label="1 row 9 seat" for="r1s9"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r1s10"
+                                    value="row 1 seat 10">
+                                <label class="seat" aria-label="1 row 10 seat" for="r1s10"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r2s9"
+                                    value="row 2 seat 9">
+                                <label class="seat" aria-label="2 row 9 seat" for="r2s9"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r2s10"
+                                    value="row 2 seat 10">
+                                <label class="seat" aria-label="2 row 10 seat" for="r2s10"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r3s9" value="row 3 seat 9">
+                                <label class="seat" aria-label="3 row 9 seat" for="r3s9"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r3s10"
+                                    value="row 3 seat 10">
+                                <label class="seat" aria-label="3 row 10 seat" for="r3s10"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r4s9" value="row 4 seat 9">
+                                <label class="seat" aria-label="4 row 9 seat" for="r4s9"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r4s10"
+                                    value="row 4 seat 10">
+                                <label class="seat" aria-label="4 row 10 seat" for="r4s10"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r5s9"
+                                    value="row 5 seat 9">
+                                <label class="seat" aria-label="5 row 9 seat" for="r5s9"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r5s10"
+                                    value="row 5 seat 10">
+                                <label class="seat" aria-label="5 row 10 seat" for="r5s10"></label>
+                                <input type="checkbox" class="seat_checkbox" name="seat" id="r6s9" value="row 6 seat 9">
+                                <label class="seat" aria-label="6 row 9 seat" for="r6s9"></label>
+                                <input type="checkbox" class="seat_checkbox" disabled name="seat" id="r6s10"
+                                    value="row 6 seat 10">
+                                <label class="seat" aria-label="6 row 10 seat" for="r6s10"></label>
+                            </fieldset>
+                        </div>
+                        <input type="submit" class="submit" value="Buy">
+                    </form>
+                </div>
+                <div class="selected-seats hidden">
+                    <h4 class="selected-seats__title">
+                        You select:
+                    </h4>
+                    <ul class="selected-seats--list">
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="popup__wrapper hidden">
+            <div class="popup">
+                <div class="popup_top">
+                    <button class="close" aria-label="close modal window">
+                        <span class="close-line"></span>
+                        <span class="close-line"></span>
+                    </button>
+                </div>
+                <div class="selected-seats">
+                    <h4 class="selected-seats__title">
+                        You select:
+                    </h4>
+                    <ul class="selected-seats--list">
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
