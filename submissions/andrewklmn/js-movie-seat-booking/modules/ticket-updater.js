@@ -45,10 +45,10 @@ function getShortedSeatsInRowRecord(seats) {
 }
 
 function getSeatPosition(seatElement) {
-  const seatPosition = seatElement.id.split('_');
+  const [row, seat] = seatElement.id.split('_').slice(1);
   return {
-    row: seatPosition[1],
-    seat: seatPosition[2],
+    row,
+    seat,
   };
 }
 
