@@ -11,6 +11,13 @@ export const payButtonListener = () => {
   alert('Action disabled!');
 };
 
+export const cancelButtonListener = () => {
+  const selectedSeats = getSelectedSeats(selectorForm);
+  selectedSeats.forEach((seat) => {
+    seat.click();
+  });
+};
+
 export const bookButtonListener = (event) => {
   const selectedSeats = getSelectedSeats(selectorForm);
   if (selectedSeats.length > 0) {
