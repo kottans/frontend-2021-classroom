@@ -3,23 +3,30 @@
   font-family: Helvetica;
 }
 
-.container {
+.body-container {
   display: flex;
   width: 100%;
 }
 
-.container-half-screen {
-  width: 50%;
+.container-inner {
   height: 90vh;
   margin: 30px;
   border-radius: 10px;
+}
+
+.container-inner--one-third {
+  width: 40%;
+}
+
+.container-inner--two-thirds {
+  width: 60%;
 }
 
 .film-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: url(./poster.jpg);
+  background: url(./assets/poster.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -48,15 +55,14 @@
   color: white;
 }
 
-.container-half-screen--grey {
+.container-inner--grey {
   background-color: rgb(241, 239, 239);
 }
 
 .choose-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
 }
 
@@ -78,19 +84,116 @@
 }
 
 .choose-section__header-button--back {
-  background-image: url(./back.png);
+  background-image: url(./assets/back.png);
 }
 
 .choose-section__header-button--filters {
-  background-image: url(./filters.png);
+  background-image: url(./assets/filters.png);
 }
 
 .choose-section__main {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  min-height: 83%;
+
+}
+
+.choose-section__main-inner {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 100%;
+}
+
+.chosen-tickets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.choose-section__chosen-tickets {
+  align-self: center;
+  width: 37%;
+  height: 70%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.choose-section__chosen-tickets--modal {
+  background-color: gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.chosen-tickets__inner {
+  width: 50%;
+  max-width: 350px;
+  height: 70%;
+  margin: auto;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.chosen-tickets__tickets-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 100%;
+  height: 60%;
+}
+
+.chosen-tickets__ticket {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 200px;
+  min-width: 85px;
+  height: 25px;
+  margin: 3px;
+  padding: 10px 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.chosen-tickets__dot {
+  height: 5px;
+  width:  5px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.chosen-tickets__dot--main {
+  align-self: flex-start;
+  margin: 10px 0px 0px 10px;
+  width: 10px;
+  height: 10px;
+}
+
+.chosen-tickets__row-seat {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.chosen-tickets__span-bold {
+  line-height: 25px;
 }
 
 .choose-section__main-title {
@@ -108,11 +211,17 @@
   font-weight: bold;
 }
 
+.choose-section__time-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .choose-section__time-container {
   display: flex;
   justify-content: center;
   height: 37px;
-  width: 78%;
   padding: 3px 0px;
   border: 1px solid transparent;
 }
@@ -198,6 +307,7 @@
   position: absolute;
   height: 20px;
   width: 20px;
+  margin: 1px;
   border: 1px solid black;
   border-radius: 3px;
   background-color: #eee;
@@ -248,32 +358,36 @@
 .choose-section__hall-legend {
   display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
 .choose-section__footer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 30px;
+  height: 40px;
   width: 100%;
 }
 
-.choose-section__checkout-information {
-  height: 100%;
-  line-height: 30px;
-  font-size: 18px;
-  font-weight: 300;
-  background-color: rgba(77, 77, 77, 1);
-  color: white;
+.chosen-tickets__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.chosen-tickets__button--go-back {
+  margin: 5px;
 }
 
 .checkout-seats__checkout-button {
-  height: 100%;
-  line-height: 25px;
+  width: 100%;
+  text-align: center;
+  line-height: 35px;
   font-size: 19px;
   font-weight: 500;
   border: 2px solid transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* padding: 0px; */
   background-color: rgba(28, 176, 85, 0.8);
   color: white;
   outline: none;
@@ -286,23 +400,81 @@
   color: rgba(77, 77, 77, 1);
 }
 
-.choose-section__footer--container-half {
-  display: flex;
-  justify-content: center;
-  width: 50%;
+@media screen and (max-width: 1014px) {
+  .checkout-seats__checkout-button {
+    font-size: 14px;
+  }
 }
 
-@media screen and (max-width: 666px), (max-height: 550px) {
-  .body {
+@media screen and (max-width: 790px), (max-height: 550px) {
+  .body-container {
     flex-direction: column;
     height: auto;
     width: 100%;
   }
 
-  .container-half-screen {
+  .container-inner {
     height: 100vh;
     width: 100%;
     margin: 0px;
+  }  
+}
+
+@media screen and (max-width: 420px) {
+  
+  .container-inner {
+    height: auto;
+  }
+
+  .choose-section__main {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 30%;
+    min-height: 83%;
+    
+  }
+
+  .choose-section__hall-legend {
+    margin: 15px 0px 0px 0px;
+  }
+
+  .choose-section__chosen-tickets {
+    align-self: center;
+    width: 37%;
+    border-radius: 10px;
+    background-color: white;
+    min-width: 60%;
+    height: 300px;
+    margin: 10px 0px;
+
+  }
+
+  .chosen-tickets {
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-width: 70%;
+  }
+
+  .choose-section__chosen-tickets--modal {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px;
+    background-color: gray;
   }
 }
 
