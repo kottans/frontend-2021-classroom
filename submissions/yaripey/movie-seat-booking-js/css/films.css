@@ -1,0 +1,30 @@
+.poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  cursor: pointer;
+  transition: transform ease 0.1s;
+  margin: 30px;
+}
+
+.poster:hover {
+  transform: translateY(-10px);
+  transition: transform ease 0.1s;
+}
+
+.poster h3 {
+  order: 2;
+}
+
+.poster .image-container {
+  order: 1;
+  width: 100%;
+  height: 350px;
+  background-color: lightgrey;
+  background-size: cover;
+}
+
+.poster .description-short {
+  order: 3;
+}

@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  color: teal;
+  font-weight: 300;
+  font-size: 40px;
+  margin: 15px;
+  transition: all 0.2s ease;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.logo:hover {
+  background: teal;
+  color: white;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.settings-buttons ul {
+  display: flex;
+  list-style: none;
+}
+
+.settings-buttons-link {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-size: 30% 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease;
+}
+
+.settings-buttons-link.settings {
+  background-image: url("../assets/cog-solid-teal.svg");
+}
+
+.settings-buttons-link.settings:hover {
+  background-color: teal;
+  background-image: url("../assets/cog-solid-white.svg");
+}
