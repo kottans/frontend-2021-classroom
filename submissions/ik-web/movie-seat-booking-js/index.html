@@ -1,0 +1,72 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seat Booking</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="modal">
+        <div class="modal__confirmation-window">
+            <div class="modal__info"></div>
+            <div class="modal__buttons">
+                <button class="modal__button button--return button">Return</button>
+                <button class="modal__button button--booking button" form="seats-form">Booking</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <section class="movie-info">
+            <h1 class="movie-info__title">Monster Hunter</h1>
+            <div class="movie-info__inner">
+                <div class="movie-info__poster">
+                    <img src="img/movie.jpg" alt="movie poster">
+                </div>
+
+                <ul class="movie-info__about">
+                    <li class="movie-info__about-item about-item__format">3D</li>
+                    <li class="movie-info__about-item about-item__map">
+                        <address>Kyiv, SEC "Lavina", Hall 13</address>
+                    </li>
+                    <li class="movie-info__about-item about-item__date">
+                        <time datetime="2021-02-04">2021.02.04</time> Thursday
+                    </li>
+                    <li class="movie-info__about-item about-item__time">
+                        Time <time datetime="18:50">18:50 - 21:39</time>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="booking-seats">
+            <h2 class="booking-seats__title">Choose your seats</h2>
+
+            <div class="booking-seats__cinema-hall">
+                <div class="cinema-hall__screen">screen</div>
+                <form class="cinema-hall__seats" id="seats-form"></form>
+            </div>
+
+            <div class="cinema-hall__seats-status">
+                <div class="seats-status__item seats-status__item--disabled">N/A</div>
+                <div class="seats-status__item seats-status__item--checked">Selected</div>
+                <div class="seats-status__item seats-status__item--unchecked">A</div>
+            </div>
+
+            <div class="cinema-hall__selected-seats-block">
+                <div class="cinema-hall__selected-seats-list"></div>
+                <div class="cinema-hall__seats-total-info"></div>
+                <button class="cinema-hall__button button">Continue</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>
