@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie house</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="filter"></div>
+    <div class="wrapper">
+        <header>
+            <h1>Choose your seats</h1>
+            <div class="ticket-legends">
+                <div class="legend-wrapper-unit">
+                    <div class="place">
+                    </div>
+                    <p class="legend-desc">available</p>
+                </div>
+                <div class="legend-wrapper-unit">
+                    <div class="place taken">
+                    </div>
+                    <p class="legend-desc">taken</p>
+                </div>
+                <div class="legend-wrapper-unit">
+                    <div class="place selected">
+                    </div>
+                    <p class="legend-desc">selected</p>
+                </div>
+            </div>
+        </header>
+        <main class="cinema-hall">
+            <section class="screen">
+                <div class="arc">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 806 21" fill="#FFFFFF">
+                        <path
+                            d="M3.2,20l-2,0.2l-0.3-4l2-0.2C136.2,5.3,269.6,0,403,0s266.8,5.3,400.2,16l2,0.2l-0.3,4l-2-0.2 C669.5,9.3,536.3,4,403,4S136.4,9.3,3.2,20z">
+                        </path>
+                    </svg>
+                </div>
+                <h2>screen</h2>
+            </section>
+            <section class="hall">
+                <form id="tickets">
+                    <div class="seats">
+                        <!--Range1-->
+                        <label class="range1">
+                            <input type="checkbox" value="row: 1 seat: 1" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 2" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">2</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 3" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">3</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 4" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">4</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 5" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">5</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 6" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">6</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 7" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">7</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 8" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">8</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 9" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">9</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 10" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">10</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 1 seat: 11" data-price="25"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">11</span>
+                        </label>
+                        <!--Range2-->
+                        <label class="range2">
+                            <input type="checkbox" value="row: 2 seat: 1" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 2" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">2</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 3" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">3</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 4" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">4</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 5" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">5</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 6" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">6</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 7" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">7</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 8" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">8</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 9" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">9</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 10" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">10</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 11" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">11</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 12" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">12</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 13" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">13</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 14" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">14</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 2 seat: 15" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">15</span>
+                        </label>
+                        <!--Range3-->
+                        <label class="range3">
+                            <input type="checkbox" value="row: 3 seat: 1" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 2" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">2</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 3" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">3</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 4" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">4</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 5" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">5</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 6" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">6</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 7" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">7</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 8" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">8</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 9" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">9</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 10" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">10</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 11" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">11</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 12" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">12</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 13" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">13</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 14" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">14</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 3 seat: 15" data-price="20"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">15</span>
+                        </label>
+                        <!--Range4-->
+                        <label class="range4">
+                            <input type="checkbox" value="row: 4 seat: 1" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 2" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">2</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 3" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">3</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 4" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">4</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 5" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">5</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 6" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">6</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 7" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">7</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 8" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">8</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 9" data-price="20" value="50"
+                                class="check-input visibility-hidden">
+                            <span class="place">9</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 10" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">10</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 11" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">11</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 12" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">12</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 13" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">13</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 4 seat: 14" data-price="20"
+                                class="check-input visibility-hidden">
+                            <span class="place">14</span>
+                        </label>
+                        <!--Range5-->
+                        <label class="range5">
+                            <input type="checkbox" value="row: 5 seat: 1" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 2" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">2</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 3" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">3</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 4" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">4</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 5" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">5</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 6" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">6</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 7" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">7</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 8" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">8</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 9" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">9</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 10" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">10</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 11" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">11</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 12" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">12</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 13" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">13</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 5 seat: 14" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">14</span>
+                        </label>
+                        <!--Range6-->
+                        <label class="range6">
+                            <input type="checkbox" value="row: 6 seat: 1" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 2" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">2</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 3" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">3</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 4" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">4</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 5" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">5</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 6" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">6</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 7" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">7</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 8" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">8</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 9" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">9</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 10" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">10</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 11" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">11</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 12" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">12</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 13" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">13</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 6 seat: 14" data-price="15"
+                                class="check-input visibility-hidden">
+                            <span class="place">14</span>
+                        </label>
+                        <!--Range7-->
+                        <label class="range7">
+                            <input type="checkbox" value="row: 7 seat: 1" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 2" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">2</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 3" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">3</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 4" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">4</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 5" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">5</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 6" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">6</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 7" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">7</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 8" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">8</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 9" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">9</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 10" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">10</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 11" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">11</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 12" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">12</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 13" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">13</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 14" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">14</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 7 seat: 15" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">15</span>
+                        </label>
+                        <!--Range8-->
+                        <label class="range8">
+                            <input type="checkbox" value="row: 8 seat: 1" data-price="10"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">1</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 2" data-price="10"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">2</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 3" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">3</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 4" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">4</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 5" data-price="10"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">5</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 6" data-price="10"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">6</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 7" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">7</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 8" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">8</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 9" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">9</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 10" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">10</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 11" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">11</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 12" data-price="10"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">12</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 13" data-price="10"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">13</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 14" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">14</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 15" data-price="10"
+                                class="check-input visibility-hidden">
+                            <span class="place">15</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 16" data-price="10"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">16</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="row: 8 seat: 17" data-price="10" value="115"
+                                class="check-input visibility-hidden" disabled>
+                            <span class="place">17</span>
+                        </label>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <aside class="selection-bar">
+            <h2>Selected seats</h2>
+            <div id="ticket-container">
+                <p>There are no choosen seats</p>
+            </div>
+            <div class="total-container">
+                <span>Total:</span>
+                <div class="sum-side">
+                    <span id="seats-sum">0</span>
+                    <span id="money-sum">0 $</span>
+                </div>
+            </div>
+            <button id="menu-button" form="tickets" type="button">Book it!</button>
+        </aside>
+    </div>
+    <div id="modal">
+        <div id="message"></div>
+        <div class="button-bar">
+            <button id="confirm-button" type="submit" form="tickets">confirm</button>
+            <button id="cancel-button" type="button">cancel</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    background-color: #161A1D;
+    color: #F5F3F4;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1.4fr 0.5fr 0.05fr;
+    grid-template-rows: 0.1fr 0.3fr 0.3fr 1.9fr 0.4fr 0.3fr 0.1fr;
+    gap: 0% 0%;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". ."
+        ". ."
+        ". .";
+}
+
+header {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.cinema-hall {
+    grid-column: 1;
+    grid-row: 3/7;
+    margin: 0.5vw auto 0vw auto;
+}
+
+.selection-bar {
+    grid-column: 2;
+    grid-row: 2/7;
+    background-color: #5c5c61;
+}
+
+.selection-bar>h2 {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 2.2vw;
+}
+
+.legend-desc {
+    font-size: 2vw;
+}
+
+.ticket-legends {
+    display: flex;
+    justify-content: center;
+    margin: 3vh auto 4vh;
+    width: 52vw;
+}
+
+.ticket-legends>h2 {
+    margin: 0 1.5vw;
+    align-self: center;
+}
+
+.legend-wrapper-unit {
+    display: flex;
+    justify-content: center;
+}
+
+.legend-desc {
+    margin: 0px 2vw 0px 1vw;
+    align-self: center;
+}
+
+.screen {
+    margin: 0 auto;
+    width: 52vw;
+}
+
+.screen>h2 {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.seats {
+    display: grid;
+    grid-gap: 0.85vw;
+    grid-template-columns: repeat(17, 2vw);
+    grid-template-rows: repeat(8, 3vw);
+    padding-top: 1vw;
+    width: fit-content;
+}
+
+.place {
+    width: 2vw;
+    height: 3vw;
+    border: 0.1vw solid #B1A7A6;
+    border-radius: 0.3vw;
+    background-color: #E5383B;
+}
+
+.taken {
+    border: 0.1vw solid #B1A7A6;
+    background-color: #161A1D;
+}
+
+.selected {
+    border: 0.1vw solid #B1A7A6;
+    background-color: #660708;
+}
+
+.visibility-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+span.place {
+    position: absolute;
+    text-align: center;
+    line-height: 3.2;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.check-input:focus+.place {
+    border: 0.1vw solid white;
+    background-color: #BA181B;
+    color: #F5F3F4;
+}
+
+.check-input:hover+.place {
+    border: 0.1vw solid white;
+    background-color: #BA181B;
+    color: #F5F3F4;
+}
+
+.check-input:checked+.place {
+    background-color: #660708;
+}
+
+.check-input:disabled+.place {
+    border: 0.1vw solid #B1A7A6;
+    background-color: #161A1D;
+}
+
+.range1 {
+    grid-column: 4/5;
+}
+
+.range2 {
+    grid-column: 2/3;
+}
+
+.range3 {
+    grid-column: 2/3;
+}
+
+.range4 {
+    grid-column: 3/4;
+}
+
+.range5 {
+    grid-column: 3/4;
+}
+
+.range6 {
+    grid-column: 3/4;
+}
+
+.range7 {
+    grid-column: 2/3;
+}
+
+.range8 {
+    grid-column: 1/2;
+}
+
+#menu-button {
+    display: block;
+    margin: 1vw auto;
+    min-width: 15vw;
+    height: 3.5vw;
+    font-size: 2vw;
+    background-color: #BA181B;
+    color: whitesmoke;
+    border: none;
+    border-radius: 0.3vw;
+    cursor: pointer;
+}
+
+#menu-button:focus {
+    background-color: #660708;
+    border: 0.1vw solid white;
+}
+
+#menu-button:hover {
+    background-color: #660708;
+    border: 0.1vw solid white;
+}
+
+.ticket {
+    margin: 0.5vw auto;
+    width: 90%;
+    height: 2.5vw;
+    text-align: center;
+    line-height: 2.5;
+    background-color: #660708;
+}
+
+#ticket-container {
+    margin-top: 10%;
+    height: 30.5vw;
+    overflow-y: auto;
+}
+
+#ticket-container>p {
+    margin-top: 1vw;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px;
+    width: 94%;
+    height: fit-content;
+    font-size: 1.2vw;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    margin: 18% auto;
+    width: 20%;
+    height: min-content;
+    z-index: 150;
+    background-color: #515158;
+}
+
+#message>h3 {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#message>p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.button-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 6%;
+}
+
+#cancel-button, #confirm-button {
+    display: block;
+    margin: 0 1.2vw;
+    width: 6.5vw;
+    height: 2.2vw;
+    font-size: 1.4vw;
+    border: none;
+    border-radius: 0.3vw;
+    background: #ccc;
+    cursor: pointer;
+}
+
+#filter {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(88, 78, 77, 0.85);
+    z-index: 100;
+}
+
+#seats-sum, #money-sum {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        display: block;
+        margin-top: 1vw;
+    }
+
+    body {
+        font-size: 1.7vw;
+    }
+
+    h1 {
+        font-size: 6vw;
+        margin-bottom: 5vw;
+    }
+
+    .legend-desc {
+        font-size: 4vw;
+        margin: 0 4vw 0 2vw;
+    }
+
+    .screen {
+        width: 78vw;
+    }
+
+    .place {
+        width: 3vw;
+        height: 4.5vw;
+    }
+
+    span.place {
+        line-height: 2.7;
+    }
+
+    .seats {
+        grid-gap: 1.2vw;
+        grid-template-columns: repeat(17, 3vw);
+        grid-template-rows: repeat(8, 4.5vw);
+        margin: 2vw auto 5vw auto;
+    }
+
+    #menu-button {
+        font-size: 4vw;
+        min-width: 30vw;
+        height: 7vw;
+    }
+
+    .selection-bar {
+        width: 62%;
+        font-size: 4vw;
+        padding: 1vw 0;
+        margin: 3vw auto;
+    }
+
+    .selection-bar>h2 {
+        font-size: 5vw;
+    }
+
+    #ticket-container {
+        margin-top: 8%;
+        height: 28.42vw;
+    }
+
+    #ticket-container>p {
+        font-size: 3.5vw;
+    }
+
+    .total-container {
+        font-size: 3.2vw;
+        margin: 2vw auto 1vw auto;
+    }
+
+    .ticket {
+        height: 6.5vw;
+        line-height: 1.5;
+    }
+
+    #message>h3 {
+        font-size: 4vw;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    #message>p {
+        font-size: 3.2vw;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .button-bar>input {
+        width: 14.5vw;
+        height: 4.5vw;
+        font-size: 3.4vw;
+    }
+
+    #modal {
+        width: 62%;
+    }
+
+    #cancel-button, #confirm-button {
+        width: 14.5vw;
+        height: 5.5vw;
+        margin: 0 3.6vw;
+        font-size: 3.4vw;
+    }
+
+}
