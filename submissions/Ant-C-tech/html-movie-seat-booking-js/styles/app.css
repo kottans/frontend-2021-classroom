@@ -1,0 +1,1781 @@
+@import "color-scheme.css";
+
+/* Fonts */
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Rubik", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  margin: 10px;
+  background-color: var(--main-color);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--main-color);
+  border-radius: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+}
+
+.flexRow-between {
+  justify-content: space-between;
+}
+
+.flexRow-center {
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  align-items: center;
+
+  height: 100vh;
+
+  padding: 0 32px;
+}
+
+main {
+  position: relative;
+  z-index: 10;
+
+  max-width: 1270px;
+
+  overflow: hidden;
+  margin: 40px auto;
+
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 5px 9px 20px var(--main-shadow-color);
+}
+
+.trailer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* ========== Choosing Seat Section =========== */
+.choseSeatSection {
+  position: relative;
+  display: flex;
+
+  z-index: 10;
+}
+
+/* ========== Poster Section =========== */
+.posterSection {
+  position: relative;
+  flex-basis: 500px;
+  flex-shrink: 0;
+
+  background: var(--black);
+  border-right: 2px solid var(--secondary-color);
+}
+
+.posterSection::after {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+  z-index: 15;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    0deg,
+    var(--gradient-black-90) 5%,
+    var(--gradient-black-70) 40%,
+    var(--gradient-black-20) 50%,
+    var(--gradient-black-0) 100%
+  );
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  z-index: 20;
+
+  margin: 15px;
+  padding: 15px;
+
+  text-align: center;
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  font-weight: bold;
+
+  border: 3px solid var(--badge-border);
+  box-shadow: 2px 2px 18px var(--secondary-color);
+  border-radius: 50%;
+
+  background: var(--badge-bg);
+}
+
+.badgeWrapper {
+  display: block;
+  position: absolute;
+  text-decoration: none;
+  z-index: 30;
+
+  top: 0;
+  left: 0;
+
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+.badgeWrapper:hover,
+.badgeWrapper:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+
+.badge-rating {
+  position: static;
+  display: flex;
+  align-items: center;
+
+  width: 73px;
+  height: 73px;
+}
+
+.badge-data {
+  right: 0;
+
+  border-radius: 5%;
+}
+
+.badge__link {
+  text-decoration: none;
+
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.textContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+
+  width: 100%;
+  padding: 40px 40px 20px;
+}
+
+.textContent__title {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+
+  color: var(--secondary-color);
+  font-size: 35px;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.textContent__description {
+  margin-bottom: 20px;
+
+  color: var(--main-color);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: var(--secondary-font);
+}
+
+.btnReadMore {
+  display: block;
+
+  width: -webkit-fit-content;
+
+  width: -moz-fit-content;
+
+  width: fit-content;
+  min-height: 40px;
+  margin: 0 auto;
+
+  color: var(--main-color);
+  font-size: 20px;
+
+  text-decoration: none;
+  transition: all ease-in-out 0.3s;
+}
+
+.btnReadMore:focus,
+.btnReadMore:hover {
+  font-size: 30px;
+  color: var(--secondary-color);
+  outline: none;
+}
+
+.posterSection__img {
+  display: block;
+
+  width: 100%;
+}
+/* ========== /Poster Section =========== */
+
+/* ========== Control Section ========== */
+.controlSection {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 20px 60px;
+
+  background-color: var(--main-color);
+
+  -webkit-user-select: none;
+
+     -moz-user-select: none;
+
+      -ms-user-select: none;
+
+          user-select: none;
+}
+
+/* /MovieType Section */
+.movieType {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movieType__radioText,
+.movieTime__radioText {
+  position: relative;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+
+  cursor: pointer;
+
+  transition: all ease-in-out 0.5s;
+}
+
+.movieType__radioText::after,
+.movieTime__radioText::after {
+  position: absolute;
+  content: "";
+  bottom: -8px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 0;
+  height: 1.5px;
+  background: var(--main-font-color);
+  box-shadow: 4px 4px 8px var(--main-font-color);
+
+  transition: all ease-in-out 0.5s;
+}
+
+.movieType__radioText:hover::after,
+.movieTime__radioText:hover::after {
+  width: 100%;
+}
+
+.movieType__radioInput:checked + .movieType__radioText,
+.movieTime__radioInput:checked + .movieTime__radioText {
+  color: var(--active-font-color);
+}
+
+.movieType__radioInput:disabled + .movieType__radioText,
+.movieTime__radioInput:disabled + .movieTime__radioText {
+  font-weight: normal;
+  color: var(--secondary-color);
+
+  cursor: default;
+}
+
+.movieType__radioInput:checked + .movieType__radioText::after,
+.movieTime__radioInput:checked + .movieTime__radioText::after {
+  width: 100%;
+  height: 3px;
+  background: var(--secondary-color);
+  box-shadow: 3px 3px 5px var(--secondary-color);
+}
+
+.movieType__radioInput:focus + .movieType__radioText::after,
+.movieTime__radioInput:focus + .movieTime__radioText::after {
+  width: 100%;
+  height: 3px;
+  background: var(--secondary-color);
+  box-shadow: 3px 3px 5px var(--secondary-color);
+}
+
+.movieType__radioInput:disabled + .movieType__radioText::after,
+.movieTime__radioInput:disabled + .movieTime__radioText::after {
+  width: 0;
+}
+/* /MovieType Section */
+
+/* MovieDate Section */
+.movieDate {
+  margin-bottom: 20px;
+}
+
+.movieDate__currentTime,
+.movieTime__title {
+  text-decoration: none;
+
+  margin-bottom: 10px;
+
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--active-font-color);
+
+  transition: opacity ease-in-out 0.3s;
+}
+
+.btnMovieDate {
+  display: inline-block;
+
+  min-width: 30px;
+  padding-top: 4px;
+
+  text-decoration: none;
+  color: var(--main-font-color);
+  font-size: 20px;
+
+  transition: all ease-in-out 0.3s;
+}
+
+.btnMovieDate:focus,
+.btnMovieDate:hover {
+  font-size: 30px;
+  color: var(--active-font-color);
+  outline: none;
+}
+
+.btnMovieDate-disabled {
+  pointer-events: none;
+  color: var(--secondary-color);
+}
+
+.btnMovieDate-disabled:hover {
+  font-size: 20px;
+  color: var(--secondary-color);
+
+  cursor: default;
+}
+
+.btnMovieDate-disabled:focus {
+  font-size: 20px;
+  color: var(--secondary-color);
+
+  cursor: default;
+}
+
+.movieDate__slider {
+  position: relative;
+  overflow: hidden;
+
+  max-width: 425px;
+}
+
+.movieDate__dateListWrapper {
+  position: relative;
+  left: 0;
+
+  transition: all ease-in-out 0.3s;
+}
+
+.movieDate__radio {
+  display: block;
+
+  padding: 0 20px;
+  min-width: 85px;
+}
+
+.movieDate__radioSupText {
+  display: block;
+  padding-bottom: 8px;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+
+  transition: color ease-in-out 0.5s;
+}
+
+.movieDate__radioSupText-current {
+  color: var(--secondary-color);
+}
+
+.movieDate__radioInput:checked + .movieDate__radioSupText {
+  color: var(--active-font-color);
+}
+
+.movieDate__radioText {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+
+  transition: color ease-in-out 0.5s;
+}
+
+.movieDate__radioText::after {
+  position: absolute;
+  content: "";
+  top: -4px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 0;
+  height: 1.5px;
+  background: var(--main-font-color);
+  box-shadow: 4px 4px 8px var(--main-font-color);
+
+  transition: all ease-in-out 0.5s;
+}
+
+.movieDate__radio:hover .movieDate__radioText::after {
+  width: 100%;
+}
+
+.movieDate__radioInput:checked ~ .movieDate__radioText::after {
+  width: 100%;
+  height: 3px;
+  background: var(--secondary-color);
+  box-shadow: 3px 3px 5px var(--secondary-color);
+}
+
+.movieDate__radioInput:disabled ~ .movieDate__radioText::after {
+  width: 0;
+}
+
+.movieDate__radioInput:checked ~ .movieDate__radioText {
+  color: var(--active-font-color);
+}
+
+.movieDate__radioInput:disabled ~ .movieDate__radioSupText {
+  font-weight: normal;
+  color: var(--secondary-color);
+
+  cursor: default;
+}
+
+.movieDate__radioInput:disabled ~ .movieDate__radioText {
+  font-weight: normal;
+  color: var(--secondary-color);
+
+  cursor: default;
+}
+/* /MovieDate Section */
+
+/* MovieTime Section */
+.movieTime {
+  margin-bottom: 30px;
+}
+/* /MovieTime Section */
+
+/* Hall Section */
+.hall {
+  margin-bottom: 15px;
+}
+
+.hall__screen {
+  position: relative;
+  margin-bottom: 40px;
+  text-decoration: none;
+
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--active-font-color);
+
+  border-bottom: 3px solid var(--main-font-color);
+}
+
+.hall__screen::after {
+  position: absolute;
+  content: "";
+  bottom: -52px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    var(--gradient-main-70) 5%,
+    var(--gradient-main-40) 30%,
+    var(--gradient-main-20) 50%,
+    var(--gradient-main-0) 70%
+  );
+}
+
+.hall__row {
+  display: flex;
+  justify-content: center;
+}
+
+.seat {
+  margin: 5px 3px;
+}
+
+.seat__mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  background: var(--white);
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--secondary-color);
+
+  border: 1px solid white;
+
+  transition: all ease-in-out 0.4s;
+}
+
+.seat__input:checked + .seat__mask {
+  background: var(--secondary-color);
+  color: var(--active-font-color);
+  font-weight: bold;
+}
+
+.seat__input:focus + .seat__mask,
+.seat__input:hover + .seat__mask {
+  border: 1px solid var(--main-font-color);
+}
+
+.seat__input:disabled + .seat__mask {
+  background: var(--main-font-color);
+  border: 1px solid var(--main-font-color);
+  color: var(--white);
+}
+
+.seat__input:disabled:hover + .seat__mask {
+  border: 1px solid var(--main-font-color);
+}
+
+.hall__legend {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hall__legendItem {
+  position: relative;
+  display: block;
+
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+}
+
+.hall__legendItem::before {
+  position: absolute;
+  content: "";
+  bottom: 6px;
+  left: -20px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 2px;
+}
+
+.hall__legendItem-available::before {
+  background: var(--white);
+}
+
+.hall__legendItem-taken::before {
+  background: var(--main-font-color);
+}
+
+.hall__legendItem-selection::before {
+  background: var(--secondary-color);
+}
+
+.siteButton {
+  padding: 2px 15px;
+
+  text-align: center;
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  font-weight: bold;
+
+  border: 3px solid var(--badge-border);
+  border-radius: 5%;
+  box-shadow: 2px 2px 18px var(--secondary-color);
+
+  background: var(--secondary-color);
+
+  transition: all ease-in-out 0.3s;
+}
+
+.siteButton:hover,
+.siteButton:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+
+.siteButton-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background: transparent;
+}
+
+.siteButton-disabled:hover,
+.siteButton-disabled:focus {
+  outline: none;
+  transform: scale(1);
+}
+
+.siteButton__img {
+  width: 20px;
+}
+/* /Hall Section */
+/* ========== /Control Section ========== */
+/* ========== /Choosing Seat Section =========== */
+
+/* ========== Confirm Ticket Section =========== */
+.confirmTicket,
+.movieDescription,
+.notification {
+  position: relative;
+
+  padding: 15px;
+
+  background: var(--main-color);
+}
+
+.confirmTicket__title,
+.movieDescription__title,
+.notification__title {
+  position: relative;
+  text-align: center;
+
+  margin-bottom: 40px;
+
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+
+  border-bottom: 3px solid var(--main-font-color);
+}
+
+.confirmTicket__title::after,
+.movieDescription__title::after,
+.notification__title::after {
+  position: absolute;
+  content: "";
+  bottom: -52px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    var(--gradient-main-70) 5%,
+    var(--gradient-main-40) 30%,
+    var(--gradient-main-20) 50%,
+    var(--gradient-main-0) 70%
+  );
+}
+
+.orderFlexWrapper,
+.movieDescription__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+
+  padding-bottom: 40px;
+
+  border-bottom: 3px solid var(--main-font-color);
+}
+
+.orderFlexWrapper::after,
+.movieDescription__content::after,
+.notification__content::after {
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    var(--gradient-main-0) 5%,
+    var(--gradient-main-20) 30%,
+    var(--gradient-main-40) 50%,
+    var(--gradient-main-70) 70%
+  );
+}
+
+/* Ticket */
+.ticket {
+  display: flex;
+
+  margin: 15px;
+
+  border: 3px solid var(--main-font-color);
+}
+
+.ticket__number {
+  display: flex;
+  flex-direction: column-reverse;
+
+  background: var(--secondary-color);
+}
+
+.ticket__number-top {
+  border-right: 3px solid var(--main-font-color);
+}
+
+.ticket__number-bottom {
+  border-left: 3px solid var(--main-font-color);
+}
+
+.ticket__numberTitle {
+  padding: 15px 0;
+
+  margin: auto;
+  text-align: center;
+
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--active-font-color);
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+
+.ticket__body {
+  max-width: 550px;
+}
+
+.ticket__bodyTopSection {
+  display: flex;
+
+  border-bottom: 3px solid var(--main-font-color);
+}
+
+.ticket__bodyBarcode {
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+
+  border-right: 5px dotted var(--secondary-color);
+}
+
+.ticket__barcode {
+  display: block;
+
+  width: 55px;
+
+  transform: rotate(90deg);
+}
+
+.ticket__barcodeValue {
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1;
+  font-family: var(--main-font);
+  color: var(--active-font-color);
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+
+.ticket__bodyImg {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  position: relative;
+
+  padding: 10px;
+}
+
+.ticket__bodyImg::after {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    0deg,
+    var(--gradient-black-90) 5%,
+    var(--gradient-black-70) 40%,
+    var(--gradient-black-40) 70%,
+    var(--gradient-black-0) 100%
+  );
+}
+
+.ticket__bodySubTitle {
+  position: relative;
+  z-index: 100;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
+  font-family: var(--main-font);
+  color: var(--main-color);
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+
+.ticket__bodyTitle {
+  position: relative;
+  margin-top: 60px;
+  margin-left: 60px;
+  z-index: 100;
+
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
+
+.ticket__bodyBottomSection {
+  display: flex;
+}
+
+.ticket__bodyCinemaBrandBox {
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+
+  border-right: 5px dotted var(--secondary-color);
+}
+
+.ticket__cinemaBrand {
+  display: block;
+  width: 65px;
+}
+
+.ticket__bodyMovieData {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  justify-content: space-around;
+
+  padding: 0 10px;
+
+  border-right: 3px solid var(--main-font-color);
+}
+
+.ticket__bodyMovieTitle,
+.ticket__bodyHallType {
+  margin: 5px 0;
+  padding: 5px;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+  font-family: var(--main-font);
+  color: var(--active-font-color);
+
+  border-radius: 5px;
+
+  background: var(--secondary-color);
+}
+
+.ticket__bodyMovieDate {
+  display: flex;
+  align-items: center;
+
+  max-width: 30%;
+
+  border-right: 3px solid var(--main-font-color);
+}
+
+.badge-ticket {
+  position: static;
+
+  margin: 8px 10px;
+
+  font-size: 16px;
+}
+
+.badge__date {
+  white-space: nowrap;
+}
+
+.ticket__bodyMovieSeat {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 10px;
+}
+
+.ticket__bodyMovieSeatTitle {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
+  font-family: var(--main-font);
+  color: var(--active-font-color);
+  white-space: nowrap;
+}
+
+.ticket__bodyMovieSeatNumber {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+}
+/* Ticket */
+
+.siteButton-text {
+  margin: 30px;
+  padding: 10px 20px;
+
+  text-decoration: none;
+
+  color: var(--active-font-color);
+}
+
+/* ========== /Confirm Ticket Section =========== */
+
+/* ========== Movie Description Section =========== */
+.movieDescription__content,
+.notification__content {
+  position: relative;
+  padding: 0 20px 50px;
+}
+
+.movieDescription__textContent {
+  width: 65%;
+
+  padding: 0 20px 20px;
+}
+
+.movieDescription__posterContent {
+  width: 35%;
+}
+
+.movieDescription__poster {
+  display: block;
+  width: 100%;
+}
+
+.movieDescription__element {
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--active-font-color);
+}
+/* ========== /Movie Description Section =========== */
+
+/* ========== Notification screen =========== */
+.notification__content {
+  padding-bottom: 40px;
+
+  border-bottom: 3px solid var(--main-font-color);
+}
+
+.notification__element {
+  text-align: center;
+
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: var(--main-font);
+  color: var(--active-font-color);
+}
+/* ========== /Notification screen =========== */
+
+/* ========== Classes for interaction ========== */
+
+.hideAnimationForNextScreenVertical {
+  -webkit-animation: hideElementForNextScreenVertical 0.7s;
+          animation: hideElementForNextScreenVertical 0.7s;
+}
+
+@-webkit-keyframes hideElementForNextScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+}
+
+@keyframes hideElementForNextScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+}
+
+.showAnimationForNextScreenVertical {
+  -webkit-animation: showElementForNextScreenVertical 0.7s;
+          animation: showElementForNextScreenVertical 0.7s;
+}
+
+@-webkit-keyframes showElementForNextScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, -90deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+@keyframes showElementForNextScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, -90deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+.hideAnimationForPreviousScreenVertical {
+  -webkit-animation: hideElementForPreviousScreenVertical 0.7s;
+          animation: hideElementForPreviousScreenVertical 0.7s;
+}
+
+@-webkit-keyframes hideElementForPreviousScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, -90deg);
+  }
+}
+
+@keyframes hideElementForPreviousScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, -90deg);
+  }
+}
+
+.showAnimationForPreviousScreenVertical {
+  -webkit-animation: showElementForPreviousScreenVertical 0.7s;
+          animation: showElementForPreviousScreenVertical 0.7s;
+}
+
+@-webkit-keyframes showElementForPreviousScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+@keyframes showElementForPreviousScreenVertical {
+  0% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+}
+
+.hideAnimationForNextScreenHorizontal {
+  -webkit-animation: hideElementForNextScreenHorizontal 0.7s;
+          animation: hideElementForNextScreenHorizontal 0.7s;
+}
+
+@-webkit-keyframes hideElementForNextScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+}
+
+@keyframes hideElementForNextScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+}
+
+.showAnimationForNextScreenHorizontal {
+  -webkit-animation: showElementForNextScreenHorizontal 0.7s;
+          animation: showElementForNextScreenHorizontal 0.7s;
+}
+
+@-webkit-keyframes showElementForNextScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+@keyframes showElementForNextScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+.hideAnimationForPreviousScreenHorizontal {
+  -webkit-animation: hideElementForPreviousScreenHorizontal 0.7s;
+          animation: hideElementForPreviousScreenHorizontal 0.7s;
+}
+
+@-webkit-keyframes hideElementForPreviousScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
+}
+
+@keyframes hideElementForPreviousScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, -90deg);
+  }
+}
+
+.showAnimationForPreviousScreenHorizontal {
+  -webkit-animation: showElementForPreviousScreenHorizontal 0.7s;
+          animation: showElementForPreviousScreenHorizontal 0.7s;
+}
+
+@-webkit-keyframes showElementForPreviousScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+@keyframes showElementForPreviousScreenHorizontal {
+  0% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.opacityHide {
+  opacity: 0;
+}
+
+.angle90_vertical {
+  transform: rotateX(90deg);
+}
+
+.angle-90_vertical {
+  transform: rotateX(-90deg);
+}
+
+.angle90_horizontal {
+  transform: rotateY(90deg);
+}
+
+.angle-90_horizontal {
+  transform: rotateY(-90deg);
+}
+
+.h-auto {
+  height: auto;
+}
+
+/* ========== /Classes for interaction ========== */
+
+/* ========== Media ========== */
+@media screen and (max-width: 1130px) {
+  .posterSection {
+    flex-basis: 450px;
+  }
+
+  .controlSection {
+    padding: 20px 30px;
+  }
+
+  .movieDate__slider {
+    max-width: 350px;
+  }
+
+  .movieDate__radio {
+    min-width: 70px;
+    padding: 0 10px;
+  }
+
+  .movieType__radioText,
+  .movieTime__radioText {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .movieDate__currentTime,
+  .movieTime__title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .movieTime__title {
+    margin-bottom: 10px;
+  }
+
+  .hall__screen {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .seat__mask {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .posterSection {
+    flex-basis: 400px;
+  }
+
+  .movieType {
+    margin-bottom: 30px;
+  }
+
+  .movieDate__slider {
+    max-width: 300px;
+  }
+
+  .movieDate__radio {
+    min-width: 60px;
+    padding: 0 10px;
+  }
+
+  .movieDate,
+  .movieTime {
+    margin-bottom: 25px;
+  }
+
+  .movieDescription__element {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .posterSection {
+    flex-basis: 380px;
+  }
+
+  .movieDate__radio {
+    padding: 0 10px;
+  }
+
+  .movieType__radioText,
+  .movieTime__radioText {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
+  .movieDate__currentTime,
+  .movieTime__title {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .movieTime {
+    margin-bottom: 30px;
+  }
+
+  .hall__screen {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .seat__mask {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 824px) {
+  body {
+    padding: 32px 32px;
+
+    background: var(--secondary-color);
+  }
+
+  .trailer {
+    display: none;
+  }
+
+  .choseSeatSection {
+    flex-wrap: wrap;
+  }
+
+  .posterSection {
+    flex-basis: 100%;
+    border-right: none;
+  }
+
+  .controlSection {
+    flex-basis: 100%;
+    padding: 20px 60px;
+  }
+
+  .movieDate__slider {
+    max-width: 425px;
+  }
+
+  .movieDate__radio {
+    min-width: 85px;
+    padding: 0 20px;
+  }
+
+  .movieType__radioText,
+  .movieTime__radioText {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .movieDate__currentTime,
+  .movieTime__title {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+
+  .hall__screen {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+
+  .seat__mask {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Animation of change screen for mobile and tablet */
+@media screen and (max-width: 768px) {
+  .hideAnimationForNextScreenVertical {
+    -webkit-animation: hideElementForNextScreenHorizontal 0.7s;
+            animation: hideElementForNextScreenHorizontal 0.7s;
+  }
+
+  .showAnimationForNextScreenVertical {
+    -webkit-animation: showElementForNextScreenHorizontal 0.7s;
+            animation: showElementForNextScreenHorizontal 0.7s;
+  }
+
+  .hideAnimationForPreviousScreenVertical {
+    -webkit-animation: hideElementForPreviousScreenHorizontal 0.7s;
+            animation: hideElementForPreviousScreenHorizontal 0.7s;
+  }
+
+  .showAnimationForPreviousScreenVertical {
+    -webkit-animation: showElementForPreviousScreenHorizontal 0.7s;
+            animation: showElementForPreviousScreenHorizontal 0.7s;
+  }
+
+  .angle90_vertical {
+  transform: rotateY(90deg);
+}
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    padding: 0;
+  }
+
+  main{
+    margin: 0 auto;
+
+    border-radius: 0;
+  }
+
+  .choseSeatSection,
+  .confirmTicket,
+  .movieDescription,
+  .notification {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .controlSection {
+    padding: 20px 30px;
+  }
+
+  .movieDate__slider {
+    max-width: 350px;
+  }
+
+  .movieDate__radio {
+    min-width: 70px;
+    padding: 0 10px;
+  }
+
+  .confirmTicket,
+  .movieDescription,
+  .notification {
+    margin: 0;
+  }
+
+  .movieType__radioText,
+  .movieTime__radioText {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .movieDate__currentTime,
+  .movieTime__title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .movieTime__title {
+    margin-bottom: 10px;
+  }
+
+  .hall__screen {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .seat__mask {
+    width: 25px;
+    height: 25px;
+  }
+
+  .movieDescription__content {
+    flex-wrap: wrap;
+  }
+
+  .movieDescription__textContent {
+    width: 100%;
+  }
+
+  .movieDescription__posterContent {
+    width: 100%;
+  }
+
+  .ticket {
+    transform: scale(0.9);
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .movieDate__slider {
+    max-width: 300px;
+  }
+
+  .movieDate__radio {
+    min-width: 60px;
+    padding: 0 10px;
+  }
+
+  .movieDescription__element {
+    font-size: 14px;
+  }
+
+  .ticket {
+    transform: scale(1);
+    margin: 15px;
+  }
+
+  .ticket__numberTitle {
+    font-size: 10px;
+  }
+
+  .ticket__bodyTitle {
+    font-size: 20px;
+    margin-left: 40px;
+  }
+
+  .ticket__bodySubTitle {
+    font-size: 12px;
+  }
+
+  .ticket__barcode {
+    width: 35px;
+  }
+
+  .ticket__barcodeValue {
+    font-size: 8px;
+  }
+
+  .ticket__cinemaBrand {
+    width: 43px;
+  }
+
+  .ticket__bodyMovieTitle {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .ticket__bodyHallType {
+    font-size: 12px;
+  }
+
+  .badge-ticket {
+    padding: 5px;
+  }
+
+  .ticket__bodyMovieSeatTitle {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .posterSection::after {
+    background: linear-gradient(
+      0deg,
+      var(--gradient-black-90) 5%,
+      var(--gradient-black-70) 70%,
+      var(--gradient-black-20) 80%,
+      var(--gradient-black-0) 100%
+    );
+  }
+
+  .controlSection {
+    padding: 20px 10px;
+  }
+
+  .movieDate__radio {
+    padding: 0 10px;
+  }
+
+  .movieType__radioText,
+  .movieTime__radioText {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+
+  .movieDate__currentTime,
+  .movieTime__title {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .hall__screen {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .seat__mask {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hall__legend {
+    flex-wrap: wrap;
+  }
+
+  .siteButton {
+    width: 100%;
+    margin: 20px 5px 0;
+  }
+
+  .confirmTicket__title,
+  .movieDescription__title,
+  .notification__title {
+    font-size: 30px;
+  }
+
+  .ticket {
+    margin: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .movieDate__slider {
+    max-width: 250px;
+  }
+
+  .movieDate__radio {
+    min-width: 50px;
+    padding: 0 5px;
+  }
+
+  .ticket__bodyTitle {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  .ticket__bodyMovieTitle {
+    font-size: 8px;
+  }
+
+  .badge-ticket {
+    font-size: 10px;
+    margin: 5px;
+  }
+
+  .ticket__bodyMovieSeatTitle {
+    font-size: 8px;
+  }
+
+  .ticket__bodyMovieSeatNumber {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .movieDate__slider {
+    max-width: 225px;
+  }
+
+  .movieDate__radio {
+    min-width: 45px;
+    padding: 0 2px;
+  }
+
+  .seat__mask {
+    width: 18px;
+    height: 18px;
+
+    font-size: 10px;
+  }
+
+  .ticket__numberTitle {
+    font-size: 8px;
+  }
+
+  .ticket__bodyBarcode {
+    padding: 5px;
+  }
+
+  .ticket__barcode {
+    width: 35px;
+    padding: 5px;
+  }
+
+  .ticket__cinemaBrand {
+    width: 33px;
+  }
+
+  .ticket__bodyTitle {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .textContent__description {
+    font-size: 12px;
+  }
+
+  .movieDate__radio {
+    min-width: 45px;
+    padding: 0 6px;
+  }
+
+  .movieType__radioText {
+    font-size: 12px;
+  }
+}
