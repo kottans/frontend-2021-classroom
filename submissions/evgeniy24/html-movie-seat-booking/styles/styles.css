@@ -26,6 +26,10 @@ header {
   align-items: center;
 }
 
+.display-element {
+  display: flex !important;
+}
+
 .main-wrap {
   max-width: 1200px;
   padding: 0 1em;
@@ -109,6 +113,7 @@ header {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 .rating__star:checked,
@@ -187,6 +192,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -194,7 +200,12 @@ main {
   -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
-  margin: 1em 0;
+  margin: 0.5em 0;
+}
+
+.template__header {
+  margin-bottom: 5px;
+  color: #edeaeb;
 }
 
 .date__list,
@@ -217,32 +228,36 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
   margin: 0 0.5em;
-  padding: 0.4em;
   border: solid 2px #d4d4d4;
   border-radius: 3px;
 }
 
 .date__item:hover,
 .time__item:hover {
+  background-color: #ffffff;
+  color: black;
   cursor: pointer;
+}
+
+.date__input:checked + .date__item,
+.time__input:checked + .time__item {
   background-color: #ffb400;
   color: black;
 }
 
-.date__item a,
-.time__item a {
-  text-align: center;
-  color: #d4d4d4;
-  text-decoration: none;
-}
-
-.date__item:hover a,
-.time__item:hover a {
-  color: black;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .time__item {
@@ -262,11 +277,6 @@ main {
   border-radius: 5px;
 }
 
-.item--active {
-  background-color: #ffb400;
-  color: black;
-}
-
 .item--active a {
   color: black;
 }
@@ -275,7 +285,6 @@ main {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -286,7 +295,8 @@ main {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 1em 0;
+  margin: 1em 0;  
+  display: none;
 }
 
 .cinema-screen {
@@ -339,12 +349,12 @@ main {
 
 .seats-input:focus {
   border: 2px solid #2ea151;
-  transition: 0.2s ease-in;
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 .seats-input:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 0.2s ease-in;
   cursor: pointer;
 }
 
@@ -413,6 +423,30 @@ main {
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.booking-information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-date {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.summary-position__element {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.summary-position__element div {
+  margin-left: 15px;
 }
 
 footer {

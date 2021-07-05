@@ -37,6 +37,15 @@
     width: 14px;
     height: 14px;
   }
+
+  .booking-information {
+    
+  }
+
+  .summary-position__element {
+    color: #ffb400;
+    font-size: 18px;
+  }
 }
 /* Smartphones landscape----------- */
 @media only screen and (min-width: 415px) and (max-width: 767px) {
